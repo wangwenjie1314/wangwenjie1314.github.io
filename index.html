@@ -9,6 +9,7 @@
   <meta name="author" content="wangwenjie" />
   <link rel="shortcut icon" href="http://wangwenjie1314.github.io/blog/images/favicon.ico" />
   <link rel="stylesheet" href="http://wangwenjie1314.github.io/static/css/zui.min.css" />
+  <link rel="stylesheet" href="http://wangwenjie1314.github.io/static/css/site.min.css" />
   <!--[if lt IE 9]>
     <script src="http://wangwenjie1314.github.io/blog/javascripts/html5shiv.js"></script>
     <script src="http://wangwenjie1314.github.io/blog/javascripts/respond.min.js"></script>
@@ -17,15 +18,78 @@
     <div class="alert alert-danger">您正在使用 <strong>过时的</strong> 浏览器. 是时候 <a href="http://wangwenjie1314.github.io/blog/browse.htm">更换一个更好的浏览器</a> 来提升用户体验.</div>
   <![endif]-->
 </head>
-<body>
-  <div class="container">
-    a
+<body class="home-template">
+<div class="wrap">
+  <div class="header" style="background-image: url(http://static.bootcss.com/expo/img/d/dd/2de797545de56274f03a5920eb3a1.jpg)">
+    <div class="logoimg">
+    <a href="http://expo.bootcss.com"><img src="http://static.bootcss.com/expo/img/d/f5/ab31f6c55403cfa55ccb32bc7f29b.png" alt="Bootstrap 优站精选" width="78"></a>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="logotxt"><h1><a href="http://expo.bootcss.com">Bootstrap</a></h1></div> 
+          <h2 class="text-center">优站精选</h2>
+        </div>
+      </div>
+    </div>
   </div>
+  <main class="main" role="main">
+  <div class="container">
+    <div class="row">
+      <!-- list-->
+      <div class="col-xs-12 col-md-6 col-lg-6">
+        <article class="post tag-guo-nei-wang-zhan tag-bootstrap-v3">
+          <section class="post-featured-image">
+            <a class="thumbnail" href="/ghostchina/" target="_blank">
+            <img src="http://expo.bootcss.com/assets/img/loader.gif" width="800" height="600" alt="Ghost中文网" data-original="http://static.bootcss.com/expo/img/7/b5/f9c2f01fad1f23574156e0577a06c.jpg">
+            </a>
+            <span class="国内网站 Bootstrap v3"></span>
+          </section>
+          <header class="post-header">
+            <h2 class="post-title"><a href="/ghostchina/" target="_blank">Ghost中文网</a></h2>
+          </header>
+        </article>
+      </div>
+      <div class="col-xs-12 col-md-6 col-lg-6">
+        <article class="post tag-guo-nei-wang-zhan tag-bootstrap-v3">
+          <section class="post-featured-image">
+            <a class="thumbnail" href="/ghostchina/" target="_blank">
+            <img src="http://expo.bootcss.com/assets/img/loader.gif" width="800" height="600" alt="Ghost中文网" data-original="http://static.bootcss.com/expo/img/7/b5/f9c2f01fad1f23574156e0577a06c.jpg">
+            </a>
+            <span class="国内网站 Bootstrap v3"></span>
+          </section>
+          <header class="post-header">
+            <h2 class="post-title"><a href="/ghostchina/" target="_blank">Ghost中文网</a></h2>
+          </header>
+        </article>
+      </div>
+      <!-- list end-->
+    </div>
+  </div>
+  </main>
+  </div>
+  <footer>
+      <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="submit">
+                <p class="text-center"><i class="icon-github"></i></p>
+              </div>
+            </div>
+          </div>
+      </div>
+  </footer>
   <script type="text/javascript" src="http://wangwenjie1314.github.io/blog/javascripts/jquery-2.0.3.min.js"></script>
   <script type="text/javascript" src="http://wangwenjie1314.github.io/blog/javascripts/zui.min.js"></script>
+  <script type="text/javascript" src="http://wangwenjie1314.github.io/static/js/jquery.lazyload.min.js"></script>
   <script type="text/javascript">
+  $(function(){
+    $(".thumbnail > img").lazyload();
+  });
+  </script>
+  <div class="hidden"><script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F1cb7855a914b199e5bbfce083b9d1f5a' type='text/javascript'%3E%3C/script%3E"));
-</script>
+</script></div>
 </body>
 </html>
