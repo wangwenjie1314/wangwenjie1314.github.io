@@ -85,7 +85,7 @@ footer.footer .footer-content .copyright{text-align:right}
 .header .navigation section.logo a{color:#cfcfcf;display:block;line-height:40px;text-align:center}
 .header .navigation ul li:first-child{border-left:1px solid #303030}
 .header .navigation ul li:last-child{border-right:1px solid #5c5c5c}
-section.main .block-contents h1.title{font-size:2em;font-weight:700;margin-bottom:0.5em;padding:0 10px .5em}
+section.main .block-contents h1.title{font-size:1.7em;font-weight:700;margin-bottom:0.5em;padding:0 10px .5em}
 footer.footer .footer-content .copyright span{color:#a1a1a1;font-size:14px;line-height:45px}
 .header .navigation ul li a:hover,.header .navigation ul li a:focus,.header .navigation ul li a.current{background-color:#333;border-left:1px solid #333}
 .header .navigation ul li a:last-child{border-right:1px solid #303030}
@@ -95,7 +95,7 @@ footer.footer .footer-content .copyright span a{color:#a1a1a1;font-weight:700}
 .title{padding:0 10px}
 .navigation .logo,.navigation .grid_8,.navigation .social{display:none}
 .header .navigation{height:50px}
-.navigation .grid_6{display:block}
+.navigation .grid_6{display:block;padding: 0}
 section.main .block-contents{padding:25px 5px}
 .header .navigation section.logo a,.navigation a{display:block;color:#cfcfcf;text-align:center;font-size:20px;line-height:50px}
 .navigation a.current{background-color:#333;border-left:1px solid #333}
@@ -105,6 +105,7 @@ ul.article-list li a{font-size:18px}
 section.main .block-contents{padding:5px}
 footer.footer .footer-content .copyright{float:none;text-align:center;width:100%}
 section.main .block-contents h1.title{display:none;margin-bottom:0;padding:0 5px}
+section.main .block-contents h1.title_s{display:block}
 }
 ::-webkit-scrollbar{width:8px}
 ::-webkit-scrollbar-thumb{background:#bbb;background:rgba(0,0,0,0.15);border-radius:5px}
