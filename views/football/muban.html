@@ -1,0 +1,583 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-title" content="测试页面">
+    <link rel="shortcut icon" href="http://cdn-img.easyicon.net/favicon.ico">
+    <title>测试页面</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    
+</head>
+<body>
+    <!-- noscript -->
+    <noscript><a class="noScript" href="##" title="页面需要开启JavaScript体验">页面需要开启JavaScript体验</a></noscript>
+    <!-- header -->
+    <header>
+
+    </header>
+    <!-- nav-->
+    <nav>
+
+    </nav>
+    <!-- con-->
+    <section>
+    <div class="target">asdadas</div>
+    </section>
+    <!-- footer -->
+    <footer>
+        
+    </footer>
+    
+    <script src="http://touch.code.baidu.com/touch-0.2.14.min.js"></script>
+    <script type="text/javascript">
+    //swipe example
+    touch.on('.target', 'swipeleft swiperight', function(ev){
+        console.log("you have done", ev.type);
+    });
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link rel="Shortcut Icon" href="http://i3.dpfile.com/s/res/favicon.5ff777c11d7833e57e01c9d192b7e427.ico" type="image/x-icon" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<meta name="apple-mobile-web-app-title" content="大众点评">
+<link rel="apple-touch-icon-precomposed" href="http://m1.s2.dpfile.com/m/img/app/dianping/logoforiphone.18d57124e8e10c79337a27dadabc4314.png" />
+<link rel="apple-touch-startup-image" href="http://m1.s2.dpfile.com/m/img/app/dianping/iphonesplash.1ec20beb9fdd2d308b5dcd3d43c39e90.png" />
+<link rel="stylesheet" href="css/common.css" type="text/css"/>
+<title>北京美食,北京餐厅餐饮,北京团购,北京生活,优惠券-大众点评网</title>
+<meta name="Keywords" content="北京美食,北京餐厅,团购,北京优惠券,大众点评网"/>
+<meta name="Description" content="根据合理的商区、地标和详细的商户分类系统，为你提供北京的餐饮美食、婚庆、住宿酒店、美容美发等消费场所，并通过海量亲身消费者的点评聚合，以各种评分、星级的标准让你选择。"/>
+<script>var G_rtop=+new Date, _hip = [
+['_setPageId', 210001],
+['_setCityId', 2]
+];
+window.onload=function() {
+	setTimeout(function() {
+		if(window.pageYOffset !== 0) return;
+		window.scrollTo(0, 1);
+	}, 300);
+ };
+</script>
+</head>
+<body>
+<header class="index-head">
+    <a class="city" href="/citylist"
+       onclick="_hip.push(['mv', {module:'2_city_tab',action:'click'}]);">北京</a>
+    <div class="search J_search" onclick="_hip.push(['mv', {module:'2_search_hover',action:'click'}]);">搜店铺、找优惠</div>
+    <a onclick="_hip.push(['mv', {module:'3_my_info',action:'click',content:'我的'}]);" href="/my" class="me"></a>
+    <div id="J_toast" class="toast Hide">你可以在这里更改所在城市</div>
+</header>
+<div class="index-category Fix">
+        <a onclick="_hip.push(['mv', {module:'5_index_category',action:'click',content:'美食'}]);"
+           href="/shoplist/2/d/500/c/10/s/s_-1"
+           class="item food">
+            <div class="icon"></div>
+        美食</a>
+        <a onclick="_hip.push(['mv', {module:'5_index_category',action:'click',content:'KTV'}]);"
+           href="/shoplist/2/d/500/c/135/s/s_-1"
+           class="item ktv">
+            <div class="icon"></div>
+        KTV</a>
+        <a onclick="_hip.push(['mv', {module:'5_index_category',action:'click',content:'足疗按摩'}]);"
+           href="/shoplist/2/d/500/c/141/s/s_-1"
+           class="item massage">
+            <div class="icon"></div>
+        足疗按摩</a>
+        <a onclick="_hip.push(['mv', {module:'5_index_category',action:'click',content:'更多'}]);"
+           href="/beijing/category"
+           class="item more">
+            <div class="icon"></div>
+        更多</a>
+        <a onclick="_hip.push(['mv', {module:'5_index_category',action:'click',content:'团购'}]);"
+           href="/tuan/beijing"
+           class="item tuan">
+            <div class="icon"></div>
+        团购</a>
+        <a onclick="_hip.push(['mv', {module:'5_index_category',action:'click',content:'看电影'}]);"
+           href="/movie"
+           class="item movie">
+            <div class="icon"></div>
+        看电影</a>
+        <a onclick="_hip.push(['mv', {module:'5_index_category',action:'click',content:'订酒店'}]);"
+           href="/shoplist/2/d/500/c/60/s/s_-1"
+           class="item hotel">
+            <div class="icon"></div>
+        订酒店</a>
+        <a onclick="_hip.push(['mv', {module:'5_index_category',action:'click',content:'订外卖'}]);"
+           href="/waimai/mindex"
+           class="item takeaway">
+            <div class="icon"></div>
+        订外卖</a>
+</div>
+<div class="index-rec">
+    <div class="tit">猜你喜欢</div>
+    <div class="home-tuan-list">
+    	<a href="/tuan/deal/2275728" class="item Fix" onclick="_hip.push(['mv',{'module':'5_rec_dealpage',action:'click','dealgrp_id':'2275728',query_id:'',index:'1'}]);">
+            <div class="cnt">
+            <img class="pic" lazy-src="http://t2.s1.dpfile.com/pc/mc/3a3243103df04cb96242635d40aefae5(220c164)/thumb.jpg" src="http://m1.s2.dpfile.com/mod/app-m-dianping/1.0.5/css/img/picpre.png" >
+            <div class="wrap">
+            <div class="wrap2">
+            <div class="content">
+                <div class="shopname">新人专享，1分钱变100，稳赚不赔，中奖100%！</div>
+                <div class="title">1分钱变100，稳赚不赔，变身抵用券限时抢！</div>
+                <div class="info">
+                    <span class="symbol">&#165;</span>
+                    <span class="price">0.01</span>
+                        <del class="o-price">&#165;100</del>
+                    <span class="distance">已售921122</span>
+                </div>
+            </div>
+            </div>           </div>
+            </div>
+        </a>
+    	<a href="/tuan/deal/6272786" class="item Fix" onclick="_hip.push(['mv',{'module':'5_rec_dealpage',action:'click','dealgrp_id':'6272786',query_id:'',index:'2'}]);">
+            <div class="cnt">
+            <img class="pic" lazy-src="http://t2.s2.dpfile.com/pc/mc/e30aa5cda421a5b0eca43667c3eb74c2(220c164)/thumb.jpg" src="http://m1.s2.dpfile.com/mod/app-m-dianping/1.0.5/css/img/picpre.png" >
+            <div class="wrap">
+            <div class="wrap2">
+            <div class="content">
+                <div class="shopname">鱼旨寿司</div>
+                <div class="title">[27店通用]代金券, 不限时段通用</div>
+                <div class="info">
+                    <span class="symbol">&#165;</span>
+                    <span class="price">34</span>
+                        <del class="o-price">&#165;50</del>
+                            <span class="sale">减10元</span>
+                    <span class="distance">已售45297</span>
+                </div>
+            </div>
+            </div>           </div>
+            </div>
+        </a>
+    	<a href="/tuan/deal/6373989" class="item Fix" onclick="_hip.push(['mv',{'module':'5_rec_dealpage',action:'click','dealgrp_id':'6373989',query_id:'',index:'3'}]);">
+            <div class="cnt">
+            <img class="pic" lazy-src="http://t3.s1.dpfile.com/pc/mc/202e26438349e4b2c9e830810990c62c(220c164)/thumb.jpg" src="http://m1.s2.dpfile.com/mod/app-m-dianping/1.0.5/css/img/picpre.png" >
+            <div class="wrap">
+            <div class="wrap2">
+            <div class="content">
+                <div class="shopname">鲍师傅糕点</div>
+                <div class="title">[3店通用]代金券, 无需预约，节假日通用</div>
+                <div class="info">
+                    <span class="symbol">&#165;</span>
+                    <span class="price">18</span>
+                        <del class="o-price">&#165;20</del>
+                    <span class="distance">已售1509</span>
+                </div>
+            </div>
+            </div>           </div>
+            </div>
+        </a>
+    	<a href="/tuan/deal/6264628" class="item Fix" onclick="_hip.push(['mv',{'module':'5_rec_dealpage',action:'click','dealgrp_id':'6264628',query_id:'',index:'4'}]);">
+            <div class="cnt">
+            <img class="pic" lazy-src="http://t3.s2.dpfile.com/pc/mc/87294db0793522fc38aa9b57c64ed1b7(220c164)/thumb.jpg" src="http://m1.s2.dpfile.com/mod/app-m-dianping/1.0.5/css/img/picpre.png" >
+            <div class="wrap">
+            <div class="wrap2">
+            <div class="content">
+                <div class="shopname">将太无二</div>
+                <div class="title">[17店通用]代金券, 可累积使用，全场通用</div>
+                <div class="info">
+                    <span class="symbol">&#165;</span>
+                    <span class="price">86</span>
+                        <del class="o-price">&#165;100</del>
+                    <span class="distance">已售171523</span>
+                </div>
+            </div>
+            </div>           </div>
+            </div>
+        </a>
+    	<a href="/tuan/deal/8122780" class="item Fix" onclick="_hip.push(['mv',{'module':'5_rec_dealpage',action:'click','dealgrp_id':'8122780',query_id:'',index:'5'}]);">
+            <div class="cnt">
+            <img class="pic" lazy-src="http://t3.s2.dpfile.com/pc/mc/82c471088ba6359f0f9d4363528e6b10(220c164)/thumb.jpg" src="http://m1.s2.dpfile.com/mod/app-m-dianping/1.0.5/css/img/picpre.png" >
+            <div class="wrap">
+            <div class="wrap2">
+            <div class="content">
+                <div class="shopname">上海小南国</div>
+                <div class="title">[17店通用]代金券, 不限时段通用，可累积使用</div>
+                <div class="info">
+                    <span class="symbol">&#165;</span>
+                    <span class="price">85</span>
+                        <del class="o-price">&#165;100</del>
+                            <span class="sale">减10元</span>
+                    <span class="distance">已售13832</span>
+                </div>
+            </div>
+            </div>           </div>
+            </div>
+        </a>
+    	<a href="/tuan/deal/6249497" class="item Fix" onclick="_hip.push(['mv',{'module':'5_rec_dealpage',action:'click','dealgrp_id':'6249497',query_id:'',index:'6'}]);">
+            <div class="cnt">
+            <img class="pic" lazy-src="http://t3.s1.dpfile.com/pc/mc/e1f025ab2056d9d0fab125a63311ad76(220c164)/thumb.jpg" src="http://m1.s2.dpfile.com/mod/app-m-dianping/1.0.5/css/img/picpre.png" >
+            <div class="wrap">
+            <div class="wrap2">
+            <div class="content">
+                <div class="shopname">李老爹</div>
+                <div class="title">[5店通用]代金券, 不限时段通用，可累积使用，不兑现、不找零，全场通用</div>
+                <div class="info">
+                    <span class="symbol">&#165;</span>
+                    <span class="price">82</span>
+                        <del class="o-price">&#165;100</del>
+                            <span class="sale">减10元</span>
+                    <span class="distance">已售5054</span>
+                </div>
+            </div>
+            </div>           </div>
+            </div>
+        </a>
+    	<a href="/tuan/deal/6104275" class="item Fix" onclick="_hip.push(['mv',{'module':'5_rec_dealpage',action:'click','dealgrp_id':'6104275',query_id:'',index:'7'}]);">
+            <div class="cnt">
+            <img class="pic" lazy-src="http://t3.s1.dpfile.com/pc/mc/2adafcef2a9234fce96387fc7ab63396(220c164)/thumb.jpg" src="http://m1.s2.dpfile.com/mod/app-m-dianping/1.0.5/css/img/picpre.png" >
+            <div class="wrap">
+            <div class="wrap2">
+            <div class="content">
+                <div class="shopname">紫光园</div>
+                <div class="title">[10店通用]代金券</div>
+                <div class="info">
+                    <span class="symbol">&#165;</span>
+                    <span class="price">79</span>
+                        <del class="o-price">&#165;100</del>
+                    <span class="distance">已售37495</span>
+                </div>
+            </div>
+            </div>           </div>
+            </div>
+        </a>
+    	<a href="/tuan/deal/8100312" class="item Fix" onclick="_hip.push(['mv',{'module':'5_rec_dealpage',action:'click','dealgrp_id':'8100312',query_id:'',index:'8'}]);">
+            <div class="cnt">
+            <img class="pic" lazy-src="http://t3.s1.dpfile.com/pc/mc/e4ffb4ac93ae64085db946348400b071(220c164)/thumb.jpg" src="http://m1.s2.dpfile.com/mod/app-m-dianping/1.0.5/css/img/picpre.png" >
+            <div class="wrap">
+            <div class="wrap2">
+            <div class="content">
+                <div class="shopname">汉拿山石锅拌饭</div>
+                <div class="title">[10店通用]单人套餐五选一, 不限时段通用</div>
+                <div class="info">
+                    <span class="symbol">&#165;</span>
+                    <span class="price">22.8</span>
+                        <del class="o-price">&#165;36</del>
+                    <span class="distance">已售3579</span>
+                </div>
+            </div>
+            </div>           </div>
+            </div>
+        </a>
+    	<a href="/tuan/deal/8111104" class="item Fix" onclick="_hip.push(['mv',{'module':'5_rec_dealpage',action:'click','dealgrp_id':'8111104',query_id:'',index:'9'}]);">
+            <div class="cnt">
+            <img class="pic" lazy-src="http://t3.s2.dpfile.com/pc/mc/8ef0ab86b6baa9085bb7e3b0633eba59(220c164)/thumb.jpg" src="http://m1.s2.dpfile.com/mod/app-m-dianping/1.0.5/css/img/picpre.png" >
+            <div class="wrap">
+            <div class="wrap2">
+            <div class="content">
+                <div class="shopname">耀莱成龙国际影城</div>
+                <div class="title">[大望路]单人电影票, 可升级为3D票</div>
+                <div class="info">
+                    <span class="symbol">&#165;</span>
+                    <span class="price">25</span>
+                        <del class="o-price">&#165;90</del>
+                    <span class="distance">已售1914</span>
+                </div>
+            </div>
+            </div>           </div>
+            </div>
+        </a>
+    	<a href="/tuan/deal/6467374" class="item Fix" onclick="_hip.push(['mv',{'module':'5_rec_dealpage',action:'click','dealgrp_id':'6467374',query_id:'',index:'10'}]);">
+            <div class="cnt">
+            <img class="pic" lazy-src="http://t2.s2.dpfile.com/pc/mc/c275b5bc557041d8ff68ec8358985c71(220c164)/thumb.jpg" src="http://m1.s2.dpfile.com/mod/app-m-dianping/1.0.5/css/img/picpre.png" >
+            <div class="wrap">
+            <div class="wrap2">
+            <div class="content">
+                <div class="shopname">百老汇新世纪影院</div>
+                <div class="title">[5店通用]套餐2选1, 不限时段通兑，儿童可免费观影</div>
+                <div class="info">
+                    <span class="symbol">&#165;</span>
+                    <span class="price">31</span>
+                        <del class="o-price">&#165;80</del>
+                    <span class="distance">已售10725</span>
+                </div>
+            </div>
+            </div>           </div>
+            </div>
+        </a>
+    	<a href="/tuan/deal/5220261" class="item Fix" onclick="_hip.push(['mv',{'module':'5_rec_dealpage',action:'click','dealgrp_id':'5220261',query_id:'',index:'11'}]);">
+            <div class="cnt">
+            <img class="pic" lazy-src="http://t1.s2.dpfile.com/pc/mc/90fafbd9e4f804f624bddf1970e06827(220c164)/thumb.jpg" src="http://m1.s2.dpfile.com/mod/app-m-dianping/1.0.5/css/img/picpre.png" >
+            <div class="wrap">
+            <div class="wrap2">
+            <div class="content">
+                <div class="shopname">水木锦堂铁板烧自助餐厅</div>
+                <div class="title">[2店通用]铁板自助午餐/晚餐2选1, 免费WiFi</div>
+                <div class="info">
+                    <span class="symbol">&#165;</span>
+                    <span class="price">168</span>
+                        <del class="o-price">&#165;326</del>
+                    <span class="distance">已售52356</span>
+                </div>
+            </div>
+            </div>           </div>
+            </div>
+        </a>
+    	<a href="/tuan/deal/2068293" class="item Fix" onclick="_hip.push(['mv',{'module':'5_rec_dealpage',action:'click','dealgrp_id':'2068293',query_id:'',index:'12'}]);">
+            <div class="cnt">
+            <img class="pic" lazy-src="http://t2.s2.dpfile.com/pc/mc/af06a2e9a734a4771442024a34c24374(220c164)/thumb.jpg" src="http://m1.s2.dpfile.com/mod/app-m-dianping/1.0.5/css/img/picpre.png" >
+            <div class="wrap">
+            <div class="wrap2">
+            <div class="content">
+                <div class="shopname">羲和雅苑烤鸭坊</div>
+                <div class="title">[5店通用]代金券, 可累积使用</div>
+                <div class="info">
+                    <span class="symbol">&#165;</span>
+                    <span class="price">255</span>
+                        <del class="o-price">&#165;300</del>
+                            <span class="sale">减30元</span>
+                    <span class="distance">已售4780</span>
+                </div>
+            </div>
+            </div>           </div>
+            </div>
+        </a>
+    	<a href="/tuan/deal/6454242" class="item Fix" onclick="_hip.push(['mv',{'module':'5_rec_dealpage',action:'click','dealgrp_id':'6454242',query_id:'',index:'13'}]);">
+            <div class="cnt">
+            <img class="pic" lazy-src="http://t3.s1.dpfile.com/pc/mc/58c970f8a9bfe062bb4ae4fe1b91b51e(220c164)/thumb.jpg" src="http://m1.s2.dpfile.com/mod/app-m-dianping/1.0.5/css/img/picpre.png" >
+            <div class="wrap">
+            <div class="wrap2">
+            <div class="content">
+                <div class="shopname">深海800米海鲜自助</div>
+                <div class="title">[2店通用]午餐/晚餐第二时段海鲜单人自助2选1, 庆祝8月23日正式营业，在团价基础上再折上折</div>
+                <div class="info">
+                    <span class="symbol">&#165;</span>
+                    <span class="price">188</span>
+                        <del class="o-price">&#165;258</del>
+                            <span class="sale">减25元</span>
+                    <span class="distance">已售4462</span>
+                </div>
+            </div>
+            </div>           </div>
+            </div>
+        </a>
+    	<a href="/tuan/deal/6006466" class="item Fix" onclick="_hip.push(['mv',{'module':'5_rec_dealpage',action:'click','dealgrp_id':'6006466',query_id:'',index:'14'}]);">
+            <div class="cnt">
+            <img class="pic" lazy-src="http://t1.s1.dpfile.com/pc/mc/d101b6cc317443208ffce08905aa85a0(220c164)/thumb.jpg" src="http://m1.s2.dpfile.com/mod/app-m-dianping/1.0.5/css/img/picpre.png" >
+            <div class="wrap">
+            <div class="wrap2">
+            <div class="content">
+                <div class="shopname">芭斯罗缤</div>
+                <div class="title">[21店通用]双球冰淇淋1份, 无需预约，到店即享，知名冰淇淋品牌，选用新鲜原料</div>
+                <div class="info">
+                    <span class="symbol">&#165;</span>
+                    <span class="price">32</span>
+                        <del class="o-price">&#165;42</del>
+                    <span class="distance">已售6757</span>
+                </div>
+            </div>
+            </div>           </div>
+            </div>
+        </a>
+    	<a href="/tuan/deal/8162504" class="item Fix" onclick="_hip.push(['mv',{'module':'5_rec_dealpage',action:'click','dealgrp_id':'8162504',query_id:'',index:'15'}]);">
+            <div class="cnt">
+            <img class="pic" lazy-src="http://t1.s1.dpfile.com/pc/mc/23f592737d8c4e2f1ab593827a787a53(220c164)/thumb.jpg" src="http://m1.s2.dpfile.com/mod/app-m-dianping/1.0.5/css/img/picpre.png" >
+            <div class="wrap">
+            <div class="wrap2">
+            <div class="content">
+                <div class="shopname">汉拿山</div>
+                <div class="title">[45店通用]午市代金券</div>
+                <div class="info">
+                    <span class="symbol">&#165;</span>
+                    <span class="price">35.5</span>
+                        <del class="o-price">&#165;50</del>
+                    <span class="distance">已售5218</span>
+                </div>
+            </div>
+            </div>           </div>
+            </div>
+        </a>
+    	<a href="/tuan/deal/6000896" class="item Fix" onclick="_hip.push(['mv',{'module':'5_rec_dealpage',action:'click','dealgrp_id':'6000896',query_id:'',index:'16'}]);">
+            <div class="cnt">
+            <img class="pic" lazy-src="http://t3.s2.dpfile.com/pc/mc/ae084527a55fde08e1586c56541a3c14(220c164)/thumb.jpg" src="http://m1.s2.dpfile.com/mod/app-m-dianping/1.0.5/css/img/picpre.png" >
+            <div class="wrap">
+            <div class="wrap2">
+            <div class="content">
+                <div class="shopname">雅玛花式铁板烧餐厅</div>
+                <div class="title">[11店通用]单人自助餐1位, 不限时段通用</div>
+                <div class="info">
+                    <span class="symbol">&#165;</span>
+                    <span class="price">168</span>
+                        <del class="o-price">&#165;198</del>
+                            <span class="sale">减20元</span>
+                    <span class="distance">已售16228</span>
+                </div>
+            </div>
+            </div>           </div>
+            </div>
+        </a>
+    	<a href="/tuan/deal/5244169" class="item Fix" onclick="_hip.push(['mv',{'module':'5_rec_dealpage',action:'click','dealgrp_id':'5244169',query_id:'',index:'17'}]);">
+            <div class="cnt">
+            <img class="pic" lazy-src="http://t2.s2.dpfile.com/pc/mc/fa5bb5c1431ab9f3a9fd91bacbd1e9a4(220c164)/thumb.jpg" src="http://m1.s2.dpfile.com/mod/app-m-dianping/1.0.5/css/img/picpre.png" >
+            <div class="wrap">
+            <div class="wrap2">
+            <div class="content">
+                <div class="shopname">金鼎轩</div>
+                <div class="title">[9店通用]代金券</div>
+                <div class="info">
+                    <span class="symbol">&#165;</span>
+                    <span class="price">89.9</span>
+                        <del class="o-price">&#165;100</del>
+                    <span class="distance">已售80475</span>
+                </div>
+            </div>
+            </div>           </div>
+            </div>
+        </a>
+    	<a href="/tuan/deal/5235443" class="item Fix" onclick="_hip.push(['mv',{'module':'5_rec_dealpage',action:'click','dealgrp_id':'5235443',query_id:'',index:'18'}]);">
+            <div class="cnt">
+            <img class="pic" lazy-src="http://t2.s2.dpfile.com/pc/mc/7bb54cf92f9863a2efc3ff0fe19c2bca(220c164)/thumb.jpg" src="http://m1.s2.dpfile.com/mod/app-m-dianping/1.0.5/css/img/picpre.png" >
+            <div class="wrap">
+            <div class="wrap2">
+            <div class="content">
+                <div class="shopname">正一味</div>
+                <div class="title">[72店通用]代金券, 可累计使用</div>
+                <div class="info">
+                    <span class="symbol">&#165;</span>
+                    <span class="price">22.8</span>
+                        <del class="o-price">&#165;30</del>
+                    <span class="distance">已售140788</span>
+                </div>
+            </div>
+            </div>           </div>
+            </div>
+        </a>
+    	<a href="/tuan/deal/6380925" class="item Fix" onclick="_hip.push(['mv',{'module':'5_rec_dealpage',action:'click','dealgrp_id':'6380925',query_id:'',index:'19'}]);">
+            <div class="cnt">
+            <img class="pic" lazy-src="http://t1.s1.dpfile.com/pc/mc/38b3936ab01113e29022acd00ff4ac56(220c164)/thumb.jpg" src="http://m1.s2.dpfile.com/mod/app-m-dianping/1.0.5/css/img/picpre.png" >
+            <div class="wrap">
+            <div class="wrap2">
+            <div class="content">
+                <div class="shopname">大鸭梨烤鸭店</div>
+                <div class="title">[61店通用]代金券, 不限时段通用</div>
+                <div class="info">
+                    <span class="symbol">&#165;</span>
+                    <span class="price">85</span>
+                        <del class="o-price">&#165;100</del>
+                    <span class="distance">已售53881</span>
+                </div>
+            </div>
+            </div>           </div>
+            </div>
+        </a>
+    	<a href="/tuan/deal/211143" class="item Fix" onclick="_hip.push(['mv',{'module':'5_rec_dealpage',action:'click','dealgrp_id':'211143',query_id:'',index:'20'}]);">
+            <div class="cnt">
+            <img class="pic" lazy-src="http://t3.s2.dpfile.com/pc/mc/7532a89add3ee341b47e5a14b9808d40(220c164)/thumb.jpg" src="http://m1.s2.dpfile.com/mod/app-m-dianping/1.0.5/css/img/picpre.png" >
+            <div class="wrap">
+            <div class="wrap2">
+            <div class="content">
+                <div class="shopname">渝乡人家</div>
+                <div class="title">[17店通用]代金券1张, 不限时段通用，可累积使用</div>
+                <div class="info">
+                    <span class="symbol">&#165;</span>
+                    <span class="price">88</span>
+                        <del class="o-price">&#165;100</del>
+                            <span class="sale">减12元</span>
+                    <span class="distance">已售100673</span>
+                </div>
+            </div>
+            </div>           </div>
+            </div>
+        </a>
+    </div>
+    <a class="view-more" href="/tuan" onclick="_hip.push(['mv',{module:'5_rec_dealpage',action:'click',index:'999'}])">查看更多团购</a>
+</div>
+<script>_hip.push(['mv', {module: '5_rec_dealpage', action: 'browse', query_id: ""}])</script>
+<div class="J_search_container search_container" style="display:none ;">
+    <form class="J_form" method="post" action="/shoplist/2/search" onsubmit="var keyword=document.getElementsByClassName('J_search_input')[0].value; _hip.push(['mv', {module:'2_search_item',action:'click',keyword:keyword}]);">
+        <header>
+            <div class="head_cnt">
+                <div class="head_cnt_input">
+                    <input type="text" name="keyword" class="search J_search_input" placeholder="搜店铺、找优惠"
+                           autocomplete="off"/>
+                    <input type="submit">
+                </div>
+                <a class="cancel J_cancel"
+                   onclick="_hip.push(['mv', {module:'index_keyword_cancel',action:'click'}]);"
+                   href="javascript:;">取消</a>
+            </div>
+        </header>
+        <div class="J_key_list key_list Fix">
+                <a onclick="_hip.push(['mv',{module:'5_rec_search',action:'click',index:'0'}])"
+                   href="/shoplist/2/kw/MJ造型/search">MJ造型</a>
+                <a onclick="_hip.push(['mv',{module:'5_rec_search',action:'click',index:'1'}])"
+                   href="/shoplist/2/kw/西少爷肉夹馍/search">西少爷肉夹馍</a>
+                <a onclick="_hip.push(['mv',{module:'5_rec_search',action:'click',index:'2'}])"
+                   href="/shoplist/2/kw/权金城/search">权金城</a>
+                <a onclick="_hip.push(['mv',{module:'5_rec_search',action:'click',index:'3'}])"
+                   href="/shoplist/2/kw/萨莉亚/search">萨莉亚</a>
+                <a onclick="_hip.push(['mv',{module:'5_rec_search',action:'click',index:'4'}])"
+                   href="/shoplist/2/kw/卤煮/search">卤煮</a>
+                <a onclick="_hip.push(['mv',{module:'5_rec_search',action:'click',index:'5'}])"
+                   href="/shoplist/2/kw/西堤厚牛排/search">西堤厚牛排</a>
+                <a onclick="_hip.push(['mv',{module:'5_rec_search',action:'click',index:'6'}])"
+                   href="/shoplist/2/kw/鹿港小镇/search">鹿港小镇</a>
+                <a onclick="_hip.push(['mv',{module:'5_rec_search',action:'click',index:'7'}])"
+                   href="/shoplist/2/kw/鲜芋仙/search">鲜芋仙</a>
+                <a onclick="_hip.push(['mv',{module:'5_rec_search',action:'click',index:'8'}])"
+                   href="/shoplist/2/kw/胜博殿/search">胜博殿</a>
+                <a onclick="_hip.push(['mv',{module:'5_rec_search',action:'click',index:'9'}])"
+                   href="/shoplist/2/kw/旺顺阁鱼头泡饼店/search">旺顺阁鱼头泡饼店</a>
+                <a onclick="_hip.push(['mv',{module:'5_rec_search',action:'click',index:'10'}])"
+                   href="/shoplist/2/kw/胡椒厨房/search">胡椒厨房</a>
+                <a onclick="_hip.push(['mv',{module:'5_rec_search',action:'click',index:'11'}])"
+                   href="/shoplist/2/kw/江边城外烤全鱼/search">江边城外烤全鱼</a>
+        </div>
+        <div class="J_history_list key_list Fix">
+
+        </div>
+        <a class="J_history_clear link-btn" href="javascript:;">清除历史记录</a>
+        <ul class="J_suggest_list suggest_list">
+        </ul>
+    </form>
+</div>
+
+<footer class="footer">
+    <a href="javascript:window.location='/my'" title="">我的</a><em>|</em>
+    <a href="javascript:window.location='/history'" title="">最近浏览</a><em>|</em>
+    <a href="javascript:window.location='/shop/addshop'">添加商户</a><em>|</em>
+    <a href="javascript:window.location='/feedback'" title="">意见反馈</a>
+    <br>
+    <a id="j-computer" href="http://www.dianping.com" title="">电脑版</a><em>|</em>
+    <a onclick="document.cookie='wapredirecttom=1; domain=.dianping.com; path=/';_gaq.push(['_trackEvent', 'footer_wap', 'click', ''])" href="http://wap.dianping.com" title="">标准版</a><em>|</em>
+    <a id="F_download" href="javascript:void(0)" title="">客户端</a>
+    <br>
+    <p class="copyright">copyright ©2014 dianping.com</p>
+</footer><script>!function(n){"use strict";function t(n,t){for(var r in t)n[r]||(n[r]=t[r])}function r(n,r){t(n.prototype,r)}function i(n){var t=n.match(U),r=t[1],i=t[2]||"*",o=t[3]||"";return e({n:r,v:i,p:o})}function e(n){var t=n.n+"@"+n.v;return n.id=t+n.p,n.k=t,n}function o(n,t){return t.map?n:n+".js"}function a(n,t){for(var r in t)n[r]=t[r]}function f(n){var t=n.match(V);return t?t[0]:n}function u(n,t){return h(f(t.p).slice(1),n)}function c(n,t){return n=u(n,t),n?t.k+"/"+n:t.k}function h(n,t){var r=(n+"/"+t).split("/").filter(Boolean);return s(r).join("/")}function s(n){for(var t=0,r=n.length-1;r>=0;r--){var i=n[r];"."===i?n.splice(r,1):".."===i?(n.splice(r,1),t++):t&&(n.splice(r,1),t--)}for(;t--;)n.unshift("..");return n}function l(n){return 0===n.indexOf("./")||0===n.indexOf("../")}function d(n){throw new Error("neuron: "+n)}function v(n){d("Cannot find module '"+n+"'")}function p(n){return W[n]||(W[n]=[])}function g(n,t){p(n).push(t)}function m(n,t){var r=p(n);r.forEach(function(n){n(t)})}function y(n,t){n||d("null id"),t||(t={});var r=t.map||{};n=r[n]||n;var a,f=l(n);if(f?(t.id||v(n),n=c(n,t),n=o(n,t),a=i(n)):(n=t.m&&t.m[n]||n,a=i(n)),a.k===t.k)a.graph=t.graph;else{var u=w(a.k,t.graph)||[];a.graph=u,a.v=u[0]||a.v,e(a)}return a}function w(n,t){var r=rt.graph._,i=t?t[1]:r;return i&&n in i?rt.graph[i[n]]:r}function k(n){return n.loaded?n.exports:O(n)}function O(n){n.loaded=!0;var t=n.exports={},r=P(n.id),i=f(r),e=n.factory;return e(R(n),t,n,r,i),n.exports}function b(n,t,r){var i=y(n,t),e=i.graph,o=E(i),a=o.main?i.k:i.id,f=e[a];return f||(!r||v(n),f=e[a]=j(o),f.graph=e,f.g||(f.g=X++)),f}function x(n,t){G.ready(n,function(){t(k(n))})}function E(n){var t=n.id;return et[t]||(et[t]={n:n.n,v:n.v,p:n.p,id:t,k:n.k,m:{},l:[],main:!n.p})}function j(n){function t(){this.r=[]}return t.prototype=n,new t}function S(n){!~n.indexOf("@")||d("id with '@' is prohibited")}function R(n){var t=function(t){S(t);var r=b(t,n,!0);return k(r)};return t.async=function(t,r){var i=t;if(r){S(t);var e=l(t);if(e){t=c(t,n);var a=n.entries;t=a?L(t,a)||L(t+".js",a)||L(t+".json",a)||v(i):o(t,n)}var f=b(t,n);if(!f.main){if(!e)return;f.a=!0}x(f,r)}},t.resolve=function(t){return l(t)&&(t=u(t,n),!~t.indexOf("../"))?P(n.k+"/"+t):void 0},t}function L(n,t){return~t.indexOf(n)?n:J}function M(n){var t=Y.createElement("script");t.src=n,t.async=!0,nt(t,function(){Z.removeChild(t)}),Z.insertBefore(t,Z.firstChild)}function $(n,t,r,i){i||(i={});var f=y(n);f.p&&(f.p=o(f.p,i),e(f));var u,c=f.k;i.main&&(u=et[c]);var h=et[f.id]=u||et[f.id]||E(f);if(i.main&&(et[c]=h,a(h,f)),a(h,i),!h.factory){h.factory=r,h.deps=t,_(t,h.m);var s=i.asyncDeps;s&&_(s,h.m),B(h,"l")}}function _(n,t){n.forEach(function(n){var r=n.split("@")[0];t[r]=n})}function B(n,t){var r,i=n[t];for(n[t]=J;r=i.pop();)r()}function C(n,t){var r=et[n.id];r.f=n.f,r.a=n.a;var i=r.l;i&&(i.push(t),i.length<2&&I(r))}function I(n){if(!n.d){n.d=!0;var t=n.f,r=n.a,i=n.k;if(~tt.indexOf(i)){if(!t&&!r)return}else tt.push(i);var e=rt.loaded,o=t?n.id:i;if(~e.indexOf(o)){if(!r)return}else e.push(o);M(N(n))}}function N(n){var t=n.main?n.k+"/"+n.n+".js":n.id;return P(t)}function P(n){var t=n.replace("@","/"),r=rt.path;return r||d("config.path must be specified"),r=r.replace("{n}",t.length%3+1),t+=rt.cache===!1?"?f="+K:"",r+t}function D(n,t,r){if(m("beforeready",A(n)+":"+n.g),!n.factory)return m("beforeload",n.id),C(n,function(){m("load",A(n)),D(n,t,r)});var i=n.deps,e=i.length,o=n.r;if(!e||!o)return n.r=J,T(n),t();if(o.push(t),!(o.length>1)){var a=function(){--e||(r.length=0,r=H,T(n),B(n,"r"))};r=r?[n].concat(r):[n],i.forEach(function(t){var i=b(t,n);return~r.indexOf(i)?a():void D(i,a,r)})}}function T(n){m("ready",A(n)+":"+n.g)}function A(n){return n.main?n.k:n.id}function q(n){return n}function z(n){var t,r;for(t in n)r=it[t],r&&(rt[t]=r(n[t]))}function F(n,t){var r=b(n);r.f=!0,x(r,t)}var G={version:"7.1.3"},H=null,J=!1,K=+new Date;G.ready=function(n,t){t()};var Q=TypeError;r(Array,{indexOf:function(n,t){var r=this.length>>>0;for(t=Number(t)||0,t=Math[0>t?"ceil":"floor"](t),0>t&&(t=Math.max(t+r,0));r>t;t++)if(t in this&&this[t]===n)return t;return-1},lastIndexOf:function(n,t){var r=this.length>>>0;for(t=Number(t)||r-1,t=Math[0>t?"ceil":"floor"](t),0>t&&(t+=r),t=Math.min(t,r-1);t>=0;t--)if(t in this&&this[t]===n)return t;return-1},filter:function(n,t){for(var r=[],i=0,e=this.length;e>i;i++)i in this&&n.call(t,this[i],i,this)&&r.push(this[i]);return r},forEach:function(n,t){for(var r=0,i=this.length;i>r;r++)r in this&&n.call(t,this[r],r,this)},every:function(n,t){for(var r=0,i=this.length;i>r;r++)if(r in this&&!n.call(t,this[r],r,this))return!1;return!0},map:function(n,t){for(var r=[],i=0,e=this.length;e>i;i++)i in this&&(r[i]=n.call(t,this[i],i,this));return r},some:function(n,t){for(var r=0,i=this.length;i>r;r++)if(r in this&&n.call(t,this[r],r,this))return!0;return!1},reduce:function(n){if("function"!=typeof n)throw new Q(n+" is not an function");var t,r=this,i=r.length>>>0,e=0;if(arguments.length>1)t=arguments[1];else for(;;){if(e in r){t=r[e++];break}if(++e>=i)throw new Q("Reduce of empty array with on initial value")}for(;i>e;e++)e in r&&(t=n.call(H,t,r[e],e,r));return t},reduceRight:function(n){if("function"!=typeof n)throw new Q(n+" is not an function");var t,r=this,i=r.length>>>0,e=i-1;if(arguments.length>1)t=arguments[1];else for(;;){if(e in r){t=r[e--];break}if(--e<0)throw new Q("Reduce of empty array with on initial value")}for(;e>=0;e--)e in r&&(t=n.call(H,t,r[e],e,r));return t}}),t(Object,{keys:function(){var n=Object.prototype.hasOwnProperty,t=!{toString:""}.propertyIsEnumerable("toString"),r=["toString","toLocaleString","valueOf","hasOwnProperty","isPrototypeOf","propertyIsEnumerable","constructor"],i=r.length;return function(e){if(e!==Object(e))throw new Q("Object.keys called on non-object");var o,a=[];for(o in e)n.call(e,o)&&a.push(o);if(t)for(var f=0;i>f;f++)n.call(e,r[f])&&a.push(r[f]);return a}}()}),r(String,{trimLeft:function(){return this.replace(/^\s+/,"")},trimRight:function(){return this.replace(/\s+$/,"")},trim:function(){return this.trimLeft().trimRight()}});var U=/^((?:[^\/])+?)(?:@([^\/]+))?(\/.*)?$/,V=/.*(?=\/.*$)/,W={};G.on=g;var X=1,Y=document,Z=Y.getElementsByTagName("head")[0],nt=Y.createElement("script").readyState?function(n,t){n.onreadystatechange=function(){var r=n.readyState;("loaded"===r||"complete"===r)&&(n.onreadystatechange=H,t.call(this))}}:function(n,t){n.addEventListener("load",t,!1)},tt=[];G.ready=D;var rt=G.conf={loaded:[],graph:{_:{}}},it={path:function(n){return n.replace(/\/*$/,"/")},loaded:q,graph:q,cache:q};G.config=z,n.neuron=G,n.define=$,n.facade=function(n){F(n.entry,function(t){t.init&&t.init(n.data)})},n._use=function(n,t){F(n,t)},n._load=M;var et=G.mods={}}(this);</script><script>neuron.config({path: "http://m1.s2.dpfile.com/mod", loaded:["app-m-dianping-index@0.3.1","nugget-mobile@0.1.2","hippo@1.2.5","app-m-dianping@1.0.5","cookie@0.1.2","openapp@0.1.2","mobile-common-search@0.2.3","mobile-common@0.1.16","mobile-download-banner@0.1.8"], graph:{"0":["0.3.1",{"mobile-common-search@~0.2.0":1,"mobile-common@~0.1.0":3,"zepto-wepp@~1.1.0":2}],"1":["0.2.3",{"zepto-wepp@~1.1.4":2}],"2":["1.1.5"],"3":["0.1.16",{"cookie@~0.1.0":4,"zepto-wepp@~1.1.0":2}],"4":["0.1.2"],"5":["1.0.5",{"mobile-download-banner@~0.1.0":6,"mobile-common@~0.1.0":3,"openapp@~0.1.0":7,"cookie@~0.1.0":4,"zepto-wepp@~1.1.0":2}],"6":["0.1.8",{"openapp@~0.1.1":7,"zepto-wepp@~1.1.4":2,"cookie@~0.1.2":4}],"7":["0.1.2"],"8":["0.1.2",{"hippo@~1.2.2":9}],"9":["1.2.5"],"_":{"app-m-dianping-index@*":0,"app-m-dianping@*":5,"nugget-mobile@*":8,"hippo@*":9}}})</script>
+<script async src="http://m1.s2.dpfile.com/mod/mobile-download-banner/0.1.8/mobile-download-banner.js"></script>
+<script async src="http://m1.s2.dpfile.com/mod/mobile-common/0.1.16/mobile-common.js"></script>
+<script async src="http://m1.s2.dpfile.com/mod/mobile-common-search/0.2.3/mobile-common-search.js"></script>
+<script async src="http://m1.s2.dpfile.com/concat/~mod~app-m-dianping~1.0.5~app-m-dianping.js,~mod~openapp~0.1.2~openapp.js"></script>
+<script async src="http://m1.s2.dpfile.com/mod/app-m-dianping-index/0.3.1/app-m-dianping-index.js"></script>
+<script async src="http://m1.s2.dpfile.com/concat/~mod~hippo~1.2.5~hippo.js,~mod~cookie~0.1.2~cookie.js"></script>
+<script async src="http://m1.s2.dpfile.com/mod/nugget-mobile/0.1.2/nugget-mobile.js"></script>
+<script>
+facade({entry:"app-m-dianping-index", data: {
+cityId:2
+}});
+facade({entry:"nugget-mobile"});
+facade({entry:"hippo"});
+facade({entry:"app-m-dianping", data: {
+        weixin:{
+            appid : 'wx841a97238d9e17b2',
+            img_url : "http://m1.s1.dpfile.com/sc/2014/mobile_pay5/dp_icon_100.png",
+            link : location.href,
+            desc : '根据合理的商区、地标和详细的商户分类系统，为你提供北京的餐饮美食、婚庆、住宿酒店、美容美发等消费场所，并通过海量亲身消费者的点评聚合，以各种评分、星级的标准让你选择。',
+            title : '北京美食,北京餐厅餐饮,北京团购,北京生活,优惠券-大众点评网'
+        }
+    }});
+</script>
+</body>
+</html>

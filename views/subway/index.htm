@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>[移植版]北京地铁输入始末站查成本</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="stylesheet" href="css/subway.css" />
+<style type="text/css">
+.title{text-align:center;margin:20px 0;color:#fff}
+.title h1{font-size: 30px;margin-bottom: 10px}
+</style>
+</head>
+<body class="index">
+<nav class="title">
+<h1>北京地铁输入始末站查成本</h1>
+<p>赶紧进来查一查，地铁涨价后，你每天多花多少钱！</p>
+<p>我每年要为北京交通贡献2008元，我（qu）心（ni）甚（mei）慰（de），你呢？</p>
+</nav>
+<section class="content">
+<form action="/activity/subway/result" id="formsubway"><img class="bg" src="images/index_bg.jpg" width="100%">
+<ul class="fieldset">
+<li>
+<select class="l" id="originLine">
+<option value="1" selected="selected">1号线</option>
+<option value="2">2号线</option>
+<option value="3">4号线</option>
+<option value="4">5号线</option>
+<option value="5">6号线</option>
+<option value="6">8号线</option>
+<option value="7">9号线</option>
+<option value="8">10号线</option>
+<option value="9">13号线</option>
+<option value="10">14号线</option>
+<option value="11">15号线</option>
+<option value="12">八通线</option>
+<option value="13">昌平线</option>
+<option value="14">亦庄线</option>
+<option value="15">房山线</option>
+<option value="16">机场线</option>
+<option value="17">大兴线</option>
+</select>
+<select class="r" name="origin" id="origin">
+<option value="1" selected="selected">苹果园</option>
+<option value="2">古城</option>
+<option value="3">八角游乐园</option>
+<option value="4">八宝山</option>
+<option value="5">玉泉路</option>
+<option value="6">五棵松</option>
+<option value="7">万寿路</option>
+<option value="8">公主坟</option>
+<option value="9">军事博物馆</option>
+<option value="10">木樨地</option>
+<option value="11">南礼士路</option>
+<option value="12">复兴门</option>
+<option value="13">西单</option>
+<option value="14">天安门西</option>
+<option value="15">天安门东</option>
+<option value="16">王府井</option>
+<option value="17">东单</option>
+<option value="18">建国门</option>
+<option value="19">永安里</option>
+<option value="20">国贸</option>
+<option value="21">大望路</option>
+<option value="22">四惠</option>
+<option value="23">四惠东</option>
+</select>
+</li>
+<li>
+<select class="l" id="destinationLine">
+<option value="1">1号线</option>
+<option value="2">2号线</option>
+<option value="3">4号线</option>
+<option value="4">5号线</option>
+<option value="5">6号线</option>
+<option value="6">8号线</option>
+<option value="7">9号线</option>
+<option value="8">10号线</option>
+<option value="9">13号线</option>
+<option value="10">14号线</option>
+<option value="11">15号线</option>
+<option value="12">八通线</option>
+<option value="13">昌平线</option>
+<option value="14">亦庄线</option>
+<option value="15">房山线</option>
+<option value="16">机场线</option>
+<option value="17">大兴线</option>
+</select>
+<select class="r" name="destination" id="destination">
+<option value="1">苹果园</option>
+<option value="2">古城</option>
+<option value="3">八角游乐园</option>
+<option value="4">八宝山</option>
+<option value="5">玉泉路</option>
+<option value="6">五棵松</option>
+<option value="7">万寿路</option>
+<option value="8">公主坟</option>
+<option value="9">军事博物馆</option>
+<option value="10">木樨地</option>
+<option value="11">南礼士路</option>
+<option value="12">复兴门</option>
+<option value="13">西单</option>
+<option value="14">天安门西</option>
+<option value="15">天安门东</option>
+<option value="16">王府井</option>
+<option value="17">东单</option>
+<option value="18">建国门</option>
+<option value="19">永安里</option>
+<option value="20">国贸</option>
+<option value="21">大望路</option>
+<option value="22">四惠</option>
+<option value="23">四惠东</option>
+</select>
+</li>
+</ul>
+<div class="ml10 mr10 mb10">
+<a class="orange_btn search" id="search_btn" href="javascript:;">查一下我的交通成本</a>
+</div>
+</form>
+</section>
+<section style="max-width:500px;margin:0 auto">
+<iframe id="search_iframe" src="" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" height="800px" width="380px"></iframe>
+</section>
+</body>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/subway.js?v=1"></script>
+</html>

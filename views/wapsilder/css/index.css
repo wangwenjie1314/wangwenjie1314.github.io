@@ -1,0 +1,406 @@
+html,body {
+	overflow:hidden;
+	display:block;
+	height:100%}
+body {
+	max-width:480px;
+	margin:0 auto;
+	display:block;
+	position:relative;
+	background-color:#fff}
+.loading {
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:100%;
+	-webkit-transform:translate(-50%,-50%) translateZ(0);
+	font-size:1.2rem;
+	color:#7482bb;
+	white-space:nowrap;
+	text-align:center}
+.progress {
+	width:80%;
+	background:#7482bb;
+	margin:0 auto;
+	border-radius:10px;
+	margin-bottom:2%}
+.progress>div {
+	background:#212f66;
+	width:0;
+	height:6px;
+	border-radius:10px}
+.page,.sliderContainer,.slider {
+	height:100%;
+	background-color:#fff}
+.sliderContainer {
+	visibility:hidden}
+.slider {
+	position:relative}
+.ani {
+	display:none;
+	position:absolute;
+	background:url(http://p18.qhimg.com/t018a6b26ed87c9bcf6.gif) 0 0 no-repeat;
+	-webkit-background-size:100% 100%;
+	background-size:100% 100%;
+	-webkit-animation-duration:.3s}
+.slider-1 {
+	background-color:#f2f2f2}
+.slider-1 .title {
+	width:73.13%;
+	padding-top:13.91%;
+	top:6%;
+	left:14.06%;
+	background-image:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/0_00.png)}
+.slider-1 .desc {
+	width:74.84%;
+	padding-top:40.31%;
+	top:15.5%;
+	left:12.81%;
+	background-image:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/0_025.png)}
+.slider-1 .man {
+	width:100%;
+	padding-top:85.63%;
+	bottom:0;
+	left:0;
+	background-image:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/0_03.png)}
+.slider-1 .next {
+	width:100%;
+	padding-top:15.16%;
+	bottom:0;
+	left:0;
+	background-image:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/0_05.png)}
+.slider-2 .title {
+	width:78.44%;
+	padding-top:13.91%;
+	top:8.33%;
+	left:11.09%;
+	background-image:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/0_00.png)}
+.slider-2 .desc {
+	width:100%;
+	padding-top:30%;
+	top:19.58%;
+	left:0;
+	background-image:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/1_06.png)}
+.slider-2 .bg {
+	width:100%;
+	padding-top:40.94%;
+	bottom:10.94%;
+	left:0;
+	background-image:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/1_07.png)}
+.slider-2 .bottom {
+	width:100%;
+	padding-top:16.41%;
+	bottom:0;
+	left:0;
+	background-image:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/1_08.png)}
+.slider-2 .bg2 {
+	width:100%;
+	padding-top:98.59%;
+	bottom:0;
+	left:0;
+	background-image:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/1_02.png)}
+.slider-2 .man {
+	width:58.91%;
+	padding-top:80.16%;
+	bottom:7.08%;
+	left:20%;
+	background-image:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/1_03.png)}
+.slider-3 .title,.slider-4 .title,.slider-5 .title,.slider-6 .title {
+	width:57.81%;
+	padding-top:10.63%;
+	top:4.58%;
+	left:7.81%;
+	background-image:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/2_00.png)}
+.slider-3 .desc {
+	width:74.06%;
+	padding-top:29.53%;
+	top:12.5%;
+	left:15%;
+	background-image:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/2_03.png)}
+.slider-3 .bg {
+	width:57.97%;
+	padding-top:78.13%;
+	top:32.19%;
+	left:22.81%;
+	background-image:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/2_06.png)}
+.slider-3 .bottom {
+	width:79.06%;
+	padding-top:57.5%;
+	top:56.04%;
+	left:10%;
+	background-image:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/2_04.png)}
+.slider-4 .desc {
+	width:71.88%;
+	padding-top:33.13%;
+	top:12.08%;
+	left:13.44%;
+	background-image:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/3_03.png)}
+.slider-4 .bg {
+	width:67.97%;
+	padding-top:76.41%;
+	top:32.81%;
+	left:19.84%;
+	background-image:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/3_06.png)}
+.slider-4 .bottom {
+	width:79.06%;
+	padding-top:57.81%;
+	top:56.04%;
+	left:10%;
+	background-image:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/3_05.png)}
+.slider-4 .mask,.slider-5 .mask,.slider-6 .mask {
+	width:100%;
+	padding-top:150%;
+	top:0;
+	left:0;
+	background-image:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/0_0.png)}
+.slider-5 .desc {
+	width:72.66%;
+	padding-top:33.91%;
+	top:12.70%;
+	left:14.06%;
+	background-image:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/4_03.png)}
+.slider-5 .bg {
+	width:72.66%;
+	padding-top:73.28%;
+	top:35.21%;
+	left:14.06%;
+	background-image:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/4_08.png)}
+.slider-5 .bottom {
+	width:79.38%;
+	padding-top:62.5%;
+	top:53.96%;
+	left:10.16%;
+	background-image:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/4_07.png)}
+.slider-6 .desc {
+	width:73.59%;
+	padding-top:32.34%;
+	top:13.54%;
+	left:12.03%;
+	background-image:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/5_03.png)}
+.slider-6 .bg {
+	width:79.22%;
+	padding-top:83.75%;
+	top:30.63%;
+	left:10%;
+	background-image:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/5_11.png)}
+.slider-6 .bottom {
+	width:73.44%;
+	padding-top:40.31%;
+	top:68.54%;
+	left:10%;
+	background-image:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/5_05.png)}
+.slider-6 .goast {
+	width:36.25%;
+	padding-top:65.15%;
+	top:37.71%;
+	left:33.59%;
+	background-image:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/5_09.png)}
+.slider-6 .pao {
+	width:32.34%;
+	padding-top:22.5%;
+	top:51.46%;
+	left:53.91%;
+	background-image:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/5_10.png)}
+.slider-7 {
+	background-color:#009aac;
+	background:-webkit-gradient(linear,top left,bottom left,from(#009aac),to(#3adac0));
+	background:-webkit-linear-gradient(#009aac,#3adac0);
+	background:linear-gradient(#009aac,#3adac0);
+	background-repeat:no-repeat}
+.slider-7 .wrap {
+	width:100%;
+	height:100%;
+	margin:0 auto;
+	position:relative}
+.slider-7 .logo {
+	width:71%;
+	padding:20.61% 0 5.94%;
+	margin:0 auto}
+.slider-7 .cdmain {
+	text-align:center}
+.slider-7 .desc {
+	width:71.09%;
+	margin:0 auto;
+	padding-bottom:6.88%}
+.slider-7 .radar {
+	position:relative;
+	width:78.13%;
+	margin:0 auto;
+	overflow:hidden}
+.slider-7 .radar .c1,.slider-7 .radar .c2 {
+	position:absolute;
+	top:50%;
+	left:50%;
+	-webkit-animation:rotate 5s linear;
+	-webkit-animation-iteration-count:infinite}
+.slider-7 .radar .c1 {
+	width:76.241%;
+	left:11%;
+	top:10%}
+.slider-7 .radar .c2 {
+	width:68.567%;
+	left:15.8%;
+	top:15.6%;
+	-webkit-animation-name:rotate;
+	-webkit-animation-duration:2s}
+.slider-7 .cloud {
+	position:absolute;
+	background:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/7_11.png) 0 0 no-repeat;
+	-webkit-background-size:100% 100%;
+	width:100%;
+	bottom:0;
+	left:0;
+	padding-top:38.44%}
+.slider-7 .next {
+	position:absolute;
+	background:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/7_12.png) 0 0 no-repeat;
+	-webkit-background-size:100% 100%;
+	width:100%;
+	bottom:0;
+	left:0;
+	padding-top:38.44%;
+	-webkit-animation:float 2s linear 0 infinite alternate}
+.weixinTip {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:url(http://p4.qhimg.com/d/_open360/ev/ar/wx/7_001.png) 0 0 no-repeat;
+	-webkit-background-size:100% 100%;
+	background-size:100% 100%;
+	z-index:100;
+	display:none}
+.fadeIn {
+	-webkit-animation-name:fadeIn}
+@-webkit-keyframes fadeIn {
+	from {
+	opacity:0;
+	-webkit-transform:translateZ(0)}
+to {
+	opacity:1;
+	-webkit-transform:translateZ(0)}
+}
+.zoomOut {
+	-webkit-animation-name:zoomOut}
+@-webkit-keyframes zoomOut {
+	from {
+	-webkit-transform:scale(3) translateZ(0);
+	opacity:0}
+to {
+	-webkit-transform:scale(1) translateZ(0);
+	opacity:1}
+}
+.zoomIn {
+	-webkit-animation-name:zoomIn}
+@-webkit-keyframes zoomIn {
+	from {
+	-webkit-transform:scale(.1) translateZ(0);
+	opacity:0}
+to {
+	-webkit-transform:scale(1) translateZ(0);
+	opacity:1}
+}
+.zoom {
+	-webkit-animation:zoom 1s linear infinite alternate}
+@-webkit-keyframes zoom {
+	0% {
+	-webkit-transform:scale(1) translateZ(0);
+	opacity:1}
+100% {
+	-webkit-transform:scale(1.3) translateZ(0);
+	opacity:.9}
+}
+.zoomOut2 {
+	-webkit-animation:zoomOut2 1s ease-in-out}
+@-webkit-keyframes zoomOut2 {
+	from {
+	-webkit-transform:scale(3) translateZ(0);
+	opacity:0}
+to {
+	-webkit-transform:scale(1) translateZ(0);
+	opacity:1}
+}
+.zoomOut3 {
+	-webkit-animation:zoomOut3 1s ease-in-out}
+@-webkit-keyframes zoomOut3 {
+	from {
+	-webkit-transform:scale(3) rotate(0) translateZ(0);
+	opacity:0}
+to {
+	-webkit-transform:scale(1) rotate(360deg) translateZ(0);
+	opacity:1}
+}
+.moveFromLeft {
+	-webkit-animation-name:moveFromLeft}
+@-webkit-keyframes moveFromLeft {
+	from {
+	-webkit-transform:translateX(-100%) translateZ(0);
+	opacity:0}
+to {
+	-webkit-transform:translateX(0) translateZ(0);
+	opacity:1}
+}
+.moveFromRight {
+	-webkit-animation-name:moveFromRight}
+@-webkit-keyframes moveFromRight {
+	from {
+	-webkit-transform:translateX(100%) translateZ(0);
+	opacity:0}
+to {
+	-webkit-transform:translateX(0) translateZ(0);
+	opacity:1}
+}
+.moveFromTop {
+	-webkit-animation-name:moveFromTop}
+@-webkit-keyframes moveFromTop {
+	from {
+	-webkit-transform:translateY(-100%) translateZ(0);
+	opacity:0}
+to {
+	-webkit-transform:translateY(0) translateZ(0);
+	opacity:1}
+}
+.moveFromBottom {
+	-webkit-animation-name:moveFromBottom}
+@-webkit-keyframes moveFromBottom {
+	from {
+	-webkit-transform:translateY(100%) translateZ(0);
+	opacity:0}
+to {
+	-webkit-transform:translateY(0) translateZ(0);
+	opacity:1}
+}
+.rotate {
+	-webkit-animation-name:rotate}
+@-webkit-keyframes rotate {
+	from {
+	-webkit-transform:rotate(0) translateZ(0)}
+to {
+	-webkit-transform:rotate(360deg) translateZ(0)}
+}
+.rotate2 {
+	-webkit-animation-name:rotate2;
+	-webkit-animation-duration:.5s}
+@-webkit-keyframes rotate2 {
+	from {
+	-webkit-transform:rotate(180deg) translateZ(0)}
+to {
+	-webkit-transform:rotate(0) translateZ(0)}
+}
+.float {
+	-webkit-animation-name:float}
+@-webkit-keyframes float {
+	0% {
+	-webkit-transform:translateY(0) translateZ(0)}
+100% {
+	-webkit-transform:translateY(-10%) translateZ(0)}
+}
+.float2 {
+	-webkit-animation-name:float2}
+@-webkit-keyframes float2 {
+	0% {
+	-webkit-transform:translateX(0) translateZ(0)}
+100% {
+	-webkit-transform:translateX(-10%) translateZ(0)}
+}

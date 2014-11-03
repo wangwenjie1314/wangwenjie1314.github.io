@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>样式表(CSS) 格式整理与压缩</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+#base64-textarea { width:500px; height:270px; }
+#upload { position:relative; display:inline-block; width:104px; height:30px; margin-right:6px; overflow:hidden; }
+#upload button { width:78px; }
+#upload object { opacity:0; position:absolute; left:0; top:0; }
+#base64-img { max-width:270px; max-height:320px; }
+#base64-imgview { margin-left:20px; }
+</style>
+</head>
+
+<body style="background:#fff;">
+<div id="main">
+    <table>
+    <tr>
+    <td>
+<textarea id="base64-textarea" spellcheck="false">
+ #
+ # 图片在线转换为Base64，移动开发、HTML5开发、必备的DataURI工具
+ # 支持 PNG、GIF、JPG、BMP、ICO 等格式
+ # Base64不支持IE6/IE7，适用于---1KB---左右的图片文件，以减少HTTP请求数
+ #
+</textarea>
+    <div id="commands">
+    	<table>
+        <tr>
+        <td>
+        <span id="upload"><button class="btnb">选择本地图片</button><object id="base64-swf" width="104" height="30" type="application/x-shockwave-flash" data="base64.swf"><param name="wmode" value="transparent"><param name="movie" value="base64.swf" /><a href="http://www.adobe.com/go/getflash">需要安装Flash后才能使用</a></object></span>       
+        <span id="copy"><button class="btn">复制</button><object id="objectID-0" width="56" height="30" type="application/x-shockwave-flash" data="copy.swf"><param name="wmode" value="transparent"><param name="movie" value="copy.swf"><a href="http://www.adobe.com/go/getflash">需要安装Flash后才能使用</a></object></span>
+        </td>
+        <td align="right">
+        <span id="ratio"></span>
+        </td>
+        </tr>
+        </table>
+    </div> 
+    </td>
+    <td align="center">
+        <div id="base64-imgview" style="display:none; ">
+         <img id="base64-img" />
+        </div>
+    </td>
+    </tr>
+    </table>
+    <strong>CSS Base64</strong>&nbsp; <span id="code">.icon { background-image:url("<span class="red">data:image/jpg;base64,/9j/4QMZRXhpZgAASUkqAAgAL....</span>"); }</span>
+    <br>
+    <strong>HTML Base64</strong>&nbsp;<span id="code"> &lt;img width="40" height="30" src="<span class="red">data:image/jpg;base64,/9j/4QMZRXhpZgAASUkqAAgAL....</span>" /&gt;</span>
+</div>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+$(function(){
+	
+	var textarea = $("#base64-textarea"),
+	imgview = $("#base64-imgview"),
+	img = $("#base64-img");
+	
+	//var bluebtns = $("#base64-buttons-container a.blue:not(.kok)"),
+	//btns = $("#base64-buttons-container a.btn:not(.blue)"),
+	//checkboxs = $("#base64-buttons-container span.checkbox"),
+	//base64swf = $("#base64-swf").get(0);
+	
+	/*
+	btns.eq(0).click(function(){
+		textarea.val("");
+	});
+
+	bluebtns.eq(0).click(function(){
+		textarea.val( base64swf.getBase64( textarea.val() ) );
+		
+	});
+	
+	checkboxs.click(function(){
+		var index = checkboxs.index(this);
+		if(index == 0 && !checkboxs.eq(0).hasClass("selected") ){
+			checkboxs.removeClass("selected");	
+		}else if( index == 1 && checkboxs.eq(1).hasClass("selected") ){
+			checkboxs.addClass("selected");
+		}
+		changeData();
+	});
+	*/
+
+	window.__oncopy = function(){
+		alert("复制成功");
+		return textarea.val();
+	};
+	
+	var copybtn = $("#copy").find(".btn");
+	$("#copy").hover(function(){
+		copybtn.addClass("btnhover");	
+	},function(){
+		copybtn.removeClass("btnhover");	
+	});	
+	
+	var uploadbtn = $("#upload").find(".btnb");
+	$("#upload").hover(function(){
+		uploadbtn.addClass("btnbhover");	
+	},function(){
+		uploadbtn.removeClass("btnbhover");	
+	});	
+	
+	function changeData(){
+		if( base64Data == "" ){
+			return;	
+		}
+		var data = base64Data;
+		data = "data:image/" + base64Type + ";base64," + data;
+		data = "background-image: url(\"" + data + "\");";
+		textarea.val( data );	
+		var size = textarea.val().length;
+		if(size<=1024){
+			size+="字节";
+		}else if(size<=1024*1024){
+			size = (size/1024).toFixed(2)+"kb";	
+		}else{
+			size = (size/1024).toFixed(2)+"mb";
+		}
+		$("#ratio").html("图片转码后：<strong class='green'>"+size+"</strong>");
+	}
+	
+	var base64Data = "", base64Type = "";
+	window.__onbase64 = function(type, data){
+		base64Type = type.slice(1);
+		base64Data = data;
+		changeData();
+		img.attr("src", "data:image/" + type + ";base64," + data);
+		imgview.fadeIn(600);
+	};
+});
+</script>
+</body>
+</html>

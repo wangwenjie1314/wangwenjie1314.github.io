@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HTML与JS互转</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body style="background:#fff;">
+<div id="main">
+    <div id="up">
+        <div id="line"></div>
+        <div class="input"><textarea id="content" name="content" rows=20 onfocus="" onclick="scrollall()" onchange="linekeyup()" onkeydown="linekeyup(event)" onscroll="scrollii()" onblur="" spellcheck="false" placeholder="请粘贴您的HTML代码">&lt;div&gt;
+<span style="color:red; background-image:url(../test.php)";>测试</span>
+&lt;/div&gt;</textarea>
+        </div>
+    </div>
+    <div id="commands">
+    	<table>
+        <tr>
+        <td>
+        <button class="btnb">HTML转JS字符串</button>
+        <button class="btnb">HTML转JS</button>
+        <button class="btnb">JS转HTML</button>
+        <label for="quote" style="display:inline-block;float:left;margin-right:24px;line-height:30px;"><input type="checkbox" id="quote"> JS使用单引号</label>
+        <span id="copy"><button class="btn">复制</button><object id="objectID-0" width="56" height="30" type="application/x-shockwave-flash" data="copy.swf"><param name="wmode" value="transparent"><param name="movie" value="copy.swf"><a href="http://www.adobe.com/go/getflash">需要安装Flash后才能使用</a></object></span>
+        <button class="btn" id="redo">还原</button>         
+        </td>
+        <td align="right">
+        <button class="btn" id="empty">清空</button>
+        </td>
+        </tr>
+        </table>
+    </div> 
+</div>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+$(function(){
+	var textarea = $("#content"),
+	bluebtns = $("#commands .btnb"),
+	
+	isHTML = function( str ){
+		return /^\s*<[\/\!]?[a-z]+[^>]*?>/i.test( str );
+	};
+
+	var copybtn = $("#copy").find(".btn");
+	$("#copy").hover(function(){
+		copybtn.addClass("btnhover");	
+	},function(){
+		copybtn.removeClass("btnhover");	
+	});	
+	
+	
+	window.__oncopy = function(){
+		alert("复制成功");
+		return textarea.val();
+	};
+	
+	var cacheData = textarea.val();
+	$("#redo").click(function(){
+		textarea.val( cacheData );
+	});
+	
+
+	$("#empty").click(function(){
+		textarea.val('');
+		textarea.select();
+	});
+	
+	var quote = false;
+	$('#quote').click(function(){
+		quote = !quote;
+	});
+	
+	bluebtns.click(function(){
+		var index = bluebtns.index( this ),
+			 val = cacheData = textarea.val();
+		if( index == 2 ){
+			if( !isHTML( val ) ){
+				var data = val.replace( /\\"/g, '"' ).split( /\n/g ), i = 0, line, s, e;
+				if( /^document.writeln/.test(data[0]) ){
+					s = 18;
+					e = -3;	
+				}else{
+					s = 3;
+					e = -1;
+					data[ i ] = data[ i++ ].slice(11, -1);  	
+				}
+				while(line = data[i]){
+					data[i] = line.slice(s, e);
+					i++;
+				}
+				textarea.val( data.join("\n") );
+			}
+			return;
+		}
+		if( isHTML( val ) ){
+			var i = 0, line, s = index == 1 ? 'document.writeln("': '+ "', e = index == 1 ? '");' : '"';
+			if( quote ){
+				s = index == 1 ? "document.writeln('": "+ '", e = index == 1 ? "');" : "'";
+			}	
+			val = val.replace( /\t/g, "    ");
+			if( quote ){
+				val = val.replace( /'/g, '\\\'' );	
+			}else{
+				val = val.replace( /"/g, "\\\"" );
+			}
+			val = val.split( /\n/g );
+			
+			while( line = val[i] ){
+				val[i] = s + line + e;
+				i++;
+			}
+			if( index == 0 ){
+				val[0] =  'var html=' + val[0].slice(1);
+			}
+			
+			val = val.join( '\n' );
+
+			textarea.val(  val );	
+
+		}
+		
+	});
+});
+</script>
+<script type="text/javascript">
+function I(obj){ return document.getElementById(obj); }
+/*code number*/
+var keyline = 1;
+var timems = true;
+
+function linekeyup(e){
+	e = e || window.event;
+	if(e.keyCode == 13)	{
+		I('line').innerHTML = I('line').innerHTML + '<b>' + keyline + '</b>';
+		keyline++;
+	}
+	else if(e.keyCode == 8)	{
+		if(keyline > 1)	{
+			scrollall();
+			//keyline--;
+		}
+	}
+}
+
+function scrollii(){
+	I('line').scrollTop = I('content').scrollTop;
+}
+
+function scrollall(){
+	if(timems == true){
+		var count = I('content').value.split('\n').length + 1;
+		if(count != keyline){
+			var tagB = [];
+			I('line').innerHTML = '';
+			for(i=1;i<count;i++){
+				tagB.push('<b>'+i+'</b>');
+			}
+			I('line').innerHTML = I('line').innerHTML + tagB.join('');
+			keyline = count;
+			timems = false;
+			setTimeout('timems = true;',100);
+		}
+	}
+}
+</script>
+</body>
+</html>

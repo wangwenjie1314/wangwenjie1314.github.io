@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>巢车网-中国第一汽车社交平台</title>
+<link rel="shortcut icon" href="http://www.takungpao.com/favicon.ico" />
+<link href="css/headFoot.css" rel="stylesheet" type="text/css"/>
+<link href="css/index.css" rel="stylesheet" type="text/css"/>
+<!--[if lt IE 9]>
+<script src="http://static.takungpao.com/js/html5shiv.min.js"></script>
+<![endif]-->
+<!--[if lte IE 8]>
+<noscript>
+<style>.html5-wrappers{display:none!important;}</style>
+<div class="ie-noscript-warning">您的浏览器禁用了脚本，请<a href="http://static.takungpao.com/home/openJavascript.html">查看这里</a>来启用脚本!
+</div>
+</noscript>
+<![endif]-->
+</head>
+<body>
+<!--顶部导航-->
+<div class="topNav" id="topNav">
+	<div class="topLogo comWidth clearfix">
+    	<div class="topLogo_l fl_dib">
+        	<div class="logo_i fl_dib"><a href="#"><img src="image/logo.png" /></a></div>
+            <div class="logo_n fl_dib">
+                <p class="tle">中国第一汽车社交平台</p>
+                <p class="txt">资讯热线：010-8888888</p>
+            </div>
+            <!-- 下面的列表为吸附式导航显示 默认隐藏-->
+           	<div class="logo_list">
+                <ul>
+                    <li class="on"><a href="#" target="_blank">首页</a></li>
+                    <li><a href="#" target="_blank">车友会</a></li>
+                    <li><a href="#" target="_blank">活动</a></li>
+                    <li><a href="#" target="_blank">问答</a></li>
+                    <li><a href="#" target="_blank">品牌</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="topLogo_r fr_dib">
+        	<form name="search_form" id="search_form" action="" method="post">
+            	<input name="s_input" id="s_input" class="s_input" type="text" value="" autocomplete="off" placeholder="搜索话题、车友会或人..." />
+                <input name="s_submit" id="s_submit" class="s_submit" onclick="javascript:return submitSearch();" type="button" value=""/>
+            </form>
+            <!-- 下面的a登录为吸附式导航显示 默认隐藏-->
+            <a href="#" target="_blank" class="a_fix_link a_login">登录</a><!--未登录 -->
+           <!-- <a href="#" target="_blank" class="a_fix_link a_user"><img src="image/st_1.jpg" title="用户名"/></a>--><!--已登录 -->
+        </div>
+    </div>
+    <div class="topLink comWidth clearfix">
+    	<div class="topLink_l fl_dib">
+        	<ul>
+            <li class="on"><a href="#" target="_blank">首页</a></li>
+            <li><a href="#" target="_blank">车友会</a></li>
+            <li><a href="#" target="_blank">活动</a></li>
+            <li><a href="#" target="_blank">问答</a></li>
+            <li><a href="#" target="_blank">品牌</a></li>
+            </ul>
+        </div>
+        <div class="topLink_r fr_dib">
+        	<span>加入我们，找到志同道合的人。发现人、车、故事、生活</span>
+            <a href="#" target="_blank"><span class="a_b">加入我们</span><span class="a_s">注册</span></a>
+        </div>
+    </div>
+</div>
+<!-- banner-->
+<div class="banner">
+    <div class="banner_con comWidth clearfix">
+    	<div class="banner_l fl_dib">
+        	<ul>
+            <li><a href="#" target="_blank" class="vef_link"><div class="vef_box"><span>认证车主 STORY</span><em>&gt;</em></div></a></li>
+            <li class="li_b">
+            <div class="ban_box">
+            	<dl>
+                <dd><a href="#" target="_blank">
+                <img src="image/st_1.jpg" />
+                <div class="ban_pos_txt">
+                	<div class="ban_time"><span>28 APRIL, 2013</span><em class="i_v"></em></div>
+                    <div class="ban_txt"><span>美国中西部</span></div>
+                    <div class="ban_txt"><span>自驾游二十二天</span></div>
+                </div>
+                </a></dd>
+                <dd><a href="#" target="_blank">
+                <img src="image/st_1.jpg" />
+                <div class="ban_pos_txt">
+                	<div class="ban_time"><span>28 APRIL, 2013</span><em class="i_v"></em></div>
+                     <div class="ban_txt"><span>美国中西部</span></div>
+                    <div class="ban_txt"><span>自驾2游二十二天</span></div>
+                </div>
+                </a></dd>
+                <dd><a href="#" target="_blank">
+                <img src="image/st_1.jpg" />
+                <div class="ban_pos_txt">
+                	<div class="ban_time"><span>28 APRIL, 2013</span><em class="i_v"></em></div>
+                    <div class="ban_txt"><span>美国中西部</span></div>
+                    <div class="ban_txt"><span>自驾3游二十二天</span></div>
+                </div>
+                </a></dd>
+                </dl>
+                <a href="javascript:;" class="ctr_btn ctr_prev">左</a>
+                <a href="javascript:;" class="ctr_btn ctr_next">右</a>
+            </div>
+            </li>
+            <li class="li_img">
+            <a href="#" target="_blank">
+                <img src="image/st_1.jpg" />
+                <div class="ban_pos_txt li_img_txt">
+                	<div class="ban_time"><span>28 APRIL, 2013</span><em class="i_p"></em></div>
+                    <div class="ban_txt"><span>大开眼界！制造</span></div>
+                    <div class="ban_txt"><span>客机全过程</span></div>
+                </div>
+                <div class="ban_pos_yy">
+                	<div class="ban_tle">长安福特狂揽前四<br/>2014CTCC上海天马站</div>
+                    <div class="ban_con">2014年CTCC中国房车锦标赛迎 来了上海天马站，超级量产组 方面。</div>
+                </div>
+            </a>
+            </li>
+            <li class="li_img">
+            <a href="#" target="_blank">
+                <img src="image/st_1.jpg" />
+                <div class="ban_pos_txt li_img_txt">
+                	<div class="ban_time"><span>28 APRIL, 2013</span><em class="i_p"></em></div>
+                    <div class="ban_txt"><span>长安福特狂揽前四</span></div>
+                    <div class="ban_txt"><span>2014CTCC上海</span></div>
+                    <div class="ban_txt"><span>天马站</span></div>
+                </div>
+                <div class="ban_pos_yy">
+                	<div class="ban_tle">长安福特狂揽前四<br/>2014CTCC上海天马站</div>
+                    <div class="ban_con">2014年CTCC中国房车锦标赛迎 来了上海天马站，超级量产组 方面。</div>
+                </div>
+            </a>
+            </li>
+            <li class="li_img">
+            <a href="#" target="_blank">
+                <img src="image/st_1.jpg" />
+                <div class="ban_pos_txt li_img_txt">
+                	<div class="ban_time"><span>28 APRIL, 2013</span><em class="i_p"></em></div>
+                    <div class="ban_txt"><span>自驾游2二十二部</span></div>
+                    <div class="ban_txt"><span>天美国天</span></div>
+                </div>
+                <div class="ban_pos_yy">
+                	<div class="ban_tle">长安福特狂揽前四<br/>2014CTCC上海天马站</div>
+                    <div class="ban_con">2014年CTCC中国房车锦标赛迎 来了上海天马站，超级量产组 方面。</div>
+                </div>
+            </a>
+            </li>
+            </ul>
+        </div>
+        <div class="banner_r fr_dib">
+        	<div class="login_box clearfix">
+            	<h1>使用巢车网帐号登录</h1>
+                <form name="login_form" id="login_form" action="" method="post">
+                	<div class="input_box"><input name="l_uname" id="l_uname" class="l_uname" type="text" autocomplete="off" value="" placeholder="邮箱／手机号" /></div>
+                	<div class="input_box"><input name="l_pwd" id="l_pwd" class="l_pwd" type="password" autocomplete="off" value="" placeholder="密码" /></div>
+                    <div class="auto_box">
+                    <input name="l_check" id="l_check" class="l_check" type="checkbox" />
+                    <span>下次自动登录</span><font>使用公共电脑勿勾选</font>
+                    </div>
+                    <div class="submit_box">
+                    <input name="l_submit" id="l_submit" class="l_submit" onclick="javascript:return submitLogin();" type="button" value="登录"/>
+                    <a href="#" target="_blank">忘记密码</a><span>|</span><a href="#" target="_blank">注册</a>
+                    </div>
+                </form>
+            </div>
+            <div class="quick_box clearfix">
+            	<span>使用其他合作账号登录</span>
+                <a href="#" target="_blank" class="qq">qq</a>
+                <a href="#" target="_blank" class="sina">sina</a>
+                <a href="#" target="_blank" class="douban">douban</a>
+                <a href="#" target="_blank" class="renren">renren</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 热门推荐 线上活动-->
+<div class="laybox comWidth clearfix">
+	<!-- 左-->
+	<div class="laybox_l fl_dib">
+    	<div class="lay_tle">热门推荐<span>······</span><a href="#" target="_blank">（更多）</a></div>
+        <div class="lay_con clearfix">
+        	<div class="lay_l fl_dib">
+            	<div class="clearfix">
+                	<div class="lay_imgbox_b fl_dib">
+                        <div class="lay_img_b load_img"><a href="#" target="_blank"><img class="lazy" data-original="image/st_1.jpg" src="" /></a></div>
+                        <div class="lay_img_t"><a href="#" target="_blank">爱卡车友会</a><font>288人</font></div>
+                        <div class="lay_img_n"><a href="#" target="_blank"><img src="image/st_1.jpg"/><span>爱卡汽车网</span><em class="level_ico"><em class="level_num num_8"></em></em></a></div>
+                    </div>
+                    <div class="lay_imgbox_r fr_dib">
+                    	<div class="lay_imgbox mb_20">
+                        	<a href="#" target="_blank">
+                            	<div class="lay_img load_img"><img class="lazy" data-original="image/st_1.jpg" src="" /></div>
+                                <div class="lay_txt">爱车屌丝车友会</div>
+                            </a>
+                        </div>
+                        <div class="lay_imgbox">
+                        	<a href="#" target="_blank">
+                            	<div class="lay_img load_img"><img class="lazy" data-original="image/st_1.jpg" src="" /></div>
+                                <div class="lay_txt">爱车屌丝车友会</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="lay_img_list clearfix">
+                	<ul>
+                    <li>
+                    <div class="lay_imgbox">
+                        <a href="#" target="_blank">
+                            <div class="lay_img load_img"><img class="lazy" data-original="image/st_1.jpg" src="" /></div>
+                            <div class="lay_txt">爱车屌丝车友会</div>
+                        </a>
+                    </div>
+                    </li>
+                     <li>
+                    <div class="lay_imgbox">
+                        <a href="#" target="_blank">
+                            <div class="lay_img load_img"><img class="lazy" data-original="image/st_1.jpg" src="" /></div>
+                            <div class="lay_txt">爱车屌丝车友会</div>
+                        </a>
+                    </div>
+                    </li>
+                     <li>
+                    <div class="lay_imgbox">
+                        <a href="#" target="_blank">
+                            <div class="lay_img load_img"><img class="lazy" data-original="image/st_1.jpg" src="" /></div>
+                            <div class="lay_txt">爱车屌丝车友会</div>
+                        </a>
+                    </div>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lay_r fr_dib">
+            	<div class="ask_box clearfix">
+                	<div class="ask_tle"><span>问答</span><font>求知永无止境...</font></div>
+                    <div class="ask_list clearfix">
+                    	<ul>
+                        <li><a href="#" target="_blank">#[赛事新闻]高规格自我锤深体验#</a></li>
+                        <li><a href="#" target="_blank">#TMC房车大师赛#</a></li>
+                        <li><a href="#" target="_blank">#[赛事新闻] 赛道精彩/友瘾 斯巴#</a></li>
+                        <li><a href="#" target="_blank">#[赛事新闻]高规格自我炼深体验#</a></li>
+                        <li><a href="#" target="_blank">#TMC房车大师赛#</a></li>
+                        <li><a href="#" target="_blank">#[赛事新闻] 赛道精彩友过瘾 斯巴#</a></li>
+                        <li><a href="#" target="_blank">#TMC房车大师赛#</a></li>
+                        <li><a href="#" target="_blank">#[赛事新闻] 赛道精彩友过瘾 斯巴#</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="topic_box clearfix">
+                	<div class="topic_tle"><span>话题</span><font>各种话题就等你了...</font></div>
+                    <div class="topic_list clearfix">
+                    	<ul>
+                        <li><a href="#" target="_blank">精彩作业</a></li>
+                        <li><a href="#" target="_blank">酷车欣赏</a></li>
+                        <li><a href="#" target="_blank">自驾游</a></li>
+                        <li><a href="#" target="_blank">买车</a></li>
+                        <li><a href="#" target="_blank">改装</a></li>
+                        <li><a href="#" target="_blank">驾游</a></li>
+                        <li><a href="#" target="_blank">自驾游</a></li>
+                        <li><a href="#" target="_blank">精彩作业</a></li>
+                        <li><a href="#" target="_blank">酷车欣赏</a></li>
+                        <li><a href="#" target="_blank">自驾阿游</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 右-->
+    <div class="laybox_r fr_dib">
+    	<div class="lay_tle lay_tle_g">线上活动<span>······</span><a href="#" target="_blank">（更多）</a></div>
+        <div class="lay_bm_box clearfix">
+        	<ul>
+            <li class="clearfix">
+                <div class="lay_bm_img load_img"><a href="#" target="_blank"><img class="lazy" data-original="image/st_1.jpg" src="" /></a></div>
+                <div class="lay_bm_tle"><font class="bm_on">进行中</font><a href="#" target="_blank">汽车点评福特车主作业征文活动大招募</a></div>
+                <div class="lay_bm_txt">
+                	<p>时间：4月23日 - 7月23日</p>
+                    <p>1196人参加</p>
+                    <a href="#" target="_blank" class="bm_link_on">报名</a>
+                </div>
+            </li>
+            <li class="clearfix">
+                <div class="lay_bm_tle"><font>已结束</font><a href="#" target="_blank">"端午小长假"撞上"六一儿童节</a></div>
+                <div class="lay_bm_txt">
+                	<p>时间：4月23日 - 7月23日</p>
+                    <p>1196人参加</p>
+                    <a href="#" target="_blank">报名</a>
+                </div>
+            </li>
+            <li class="clearfix">
+                <div class="lay_bm_tle"><font>已结束</font><a href="#" target="_blank">"端午小长假"撞上"六一儿童节</a></div>
+                <div class="lay_bm_txt">
+                	<p>时间：4月23日 - 7月23日</p>
+                    <p>1196人参加</p>
+                    <a href="#" target="_blank">报名</a>
+                </div>
+            </li>
+            <li class="clearfix">
+                <div class="lay_bm_tle"><font>已结束</font><a href="#" target="_blank">"端午小长假"撞上"六一儿童节</a></div>
+                <div class="lay_bm_txt">
+                	<p>时间：4月23日 - 7月23日</p>
+                    <p>1196人参加</p>
+                    <a href="#" target="_blank">报名</a>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- ad-->
+<div class="adbox comWidth clearfix"><a href="#" target="_blank"><img src="image/st_1.jpg" /></a></div>
+<!-- 活动精选-->
+<div class="laybox comWidth clearfix">
+	<div class="clearfix">
+    	<div class="lay_tle fl_dib">活动精选<span>······</span><a href="#" target="_blank">（更多）</a></div>
+    	<div class="lay_tabs fr_dib">
+        	<ul>
+            <li class="on"><a href="javascript:;">分类项目1</a></li>
+            <li><a href="javascript:;">分类项目2</a></li>
+            <li><a href="javascript:;">分类项目3</a></li>
+            <li><a href="javascript:;">分类项目4</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="activity_list clearfix">
+    	<ul>
+        <li>
+            <div class="act_img load_img">
+                <a href="#" target="_blank"><img class="lazy load" data-original="image/st_1.jpg" src="" />
+                <div class="ban_time ban_pos"><span>28 APRIL, 2013</span><em class="i_p"></em></div></a>
+            </div>
+            <div class="act_con">
+                <div class="act_tle"><a href="#" target="_blank">再接再厉！再创"奇"迹，奇瑞狂欢季</a></div>
+                <div class="act_txt">
+                	<div class="act_l fl_dib"><a href="#" target="_blank"><img src="image/st_1.jpg" /><span>睡不着的小鱼</span></a><font>发布</font></div>
+                    <div class="act_r fr_dib">喜欢 111111</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="act_img load_img">
+                <a href="#" target="_blank"><img class="lazy load" data-original="image/st_1.jpg" src="" />
+                <div class="ban_time ban_pos"><span>28 APRIL, 2013</span><em class="i_p"></em></div></a>
+            </div>
+            <div class="act_con">
+                <div class="act_tle"><a href="#" target="_blank">再接再厉！再创"奇"迹，奇瑞狂欢季</a></div>
+                <div class="act_txt">
+                	<div class="act_l fl_dib"><a href="#" target="_blank"><img src="image/st_1.jpg" /><span>睡不着的小鱼</span></a><font>发布</font></div>
+                    <div class="act_r fr_dib">喜欢 111111</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="act_img load_img">
+                <a href="#" target="_blank"><img class="lazy load" data-original="image/st_1.jpg" src="" />
+                <div class="ban_time ban_pos"><span>28 APRIL, 2013</span><em class="i_p"></em></div></a>
+            </div>
+            <div class="act_con">
+                <div class="act_tle"><a href="#" target="_blank">再接再厉！再创"奇"迹，奇瑞狂欢季</a></div>
+                <div class="act_txt">
+                	<div class="act_l fl_dib"><a href="#" target="_blank"><img src="image/st_1.jpg" /><span>睡不着的小鱼</span></a><font>发布</font></div>
+                    <div class="act_r fr_dib">喜欢 111111</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="act_img load_img">
+                <a href="#" target="_blank"><img class="lazy load" data-original="image/st_1.jpg" src="" />
+                <div class="ban_time ban_pos"><span>28 APRIL, 2013</span><em class="i_p"></em></div></a>
+            </div>
+            <div class="act_con">
+                <div class="act_tle"><a href="#" target="_blank">再接再厉！再创"奇"迹，奇瑞狂欢季</a></div>
+                <div class="act_txt">
+                	<div class="act_l fl_dib"><a href="#" target="_blank"><img src="image/st_1.jpg" /><span>睡不着的小鱼</span></a><font>发布</font></div>
+                    <div class="act_r fr_dib">喜欢 111111</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="act_img load_img">
+                <a href="#" target="_blank"><img class="lazy load" data-original="image/st_1.jpg" src="" />
+                <div class="ban_time ban_pos"><span>28 APRIL, 2013</span><em class="i_p"></em></div></a>
+            </div>
+            <div class="act_con">
+                <div class="act_tle"><a href="#" target="_blank">再接再厉！再创"奇"迹，奇瑞狂欢季</a></div>
+                <div class="act_txt">
+                	<div class="act_l fl_dib"><a href="#" target="_blank"><img src="image/st_1.jpg" /><span>睡不着的小鱼</span></a><font>发布</font></div>
+                    <div class="act_r fr_dib">喜欢 111111</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="act_img load_img">
+                <a href="#" target="_blank"><img class="lazy load" data-original="image/st_1.jpg" src="" />
+                <div class="ban_time ban_pos"><span>28 APRIL, 2013</span><em class="i_p"></em></div></a>
+            </div>
+            <div class="act_con">
+                <div class="act_tle"><a href="#" target="_blank">再接再厉！再创"奇"迹，奇瑞狂欢季</a></div>
+                <div class="act_txt">
+                	<div class="act_l fl_dib"><a href="#" target="_blank"><img src="image/st_1.jpg" /><span>睡不着的小鱼</span></a><font>发布</font></div>
+                    <div class="act_r fr_dib">喜欢 111111</div>
+                </div>
+            </div>
+        </li>
+        </ul>
+        <ul class="dn">
+        <li>
+            <div class="act_img load_img">
+                <a href="#" target="_blank"><img class="lazy load" data-original="image/st_1.jpg" src="" />
+                <div class="ban_time ban_pos"><span>28 APRIL, 2013</span><em class="i_p"></em></div></a>
+            </div>
+            <div class="act_con">
+                <div class="act_tle"><a href="#" target="_blank">再接再厉！再创"奇"迹，奇瑞狂欢季</a></div>
+                <div class="act_txt">
+                	<div class="act_l fl_dib"><a href="#" target="_blank"><img src="image/st_1.jpg" /><span>睡不着的小鱼</span></a><font>发布</font></div>
+                    <div class="act_r fr_dib">喜欢 111111</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="act_img load_img">
+                <a href="#" target="_blank"><img class="lazy load" data-original="image/st_1.jpg" src="" />
+                <div class="ban_time ban_pos"><span>28 APRIL, 2013</span><em class="i_p"></em></div></a>
+            </div>
+            <div class="act_con">
+                <div class="act_tle"><a href="#" target="_blank">再接再厉！再创"奇"迹，奇瑞狂欢季</a></div>
+                <div class="act_txt">
+                	<div class="act_l fl_dib"><a href="#" target="_blank"><img src="image/st_1.jpg" /><span>睡不着的小鱼</span></a><font>发布</font></div>
+                    <div class="act_r fr_dib">喜欢 111111</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="act_img load_img">
+                <a href="#" target="_blank"><img class="lazy load" data-original="image/st_1.jpg" src="" />
+                <div class="ban_time ban_pos"><span>28 APRIL, 2013</span><em class="i_p"></em></div></a>
+            </div>
+            <div class="act_con">
+                <div class="act_tle"><a href="#" target="_blank">再接再厉！再创"奇"迹，奇瑞狂欢季</a></div>
+                <div class="act_txt">
+                	<div class="act_l fl_dib"><a href="#" target="_blank"><img src="image/st_1.jpg" /><span>睡不着的小鱼</span></a><font>发布</font></div>
+                    <div class="act_r fr_dib">喜欢 111111</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="act_img load_img">
+                <a href="#" target="_blank"><img class="lazy load" data-original="image/st_1.jpg" src="" />
+                <div class="ban_time ban_pos"><span>28 APRIL, 2013</span><em class="i_p"></em></div></a>
+            </div>
+            <div class="act_con">
+                <div class="act_tle"><a href="#" target="_blank">再接再厉！再创"奇"迹，奇瑞狂欢季</a></div>
+                <div class="act_txt">
+                	<div class="act_l fl_dib"><a href="#" target="_blank"><img src="image/st_1.jpg" /><span>睡不着的小鱼</span></a><font>发布</font></div>
+                    <div class="act_r fr_dib">喜欢 111111</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="act_img load_img">
+                <a href="#" target="_blank"><img class="lazy load" data-original="image/st_1.jpg" src="" />
+                <div class="ban_time ban_pos"><span>28 APRIL, 2013</span><em class="i_p"></em></div></a>
+            </div>
+            <div class="act_con">
+                <div class="act_tle"><a href="#" target="_blank">再接再厉！再创"奇"迹，奇瑞狂欢季</a></div>
+                <div class="act_txt">
+                	<div class="act_l fl_dib"><a href="#" target="_blank"><img src="image/st_1.jpg" /><span>睡不着的小鱼</span></a><font>发布</font></div>
+                    <div class="act_r fr_dib">喜欢 111111</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="act_img load_img">
+                <a href="#" target="_blank"><img class="lazy load" data-original="image/st_1.jpg" src="" />
+                <div class="ban_time ban_pos"><span>28 APRIL, 2013</span><em class="i_p"></em></div></a>
+            </div>
+            <div class="act_con">
+                <div class="act_tle"><a href="#" target="_blank">再接再厉！再创"奇"迹，奇瑞狂欢季</a></div>
+                <div class="act_txt">
+                	<div class="act_l fl_dib"><a href="#" target="_blank"><img src="image/st_1.jpg" /><span>睡不着的小鱼</span></a><font>发布</font></div>
+                    <div class="act_r fr_dib">喜欢 111111</div>
+                </div>
+            </div>
+        </li>
+        </ul>
+        <ul class="dn">
+        <li>
+            <div class="act_img load_img">
+                <a href="#" target="_blank"><img class="lazy load" data-original="image/st_1.jpg" src="" />
+                <div class="ban_time ban_pos"><span>28 APRIL, 2013</span><em class="i_p"></em></div></a>
+            </div>
+            <div class="act_con">
+                <div class="act_tle"><a href="#" target="_blank">再接再厉！再创"奇"迹，奇瑞狂欢季</a></div>
+                <div class="act_txt">
+                	<div class="act_l fl_dib"><a href="#" target="_blank"><img src="image/st_1.jpg" /><span>睡不着的小鱼</span></a><font>发布</font></div>
+                    <div class="act_r fr_dib">喜欢 111111</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="act_img load_img">
+                <a href="#" target="_blank"><img class="lazy load" data-original="image/st_1.jpg" src="" />
+                <div class="ban_time ban_pos"><span>28 APRIL, 2013</span><em class="i_p"></em></div></a>
+            </div>
+            <div class="act_con">
+                <div class="act_tle"><a href="#" target="_blank">再接再厉！再创"奇"迹，奇瑞狂欢季</a></div>
+                <div class="act_txt">
+                	<div class="act_l fl_dib"><a href="#" target="_blank"><img src="image/st_1.jpg" /><span>睡不着的小鱼</span></a><font>发布</font></div>
+                    <div class="act_r fr_dib">喜欢 111111</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="act_img load_img">
+                <a href="#" target="_blank"><img class="lazy load" data-original="image/st_1.jpg" src="" />
+                <div class="ban_time ban_pos"><span>28 APRIL, 2013</span><em class="i_p"></em></div></a>
+            </div>
+            <div class="act_con">
+                <div class="act_tle"><a href="#" target="_blank">再接再厉！再创"奇"迹，奇瑞狂欢季</a></div>
+                <div class="act_txt">
+                	<div class="act_l fl_dib"><a href="#" target="_blank"><img src="image/st_1.jpg" /><span>睡不着的小鱼</span></a><font>发布</font></div>
+                    <div class="act_r fr_dib">喜欢 111111</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="act_img load_img">
+                <a href="#" target="_blank"><img class="lazy load" data-original="image/st_1.jpg" src="" />
+                <div class="ban_time ban_pos"><span>28 APRIL, 2013</span><em class="i_p"></em></div></a>
+            </div>
+            <div class="act_con">
+                <div class="act_tle"><a href="#" target="_blank">再接再厉！再创"奇"迹，奇瑞狂欢季</a></div>
+                <div class="act_txt">
+                	<div class="act_l fl_dib"><a href="#" target="_blank"><img src="image/st_1.jpg" /><span>睡不着的小鱼</span></a><font>发布</font></div>
+                    <div class="act_r fr_dib">喜欢 111111</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="act_img load_img">
+                <a href="#" target="_blank"><img class="lazy load" data-original="image/st_1.jpg" src="" />
+                <div class="ban_time ban_pos"><span>28 APRIL, 2013</span><em class="i_p"></em></div></a>
+            </div>
+            <div class="act_con">
+                <div class="act_tle"><a href="#" target="_blank">再接再厉！再创"奇"迹，奇瑞狂欢季</a></div>
+                <div class="act_txt">
+                	<div class="act_l fl_dib"><a href="#" target="_blank"><img src="image/st_1.jpg" /><span>睡不着的小鱼</span></a><font>发布</font></div>
+                    <div class="act_r fr_dib">喜欢 111111</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="act_img load_img">
+                <a href="#" target="_blank"><img class="lazy load" data-original="image/st_1.jpg" src="" />
+                <div class="ban_time ban_pos"><span>28 APRIL, 2013</span><em class="i_p"></em></div></a>
+            </div>
+            <div class="act_con">
+                <div class="act_tle"><a href="#" target="_blank">再接再厉！再创"奇"迹，奇瑞狂欢季</a></div>
+                <div class="act_txt">
+                	<div class="act_l fl_dib"><a href="#" target="_blank"><img src="image/st_1.jpg" /><span>睡不着的小鱼</span></a><font>发布</font></div>
+                    <div class="act_r fr_dib">喜欢 111111</div>
+                </div>
+            </div>
+        </li>
+        </ul>
+        <ul class="dn">
+        <li>
+            <div class="act_img load_img">
+                <a href="#" target="_blank"><img class="lazy load" data-original="image/st_1.jpg" src="" />
+                <div class="ban_time ban_pos"><span>28 APRIL, 2013</span><em class="i_p"></em></div></a>
+            </div>
+            <div class="act_con">
+                <div class="act_tle"><a href="#" target="_blank">再接再厉！再创"奇"迹，奇瑞狂欢季</a></div>
+                <div class="act_txt">
+                	<div class="act_l fl_dib"><a href="#" target="_blank"><img src="image/st_1.jpg" /><span>睡不着的小鱼</span></a><font>发布</font></div>
+                    <div class="act_r fr_dib">喜欢 111111</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="act_img load_img">
+                <a href="#" target="_blank"><img class="lazy load" data-original="image/st_1.jpg" src="" />
+                <div class="ban_time ban_pos"><span>28 APRIL, 2013</span><em class="i_p"></em></div></a>
+            </div>
+            <div class="act_con">
+                <div class="act_tle"><a href="#" target="_blank">再接再厉！再创"奇"迹，奇瑞狂欢季</a></div>
+                <div class="act_txt">
+                	<div class="act_l fl_dib"><a href="#" target="_blank"><img src="image/st_1.jpg" /><span>睡不着的小鱼</span></a><font>发布</font></div>
+                    <div class="act_r fr_dib">喜欢 111111</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="act_img load_img">
+                <a href="#" target="_blank"><img class="lazy load" data-original="image/st_1.jpg" src="" />
+                <div class="ban_time ban_pos"><span>28 APRIL, 2013</span><em class="i_p"></em></div></a>
+            </div>
+            <div class="act_con">
+                <div class="act_tle"><a href="#" target="_blank">再接再厉！再创"奇"迹，奇瑞狂欢季</a></div>
+                <div class="act_txt">
+                	<div class="act_l fl_dib"><a href="#" target="_blank"><img src="image/st_1.jpg" /><span>睡不着的小鱼</span></a><font>发布</font></div>
+                    <div class="act_r fr_dib">喜欢 111111</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="act_img load_img">
+                <a href="#" target="_blank"><img class="lazy load" data-original="image/st_1.jpg" src="" />
+                <div class="ban_time ban_pos"><span>28 APRIL, 2013</span><em class="i_p"></em></div></a>
+            </div>
+            <div class="act_con">
+                <div class="act_tle"><a href="#" target="_blank">再接再厉！再创"奇"迹，奇瑞狂欢季</a></div>
+                <div class="act_txt">
+                	<div class="act_l fl_dib"><a href="#" target="_blank"><img src="image/st_1.jpg" /><span>睡不着的小鱼</span></a><font>发布</font></div>
+                    <div class="act_r fr_dib">喜欢 111111</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="act_img load_img">
+                <a href="#" target="_blank"><img class="lazy load" data-original="image/st_1.jpg" src="" />
+                <div class="ban_time ban_pos"><span>28 APRIL, 2013</span><em class="i_p"></em></div></a>
+            </div>
+            <div class="act_con">
+                <div class="act_tle"><a href="#" target="_blank">再接再厉！再创"奇"迹，奇瑞狂欢季</a></div>
+                <div class="act_txt">
+                	<div class="act_l fl_dib"><a href="#" target="_blank"><img src="image/st_1.jpg" /><span>睡不着的小鱼</span></a><font>发布</font></div>
+                    <div class="act_r fr_dib">喜欢 111111</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="act_img load_img">
+                <a href="#" target="_blank"><img class="lazy load" data-original="image/st_1.jpg" src="" />
+                <div class="ban_time ban_pos"><span>28 APRIL, 2013</span><em class="i_p"></em></div></a>
+            </div>
+            <div class="act_con">
+                <div class="act_tle"><a href="#" target="_blank">再接再厉！再创"奇"迹，奇瑞狂欢季</a></div>
+                <div class="act_txt">
+                	<div class="act_l fl_dib"><a href="#" target="_blank"><img src="image/st_1.jpg" /><span>睡不着的小鱼</span></a><font>发布</font></div>
+                    <div class="act_r fr_dib">喜欢 111111</div>
+                </div>
+            </div>
+        </li>
+        </ul>
+    </div>
+    <div class="activity_line clearfix">
+    	<ul><li class="on">1</li><li>2</li><li>3</li><li>4</li></ul>
+    </div>
+</div>
+<!-- 浮动导航-->
+<div class="nest_nav_fixed_box" id="nest_nav_box">
+	<a href="javascript:;" class="nest_link_nav nest_link_ewm" id="nest_link_ewm">
+    <div class="nest_ewm_box dn" id="nest_ewm_box">
+    	<div class="nest_ewm_pos clearfix">
+    	<p><img src="image/logo_ewm.png" class="nest_lgo_ewm"/></p>
+        <p><img src="image/logo.png" class="nest_lgo_img"/></p>
+        <p class="nest_lgo_txt">中国第一汽车社交平台</p>
+        <em></em>
+        </div>
+    </div>
+    </a>
+    <a href="javascript:;" class="nest_link_nav nest_link_gotop" flag="0" id="nest_link_gotop">回顶部</a>
+</div>
+<!-- 浮动导航end-->
+<!-- footer-->
+<div class="nest_foot">
+	<div class="nest_foot_con comWidth clearfix">
+    	<div class="nest_foot_link">
+        	<a href="#" target="_blank">关于我们</a>
+            <a href="#" target="_blank">网站声明</a>
+            <a href="#" target="_blank">诚聘英才</a>
+            <a href="#" target="_blank">联系我们</a>
+            <a href="#" target="_blank">商务合作</a>
+            <a href="#" target="_blank">意见反馈</a>
+            <a href="#" target="_blank">帮助中心</a>
+        </div>
+        <a href="#" target="_blank" class="nest_foot_logo"></a>
+    </div>
+</div>
+<div class="nest_footer">
+	<div class="nest_foot_cen comWidth clearfix">
+    	<div class="nest_foot_txt clearfix">
+        	<span>友情链接：</span><a href="#" target="_blank">和讯网</a><a href="#" target="_blank">雷锋网</a><a href="#" target="_blank">36氪</a><a href="#" target="_blank">hao123</a><a href="#" target="_blank">360安全网址</a><a href="#" target="_blank">北青网</a><a href="#" target="_blank">凤凰网</a><a href="#" target="_blank">和讯网</a><a href="#" target="_blank">雷锋网</a><a href="#" target="_blank">36氪</a><a href="#" target="_blank">hao123</a><a href="#" target="_blank">360安全网址</a><a href="#" target="_blank">北青网</a><a href="#" target="_blank">凤凰网</a><a href="#" target="_blank">和讯网</a><a href="#" target="_blank">雷锋网</a><a href="#" target="_blank">36氪</a><a href="#" target="_blank">hao123</a><a href="#" target="_blank">360安全网址</a><a href="#" target="_blank">北青网</a><a href="#" target="_blank">凤凰网</a>
+        </div>
+        <p>©2014 北京巢车网科技有限公司 版权所有 京ICP备14016844号</p>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery.imgScroll.js"></script>
+<script type="text/javascript" src="js/jquery.lazyload.min.js"></script>
+<script type="text/javascript" src="js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/jquery.gotop.js"></script>
+<script type="text/javascript">
+//搜索按钮提交
+function submitSearch(){
+	var s_input=$("#s_input").val();
+	if(s_input==""||s_input==null||s_input=="搜索话题、车友会或人..."){
+		getInput_err("#s_input");return;
+	}else{$("#search_form").submit();}
+}
+//登录提交验证
+function submitLogin(){
+	var l_uname=$("#l_uname").val();
+	var l_pwd=$("#l_pwd").val();
+	var l_pwd_n=$(".pwd_input_n").val();//给ie8 7 6写的
+	if(l_uname==""||l_uname==null||l_uname=="邮箱／手机号"){
+		getInput_err("#l_uname");return;
+	}else if(l_pwd==""||l_pwd==null||l_pwd=="密码"||l_pwd_n=="密码"){
+		getInput_err(".pwd_input_n");getInput_err("#l_pwd");return;
+	}else{$("#login_form").submit();}
+}
+</script>
+</body>
+</html>

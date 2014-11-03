@@ -1,0 +1,582 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+
+<body>
+<div>
+<ul class="formData" id="CssBorderRadius">
+    <li>
+    <label>Style:</label>
+    <select name="borderStyle" id="borderStyle">
+    <option value="dashed">dashed </option>
+    <option value="dotted">dotted </option>
+    <option value="double">double </option>
+    <option value="groove">groove </option>
+    <option value="hidden">hidden </option>
+    <option value="inset">inset </option>
+    <option value="none">none </option>
+    <option value="outset">outset </option>
+    <option value="ridge">ridge </option>
+    <option value="solid">solid </option>
+    <option value="inherit">inherit</option>
+    </select>
+    </li>
+    <li><label><span id="amount">Width:5px</span></label><div id="BorderWidth" class="slider_mozz"></div></li>
+    <li><label><span id="Radiusval">Radius:5px</span></label><div id="BorderRedius" class="slider_mozz"></div></li>
+    <li><label>Color:</label><div id="TextShadowColor" class="colorSelector"><div></div></div></li>
+</ul>
+</div>
+
+<!--not use-->
+<div>
+<ul class="formData" id="CssBackground">
+    <li>
+    <label>Background Color:</label>
+    <div id="red"></div>
+    <label>&nbsp; </label><div id="green"></div>
+    <label>&nbsp; </label><div id="blue"></div>
+    </li>
+    <li>
+    <label>Background Image:</label><select name="" id="Image">
+    <option value="image">Image 1 </option>
+    <option value="image1">Image 2 </option>
+    </select>
+    </li>
+    <li>
+    <label>Repeat:</label><select name="borderStyle" id="selectOne" class="editThis">
+    <option value="no-repeat">no-repeat </option>
+    <option value="repeat">repeat </option>
+    <option value="repeat-x">repeat-x </option>
+    <option value="repeat-y">repeat-y </option>
+    </select>
+    </li>
+    <li>
+    <label>Position:</label>
+    <select name="borderStyle" id="Position" class="editThis">
+    <option value="left top">Top-Left </option>
+    <option value="right top">Top-Right </option>
+    <option value="left bottom">Bottom-Left</option>
+    <option value="right bottom">Bottom-Right</option>
+    <option value="right bottom">Bottom-Right</option>
+    <option value="center center">Center</option>
+    <option value="left center">Left Center</option>
+    <option value="right center">Right Center</option>
+    <option value="center bottom">Bottom Center</option>
+    <option value="center top">Top Center</option>
+    </select>
+    </li>
+</ul>
+</div>
+
+
+<div>
+<ul class="formData" id="BoxShadow">
+    <li>
+    <label>Inset</label>
+    <select name="" id="boxShadowInset">
+    <option value="">NO</option>
+    <option value="inset">Inset</option>
+    </select>
+    </li>
+    <li><label>Horizontal Length <span id="test"></span></label><div id="HorizontalLength" class="slider_mozz"></div></li>
+    <li><label>Vertical Length</label><div id="VerticalLength" class="slider_mozz"></div></li>
+    <li><label>Blur Radius</label><div id="BlurRadius" class="slider_mozz"></div></li>
+    <li><label>Shadow Color:</label><div id="TextShadowColor" class="colorSelector"><div></div></div></li>
+</ul>
+
+<!-- textShadow --> 
+<ul class="formData" id="textShadow">
+    <li><label>Horizontal Length <span id="test"></span></label><div id="HorizontalLength" class="slider_mozz"></div></li>
+    <li><label>Vertical Length</label><div id="VerticalLength" class="slider_mozz"></div></li>
+    <li><label>Blur Radius</label><div id="BlurRadius" class="slider_mozz"></div></li>
+    <li><label>Shadow Color:</label><div id="TextShadowColor" class="colorSelector"><div></div></div></li>
+</ul>
+
+<!-- rgba --> 
+<ul class="formData" id="rgba">
+    <li><label>R: <span id="test"></span></label><div id="colorR" class="slider_mozz"></div></li>
+    <li><label>G: <span id="test"></span></label><div id="colorG" class="slider_mozz"></div></li>
+    <li><label>B: <span id="test"></span></label><div id="colorB" class="slider_mozz"></div></li>
+    <li><label>Opacity <span id="test"></span></label><div id="Opacity" class="slider_mozz"></div></li>
+</ul>
+
+<!-- Borderimage not use--> 
+<ul class="formData" id="Borderimage">
+    <li>
+    <label>Border Image:</label>
+    <input name="" type="text" class="px editThis" id="rgbaR" value="200">px 
+    </li>
+    <!--<li>
+    <label>G:</label>
+    <input name="" type="text" class="px editThis" id="rgbaG" value="100" />
+    Px</li>
+    <li>
+    <label>B:</label>
+    <input name="" type="text" class="px editThis" id="rgbaB" value="100" />
+    Px</li>
+    <li>
+    <label>Opacity:</label>
+    <select name="" class="editThis" id="rgbaOpacity">
+    <option value="1">1</option>
+    <option value="0.9">0.9</option>
+    <option value="0.8">0.8</option>
+    <option value="0.7">0.7</option>
+    <option value="0.6">0.6</option>
+    <option value="0.5">0.5</option>
+    <option value="0.4">0.4</option>
+    <option value="0.3">0.3</option>
+    <option value="0.2">0.2</option>
+    <option value="0.1">0.1</option>
+    <option value="0.0">0.0</option>
+    </select>
+    </li>-->
+</ul>
+
+<!-- textRotation --> 
+<ul class="formData" id="textRotation">
+    <li><label>Rotate <span id="test"></span></label><div id="Rotate" class="slider_mozz"></div></li>
+    <li>
+    <label>For IE Rotate:</label>
+    <select name="Forie" class="editThis" id="ForieRotate">
+    <option value="lr-tb">lr-tb</option>
+    <option value="rl-tb">rl-tb</option>
+    <option value="tb-rl">tb-rl</option>
+    <option value="bt-rl">bt-rl </option>
+    <option value="bt-lr">tb-lr</option>
+    <option value="lr-bt ">lr-bt </option>
+    <option value="rl-bt">rl-bt</option>
+    </select>
+    </li>
+</ul>
+
+<!-- FontFace --> 
+<ul class="formData" id="FontFace">
+    <li>
+    <label>Select Font:</label>
+    <select name="SelectFont" class="editThisfont" id="SelectFont">
+    <option value="BrushScriptStdMedium">BrushScriptStdMedium</option>
+    <option value="GoodFootRegular">GoodFootRegular</option>
+    <option value="SouciSansRegular">SouciSansRegular</option>
+    </select>
+    </li>
+    <li><label>Font Size <span id="test"></span></label><div id="FontSize" class="slider_mozz"></div></li>
+    <li><label>Font Style:</label>
+    <select name="FontStyle" class="editThis" id="fontStyle">
+    <option value="normal">normal</option>
+    <option value="italic">italic</option>
+    </select>
+    </li>
+    <li><label>Font Weight:</label>
+    <select name="FontWeight" class="editThis" id="fontWeight">
+    <option value="bold">bold</option>
+    <option value="normal">normal</option>
+    <option value="bolder">bolder</option>
+    </select>
+    </li>
+</ul>
+
+<!-- CssOutline --> 
+<ul class="formData" id="CssOutline">
+    <li>
+    <label>Outline Style:</label>
+    <select name="OutlineStyle" id="OutlineStyle" class="editThis">
+    <option value="dashed">dashed </option>
+    <option value="dotted">dotted </option>
+    <option value="double">double </option>
+    <option value="groove">groove </option>
+    <option value="hidden">hidden </option>
+    <option value="inset">inset </option>
+    <option value="none">none </option>
+    <option value="outset">outset </option>
+    <option value="ridge">ridge </option>
+    <option value="solid">solid </option>
+    <option value="inherit">inherit</option>
+    </select>
+    </li>
+    <li>
+    <label><span id="amount">Outline Width</span></label>
+    <div id="BorderWidth" class="slider_mozz"></div>
+    </li>
+    <li>
+    <label><span id="Radiusval">Outline-offset</span></label>
+    <div id="Outline-offset" class="slider_mozz"></div>
+    </li>
+    <li>
+    <label>Outline Color:</label>
+    <div id="red"></div>
+    <label>&nbsp; </label><div id="green"></div>
+    <label>&nbsp; </label><div id="blue"></div>
+    </li>
+</ul>
+
+<!-- Transition  -->                      
+<ul class="formData" id="Transition">
+    <li>
+    <label>Transition Property</label>
+    :- All
+    </li>
+    <li>
+    <label>Transition Duration <span id="test"></span></label>
+    <div id="Duration" class="slider_mozz"></div>
+    </li>
+    <li>
+    <label>Transition Timing </label>
+    <select class="aniTiming">
+    <option value="ease" selected="selected">ease</option>
+    <option value="linear">linear </option>
+    <option value="ease-in">ease-in</option>
+    <option value="ease-out">ease-out</option>
+    <option value="ease-in-out">ease-in-out</option>
+    </select>
+    </li>
+    <li> <label>&nbsp;</label></li>
+    <li>
+	<label>Select Action</label>
+    <br><label><input type="radio" name="Animation" value="Start" id="RadioGroup1_0" class="transformSelect">
+    Normal</label>  <label><input type="radio" name="Animation" checked="checked" value="End" id="RadioGroup1_0" class="transformSelect transformActive">On Hover</label></li>
+    <li class="rotate showall">
+    <label>Rotate <span id="test"></span></label>
+    <div id="Rotate" class="slider_mozz"></div>
+    </li>
+    <li class="scale showall">
+    <label>Scale</label>
+    <div id="Scale" class="slider_mozz"></div>
+    </li>
+    <li class="skew showall">
+    <label>Skew <span id="test"></span></label>
+    <div id="Skew" class="slider_mozz"></div>
+    </li>
+    <li class="translate showall">
+    <label>Translate <span id="test"></span></label>
+    <div id="Translate" class="slider_mozz"></div>
+    </li>
+    <li class="button_menu">
+    <a href="#" class="viewimg">Save</a>
+    </li>
+</ul>
+
+<!-- CssRadius not use--> 
+<ul class="formData" id="CssRadius">
+    <li>
+    <label>Style:</label>
+    <select name="borderStyle" id="borderStyle">
+    <option value="dashed">dashed </option>
+    <option value="dotted">dotted </option>
+    <option value="double">double </option>
+    <option value="groove">groove </option>
+    <option value="hidden">hidden </option>
+    <option value="inset">inset </option>
+    <option value="none">none </option>
+    <option value="outset">outset </option>
+    <option value="ridge">ridge </option>
+    <option value="solid">solid </option>
+    <option value="inherit">inherit</option>
+    </select>
+    </li>
+    <li>
+    <label><span id="amount">Width:</span></label>
+    <div id="BorderWidth" class="slider_mozz"></div>
+    </li>
+    <li>
+    <label><span id="Radiusval">Radius T-Left:</span></label>
+    <div id="BorderRediusTleft" class="slider_mozz"></div>
+    </li>
+    <li>
+    <label><span id="Radiusval">Radius T-Right:</span></label>
+    <div id="BorderRediusTright" class="slider_mozz"></div>
+    </li>
+    <li>
+    <label><span id="Radiusval">Radius B-Left:</span></label>
+    <div id="BorderRediusBleft" class="slider_mozz"></div>
+    </li>
+    <li>
+    <label><span id="Radiusval">Radius B-Right:</span></label>
+    <div id="BorderRediusBright" class="slider_mozz"></div>
+    </li>
+    <li><label>Color:</label><div id="TextShadowColor" class="colorSelector"><div></div></div></li>
+</ul>
+
+
+<!-- CssGradient --> 
+<ul class="formData" id="CssGradient">
+    <li>
+	<label>Type :</label>
+    <select id="type">
+    <option value="linear" selected="selected">Linear</option>
+    <option value="radial">radial</option>
+    </select>
+    </li>
+    <li>
+	<label>Start Color:</label>
+    <div id="red"></div>
+    <label>&nbsp; </label><div id="green"></div>
+    <label>&nbsp; </label><div id="blue"></div>
+    </li>
+    <li>
+	<label>Start H Position</label>
+    <div id="hPosition" class="slider_mozz" ral="0">80</div>
+    </li>
+    <li>
+	<label>Start V Position:</label>
+    <div id="vPosition" class="slider_mozz" ral="0">20</div>
+    </li>
+    <li style="visibility:hidden"><label>Start radial:</label>
+    <div id="startvRadial" class="slider_mozz" ral="0">-440</div>
+    </li>
+    <li>
+	<label>&nbsp; </label></li>
+    <li>
+    <label>End Color:</label>
+    <div id="red" class="red"></div>
+    <label>&nbsp; </label><div id="green" class="green"></div>
+    <label>&nbsp; </label><div id="blue" class="blue"></div>
+    </li>
+    <li>
+	<label>End H Position</label>
+    <div id="endhPosition" class="slider_mozz" ral="0">10</div>
+    </li>
+    <li>
+	<label>End V Position:</label>
+    <div id="endvPosition" class="slider_mozz" ral="0">21</div>
+    </li>
+    <li style="visibility:hidden"><label>End radial:</label>
+    <div id="endRadial" class="slider_mozz" ral="0">465</div>
+    </li>
+</ul>
+
+<!-- CssGradientradial --> 
+<ul class="formData" id="CssGradientradial">
+    <li>
+	<label>Type :</label>
+    <select id="type">
+    <option value="linear">Linear</option>
+    <option value="radial" selected="selected">radial</option>
+    </select>
+    </li>
+    <li>
+	<label>Start Color:</label>
+    <div id="red"></div>
+    <label>&nbsp; </label><div id="green"></div>
+    <label>&nbsp; </label><div id="blue"></div>
+    </li>
+    <li>
+	<label>Start H Position</label>
+    <div id="hPosition" class="slider_mozz" ral="-1000">165</div>
+    </li>
+    <li>
+	<label>Start V Position:</label>
+    <div id="vPosition" class="slider_mozz" ral="-1000">0</div>
+    </li>
+    <li>
+	<label>Start radial:</label>
+    <div id="startvRadial" class="slider_mozz" ral="0">-440</div>
+    </li>
+    <li>
+	<label>&nbsp; </label></li>
+    <li>
+	<label>End Color:</label>
+    <div id="red" class="red"></div>
+    <label>&nbsp; </label><div id="green" class="green"></div>
+    <label>&nbsp; </label><div id="blue" class="blue"></div>
+    </li>
+    <li>
+	<label>End H Position</label>
+    <div id="endhPosition" class="slider_mozz" ral="-1000">220</div>
+    </li>
+    <li>
+	<label>End V Position:</label>
+    <div id="endvPosition" class="slider_mozz" ral="-1000">-257</div>
+    </li>
+    <li>
+	<label>End radial:</label>
+    <div id="endRadial" class="slider_mozz" ral="0">465</div>
+    </li>
+</ul>   
+
+<!-- mozCssGradient --> 
+<ul class="formData" id="mozCssGradient">
+    <li>
+	<label>Type :</label>
+    <select id="type">
+    <option value="linear" selected="selected">Linear</option>
+    <option value="radial">radial</option>
+    </select>
+    </li>
+    <li>
+	<label>Start Color:</label>
+    <div id="red"></div>
+    <label>&nbsp; </label><div id="green"></div>
+    <label>&nbsp; </label><div id="blue"></div>
+    </li>
+    <li>
+	<label>Start H Position</label>
+    <div id="hPosition" class="slider_mozz" ral="100">80</div>
+    </li>
+    <li>
+	<label>Start V Position:</label>
+    <div id="vPosition" class="slider_mozz" ral="100">20</div>
+    </li>
+    <li>
+	<label>Angle:</label>
+    <div id="startvRadial" class="slider_mozz" ral="360">-440</div>
+    </li>
+    <li>
+	<label>&nbsp; </label></li>
+    <li>
+	<label>End Color:</label>
+    <div id="red" class="red"></div>
+    <label>&nbsp; </label><div id="green" class="green"></div>
+    <label>&nbsp; </label><div id="blue" class="blue"></div>
+    </li>
+    <li>
+	<label>End H Position</label>
+    <div id="endhPosition" class="slider_mozz" ral="100">10</div>
+    </li>
+    <li style="visibility:hidden;"><label>End V Position:</label>
+    <div id="endvPosition" class="slider_mozz" ral="100">21</div>
+    </li>
+    <li style="visibility:hidden;"><label>Angle:</label>
+    <div id="endRadial" class="slider_mozz" ral="360">200</div>
+    </li>
+</ul>
+
+<!-- mozCssGradientradial -->   
+<ul class="formData" id="mozCssGradientradial">
+    <li>
+	<label>Type :</label>
+    <select id="type">
+    <option value="linear">Linear</option>
+    <option value="radial" selected="selected">radial</option>
+    </select>
+    </li>
+    <li>
+	<label>Start Color:</label>
+    <div id="red"></div>
+    <label>&nbsp; </label><div id="green"></div>
+    <label>&nbsp; </label><div id="blue"></div>
+    </li>
+    <li>
+	<label>Start H Position</label>
+    <div id="hPosition" class="slider_mozz" ral="100">60</div>
+    </li>
+    <li>
+	<label>Start V Position:</label>
+    <div id="vPosition" class="slider_mozz" ral="100">50</div>
+    </li>
+    <li>
+	<label>Angle:</label>
+    <div id="startvRadial" class="slider_mozz" ral="360">40</div>
+    </li>
+    <li>
+	<label>&nbsp; </label></li>
+    <li>
+	<label>End Color:</label>
+    <div id="red" class="red"></div>
+    <label>&nbsp; </label><div id="green" class="green"></div>
+    <label>&nbsp; </label><div id="blue" class="blue"></div>
+    </li>
+    <li>
+	<label>End H Position</label>
+    <div id="endhPosition" class="slider_mozz" ral="100">50</div>
+    </li>
+    <li style="visibility:hidden;"><label>End V Position:</label>
+    <div id="endvPosition" class="slider_mozz" ral="100">30</div>
+    </li>
+    <li style="visibility:hidden;"><label>End radial:</label>
+    <div id="endRadial" class="slider_mozz" ral="360">20</div>
+    </li>
+</ul> 
+
+<!-- CSStransform -->                 
+<ul class="formData" id="CSStransform">
+    <li>
+    <label>Select Transform</label> <input type="radio" checked="checked" name="Transform" value="All" id="RadioGroup1_0" class="transformSelect transformActive">
+    All</li>
+    <li>
+    <label style="width:auto; margin-right:8px"> <input type="radio" name="Transform" value="Rotate" id="RadioGroup1_1" class="transformSelect"> Rotate</label>
+    <label style="width:auto; margin-right:8px"> <input type="radio" name="Transform" value="Scale" id="RadioGroup1_2" class="transformSelect"> Scale</label>
+    <label style="width:auto; margin-right:8px"> <input type="radio" name="Transform" value="Skew" id="RadioGroup1_3" class="transformSelect"> Skew</label>
+    <label style="width:auto; margin-right:8px"> <input type="radio" name="Transform" value="Translate" id="RadioGroup1_4" class="transformSelect"> Translate</label>
+    </li>
+    <li class="rotate showall">
+    <label>Rotate <span id="test"></span></label>
+    <div id="Rotate" class="slider_mozz"></div>
+    </li>
+    <li class="scale showall">
+    <label>Scale</label>
+    <div id="Scale" class="slider_mozz"></div>
+    </li>
+    <li class="scaleY showall" style="display:none;">
+    <label>Scale Y</label>
+    <div id="ScaleY" class="slider_mozz"></div>
+    </li>
+    <li class="skew showall">
+    <label>Skew <span id="test"></span></label>
+    <div id="Skew" class="slider_mozz"></div>
+    </li>
+    <li class="skewY showall" style="display:none;">
+    <label>Skew Y<span id="test"></span></label>
+    <div id="SkewY" class="slider_mozz"></div>
+    </li>
+    <li class="translate showall">
+    <label>Translate <span id="test"></span></label>
+    <div id="Translate" class="slider_mozz"></div>
+    </li>
+    <li class="translateY showall" style="display:none;">
+    <label>Translate Y<span id="test"></span></label>
+    <div id="TranslateY" class="slider_mozz"></div>
+    </li>
+</ul>
+
+<!-- CSS Animation not use-->                 
+<ul class="formData" id="CSSAnimation">
+    <li>
+    <label>Animation Duration <span id="test"></span></label>
+    <div id="Duration" class="slider_mozz"></div>
+    </li>
+    <li>
+    <label>A.. Iteration Count</label>
+    <div id="Iteration" class="slider_mozz"></div>
+    </li>
+    <li>
+    <label>Animation Timing </label>
+    <select class="aniTiming">
+    <option value="ease" selected="selected">ease</option>
+    <option value="linear">linear</option>
+    <option value="ease-in">ease-in</option>
+    <option value="ease-out">ease-out</option>
+    <option value="ease-in-out">ease-in-out</option>
+    </select>
+    </li>
+    <li>
+    <label>&nbsp;</label>
+    </li>
+    <li>
+    <label>Select Keyframes</label> <input type="radio" name="Animation" value="Start" id="RadioGroup1_0" class="transformSelect">
+    Start  <input type="radio" name="Animation" checked="checked" value="End" id="RadioGroup1_0" class="transformSelect transformActive">
+    End</li>
+    <li class="rotate showall">
+    <label>Rotate <span id="test"></span></label>
+    <div id="Rotate" class="slider_mozz"></div>
+    </li>
+    <li class="scale showall">
+    <label>Scale</label>
+    <div id="Scale" class="slider_mozz"></div>
+    </li>
+    <li class="skew showall">
+    <label>Skew <span id="test"></span></label>
+    <div id="Skew" class="slider_mozz"></div>
+    </li>
+    <li class="translate showall">
+    <label>Translate <span id="test"></span></label>
+    <div id="Translate" class="slider_mozz"></div>
+    </li>
+    <li class="button_menu">
+    <a href="#" class="viewimg">View Animation</a>
+    </li>
+</ul>
+
+</div>
+</body>
+</html>

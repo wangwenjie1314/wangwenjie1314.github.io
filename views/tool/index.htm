@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<title>bluesdog 前端工具箱</title>
+<link rel="shortcut icon" href="http://cdn-img.easyicon.net/favicon.ico" />
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/lightbox.css">
+<style>
+body { background:#e8e8e8 url(images/bg.png) repeat; }
+</style>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+//中文字符Unicode转换
+String.prototype.trim = function() {
+    return this.replace(/^\s+/, '').replace(/\s+$/, '');
+}
+function unicode() {
+    var preStr = '\\u';
+    var value = $('#ch2uncd-content').val().trim();
+    var cnReg = /[\u0391-\uFFE5]/gm;
+    if (cnReg.test(value)) {
+        var ret = value.replace(cnReg,
+        function(str) {
+            return preStr + str.charCodeAt(0).toString(16);
+        });
+        $('#ch2uncd-content').val(ret);
+    } else {
+        alert('没有找到中文字符串');
+    }
+}
+function chinese() {
+    var ovalue = $('#ch2uncd-content').val().trim();
+    if (ovalue) {
+        var omt = ovalue;
+        try {
+            var obj = eval('({text:"' + ovalue + '"})');
+            $('#ch2uncd-content').val(obj.text);
+        } catch(e) {
+            alert("转化失败");
+        }
+    } else {
+        alert('没有输入内容');
+    }
+}
+
+var reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
+/*RGB色转16位色*/
+String.prototype.colorHex = function(){
+	var that = this;
+	if(/^(rgb|RGB)/.test(that)){
+		var aColor = that.replace(/(?:\(|\)|rgb|RGB)*/g,"").split(",");
+		var strHex = "#";
+		for(var i=0; i<aColor.length; i++){
+			var hex = Number(aColor[i]).toString(16);
+			if(hex === "0"){
+				hex += hex;	
+			}
+			strHex += hex;
+		}
+		if(strHex.length !== 7){
+			strHex = that;	
+		}
+		return strHex;
+	}else if(reg.test(that)){
+		var aNum = that.replace(/#/,"").split("");
+		if(aNum.length === 6){
+			return that;	
+		}else if(aNum.length === 3){
+			var numHex = "#";
+			for(var i=0; i<aNum.length; i+=1){
+				numHex += (aNum[i]+aNum[i]);
+			}
+			return numHex;
+		}
+	}else{
+		return that;	
+	}
+};
+
+/*16位色转RGB色*/
+String.prototype.colorRgb = function(){
+	var sColor = this.toLowerCase();
+	if(sColor && reg.test(sColor)){
+		if(sColor.length === 4){
+			var sColorNew = "#";
+			for(var i=1; i<4; i+=1){
+				sColorNew += sColor.slice(i,i+1).concat(sColor.slice(i,i+1));	
+			}
+			sColor = sColorNew;
+		}
+		var sColorChange = [];
+		for(var i=1; i<7; i+=2){
+			sColorChange.push(parseInt("0x"+sColor.slice(i,i+2)));	
+		}
+		return "RGB(" + sColorChange.join(",") + ")";
+	}else{
+		return sColor;	
+	}
+};
+
+window.onload = function(){
+	var obj = {
+		v1: document.getElementById("v1"),	
+		b1: document.getElementById("b1"),	
+		s1: document.getElementById("showRgb"),
+		v2: document.getElementById("v2"),	
+		b2: document.getElementById("b2"),	
+		s2: document.getElementById("showHex")
+	};
+	obj.b1.onclick = function(){
+		var v = obj.v1.value;
+		obj.s1.value = v.colorRgb();
+	};
+	obj.b2.onclick = function(){
+		var v = obj.v2.value;
+		obj.s2.value = v.colorHex();
+	};
+};
+
+$(function(){
+	var alpha60 = $("#alpha60"), 
+	arrow = $("#arrow"),
+	arrow2 = $("#arrow2 a"),
+	tools = $(".tools"), 
+	sBox = $(".setBox"), 
+	txt = $("#txt"),
+	links = $("#links"), 
+	box = $("#box")
+	aboutme = $("#aboutme"), 
+	aboutmeopen = false,
+	aboutmediv = $("#aboutme").find("div"), 
+	aboutme_box = $("#aboutme_box"),
+	nav = $("nav"),
+	p_node = $(".p_node");
+	
+	$(window).resize(function(){
+		$("#container").width($(window).width()).height($(window).height());
+	}).trigger("resize");
+	
+	sBox.click(function(event){
+		event.stopPropagation();
+	});
+	
+	tools.each(function(index){
+		$(this).click(function(event){
+			if(!alpha60.is(":visible")) alpha60.show();
+			tools.removeClass("tools_active");
+			sBox.hide();
+			arrow.hide();
+			if(!sBox.eq(index).is(":visible")){
+				var setBox = sBox.eq(index);
+				var btntop = $(this).position().top+14;
+				var xx = btntop-setBox.outerHeight()/2;
+				//$("#result").html("height:"+setBox.outerHeight()+"<br>btntop:"+btntop+"<br>xx:"+xx);
+				if(xx<0){
+					xx=0;
+				}else if(xx+setBox.outerHeight()>$(window).height()){
+					xx=$(window).height()-setBox.outerHeight();
+				}
+				setBox.css("top",xx-100).show(150).animate({"top":xx},300);
+				arrow.css("top",btntop-100).show(150).animate({"top":btntop-25},300);
+			$(this).toggleClass("tools_active");
+			}
+			event.stopPropagation();
+		});
+	});
+	
+	$(document).click(function(){
+		tools.removeClass("tools_active");
+		sBox.hide();	
+		arrow.hide();
+		alpha60.hide();
+		if(aboutmeopen) aboutme.trigger("click");
+	});
+	
+	txt.keydown(function(event){
+		$(this).select();
+		if(event.which==8){
+			txt.val("Back ");	
+		}else if(event.which==9){
+			txt.val("Tab");	
+		}else if(event.which==13){
+			txt.val("Enter");	
+		}else if(event.which==16){
+			txt.val("Shfit");	
+		}else if(event.which==17){
+			txt.val("Ctrl");	
+		}else if(event.which==18){
+			txt.val("Alt");	
+		}else if(event.which==20){
+			txt.val("Caps");
+		}else if(event.which==27){
+			txt.val("Esc");	
+		}else if(event.which==32){
+			txt.val("Space");	
+		}else if(event.which==91 || event.which==92){
+			txt.val("Win");	
+		}
+		$("#msg").html(event.which);
+		$(this).focus();
+	});
+	
+	$("#v1").keyup(function(){
+		$("#color1").css("background-color",$(this).val());	
+	}).trigger("keyup");
+	$("#v2").keyup(function(){
+		$("#color2").css("background-color",$(this).val());	
+	}).trigger("keyup");
+		
+	var myInterval, i=1, fs = $("footer span");
+	fs.eq(0).show();
+	fslength = fs.length-1;
+	var say = function(){
+		myInterval = setInterval(function(){
+		fs.hide().eq(i).fadeIn();	
+		i>=fslength?i=0:i++;
+		},9900); 
+	}
+	say();
+	$("footer div").hover(function(){
+		clearInterval(myInterval);
+	},function(){ 
+		say();
+	});
+	
+	arrow2.toggle(function(){
+		links.css({"transform":"translateX(160px)"});
+		box.animate({"margin-right":"0"});
+		arrow2.css({"transform":"rotate(180deg) scaleX(.6)"});
+	},function(){
+		links.css({"transform":"translateX(0)"});
+		box.animate({"margin-right":"140px"});
+		arrow2.css({"transform":"rotate(360deg) scaleX(.6)"});
+	});
+
+	links.find("img").addClass("gray").end().find("a").hover(function(){
+		$(this).find("img").removeClass("gray");
+	},function(){
+		$(this).find("img").addClass("gray");
+	});
+	
+	aboutme.toggle(function(){
+		aboutmediv.css({"transform":"rotateY(180deg)","background":"url(images/logo2.png)"});
+		aboutme_box.animate({"left":"0"});
+		nav.animate({"left":"340px"});
+		sBox.animate({"left":"520px"});
+		arrow.animate({"left":"503px"});
+		alpha60.show();
+		aboutmeopen = true;
+	},function(){
+		aboutmediv.css({"transform":"rotateY(0deg)","background":"url(images/logo.png)"});
+		aboutme_box.animate({"left":"-340px"});
+		nav.animate({"left":"0"});
+		sBox.animate({"left":"180px"});
+		arrow.animate({"left":"163px"}).hide();
+		alpha60.fadeOut();
+		sBox.hide();
+		tools.removeClass("tools_active");
+		aboutmeopen = false;
+	});
+	
+	aboutme_box.click(function(){
+		event.stopPropagation();
+	});
+
+	var sp = $(".scroll");
+	$("#project a").each(function(index){
+		$(this).click(function(){
+			p_node.hide().eq(index).show();
+			index==0?sp.show():sp.hide();
+			$(this).siblings("a").removeClass("actived").end().addClass("actived");
+			return false;
+		});
+	});
+	
+	var p = p_node.eq(0);
+	sp.find("a").eq(0).mouseover(function(){
+		p.animate({"scrollTop":0},200);
+	}).end().eq(1).mouseover(function(){
+		p.animate({"scrollTop":p.height()},500);
+	});
+	
+	$(".logo").toggle(function(){
+		$(this).css("animation-play-state","paused");
+		$("#shadow").css("animation-play-state","paused");
+	},function(){
+		$(this).css("animation-play-state","running");
+		$("#shadow").css("animation-play-state","running");
+	});
+	speed = localStorage.speed?localStorage.speed:5;
+	$("#speed").val(speed).blur(function(){
+		localStorage.speed = $(this).val();
+		location.reload();
+	});
+	
+	$(".logo").eq(0).css("animation","logo 10s ease-in-out 1.0s infinite");
+	
+	$("#goback").click(function(){
+		$("#box").load("box_content.html",function(){
+			$(".boxnode a[href^='articles']").click(function(){
+				$("#box").load($(this).attr("href"),function(){
+					var loseScroll=true;
+					$(window).focus().scroll(function(){loseScroll=false}).click(function(){if(loseScroll){$(this).scrollTop(1).scrollTop(0)}});				
+				});
+				return false;
+			});
+			$(".boxnode a").hover(function(){
+				$(this).find("span").fadeIn();
+			},function(){
+				$(this).find("span").fadeOut();			
+			});
+		});
+	}).trigger("click");
+});
+</script>
+</head>
+
+
+<body>
+<div class="undis"><img src="http://www.bluesdog.net/images/loading.gif"><img src="http://www.bluesdog.net/images/logo.png"><img src="http://www.bluesdog.net/images/logo2.png"></div>
+<div id="aboutme_box" class="pf t0 z3 w300 h100p pl20 pr20 bcfff">
+	<div class="fl w300 mr10 mb10">
+        <h2 class="mt10">Blues<sup class="f14">@SH</sup></h2>
+        <strong class="f14">网页设计师、移动交互设计师、前端临时工</strong>
+    </div>
+    <table class="mb15 bb1ddd c888 bcf4">
+    <tr class="bt1ddd"><td nowrap>1999年</td><td>设计制作了第一个网站“百奇星空”</td></tr>
+    <tr><td>2007年</td><td>编写了第一个ASP后台 <strong>“BxCMS”</strong> 和基于它的个人博客网站 <strong>bluesdog.cn</strong></td></tr>
+    <tr><td>2009年</td><td>学习PHP、mySQL和Smarty</td></tr>
+    <tr><td>2011年</td><td>学习JQuery、HTML5和CSS3</td></tr>
+    <tr><td>2013年</td><td>从事移动端交互设计</td></tr>
+    <tr><td>2014年</td><td>学习Jquery Mobile、PhoneGap</td></tr>
+	</table>
+    <div class="red f14">如有<strong>[企业网站]</strong>设计或整站打包项目合作意向，请联系我！</div>
+    <table>
+    <tr><td class="w160">邮箱 <a href="mailto:bluesjiang@qq.com" class="tdu">bluesjiang@qq.com</a><br>
+    QQ <strong>123987163</strong></td>
+    <td>微信 <img src="http://www.bluesdog.net/images/myqrcode.png" class="vam"></td></tr>
+    </table>   
+    <div id="project" class="fl w100p mt10 bb1ddd">
+    	<a href="javascript:;" class="actived db pr fl mr10 b1ddd bb0"><strong>部分以往项目</strong></a> <a href="javascript:;" class="db pr fl mr10 b1ddd bb0"><strong>部分移动端项目</strong></a>
+    </div>
+    <div class="p_node fl pt10"> 
+		<a href="images/p_webs_7_demo_1.jpg" class="p_web openw" title="华润五丰飞机稿" data-lightbox="example-1" target="_blank"><img src="http://www.bluesdog.net/images/p_webs_7.png" alt=""></a>
+		<a href="images/p_webs_8_demo_1.jpg" class="p_web openw" title="盐田网飞机稿" data-lightbox="example-2" target="_blank"><img src="http://www.bluesdog.net/images/p_webs_8.png" alt=""></a>
+		<a href="images/p_webs_8_demo_2.jpg" class="p_web openw" title="盐田网飞机稿" data-lightbox="example-2" style="display:none;"><img src="http://www.bluesdog.net/images/p_webs_8.png" alt=""></a>
+		<a href="images/p_webs_8_demo_3.jpg" class="p_web openw" title="盐田网飞机稿" data-lightbox="example-2" style="display:none;"><img src="http://www.bluesdog.net/images/p_webs_8.png" alt=""></a>
+		<a href="/project/atp/" class="p_web" title="ATP" target="_blank"><img src="http://www.bluesdog.net/images/p_webs_1.png"></a> 
+        <a href="/project/feimalv/" class="p_web" title="飞马旅官网" target="_blank"><img src="http://www.bluesdog.net/images/p_webs_4.png"></a>
+        <a href="/project/snh48/" class="p_web" title="SNH48招生二期" target="_blank"><img src="http://www.bluesdog.net/images/p_webs_2.png"></a> 
+        <a href="/project/snh48v2/" class="p_web" title="SNH48招生一期" target="_blank"><img src="http://www.bluesdog.net/images/p_webs_3.png"></a>
+        <a href="/project/huaqi/" class="p_web" title="2012华企领袖峰会主题站" target="_blank"><img src="http://www.bluesdog.net/images/p_webs_5.png"></a> 
+        <a href="/project/ecis/" class="p_web" title="ECIS2011电商峰会" target="_blank"><img src="http://www.bluesdog.net/images/p_webs_6.png"></a>
+    </div>
+	<div class="scroll w70 m0a"><a href="javascript:;" class="db fl w20 h30 mt5 mr20 scaleY06">▼</a> <a href="javascript:;" class="db fl w20 h30 mt5 scaleY06">▲</a></div>
+    <div class="p_node fl pt10 undis">
+        <a href="https://itunes.apple.com/cn/app/ellemen-rui-shi-za-zhi/id427599544?mt=8" class="p_app" title="ELLEMEN睿士" rel='nofollow' target="_blank"><img src="http://www.bluesdog.net/images/p_apps_1.png"></a>
+        <a href="https://itunes.apple.com/cn/app/id421791629?mt=8" class="p_app" title="名车志" rel='nofollow' target="_blank"><img src="http://www.bluesdog.net/images/p_apps_2.png"></a>
+        <a href="https://itunes.apple.com/cn/app/elle-deco-jia-ju-lang/id463692371?mt=8" class="p_app" title="家居廊" rel='nofollow' target="_blank"><img src="http://www.bluesdog.net/images/p_apps_3.png"></a>
+        <a href="https://itunes.apple.com/cn/app/wai-tan-daily/id656614627?mt=8" class="p_app" title="外滩画报" rel='nofollow' target="_blank"><img src="http://www.bluesdog.net/images/p_apps_4.png"></a>
+    </div>
+</div>
+<nav class="pa t0 l0">
+    <div id="menu" class="pf z3 w180 h100p bcfff br1ccc bl1ccc">
+        <div id="aboutme" class="cur w160 m0a mt10"><div class="w100p h100p"></div></div>
+        <p class="dtc f14 w180 mb0 pb10 tac vab bb1ddd">
+        <strong>前端工具箱</strong>  
+        </p>
+        <button class="tools">CSS压缩格式化</button>
+        <button class="tools">JS压缩格式化</button>
+        <button class="tools">JSON压缩格式化</button>
+        <button class="tools">JS与HTML互转</button>
+        <button class="tools">中文/Unicode字符互转</button>  
+        <button class="tools">CSS3效果生成器</button>
+        <button class="tools">CSS*Hack备忘</button>
+        <button class="tools">JQuery CDN</button>
+        <button class="tools">键盘键值表</button>
+        <button class="tools">HTML5元素表</button>
+        <button class="tools">网页常用单位换算</button>
+        <button class="tools">网页常用颜色单词表</button>
+        <button class="tools">RGB/HEX颜色互换</button>
+        <button class="tools">二维码生成</button>
+        <button class="tools">图片Base64编码</button>
+    </div>
+    <div id="arrow" class="undis pf t0 z4 cfff f30 scaleX06">◀</div>
+    <div id="links" class="pf t0 r0 z1 h100p bl1ddd">
+        <div id="arrow2" class="fl h100p mr10"><a href="javascript:;" class="db pr f12 w20 h40 c999 tac lh40 scaleX06">▶</a></div>
+        <div class="fl h100p">
+        <strong>网站导航 <span class="red">*需翻墙</span></strong>
+        <p>W3C</p>
+        <a href="http://www.w3school.com.cn/" target="_blank" rel='nofollow'><img src="http://www.bluesdog.net/images/favicon_w3school.ico"> w3school中文</a>
+        <a href="http://www.w3schools.com/" target="_blank" rel='nofollow'><img src="http://www.bluesdog.net/images/favicon_w3schools.ico"> w3schools</a>
+        <a href="https://developer.mozilla.org/zh-CN/#" target="_blank" rel='nofollow'><img src="http://www.bluesdog.net/images/favicon_mozilla.png"> mozilla开发者</a>
+           
+        <p>HTML5/CSS3支持</p>
+        <a href="http://caniuse.com/#index" target="_blank" rel='nofollow'><img src="http://www.bluesdog.net/images/favicon_caniuse.ico"> caniuse</a>
+        <a href="http://html5test.com/" target="_blank" rel='nofollow'><img src="http://www.bluesdog.net/images/favicon_html5test.png"> 浏览器HTML5得分</a>
+        <a href="http://fmbip.com/" target="_blank" rel='nofollow'><img src="http://www.bluesdog.net/images/favicon_fmbip.ico"> 浏览器HTML5支持</a>
+        
+        <p>Web辅助</p>
+        <a href="http://tool.chinaz.com/" target="_blank" rel='nofollow'><img src="http://www.bluesdog.net/images/favicon_chinaz.ico"> 站长工具</a>
+        <a href="http://t.mb5u.com/jquery/" target="_blank" rel='nofollow'><img src="http://www.bluesdog.net/images/favicon_mb5u.ico"> jQuery 1.8中文手册</a>    
+        <a href="http://tongji.baidu.com/data/browser" target="_blank" rel='nofollow'><img src="http://www.bluesdog.net/images/favicon_baidutongji.ico"> 百度浏览器统计</a>
+        
+        <p>UI设计与分享</p>
+        <a href="http://www.behance.net/" target="_blank" rel='nofollow'><img src="http://www.bluesdog.net/images/favicon_behance.ico"> behance</a>
+        <a href="http://dribbble.com/" target="_blank" rel='nofollow'><img src="http://www.bluesdog.net/images/favicon_dribbble.ico"> dribbble</a>
+        <a href="http://freebiesbug.com/" target="_blank" rel='nofollow'><img src="http://www.bluesdog.net/images/favicon_freebiesbug.ico"> freebiesbug</a>
+        <a href="http://ui-cloud.com/browse/" target="_blank" rel='nofollow'><img src="http://www.bluesdog.net/images/favicon_uicloud.ico"> ui-cloud</a>
+        <a href="http://www.uehtml.com/" target="_blank" rel='nofollow'><img src="http://www.bluesdog.net/images/favicon_uehtml.ico"> uehtml</a>
+        <a href="http://www.iguoguo.net/" target="_blank" rel='nofollow'><img src="http://www.bluesdog.net/images/favicon_iguoguo.ico"> 爱果果</a>
+        
+        <p>设计综合网</p>
+        <a href="http://www.uisdc.com/" target="_blank" rel='nofollow'><img src="http://www.bluesdog.net/images/favicon_uisdc.ico"> 优设网</a>
+        <a href="http://www.zcool.com.cn/" target="_blank" rel='nofollow'><img src="http://www.bluesdog.net/images/favicon_zcool.ico"> 站酷</a>
+    
+        <p>移动端相关</p>
+        <a href="http://www.teehanlax.com/tools/" target="_blank" rel='nofollow'><img src="http://www.bluesdog.net/images/favicon_teehanlax.ico"> iOS GUI psd<span class="red">*</span></a>
+        <a href="http://www.uxguide.net/wiki/Home" target="_blank" rel='nofollow'><img src="http://www.bluesdog.net/images/favicon_fmbip.ico"> iOS设计规范指南</a>
+        <a href="http://dev.windowsphone.com/zh-cn/design/Library" target="_blank" rel='nofollow'><img src="http://www.bluesdog.net/images/favicon_windowsphone.ico"> WP设计指南</a>
+        
+        <p>APP设计参考</p>
+        <a href="http://www.mobilemozaic.com/" target="_blank" rel='nofollow'><img src="http://www.bluesdog.net/images/favicon_mobilemozaic.ico"> iPhone</a>
+        <a href="http://www.android-app-patterns.com/" target="_blank" rel="nofollow"><img src="http://www.bluesdog.net/images/favicon_android-app-patterns.ico"> android phone</a>
+        <a href="http://androidniceties.tumblr.com/" target="_blank" rel="nofollow"><img src="http://www.bluesdog.net/images/favicon_fmbip.ico"> android phone<span class="red">*</span></a>
+        
+        <p>FONT\SVG icon</p>
+        <a href="http://fontello.com/" target="_blank" rel='nofollow'><img src="http://www.bluesdog.net/images/favicon_fontello.ico"> fontello</a>
+        <a href="http://fontastic.me/" target="_blank" rel="nofollow"><img src="http://www.bluesdog.net/images/favicon_fontastic.ico"> fontastic</a>
+        <a href="http://icomoon.io/" target="_blank" rel="nofollow"><img src="http://www.bluesdog.net/images/favicon_icomoon.ico"> icomoon</a>
+        </div>
+    </div>
+</nav>
+
+<div id="container">
+	<div id="alpha60" class="undis pf t0 l0 z2 bc000 h100p o50"></div>
+    <h1 id="topbar" class="pf w100p mb10 bb1ddd h40 f18 lh40"><a href="javascript:;" id="goback" class="db fl w50 h30 mt5 scaleX06">◀</a><div class="c555">设计&amp;前端工具/网站</div></h1>
+    <div id="box"></div>
+    
+    <!--CSS 压缩格式化-->
+    <div class="setBox"><iframe src="cssFormat.html" width=820 height=410 frameborder="0" scrolling="no"></iframe></div>
+    
+    <!--JS 加密压缩格式化-->
+	<div class="setBox"><iframe src="jsFormat.html" width=820 height=410 frameborder="0" scrolling="no"></iframe></div>
+    
+    <!--JSON 数据格式化解析-->
+	<div class="setBox"><iframe src="jsonFormat.html" width=790 height=474 frameborder="0" scrolling="no"></iframe></div>
+    
+    <!--HTML与JS互转-->
+	<div class="setBox"><iframe src="html2js.html" width=820 height=410 frameborder="0" scrolling="no"></iframe></div>
+    
+    <!--中文/Unicode字符互换-->
+    <div class="setBox pb0">
+        <textarea rows=20 id="ch2uncd-content" placeholder="请粘贴要转换的中文/Unicode"></textarea>
+        <div id="commands">
+        <button class="btn" onclick="unicode()">中文转Unicode</button>
+        <button class="btn" onclick="chinese()">Unicode转中文</button>
+        </div>
+    </div>
+	
+    <!--CSS3 效果生成器-->
+	<div class="setBox pb0"><iframe src="css3maker.html" width=980 height=480 frameborder="0" scrolling="no"></iframe></div>
+    
+    <!--CSS HACK速查-->
+	<div class="setBox">
+        <div id="code">
+        .eq {<br>
+            color:#f00;      /*标准浏览器*/<br>
+            color:#f30<strong class="red">\0</strong>;    /*IE8,IE9,opera*/<br>
+            <strong class="red">*</strong>color:#c00;     /*IE7及IE6*/<br>
+            <strong class="red">_</strong>color:#600;     /*IE6*/<br>
+        }<br>
+        <hr>
+        <strong class="red">:root</strong> .eq { <br>
+            color:#a00;     /*IE9+*/<br>
+        }<br>
+        <hr>
+        @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0){ <br>
+            .eq { color:#450; }   /*opera专属*/<br>
+        }<br>
+        <hr>
+        @media screen and (-webkit-min-device-pixel-ratio:0){ <br>
+            .eq { color:#879; }   /*chrome, safari专属*/<br>
+        }<br>
+        <hr>
+        @-moz-document url-prefix(){ <br>
+            .eq { color:#4dd; }   /*firefox专属*/<br>
+        }<br>
+        </div>
+    </div>
+
+    <!--JQuery CDN-->
+	<div class="setBox">
+    	<div id="code">
+        <a href="http://jquery.com/download/" target="_blank" class="f18">JQuery.com</a>
+        <br>
+        http://code.jquery.com/jquery-latest.js<br>
+        http://code.jquery.com/jquery-1.4.2.js<br>
+        http://code.jquery.com/jquery-1.5.2.js<br>
+        http://code.jquery.com/jquery-1.6.2.js<br>
+        http://code.jquery.com/jquery-1.7.2.js<br>
+        http://code.jquery.com/jquery-1.8.3.js<br>
+		<hr>
+        <a href="http://www.asp.net/ajaxlibrary/cdn.ashx#jQuery_Releases_on_the_CDN_0" target="_blank" class="f18">Microsoft CDN</a>
+        <br>
+        http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.3.2.min.js<br>
+        http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.3.min.js<br>
+        http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.2.min.js<br>
+        http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.2.min.js<br>
+        http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js<br>
+        http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js<br>
+		<hr>
+        <a href="https://developers.google.com/speed/libraries/devguide?hl=zh-CN&csw=1#jquery" target="_blank" class="f18">Google CDN</a>
+        <br>
+        http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js<br>
+        http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js<br>
+        http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js<br>
+        http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js<br>
+        http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js<br>
+        http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js<br>
+        </div>
+    </div>
+
+    <!--键盘键值表-->
+    <div class="setBox">
+        <table>
+        <tr><td colspan="3"><strong>请关闭中文输入法</strong></td></tr>
+        <tr><td><input type="text" id="txt" size=1 placeholder="此处按键" class="fb dib w120 h30 p10 lh30 tac"></td>
+        <td class="f18 simsun">&nbsp;&gt;&gt;&nbsp;</td>
+        <td><div id="msg" class="dib w30 h30 p10 f30 lh30 tac green">NaN</div></td></tr>
+        </table>
+        <br>
+        <img src="http://www.bluesdog.net/images/keycode.gif" alt="键盘键值表">
+        <br>
+        <p>鼠标左键 event.which = 1、 中键 event.which = 2、 右键 event.which = 3</p>
+    </div>
+    
+    <div class="setBox pb0"><iframe src="html5.html" width=1050 height=660 frameborder="0" scrolling="no"></iframe></div>
+    <div class="setBox"><iframe src="px2em.html" width=800 height=540 frameborder="0" scrolling="no"></iframe></div>
+    <div class="setBox pb0"><iframe src="colorName.html" width=800 height=685 frameborder="0" scrolling="auto" style="overflow-x:hidden"></iframe></div>
+    
+    <!--RGB/HEX颜色互换-->
+    <div class="setBox">
+        <table id="color">
+        <tr>
+            <td width=70><div id="color1" class="fr w50 h50 mr10 bcfff b1ddd"></div></td>
+            <td width=230>
+                <p><strong class="f14">十六进制颜色值</strong></p>
+                <input type="text" id="v1" value="#3453fb"><br>
+                <button id="b1" class="btn">转为RGB格式</button>
+                <input type="text" id="showRgb" onclick="this.select()">
+            </td>
+            <td width=70><div id="color2" class="fr w50 h50 mr10 bcfff b1ddd"></div></td>
+            <td width=230>
+                <p><strong class="f14">RGB颜色值</strong></p>
+                <input type="text" id="v2" value="RGB(23, 245, 56)"><br>
+                <button id="b2" class="btn">转为十六进制形式</button>
+                <input type="text" id="showHex" onclick="this.select()">
+            </td>
+        </tr>
+        </table>
+    </div>
+    <div class="setBox"><iframe src="qrcode.html" width=490 height=190 frameborder="0" scrolling="no"></iframe></div>
+    <div class="setBox"><iframe src="base64.html" width=820 height=380 frameborder="0" scrolling="auto"></iframe></div> 
+
+    <footer class="pf b0 z1 w100p bt1ccc tar">
+        <strong class="db fl">&copy; bluesdog.net 2014 <em>推荐使用chrome</em></strong> 
+        <div class="fr pr10">
+        <span>上进心不是外界强加的，不是即兴秀，而是自发的，持续的人生态度。</span>
+        <span>如何才能唤醒沉睡的自我，如何才能重拾坚强和自信，我的勇气在哪里？</span>
+        <span>在人生的战场里，无处躲藏，只有奋斗或死亡。</span>
+        <span>学会做减法比加法难，但是学会逃避比直面窘境更容易。</span>
+        <span>没有人愿意承认自己的错误、失败、愚蠢、低人一等，阿甘如此，阿Q如此。</span>
+        <span>万恶懒为首</span>
+        </div>
+    </footer>
+</div>
+<div id="logobox" class="undis">
+    <img src="http://www.bluesdog.net/images/dog-logo.png" class="logo z3 o0">
+    <div id="shadow" class="pa w160"></div> 
+    <h1 class="dis pa tac">Sorry there's no mobile phone page yet!</h1>
+    <div id="footer" class="pf b0 z1 w100p tac bt1ccc">&#8226; bluesdog.net 2008~2014  <strong>bluesjiang@qq.com</strong> &#8226;</div>
+</div>
+</body>
+</html>

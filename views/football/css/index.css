@@ -1,0 +1,24 @@
+@charset "utf-8";#header-yuedong{position:fixed;height:47px;top:0;left:0;z-index:999;background-color:#dcdcdf;padding:14px 10px;display:box;display:-webkit-box;width:100%;border-bottom:1px solid #29c300}
+#header-yuedong .app-icon{width:25px;position:relative}
+#header-yuedong .app-icon img{width:50px;height:50px;position:absolute;left:-2px;top:-2px}
+#header-yuedong .app-box{position:relative;margin-left:30px;color:#4a4a4a;-webkit-box-flex:1;box-flex:1;margin-top:-2px}
+#header-yuedong .app-box h2{font-size:0.875rem}
+#header-yuedong .app-info{font-size:0.5rem;color:#4a4a4a;width:70%;margin:4px 0px}
+.app-star{height:14px;position:relative}
+.app-star span{display:inline-block;position:relative;background:url(../images/star.png);width:15px;background-size:14px 14px;height:14px;margin-right:2px}
+.app-down-yuedong{position:absolute;width:55px;height:23px;right:20px;top:0px;color:#0080fc;font-size:0.75rem;line-height:23px;text-align:center;border-radius:4px;border:1px solid #0080fc}
+#top{position:relative;background:#dadada;height:44px;margin-top:75px}
+.logo{width:105px;height:30px;position:absolute;left:10px;top:7px}
+.logo img{width:100%}
+.logo-info{position:absolute;font-size:0.75rem;top:19px;left:120px;font-weight:bold}
+#top-title{position:relative;background:#1f9400;height:36px;color:#fff;font-size:0.75rem}
+.nav-address a{position:relative;display:inline-block;height:36px;line-height:36px;color:#fff;font-size:0.75rem;padding:0 12px}
+#context-box{padding:20px 10px;font-family:"微软雅黑"}
+#container{font-family:"Helvetica Neue";font-size:16px;padding:2px 0px;margin:10px;padding-bottom:40px}
+#container .title{font-size:20px}
+#container .subtitle{padding:10px 0px}
+#container p{text-indent:2em;line-height:150%;text-align:justify;padding:5px 0px}
+#container a{color:#5cb85c;text-decoration:none}
+#container img,video{max-width:100%;width:auto;height:auto}
+#container p img{display:block;margin:0px;vertical-align:middle;text-align:center}
+#container .source{color:gray;font-size:14px;width:100%;text-align:left}

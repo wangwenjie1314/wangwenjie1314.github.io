@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html> 
+<html lang="zh-CN"> 
+<head>
+<meta charset="UTF-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<meta name="renderer" content="webkit">
+<title>注册</title>
+<link rel="shortcut icon" href="http://www.takungpao.com/favicon.ico" /> 
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="css/font-awesome.css" />
+<link type="text/css" rel="stylesheet" href="css/se7en-font.css" />
+<link type="text/css" rel="stylesheet" href="css/style.css?t=140930" />
+<script type="text/javascript" src="js/modernizr.custom.js"></script>
+<!--[if lt IE 9]>
+<script src="http://static.takungpao.com/js/html5shiv.min.js"></script>
+<![endif]-->
+</head>
+<body class="login1 signup">
+<!-- Login Screen -->
+<div class="login-wrapper">
+  <div class="login-container">
+    <a href="./"><img src="img/login.png" /></a>
+    <form action="index.html">
+      <div class="form-group">
+        <input class="form-control" type="text" value="输入您的邮箱地址">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" value="输入密码">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" value="确认密码"><input type="submit" value="&#xf054;">
+      </div>
+      <div class="form-options">
+        <label class="checkbox"><input type="checkbox"><span>同意《注册条款》</span></label>
+      </div>
+    </form>
+    <div class="social-login clearfix">
+        <a class="btn btn-primary pull-left weibo" href="index.html"><i class="icon-weibo"></i>微博 账户登录</a><a class="btn btn-primary pull-right renren" href="index.html"><i class="icon-renren"></i>人人 账户登录</a>
+    </div>
+    <p class="signup">
+      已经有账户了？ <a href="login1.html">立即登录</a>
+    </p>
+  </div>
+</div>
+<!-- End Login Screen -->
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(function(){
+  $(window).load(function() {
+    return $(".login-container").addClass("active");
+  });
+});
+</script>
+</body>
+</html>

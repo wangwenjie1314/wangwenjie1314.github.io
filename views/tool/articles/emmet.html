@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Emmet bluesdog.net</title>
+<style>
+#syntax div { float:left; display:block; width:30%; max-height:66px; overflow:hidden; vertical-align:top; margin:5px; padding:10px; transition:all .3s; }
+#syntax div:hover { background:#e0e0e0; max-height:600px; }
+#syntax code, #syntax pre { word-break:break-all; white-space:pre-wrap; }
+pre { margin-bottom:10px; }
+</style>
+<script>
+$(function(){
+	$("#more").toggle(function(){
+		$(this).text("更多语法 和 使用技巧 -");
+		$("#syntax").slideDown();	
+	},function(){
+		$(this).text("更多语法 和 使用技巧 +");
+		$("#syntax").slideUp();
+	})	
+})
+</script>
+</head>
+
+<body>
+<h1>Emmet - DW插件</h1>
+<article>
+<p class="f18 fb">1. emmet 前身是 Zen Coding</p>
+<p>其作用是快速编写HTML、CSS片段，比方说下面截图所示的HTML代码：<br>
+<img src="http://image.zhangxinxu.com/image/blog/201309/2013-09-09_194118.png"></p>
+<p>只要下面这点东西，CTRL+E键就可以了！</p>
+<pre><code>div#test&gt;ul.nav&gt;li&gt;a*5</code></pre>
+<a href="#" id="more">更多语法 和 使用技巧 +</a>
+<div id="syntax" class="undis">
+<table class="w100p"><tr><td>
+<div><strong>子 Child:</strong> <strong class="red f18">&gt;</strong>
+<pre><code>div<em class="red">&gt;</em>ul<em class="red">&gt;</em>li</code></pre>
+<pre><code>&lt;div&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<div><strong>邻 Sibling:</strong> <strong class="red f18">+</strong>
+<pre><code>div<em class="red">+</em>p<em class="red">+</em>bq</code></pre>
+<pre><code>&lt;div&gt;&lt;/div&gt;  
+&lt;p&gt;&lt;/p&gt;  
+&lt;blockquote&gt;&lt;/blockquote&gt;</code></pre>
+</div>
+
+<div><strong>子邻组合:</strong>
+<pre><code>div+div&gt;p&gt;span+em</code></pre>
+<pre>&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;
+  &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;em&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;</pre>
+</div>
+<td></tr></table>
+<table class="w100p"><tr><td>
+<div><strong>退一层 Climb-up:</strong> <strong class="red f18">^</strong>
+<pre><code>div+div&gt;p&gt;span+em<em class="red">^</em>bq</code></pre>
+<pre><code>&lt;div&gt;&lt;/div&gt;  
+&lt;div&gt;      
+  &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;em&gt;&lt;/em&gt;&lt;/p&gt;      
+  &lt;blockquote&gt;&lt;/blockquote&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<div><strong>退多层:</strong> <strong class="red f18">^^^</strong>
+<pre><code>div+div&gt;p&gt;span+em<em class="red">^^^</em>bq</code></pre>
+<pre><code>&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;
+  &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;em&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;blockquote&gt;&lt;/blockquote&gt;</code></pre>
+</div>
+
+<div><strong>多个 Multiplication:</strong> <strong class="red f18">*</strong>
+<pre><code>ul&gt;li<em class="red">*</em>5</code></pre>
+<pre><code>&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+<td></tr></table>
+<table class="w100p"><tr><td>
+<div><b>群组 Grouping:</b> <strong class="red f18">()</strong>
+<pre><code>div&gt;<em class="red">(</em>header&gt;ul&gt;li*2&gt;a<em class="red">)</em>+footer&gt;p</code></pre>
+<pre><code>&lt;div&gt;
+  &lt;header&gt;
+    &lt;ul&gt;
+    &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/header&gt;
+  &lt;footer&gt;
+    &lt;p&gt;&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<div><strong>组合:</strong>
+<pre><code>(div&gt;dl&gt;(dt+dd )*3)+footer&gt;p</code></pre>
+<pre><code>&lt;div&gt;
+  &lt;dl&gt;
+    &lt;dt&gt;&lt;/dt&gt;
+    &lt;dd&gt;&lt;/dd&gt;
+    &lt;dt&gt;&lt;/dt&gt;
+    &lt;dd&gt;&lt;/dd&gt;
+    &lt;dt&gt;&lt;/dt&gt;
+    &lt;dd&gt;&lt;/dd&gt;
+    &lt;/dl&gt;
+&lt;/div&gt;
+&lt;footer&gt;
+  &lt;p&gt;&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+</div>
+
+<div><strong>ID and CLASS:</strong> <strong class="red f18"># .</strong>
+<pre><code>div<em class="red">#</em>header+div<em class="red">.</em>page+div<em class="red">#</em>footer<em class="red">.</em>cls1<em class="red">.</em>cls2<em class="red">.</em>cls3</code></pre>
+<pre>&lt;div id="header"&gt;&lt;/div&gt;  
+&lt;div class="page"&gt;&lt;/div&gt;  
+&lt;div id="footer" class="cls1 cls2 cls3"&gt;
+&lt;/div&gt;</pre>
+</div>
+<td></tr></table>
+<table class="w100p"><tr><td>
+<div><strong>属性 attributes:</strong> <strong class="red f18">[ ]</strong>
+<pre><code>td<em class="red">[</em>title="Hello world!" colspan=3<em class="red">]</em></code></pre>
+<pre>&lt;td title="Hello world!" colspan="3"&gt;&lt;/td&gt;</pre>
+</div>
+
+<div><strong>添加内部文字 text:</strong> <strong class="red f18">{}</strong>
+<pre><code>p><em class="red">{</em>Click <em class="red">}</em>+a<em class="red">{</em>here<em class="red">}</em>+<em class="red">{</em> to continue<em class="red">}</em></code></pre>
+<pre>&lt;p&gt;Click &lt;a href=""&gt;here&lt;/a&gt; to continue&lt;/p&gt;</pre>
+</div>
+
+<div><strong>自动累加数 numbering:</strong> <strong class="red f18">$</strong>
+<pre><code>ul>li.item<em class="red">$</em>*5</code></pre>
+<pre><code>&lt;ul&gt;
+&lt;li class="item1"&gt;&lt;/li&gt;
+&lt;li class="item2"&gt;&lt;/li&gt;
+&lt;li class="item3"&gt;&lt;/li&gt;
+&lt;li class="item4"&gt;&lt;/li&gt;
+&lt;li class="item5"&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<br>
+<pre><code>ul>li.item<em class="red">$$$</em>*5</code></pre>
+<pre><code>&lt;ul&gt;
+&lt;li class="item001"&gt;&lt;/li&gt;
+&lt;li class="item002"&gt;&lt;/li&gt;
+&lt;li class="item003"&gt;&lt;/li&gt;
+&lt;li class="item004"&gt;&lt;/li&gt;
+&lt;li class="item005"&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+<td></tr></table>
+<table class="w100p"><tr><td>
+<div><strong>自动累减数:</strong> <strong class="red f18">$@-</strong>
+<pre><code>ul>li.item<em class="red">$@-</em>*5</code></pre>
+<pre><code>&lt;ul&gt;
+&lt;li class="item5"&gt;&lt;/li&gt;
+&lt;li class="item4"&gt;&lt;/li&gt;
+&lt;li class="item3"&gt;&lt;/li&gt;
+&lt;li class="item2"&gt;&lt;/li&gt;
+&lt;li class="item1"&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+
+<div><strong>累加数初始值:</strong>
+<pre><code>ul>li.item$@<em class="red">3</em>*5</code></pre>
+<pre><code>&lt;ul&gt;
+&lt;li class="item3"&gt;&lt;/li&gt;
+&lt;li class="item4"&gt;&lt;/li&gt;
+&lt;li class="item5"&gt;&lt;/li&gt;
+&lt;li class="item6"&gt;&lt;/li&gt;
+&lt;li class="item7"&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<br>
+<pre><code>ul>li.item$@<em class="red">-3</em>*5</code></pre>
+<pre><code>&lt;ul&gt;
+&lt;li class="item7"&gt;&lt;/li&gt;
+&lt;li class="item6"&gt;&lt;/li&gt;
+&lt;li class="item5"&gt;&lt;/li&gt;
+&lt;li class="item4"&gt;&lt;/li&gt;
+&lt;li class="item3"&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+<td></tr></table>
+<br><br>
+Dreamweaver版的Emmet插件，除了没有&lt;img&gt;自动填充尺寸功能，也没有图片自动转base64功能，其他都有。<br>
+<p>快捷键将是一个考验记性的大麻烦。<br>Dw对DOM选择功能比较简单，但是Emmet有大量选择功能，如：<br>
+<strong>前后节点Point选择</strong> <span class="green">(Ctrl+Alt+[ || Ctrl+Alt+])</span>、<br>
+<strong>前后标签Tag选择</strong> <span class="green">(Ctrl+Alt+E || Ctrl+Alt+D)</span>、<br>
+<strong>前后单词Item选择</strong> <span class="green">(Ctrl+[ || Ctrl+])</span>，<br>
+<strong>还有跳到闭合标签</strong> <span class="green">(Ctrl+T)</span>、删除标签 <span class="green">(Ctrl+R)*</span>、合并多行 <span class="green">(Ctrl+Alt+G)</span>、包裹内容 <span class="green">(Ctrl+W)*</span>、添加注释 <span class="green">(Ctrl+/)</span> 等等。</p>
+<span class="red f12">(快捷键) 为本人自定义非默认，*特别有价值。</span><br>
+总体而言，如果熟练掌握了以上快捷键和语法，在HTML编写速度上，提升不是一点点。<br>
+<br>
+<br>
+<strong>Emmet的CSS部分，是以CSS语句的缩写形式，进行快速转义。如：</strong>
+<pre><code>m10 5 → margin:10px 5px;
+tdu → text-decoration:underline;
+lh20 → line-height: 20px;
+db → display:block;
+fl → float:left;
+</code></pre>
+其理念和我的CSS通用库类似...以单词字母开头为缩写，当然有个别缩写形式存在冲突，可能得不到你想要的转义。<br><br>
+<strong>特殊缩写：</strong>
+<pre><code>p → %
+e → em
+x → ex
+#1 → #111111
+#e0 → #e0e0e0
+#fc0 → #ffcc00
+p!+m10e!  →  padding:  !important;  margin: 10em !important;
+m-10--20 → margin:-10px -20px
+</code></pre>
+总体而言，因为有CSS通用库的存在，Emmet的CSS转义这块实际提升速度没有HTML转义那么明显。
+</div>
+<br><br>
+<p class="f18 fb">2. 在 Dreamweaver CS6 中安装 emmet</p>
+<p>下载点击这里：<a target="_blank" href="http://emmet.io/download/">http://emmet.io/download/</a> 或者直接 <a href="http://download.emmet.io/dreamweaver/Emmet.zxp">Emmet.zxp</a></p>
+<p>如果已经安装了Adobe的Extension Manager(扩展管理器)，直接双击安装就可以啦。如果没有，<a href="http://www.adobe.com/exchange/em_download/">先下载扩展管理器</a>。</p>
+<p><img src="http://image.zhangxinxu.com/image/blog/201309/2013-09-09_201758.png" width=500></p>
+<p><img src="http://image.zhangxinxu.com/image/blog/201309/2013-09-09_203515.png" width=500></p>
+<p>&nbsp;</p>
+<p class="f18 fb">3. 在安装时，如果出现 “无法更新菜单,将不会安装该扩展” 的解决方法</p>
+<p><img src="articles/images/emmet_1.jpg"></p>
+<p>开始-&gt;运行-&gt;输入&ldquo;%appdata%/adobe&rdquo;<br>删除 ..\Adobe\Dreamweaver CS6\zh_CN\Configuration\Menus 目录下的 <strong class="red">Menus.xbk</strong> 或 <strong class="red">Menus.xml</strong>，然后重新启动Dreamweaver即可成功安装扩展，此方法同样适用无法安装 Zen Coding 扩展的朋友。</p>
+<p><img src="articles/images/emmet_2.jpg"></p>
+<p>安装成功了。</p>
+<p><img src="articles/images/emmet_3.jpg"></p>
+<br>
+<p class="f18 fb">4. 默认快捷键 <span class="green">ctrl+e</span> 和 插入标签项 的快捷键冲突，需要修改。</p>
+<p><img src="articles/images/emmet_4.jpg"></p>
+<p>在 Dreameaver，选择&ldquo;编辑&rdquo;-&gt;"快捷键"命令，打开&ldquo;菜单命令&rdquo;-&gt;&ldquo;插入&rdquo;-&gt;&ldquo;标签&rdquo;。重新快捷键，比如&ldquo;ctrl+shift+e&rdquo;，就避免了和 Emmet 快捷键冲突。</p>
+<p><img src="articles/images/emmet_5.jpg"></p>
+</p>
+<br>个人认为Emmet是前端从业者必须掌握的一门技巧，end.
+</article>
+</body>
+</html>

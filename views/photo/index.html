@@ -1,0 +1,511 @@
+﻿<!DOCTYPE html> 
+<html lang="zh-CN"> 
+<head>
+<meta charset="UTF-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<meta name="renderer" content="webkit">
+<title>相册</title>
+<link rel="shortcut icon" href="http://www.takungpao.com/favicon.ico" /> 
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="css/font-awesome.css" />
+<link type="text/css" rel="stylesheet" href="css/se7en-font.css" />
+<link type="text/css" rel="stylesheet" href="css/jquery.fancybox.css" />
+<link type="text/css" rel="stylesheet" href="css/isotope.css" />
+<link type="text/css" rel="stylesheet" href="css/style.css?t=140930" />
+<script type="text/javascript" src="js/modernizr.custom.js"></script>
+<!--[if lt IE 9]>
+<script src="http://static.takungpao.com/js/html5shiv.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<div class="modal-shiftfix">
+<!-- Navigation -->
+<div class="navbar navbar-fixed-top scroll-hide">
+<div class="container-fluid top-bar">
+    <div class="pull-right">
+        <ul class="nav navbar-nav pull-right">
+            <li class="dropdown notifications hidden-xs">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span aria-hidden="true" class="se7en-flag"></span>
+                    <div class="sr-only">
+                        通知
+                    </div>
+                    <p class="counter">
+                        4
+                    </p>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">
+                        <div class="notifications label label-info">
+                            新
+                        </div>
+                        <p>
+                            新加入用户：王晓
+                        </p></a>
+
+                    </li>
+                    <li><a href="#">
+                        <div class="notifications label label-info">
+                            新
+                        </div>
+                        <p>
+                            销售目标
+                        </p></a>
+
+                    </li>
+                    <li><a href="#">
+                        <div class="notifications label label-info">
+                            新
+                        </div>
+                        <p>
+                            新性能指标
+                        </p></a>
+
+                    </li>
+                    <li><a href="#">
+                        <div class="notifications label label-info">
+                            新
+                        </div>
+                        <p>
+                            提供新的经济增长数据
+                        </p></a>
+
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown messages hidden-xs">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span aria-hidden="true" class="se7en-envelope"></span>
+                    <div class="sr-only">
+                        消息
+                    </div>
+                    <p class="counter">
+                        3
+                    </p>
+                </a>
+                <ul class="dropdown-menu messages">
+                    <li><a href="#">
+                        <img width="34" height="34" src="http://www.zi-han.net/theme/se7en/images/avatar-male2.png" />我们可以见面吗？我想...</a>
+                    </li>
+                    <li><a href="#">
+                        <img width="34" height="34" src="http://www.zi-han.net/theme/se7en/images/avatar-female.png" />重要的数据需要分析...</a>
+                    </li>
+                    <li><a href="#">
+                        <img width="34" height="34" src="http://www.zi-han.net/theme/se7en/images/avatar-male2.png" />Se7en是一款不错的主题。</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown settings hidden-xs">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span aria-hidden="true" class="se7en-gear"></span>
+                    <div class="sr-only">
+                        设置
+                    </div>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="settings-link blue" href="javascript:chooseStyle('none', 30)"><span></span>蓝色</a>
+                    </li>
+                    <li>
+                        <a class="settings-link green" href="javascript:chooseStyle('green-theme', 30)"><span></span>绿色</a>
+                    </li>
+                    <li>
+                        <a class="settings-link orange" href="javascript:chooseStyle('orange-theme', 30)"><span></span>橘黄色</a>
+                    </li>
+                    <li>
+                        <a class="settings-link magenta" href="javascript:chooseStyle('magenta-theme', 30)"><span></span>品红</a>
+                    </li>
+                    <li>
+                        <a class="settings-link gray" href="javascript:chooseStyle('gray-theme', 30)"><span></span>灰色</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown user hidden-xs"><a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <img width="34" height="34" src="http://www.zi-han.net/theme/se7en/images/avatar-male.jpg" />管理员<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">
+                        <i class="icon-user"></i>我的账户</a>
+                    </li>
+                    <li><a href="#">
+                        <i class="icon-gear"></i>账户设置</a>
+                    </li>
+                    <li><a href="login1.html">
+                        <i class="icon-signout"></i>退出</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <button class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="logo" href="index.html">se7en</a>
+    <form class="navbar-form form-inline col-lg-2 hidden-xs">
+        <input class="form-control" placeholder="搜索" type="text">
+    </form>
+</div>
+<div class="container-fluid main-nav clearfix">
+    <div class="nav-collapse">
+        <ul class="nav">
+            <li>
+                <a href="index.html"><span aria-hidden="true" class="se7en-home"></span>控制台</a>
+            </li>
+            <li><a href="social.html">
+                <span aria-hidden="true" class="se7en-feed"></span>社交订阅</a>
+            </li>
+            <li class="dropdown"><a data-toggle="dropdown" href="#">
+                <span aria-hidden="true" class="se7en-star"></span>特色<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="buttons.html">按钮</a>
+                    </li>
+                    <li>
+                        <a href="fontawesome.html">Font Awesome Icons</a>
+                    </li>
+                    <li><a href="glyphicons.html">
+                        <span class="notifications label label-warning">新</span>
+                        <p>
+                            Glyphicons
+                        </p></a>
+
+                    </li>
+                    <li>
+                        <a href="components.html">组件</a>
+                    </li>
+                    <li>
+                        <a href="widgets.html">小工具</a>
+                    </li>
+                    <li>
+                        <a href="typo.html">排版</a>
+                    </li>
+                    <li>
+                        <a href="grid.html">栅格</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown"><a data-toggle="dropdown" href="#">
+                <span aria-hidden="true" class="se7en-forms"></span>表单<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="form-components.html">
+                        <span class="notifications label label-warning">新</span>
+                        <p>
+                            表格组件
+                        </p></a>
+
+                    </li>
+                    <li>
+                        <a href="form-advanced.html">高级形式</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown"><a data-toggle="dropdown" href="#">
+                <span aria-hidden="true" class="se7en-tables"></span>表格<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="tables.html">基本表格</a>
+                    </li>
+                    <li>
+                        <a href="datatables.html">数据表格</a>
+                    </li>
+                    <li><a href="datatables-editable.html">
+                        <div class="notifications label label-warning">
+                            新
+                        </div>
+                        <p>
+                            编辑数据表格
+                        </p></a>
+
+                    </li>
+                </ul>
+            </li>
+            <li><a href="charts.html">
+                <span aria-hidden="true" class="se7en-charts"></span>图表</a>
+            </li>
+            <li class="dropdown"><a data-toggle="dropdown" href="#">
+                <span aria-hidden="true" class="se7en-pages"></span>页面<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="chat.html">
+                        <span class="notifications label label-warning">新</span>
+                        <p>
+                            聊天窗口
+                        </p></a>
+                    </li>
+                    <li>
+                        <a href="calendar.html">日历</a>
+                    </li>
+                    <li><a href="timeline.html">
+                        <span class="notifications label label-warning">新</span>
+                        <p>
+                            时间轴
+                        </p></a>
+
+                    </li>
+                    <li><a href="login1.html">
+                        <span class="notifications label label-warning">新</span>
+                        <p>
+                            登录(1)
+                        </p></a>
+
+                    </li>
+                    <li>
+                        <a href="login2.html">登录(2)</a>
+                    </li>
+                    <li><a href="signup1.html">
+                        <span class="notifications label label-warning">新</span>
+                        <p>
+                            注册(1)
+                        </p></a>
+
+                    </li>
+                    <li>
+                        <a href="signup2.html">注册(2)</a>
+                    </li>
+                    <li><a href="invoice.html">
+                        <span class="notifications label label-warning">新</span>
+                        <p>
+                            订单
+                        </p></a>
+
+                    </li>
+                    <li><a href="faq.html">
+                        <span class="notifications label label-warning">新</span>
+                        <p>
+                            FAQ
+                        </p></a>
+
+                    </li>
+                    <li>
+                        <a href="filters.html">筛选结果</a>
+                    </li>
+                    <li>
+                        <a href="404-page.html">404页面</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a class="current" href="gallery.html">
+                <span aria-hidden="true" class="se7en-gallery"></span>相册</a>
+            </li>
+            <li><a href="docs/index.html" target="_blank">
+                <span aria-hidden="true" class="se7en-doc"></span>帮助文档</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+<!-- End Navigation -->
+<div class="container-fluid main-content">
+  <div class="page-title">
+    <h1>
+      相册
+    </h1>
+  </div>
+  <!-- Gallery with captions -->
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="widget-container fluid-height">
+        <div class="heading">
+          <i class="icon-picture"></i>带标题的相册
+        </div>
+        <div class="widget-content padded">
+          <ul class="gallery-grid clearfix">
+            <li>
+              <figure>
+                <img src="http://www.zi-han.net/theme/se7en/images/nature1.jpg" />
+                <div class="caption">
+                  <h3>
+                        图片标题
+                  </h3>
+                  <span>这里可以添加图片描述……</span>
+                </div>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="http://www.zi-han.net/theme/se7en/images/nature3.jpg" />
+                <div class="caption">
+                  <h3>
+                      图片标题
+                  </h3>
+                  <span>这里可以添加图片描述……</span>
+                </div>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="http://www.zi-han.net/theme/se7en/images/nature2.jpg" />
+                <div class="caption">
+                  <h3>
+                      图片标题
+                  </h3>
+                  <span>这里可以添加图片描述……</span>
+                </div>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="http://www.zi-han.net/theme/se7en/images/nature4.jpg" />
+                <div class="caption">
+                  <h3>
+                      图片标题
+                  </h3>
+                  <span>这里可以添加图片描述……</span>
+                </div>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end Gallery with captions -->
+  <div class="row">
+    <!-- Gallery with filtering and actions -->
+    <div class="col-lg-6">
+      <div class="widget-container fluid-height">
+        <div class="heading">
+          <i class="icon-th-large"></i>过滤和动作
+          <div class="gallery-filters list-inline btn-group pull-right">
+            <a class="btn btn-sm btn-primary-outline selected" data-filter="*" href="#">全部</a><a class="btn btn-sm btn-primary-outline" data-filter=".filter1" href="#">过滤条件 1</a><a class="btn btn-sm btn-primary-outline" data-filter=".filter2" href="#">过滤条件 2</a>
+          </div>
+        </div>
+        <div class="widget-content padded">
+          <div class="gallery-container">
+            <a class="gallery-item filter1 fancybox" href="http://www.zi-han.net/theme/se7en/images/image-iso5.png" rel="gallery1" title="这里显示图片的标题或描述"><img src="http://www.zi-han.net/theme/se7en/images/image-iso5.png" />
+              <div class="actions">
+                <i class="icon-trash"></i><i class="icon-zoom-in"></i><i class="icon-pencil"></i>
+              </div>
+            </a><a class="gallery-item filter1 fancybox" href="http://www.zi-han.net/theme/se7en/images/image-iso2.jpg" rel="gallery1" title="这里显示图片的标题或描述"><img src="http://www.zi-han.net/theme/se7en/images/image-iso2.jpg" />
+              <div class="actions">
+                <i class="icon-trash"></i><i class="icon-zoom-in"></i><i class="icon-pencil"></i>
+              </div>
+            </a><a class="gallery-item filter2 fancybox" href="http://www.zi-han.net/theme/se7en/images/image-iso3.png" rel="gallery1" title="这里显示图片的标题或描述"><img src="http://www.zi-han.net/theme/se7en/images/image-iso3.png" />
+              <div class="actions">
+                <i class="icon-trash"></i><i class="icon-zoom-in"></i><i class="icon-pencil"></i>
+              </div>
+            </a><a class="gallery-item filter1 fancybox" href="http://www.zi-han.net/theme/se7en/images/image-iso4.png" rel="gallery1" title="这里显示图片的标题或描述"><img src="http://www.zi-han.net/theme/se7en/images/image-iso4.png" />
+              <div class="actions">
+                <i class="icon-trash"></i><i class="icon-zoom-in"></i><i class="icon-pencil"></i>
+              </div>
+            </a><a class="gallery-item filter2 fancybox" href="http://www.zi-han.net/theme/se7en/images/image-iso6.png" rel="gallery1" title="这里显示图片的标题或描述"><img src="http://www.zi-han.net/theme/se7en/images/image-iso6.png" />
+              <div class="actions">
+                <i class="icon-trash"></i><i class="icon-zoom-in"></i><i class="icon-pencil"></i>
+              </div>
+            </a><a class="gallery-item filter2 fancybox" href="http://www.zi-han.net/theme/se7en/images/image-iso.png" rel="gallery1" title="这里显示图片的标题或描述"><img src="http://www.zi-han.net/theme/se7en/images/image-iso.png" />
+              <div class="actions">
+                <i class="icon-trash"></i><i class="icon-zoom-in"></i><i class="icon-pencil"></i>
+              </div>
+            </a><a class="gallery-item filter2 fancybox" href="http://www.zi-han.net/theme/se7en/images/image-iso7.png" rel="gallery1" title="这里显示图片的标题或描述"><img src="http://www.zi-han.net/theme/se7en/images/image-iso7.png" />
+              <div class="actions">
+                <i class="icon-trash"></i><i class="icon-zoom-in"></i><i class="icon-pencil"></i>
+              </div>
+            </a><a class="gallery-item filter1 fancybox" href="http://www.zi-han.net/theme/se7en/images/image-iso8.png" rel="gallery1" title="这里显示图片的标题或描述"><img src="http://www.zi-han.net/theme/se7en/images/image-iso8.png" />
+              <div class="actions">
+                <i class="icon-trash"></i><i class="icon-zoom-in"></i><i class="icon-pencil"></i>
+              </div>
+            </a><a class="gallery-item filter2 fancybox" href="http://www.zi-han.net/theme/se7en/images/image-iso9.png" rel="gallery1" title="这里显示图片的标题或描述"><img src="http://www.zi-han.net/theme/se7en/images/image-iso9.png" />
+              <div class="actions">
+                <i class="icon-trash"></i><i class="icon-zoom-in"></i><i class="icon-pencil"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Gallery with filtering and actions --><!-- Gallery carousel -->
+    <div class="col-lg-6">
+      <div class="widget-container">
+        <div class="heading">
+          <i class="icon-camera"></i>自动切换
+        </div>
+        <div class="widget-content padded">
+          <div class="carousel slide" id="carousel-example-generic">
+            <ol class="carousel-indicators">
+              <li class="active" data-slide-to="0" data-target="#carousel-example-generic"></li>
+              <li data-slide-to="1" data-target="#carousel-example-generic"></li>
+              <li data-slide-to="2" data-target="#carousel-example-generic"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="http://www.zi-han.net/theme/se7en/images/image5.jpg" />
+              </div>
+              <div class="item">
+                <img src="http://www.zi-han.net/theme/se7en/images/image6.png" />
+              </div>
+              <div class="item">
+                <img src="http://www.zi-han.net/theme/se7en/images/image7.png" />
+              </div>
+            </div>
+            <a class="left carousel-control" data-slide="prev" href="#carousel-example-generic"><span class="icon-angle-left"></span></a><a class="right carousel-control" data-slide="next" href="#carousel-example-generic"><span class="icon-angle-right"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Gallery carousel -->
+  </div>
+</div>
+</div>
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+<script type="text/javascript" src="js/isotope_extras.js"></script>
+<script type="text/javascript">
+$(function(){
+	//导航条
+	$(".navbar.scroll-hide").mouseover(function() {
+    $(".navbar.scroll-hide").removeClass("closed");
+    return setTimeout((function() {
+      return $(".navbar.scroll-hide").css({
+        overflow: "visible"
+      });
+    }), 150);
+  });
+  $(function() {
+    var delta, lastScrollTop;
+    lastScrollTop = 0;
+    delta = 50;
+    return $(window).scroll(function(event) {
+      var st;
+      st = $(this).scrollTop();
+      if (Math.abs(lastScrollTop - st) <= delta) {
+        return;
+      }
+      if (st > lastScrollTop) {
+        $('.navbar.scroll-hide').addClass("closed");
+      } else {
+        $('.navbar.scroll-hide').removeClass("closed");
+      }
+      return lastScrollTop = st;
+    });
+  });
+  //移动端 nav
+  $('.navbar-toggle').click(function() {
+    return $('body, html').toggleClass("nav-open");
+  });
+
+  var $container = $(".gallery-container");
+  $container.isotope({});
+  $(".gallery-filters a").click(function() {
+    var selector;
+    selector = $(this).attr("data-filter");
+    $(".gallery-filters a.selected").removeClass("selected");
+    $(this).addClass("selected");
+    $container.isotope({
+      filter: selector
+    });
+    return false;
+  }); 
+
+	$(".fancybox").fancybox({
+      maxWidth: 700,
+      height: 'auto',
+      fitToView: false,
+      autoSize: true,
+      padding: 15,
+      nextEffect: 'fade',
+      prevEffect: 'fade',
+      helpers: {
+        title: {
+          type: "outside"
+        }
+      }
+    });
+});
+</script>
+</body>
+</html>

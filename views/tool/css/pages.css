@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {    
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+padding: 0;
+margin: 0; 
+}
+body { font:12px/16px "microsoft yahei",tahoma,arial; background:#fff; color:#444; }
+a,a:link { text-decoration:none; font-size:12px; color:#09d; font-weight:bold; }
+a:hover { color:#3CF; }
+.f14 { font-size:14px; }

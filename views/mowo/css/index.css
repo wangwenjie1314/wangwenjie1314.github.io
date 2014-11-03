@@ -1,0 +1,43 @@
+/*首页css add by wwj 2014-9-22 21:49:30*/
+@charset "utf-8";
+/*common*/
+html,body{height:100%;width:100%;min-width:1000px}
+/*banner*/
+.mw-banner{position:relative;width:100%;height:100%;background:url(../imgs/main_bg.jpg) no-repeat center center #fff4f4;background-size:100%;-webkit-background-size:100%;-moz-background-size:100%;overflow:hidden}
+.mw-banner-box{position:absolute;top:50%;left:50%;margin-left:-375px;margin-top:-165px;width:750px;height:330px}
+.mw-banner-con{position:relative}
+.mw-banner-logo{position:absolute;background:url(../imgs/ico_logo.png) no-repeat left top;width:363px;height:329px;left:10px;top:0}
+.mw-banner-app{position:absolute;width:300px;height:310px;top:20px;right:10px}
+.mw-banner-app a{display:block;margin-top:50px;width:300px;height:60px}
+.mw-banner-app a.app-iphone{background:url(../imgs/ico_app_iphone.png) no-repeat left top}
+.mw-banner-app a.app-android{background:url(../imgs/ico_app_android.png) no-repeat left top}
+.mw-banner-app a.app-iphone:hover{-moz-box-shadow:0px 0px 20px #999;-webkit-box-shadow:0px 0px 20px #999;box-shadow:0px 0px 20px #999}
+.mw-banner-app a.app-android:hover{-moz-box-shadow:0px 0px 20px #fff;-webkit-box-shadow:0px 0px 20px #fff;box-shadow:0px 0px 20px #fff}
+.mw-banner-text-life{position: absolute;bottom:-80px;left:0;background: url(../imgs/ico_text_life.png) no-repeat center center #feb9ed;width:100%;height:80px;}
+/*box*/
+.mw-box{position: relative;height:720px;overflow: hidden}
+.mw-box-1{background-color:#feb9ed;z-index:11}
+.mw-box-2{background-color:#a0c8fd;z-index:21}
+.mw-box-3{background-color:#fbd7a5;z-index:31}
+.mw-box-4{background-color:#85cbc7;z-index:41}
+.mw-box-con{position: relative;height: 100%;z-index:999}
+.mw-box-l,.mw-box-r,.mw-box-b{position: absolute}
+.mw-box-l,.mw-box-r{opacity: 0;filter:alpha(opacity=0)}
+.mw-box-1 .mw-box-b{background:url(../imgs/ico_1_sx.png) no-repeat left top;width:1280px;height:0;top:0;left:-138px}
+.mw-box-1 .mw-box-l{background:url(../imgs/ico_1_l.png) no-repeat left top;width:559px;height:525px;top:210px;left:-20px}
+.mw-box-1 .mw-box-r{background:url(../imgs/ico_1_r.png) no-repeat left top;width:380px;height:224px;top:250px;right:-84px}
+.mw-box-2 .mw-box-b{background:url(../imgs/ico_2_sx.png) no-repeat left top;width:1282px;height:0;top:15px;left:-202px}
+.mw-box-2 .mw-box-l{background:url(../imgs/ico_2_l.png) no-repeat left top;width:536px;height:530px;top:210px;left:10px}
+.mw-box-2 .mw-box-r{background:url(../imgs/ico_2_r.png) no-repeat left top;width:328px;height:212px;top:256px;right:-30px}
+.mw-box-3 .mw-box-b{background:url(../imgs/ico_3_sx.png) no-repeat left top;width:1718px;height:0;top:30px;left:-461px}
+.mw-box-3 .mw-box-l{background:url(../imgs/ico_3_l.png) no-repeat left top;width:570px;height:468px;top:225px;left:10px}
+.mw-box-3 .mw-box-r{background:url(../imgs/ico_3_r.png) no-repeat left top;width:275px;height:211px;top:256px;right:-60px}
+.mw-box-4 .mw-box-b{background:url(../imgs/ico_4_sx.png) no-repeat left top;width:1072px;height:0;top:53px;left:-158px}
+.mw-box-4 .mw-box-l{background:url(../imgs/ico_4_l.png) no-repeat left top;width:558px;height:496px;top:215px;left:-3px}
+.mw-box-4 .mw-box-r{background:url(../imgs/ico_4_r.png) no-repeat left top;width:352px;height:211px;top:256px;right:-70px}
+/*about us*/
+.mw-banner-s{height:1000px}
+.mw-banner-box-s{margin-left:-500px;margin-top:-393px;width:1000px;height:866px;background-color: #fff;opacity:.6;filter:alpha(opacity=60)}
+.mw-banner-stroy{background:url(../imgs/ico_text_story.png) no-repeat left top;width:852px;height:94px;position: absolute;top:100px;left:50%;margin-left:-280px}
+.mw-banner-logo-s{background:url(../imgs/ico_logo_s.png) no-repeat left top;width:186px;height:169px;position: absolute;top:350px;left:110px}
+.mw-banner-text{background:url(../imgs/ico_text_about.png) no-repeat left top;width:867px;height:585px;position: absolute;top:245px;left:420px}

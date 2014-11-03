@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+body, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend, input, textarea, select{margin:0;padding:0}
+body{font:12px "宋体","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;}
+h1, h2, h3, h4, h5, h6, .yh{font-family: "微软雅黑","黑体","宋体";font-size: 100%;font-weight: normal;}
+a{color:#333333;text-decoration:none}a:hover{color:#cc0000;text-decoration:underline}em{font-style:normal}li{list-style:none}img{border:0;vertical-align:middle}table{border-collapse:collapse;border-spacing:0}p{word-wrap:break-word}.undis{display:none}.dis{display:block}.ind{text-indent:2em}
+.clearfix:after {content: "."; display: block;  height: 0; font-size:0; clear: both; visibility: hidden;}.clearfix {display: inline-block;}   
+* html .clearfix {height:1%;}.clearfix {display: block;}.cf:after{content:"";display:table;clear:both}.cf{*zoom:1}
+.fl_dib{float:left;display:inline-block;*display:inline; *zoom:1}.fr_dib{float:right;display:inline-block;*display:inline; *zoom:1}
+.mr_5{margin-right: 5px}.mr_10{margin-right: 10px}.mr_15{margin-right: 15px}.mr_20{margin-right: 20px}.mr_25{margin-right: 25px}.mr_40{margin-right: 40px}.mr_50{margin-right: 50px}.mb_5{margin-bottom: 5px}.mb_10{margin-bottom: 10px}.mb_15{margin-bottom: 15px}.mb_20{margin-bottom: 20px}.mb_25{margin-bottom: 25px}.mb_30{margin-bottom: 30px}.mb_35{margin-bottom: 35px}.mt_5{margin-top: 5px}.mt_10{margin-top: 10px}.mt_15{margin-top: 15px}.mt_20{margin-top: 20px}.mt_30{margin-top: 30px}

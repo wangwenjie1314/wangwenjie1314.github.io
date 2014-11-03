@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>PX to EM conversion made simple.</title>
+    <meta name="description" content="One-click PX/EM/%/PT conversion tables, a custom conversion calculator, gnd generated reset CSS.">
+    <link rel="stylesheet" type="text/css" href="css/pages.css" />
+    <style>
+	html {
+		overflow-y: scroll;
+	}
+	
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		font-family: "microsoft yahei", Georgia, 'Helvetica Neue', Arial, sans-serif;
+		font-weight: bold;
+	}
+	
+	dl {
+		margin: 0 0 16px;
+	}
+	
+	dt {
+		font-weight: bold;
+	}
+	
+	dd {
+		margin-left: 16px;
+	}
+	
+	dd + dt {
+		margin: 16px 0 0;
+	}
+	
+	ul {
+		margin: 0 16px 16px;
+	}
+	
+	input {
+		font-size: 16px;
+		padding: 8px;
+		width: 60px;
+	}
+		
+	.pages {
+		height: 550px;
+	}
+	
+	.page {
+		height: 550px;
+	}
+	
+	.hide {
+		display: none;
+	}
+	
+	.column {
+		float: left;
+		width: 260px;
+		margin-right: 10px;
+	}
+	
+	.column:last-child {
+		margin-right: 0;
+	}
+	
+	.even {
+		background-color: rgba(0, 0, 0, .05);
+	}
+			
+	.conversion-column {
+		height: 502px;
+		background-color: #fff;
+		background-image: -moz-linear-gradient(top, #fff 0%, #eee 100%);
+		background-image: -webkit-linear-gradient(top, #fff 0%, #eee 100%);
+		background-image: -o-linear-gradient(top, #fff 0%, #eee 100%);
+		background-image: -ie-linear-gradient(top, #fff 0%, #eee 100%);
+		background-image: linear-gradient(top, #fff 0%, #eee 100%);
+		color: #222;
+	}
+	
+	.conversion-table {
+		width: 100%;
+		border-collapse: collapse;
+		border-spacing: 0;
+		border: 1px solid #ccc;
+	}
+	
+	.conversion-table td,
+	.conversion-table th {
+		width: 25%;
+		padding: 4px 8px;
+	}
+	
+	.conversion-table td {
+		border-bottom: 1px solid rgba(0, 0, 0, .1);
+	}
+	
+	.conversion-table th {
+		background-color: #ccc;
+		background-image: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+		background-image: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+		background-image: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+		background-image: -ie-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+		background-image: linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+		border-bottom: 1px solid #999;
+		border-left: 1px solid #ccc;
+	}
+	
+	.base {
+		background-color: rgba(0, 0, 0, .2);
+	}
+	
+	.base-table tbody tr:hover,
+	.base-table .selected,
+	.base-table .base.selected {
+		cursor: pointer;
+		background-color: #f60;
+		color: #fff;
+		background-image: -moz-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(255,255,255,0) 100%);
+		background-image: -webkit-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(255,255,255,0) 100%);
+		background-image: -o-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(255,255,255,0) 100%);
+		background-image: -ie-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(255,255,255,0) 100%);
+		background-image: linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(255,255,255,0) 100%);
+	}
+	
+	.conversion-column h4 {
+		text-align:center;
+		padding: 4px;
+		background-color: #ccc;
+		background-image: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+		background-image: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+		background-image: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+		background-image: -ie-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+		background-image: linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+		border-bottom: 1px solid #999;
+	}
+	
+	.conversion-column div + h4 {
+		border-top: 1px solid #ddd;
+	}
+	
+	.conversion-column h5 {
+		padding: 4px;
+		background-color: rgba(0, 0, 0, .1);
+		border-bottom: 1px solid #ccc;
+		margin-bottom: 16px;
+		border-left: 1px solid #ccc;
+	}
+	
+	.custom-base-size,
+	.custom-px-to-em,
+	.custom-em-to-px,
+	.custom-result {
+		padding: 16px;
+		text-align: center;
+		font-size: 16px;
+	}
+	
+	.custom-px-to-em,
+	.custom-em-to-px {
+		padding: 0 0 16px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50%;
+		line-height: 16px;
+		border-left: 1px solid rgba(0, 0, 0, .1);
+	}
+	
+	.custom-em-to-px {
+		left: 50%;
+	}
+	
+	.custom-wrap {
+		width: 100%;
+		position: relative;
+		height: 143px;
+		line-height: 120px;
+		text-align: center;
+	}
+	
+	.or {
+		padding: 4px;
+		position: relative;
+		z-index: 10;
+		background-color: #f9f9f9;
+	}
+	
+	.convert-button {
+		display: block;
+		position: absolute;
+		top: 95px;
+		left: 50%;
+		margin-left: -50px;
+		width: 100px;
+		padding:0 12px; height:28px; line-height:26px; display:inline-block; margin-right:6px; border-radius:4px; border:1px solid #ccc;; background-color:#eee; color:#666; cursor:pointer; font-weight:bold;
+	}
+	
+	.convert-button:hover {
+		background-image: -moz-linear-gradient(top, rgba(255,255,255,.4) 0%, rgba(255,255,255,.2) 100%);
+		background-image: -webkit-linear-gradient(top, rgba(255,255,255,.4) 0%, rgba(255,255,255,.2) 100%);
+		background-image: -o-linear-gradient(top, rgba(255,255,255,.4) 0%, rgba(255,255,255,.2) 100%);
+		background-image: -ie-linear-gradient(top, rgba(255,255,255,.4) 0%, rgba(255,255,255,.2) 100%);
+		background-image: linear-gradient(top, rgba(255,255,255,.4) 0%, rgba(255,255,255,.2) 100%);
+	}
+	
+	h2 { line-height:36px; font-size:14px; }
+	</style>
+</head>
+<body>
+    <div class="pages">
+        <div class="page" id="convert">
+            <div class="convert-base column">
+                <h2>选择body基准文字大小（默认16px）</h2>
+                <div class="conversion-column">
+                    <table class="conversion-table base-table">
+                        <colgroup><col class="c25">
+                        <col class="c25">
+                        <col class="c25">
+                        <col class="c25">
+                        </colgroup><thead>
+                            <tr>
+                                <th>Pixels</th>
+                                <th>EMs</th>
+                                <th>Percent</th>
+                                <th>Points</th>
+                            </tr>
+                        </thead>
+                        <tbody><tr class="odd"><td>6px</td><td>0.375em</td><td>37.5%</td><td>5pt</td></tr><tr class="even"><td>7px</td><td>0.438em</td><td>43.8%</td><td>5pt</td></tr><tr class="odd"><td>8px</td><td>0.500em</td><td>50.0%</td><td>6pt</td></tr><tr class="even"><td>9px</td><td>0.563em</td><td>56.3%</td><td>7pt</td></tr><tr class="odd"><td>10px</td><td>0.625em</td><td>62.5%</td><td>8pt</td></tr><tr class="even"><td>11px</td><td>0.688em</td><td>68.8%</td><td>8pt</td></tr><tr class="odd"><td>12px</td><td>0.750em</td><td>75.0%</td><td>9pt</td></tr><tr class="even"><td>13px</td><td>0.813em</td><td>81.3%</td><td>10pt</td></tr><tr class="odd"><td>14px</td><td>0.875em</td><td>87.5%</td><td>11pt</td></tr><tr class="even"><td>15px</td><td>0.938em</td><td>93.8%</td><td>11pt</td></tr><tr class="odd base"><td>16px</td><td>1.000em</td><td>100.0%</td><td>12pt</td></tr><tr class="even"><td>17px</td><td>1.063em</td><td>106.3%</td><td>13pt</td></tr><tr class="odd"><td>18px</td><td>1.125em</td><td>112.5%</td><td>14pt</td></tr><tr class="even"><td>19px</td><td>1.188em</td><td>118.8%</td><td>14pt</td></tr><tr class="odd"><td>20px</td><td>1.250em</td><td>125.0%</td><td>15pt</td></tr><tr class="even"><td>21px</td><td>1.313em</td><td>131.3%</td><td>16pt</td></tr><tr class="odd"><td>22px</td><td>1.375em</td><td>137.5%</td><td>17pt</td></tr><tr class="even"><td>23px</td><td>1.438em</td><td>143.8%</td><td>17pt</td></tr><tr class="odd selected"><td>24px</td><td>1.500em</td><td>150.0%</td><td>18pt</td></tr></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="convert-body column">
+                <h2>对应的em大小</h2>
+                <div class="conversion-column">
+                    <table class="conversion-table body-table">
+                        <colgroup><col class="c25">
+                        <col class="c25">
+                        <col class="c25">
+                        <col class="c25">
+                        </colgroup><thead>
+                            <tr>
+                                <th>Pixels</th>
+                                <th>EMs</th>
+                                <th>Percent</th>
+                                <th>Points</th>
+                            </tr>
+                        </thead>
+                        <tbody><tr class="odd"><td>6px</td><td>0.250em</td><td>25.0%</td><td>5pt</td></tr><tr class="even"><td>7px</td><td>0.292em</td><td>29.2%</td><td>5pt</td></tr><tr class="odd"><td>8px</td><td>0.333em</td><td>33.3%</td><td>6pt</td></tr><tr class="even"><td>9px</td><td>0.375em</td><td>37.5%</td><td>7pt</td></tr><tr class="odd"><td>10px</td><td>0.417em</td><td>41.7%</td><td>8pt</td></tr><tr class="even"><td>11px</td><td>0.458em</td><td>45.8%</td><td>8pt</td></tr><tr class="odd"><td>12px</td><td>0.500em</td><td>50.0%</td><td>9pt</td></tr><tr class="even"><td>13px</td><td>0.542em</td><td>54.2%</td><td>10pt</td></tr><tr class="odd"><td>14px</td><td>0.583em</td><td>58.3%</td><td>11pt</td></tr><tr class="even"><td>15px</td><td>0.625em</td><td>62.5%</td><td>11pt</td></tr><tr class="odd"><td>16px</td><td>0.667em</td><td>66.7%</td><td>12pt</td></tr><tr class="even"><td>17px</td><td>0.708em</td><td>70.8%</td><td>13pt</td></tr><tr class="odd"><td>18px</td><td>0.750em</td><td>75.0%</td><td>14pt</td></tr><tr class="even"><td>19px</td><td>0.792em</td><td>79.2%</td><td>14pt</td></tr><tr class="odd"><td>20px</td><td>0.833em</td><td>83.3%</td><td>15pt</td></tr><tr class="even"><td>21px</td><td>0.875em</td><td>87.5%</td><td>16pt</td></tr><tr class="odd"><td>22px</td><td>0.917em</td><td>91.7%</td><td>17pt</td></tr><tr class="even"><td>23px</td><td>0.958em</td><td>95.8%</td><td>17pt</td></tr><tr class="odd selected base"><td>24px</td><td>1.000em</td><td>100.0%</td><td>18pt</td></tr></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="convert-custom column">
+                <h2>自定义转换</h2>
+                <div class="conversion-column" style="border:1px solid #ccc;">
+                    <h4>输入基准字体大小</h4>
+                    <div class="custom-base-size">
+                        <input type="text" class="custom-base"> px
+                    </div>
+                    <h4>转换</h4>
+                    <div class="custom-wrap">
+                        <div class="custom-px-to-em">
+                            <h5>PX to EM</h5>
+                            <input type="text" class="custom-px"> px
+                        </div>
+                        <span class="or">or</span>
+                        <div class="custom-em-to-px">
+                            <h5>EM to PX</h5>
+                            <input type="text" class="custom-em"> em
+                        </div>
+                        <span class="convert-button">转换</span>
+                    </div>
+                    <h4>结果</h4>
+                    <div class="custom-result"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script>
+$(function () {
+    var base = window.base_font_size || 16,
+        selected = window.selected_font_size || 16;
+
+
+    (function () {
+        var $base_table = $('.base-table'),
+            $body_table = $('.body-table'),
+            $custom_base = $('.custom-base'),
+            $custom_px = $('.custom-px'),
+            $custom_em = $('.custom-em'),
+            $custom_result = $('.custom-result'),
+            $convert_button = $('.convert-button');
+
+
+        function build_table (root) {
+            var html = [];
+            for (var x = 6; x <= 24; x++) {
+                html.push(
+                    '<tr class="' + ((x + 1) % 2 ? 'odd' : 'even') + (selected == x ? ' selected' : '') + (root == x ? ' base' : '') + '">',
+                        '<td>' + x + 'px</td>',
+                        '<td>' + (x / root).toFixed(3) + 'em</td>',
+                        '<td>' + (x / root * 100).toFixed(1) + '%</td>',
+                        '<td>' + Math.round(x * .75) + 'pt</td>',
+                    '</tr>'
+                );
+            }
+            return html.join('');
+        };
+
+        function reset_calc () {
+            $custom_base.val(selected);
+            clear_calc();
+        };
+
+        function clear_calc () {
+            $custom_px.val('');
+            $custom_em.val('');
+            $custom_result.text('');
+        };
+
+        function do_calc () {
+            var px_val = $custom_px.val().replace(/[^0-9.]/g, ''),
+                em_val = $custom_em.val().replace(/[^0-9.]/g, ''),
+                base_val = $custom_base.val().replace(/[^0-9.]/g, '');
+
+            if (base_val && px_val) {
+                $custom_result.text((px_val / base_val).toFixed(3) + 'em');
+            }
+            else if (base_val && em_val) {
+                $custom_result.text(parseInt(em_val * base_val) + 'px');
+            }
+            else {
+                return;
+            }
+        };
+        
+        $base_table.find('tbody').html(build_table(base)).on('click', 'tr', function (e) {
+            e.preventDefault();
+            var $el = $(this);
+            $el.addClass('selected').siblings().removeClass('selected');
+            selected = $el.children('td:first').text().slice(0, -2);
+            $body_table.find('tbody').html(build_table(selected));
+            reset_calc();
+        }).find('tr:eq(' + (selected - 6) + ')').trigger('click');
+
+        $custom_px.on('focus', function (e) {
+            clear_calc();
+        }).on('keypress', function (e) {
+            if (e.keyCode == 13) {
+                do_calc();
+            }
+        });
+
+        $custom_em.on('focus', function (e) {
+            clear_calc();
+        }).on('keypress', function (e) {
+            if (e.keyCode == 13) {
+                do_calc();
+            }
+        });
+
+        $convert_button.on('click', function (e) {
+            e.preventDefault();
+            do_calc();
+        });
+    })();
+
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+@charset "utf-8"; 
+// var 变量名区分大小写
+@f0:#f0f0f0; @f4:#f4f4f4; @f6:#f6f6f6; @f8:#f8f8f8; @fa:#fafafa;
+@f:#fff; @e:#eee; @d:#ddd; @c:#ccc; @bb:#bbb; @a:#aaa; @9:#999; @8:#888; @7:#777; @6:#666; @5:#555; @4:#444; @3:#333; @2:#222; @1:#111; @0:#000;
+
+@m:normal; @n:; @o:none; @u:auto;
+@T:-top; @L:-left; @R:-right; @B:-bottom;
+@t:top; @l:left; @r:right; @b:bottom; @cr:center; @me:middle;
+@ar:arial; @ta:tahoma; @ve:verdana; @ya:'microsoft yahei'; @si:simsun; @sa:sans-serif; @hi:'Hiragino Sans GB';
+
+/*********************/
+/* blues CSS Library */
+/*********************/
+
+/* base */
+.ani(@i1:all,@i2:0.3s,@i3:linear,@i4:0s){-webkit-transition:@arguments;-moz-transition:@arguments;transition:@arguments;}
+.b(@i:0){@{b}:@i;}
+.bc(@i){background-color:@i;}
+.br(@a,@c){border@{a}:1px solid @c;}
+.br0(@a){border@{a}:0;}
+.brc(@i){border-color:@i;}
+.c(@i){color:@i;}
+.d(@i){display:@i;}
+.f(@i){float:@i;}
+.fb(@i:bold){font-weight:@i;}
+.fe(@i:italic){font-style:@i;}
+.ff(@i1,@i2:@ar,@i3:@ar,@i4:@ar){font-family:@i1,@i2,@i3,@i4;}
+.fn{.fb(@m) !important; .fe(@m) !important;}
+.fs(@i1,@i2:0px){font-size:@i1+@i2;}
+.h(@i1,@i2:0px){height:@i1+@i2;}
+.l(@i:0){@{l}:@i;}
+.lh(@i1,@i2:0px){line-height:@i1+@i2;}
+.m(@a,@i1,@i2:0px){margin@{a}:@i1+@i2;}
+.m-(@a,@i1,@i2:0px){margin@{a}:@i1+@i2;}
+.o(@i){opacity:@i;filter:opacity(alpha=percentage(@i));}
+.ow(@i){overflow:@i;}
+.pn(@i){position:@i;}
+.p(@a,@i1,@i2:0px){padding@{a}:@i1+@i2;}
+.r(@i:0){@{r}:@i;}
+.t(@i:0){@{t}:@i;}
+.ta(@i){text-align:@i;}
+.td(@i){text-decoration:@i;}
+.v(@i){visibility:@i;}
+.va(@i){vertical-align:@i;}
+.w(@i1,@i2:0px){width:@i1+@i2;}
+.wb(@i){word-break:@i;}
+.ws(@i){white-space:@i;}
+.z(@i){z-index:@i;}
+
+
+/* font-size */
+.f12{.fs(12)}.f13{.fs(13)}.f14{.fs(14)}.f16{.fs(16)}.f18{.fs(18)}.f20{.fs(20)}.f24{.fs(24)}.f30{.fs(30)}
+
+/* font-family */
+.@{ar}{.ff(@ar)}.@{ta}{.ff(@ta)}.@{ve}{.ff(@ve)}.@{ya}{.ff(@ya)}.@{si}{.ff(@si)}.courier{.ff('courier new',courier,monospace);}
+
+/* line-height */
+.lh0{.lh(0)}.lh14{.lh(14)}.lh16{.lh(16)}.lh18{.lh(18)}.lh20{.lh(20)}.lh22{.lh(22)}.lh24{.lh(24)}.lh30{.lh(30)}.lh40{.lh(40)}
+
+/* show */
+.undis{.d(@o)}.dis{.d(inherit)}.db{.d(block)}.dib{.d(inline-block)}.di{.d(inline)}.dtc{.d(table-cell)}
+.hid{.v(hidden)}.vis{.v(visible)}
+.o0{.o(0)}.o50{.o(0.5)}.o100{.o(1)}
+
+/* color */
+.red{.c(#f30)}.green{.c(#0c0)}.blue{.c(#09f)}.orange{.c(#f93)}
+.red2{.c(#f00)}.blue2{.c(#00f)}.green2{.c(#0f0)}.yellow{.c(#ff0)}.aqua{.c(#0ff)}.pink{.c(#f0f)}
+.c000{.c(@0)}.c111{.c(@1)}.c222{.c(@2)}.c333{.c(@3)}.c444{.c(@4)}.c555{.c(@5)}.c666{.c(@6)}.c777{.c(@7)}.c888{.c(@8)}.c999{.c(@9)}.caaa{.c(@a)}.cbbb{.c(@bb)}.cccc{.c(@c)}.cddd{.c(@d)}.ceee{.c(@e)}.cfff{.c(@f)}
+
+/* background */
+.bcfff{.bc(@f)}.bc000{.bc(@0)}.bcf0{.bc(@f0)}.bcf4{.bc(@f4)}.bcf6{.bc(@f6)}
+
+/* border */
+.b1ccc{.br(@n,@c)}.bt1ccc{.br(@T,@c)}.bb1ccc{.br(@B,@c)}.bl1ccc{.br(@L,@c)}.br1ccc{.br(@R,@c)}
+.b1ddd{.br(@n,@d)}.bt1ddd{.br(@T,@d)}.bb1ddd{.br(@B,@d)}.bl1ddd{.br(@L,@d)}.br1ddd{.br(@R,@d)}
+.b1eee{.br(@n,@e)}.bt1eee{.br(@T,@e)}.bb1eee{.br(@B,@e)}.bl1eee{.br(@L,@e)}.br1eee{.br(@R,@e)}
+.bo0{.br0(@n)}.bt0{.br0(@T)}.bb0{.br0(@B)}.bl0{.br0(@L)}.br0{.br0(@R)}
+.ol0{outline:0;}
+
+/* position */
+.m0a{margin:0 @u;}
+.tal{.ta(@l)}.tac{.ta(@cr)}.tar{.ta(@r)}
+.vab{.va(@b)}.vam{.va(@me)}.vat{.va(@t)}
+.pr{.pn(relative)}.pa{.pn(absolute)}.pf{.pn(fixed)}
+.fl{.f(@l)}.fr{.f(@r)}
+.t0{.t}.b0{.b}.l0{.l}.r0{.r}
+.z1{.z(1)}.z2{.z(2)}.z3{.z(3)}.z4{.z(4)}
+
+/* margin padding */
+.m0{.m(@n,0)}.m5{.m(@n,5)}.m10{.m(@n,10)}.m15{.m(@n,15)}.m20{.m(@n,20)}
+.mt0{.m(@T,0)}.mt5{.m(@T,5)}.mt10{.m(@T,10)}.mt15{.m(@T,15)}.mt20{.m(@T,20)}.mt30{.m(@T,30)}.mt50{.m(@T,50)}.mt100{.m(@T,100)}
+.mb0{.m(@B,0)}.mb5{.m(@B,5)}.mb10{.m(@B,10)}.mb15{.m(@B,15)}.mb20{.m(@B,20)}.mb30{.m(@B,30)}.mb50{.m(@B,50)}.mb100{.m(@B,100)}
+.ml0{.m(@L,0)}.ml5{.m(@L,5)}.ml10{.m(@L,10)}.ml15{.m(@L,15)}.ml20{.m(@L,20)}.ml30{.m(@L,30)}.ml50{.m(@L,50)}.ml100{.m(@L,100)}
+.mr0{.m(@R,0)}.mr5{.m(@R,5)}.mr10{.m(@R,10)}.mr15{.m(@R,15)}.mr20{.m(@R,20)}.mr30{.m(@R,30)}.mr50{.m(@R,50)}.mr100{.m(@R,100)}
+.p0{.p(@n,0)}.p5{.p(@n,5)}.p10{.p(@n,10)}.p15{.p(@n,15)}.p20{.p(@n,20)}
+.pt0{.p(@T,0)}.pt5{.p(@T,5)}.pt10{.p(@T,10)}.pt15{.p(@T,15)}.pt20{.p(@T,20)}.pt30{.p(@T,30)}.pt50{.p(@T,50)}.pt100{.p(@T,100)}
+.pb0{.p(@B,0)}.pb5{.p(@B,5)}.pb10{.p(@B,10)}.pb15{.p(@B,15)}.pb20{.p(@B,20)}.pb30{.p(@B,30)}.pb50{.p(@B,50)}.pb100{.p(@B,100)}
+.pl0{.p(@L,0)}.pl5{.p(@L,5)}.pl10{.p(@L,10)}.pl15{.p(@L,15)}.pl20{.p(@L,20)}.pl30{.p(@L,30)}.pl50{.p(@L,50)}.pl100{.p(@L,100)}
+.pr0{.p(@R,0)}.pr5{.p(@R,5)}.pr10{.p(@R,10)}.pr15{.p(@R,15)}.pr20{.p(@R,20)}.pr30{.p(@R,30)}.pr50{.p(@R,50)}.pr100{.p(@R,100)}
+
+/* margin negative */
+.ml-1{.m(@L,-1)}.mr-1{.m(@R,-1)}.mt-1{.m(@T,-1)}.mb-1{.m(@B,-1)}
+.ml-10{.m(@L,-10)}.mr-10{.m(@R,-10)}.mt-10{.m(@T,-10)}.mb-10{.m(@B,-10)}
+.ml-20{.m(@L,-20)}.mr-20{.m(@R,-20)}.mt-20{.m(@T,-20)}.mb-20{.m(@L,-20)}
+
+/* width height */
+.w0{.w(0)}.w20{.w(20)}.w30{.w(30)}.w40{.w(40)}.w50{.w(50)}.w70{.w(70)}.w100{.w(100)}.w120{.w(120)}.w140{.w(120)}.w160{.w(160)}.w180{.w(180)}.w200{.w(200)}.w220{.w(220)}.w250{.w(250)}.w280{.w(280)}.w300{.w(300)}.w320{.w(320)}.w360{.w(360)}.w400{.w(400)}.w500{.w(500)}.w600{.w(600)}.w640{.w(640)}.w700{.w(700)}.w800{.w(800)}.w900{.w(900)}.w960{.w(960)}.w980{.w(980)}.w50p{.w(50%)}.w75p{.w(75%)}.w90p{.w(90%)}.w100p{.w(100%)}
+.h0{.h(0)}.h18{.h(18)}.h20{.h(20)}.h24{.h(24)}.h30{.h(30)}.h40{.h(40)}.h50{.h(50)}.h100{.h(100)}.h100p{.h(100%)}
+
+/* other */
+.cur{cursor:pointer;}
+.cb{clear:both;}
+.lsn{list-style:@o;}
+.lsi{list-style:inside;}
+.zm{*zoom:1;}
+.oh{.ow(hidden)}.oa{.ow(@u)}
+.tdu{.td(underline)}.tdn{.td(@o)}
+.nowrap{.ws(nowrap); .wb(keep-all);}.wrap{.ws(pre-wrap); .wb(break-all); word-wrap:break-word;}
+.tlf{table-layout:fixed;}
+.clear{.zm}.clear:after{.db; .oh; .cb; .h0; .hid; content:".";}
+.loading{background:url(http://www.bluesdog.net/images/loading.gif) no-repeat center;}
+
+
+/*css reset*/ 
+html{*overflow-y:@u;}
+body{.c333; .bcfff;}
+body,button,input,select,textarea{font:12px/1.5 @ta,@ar,@ya,@hi,@si,@sa;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,hr,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{.m0; .p0;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{.db}
+audio,canvas,video{.dib;*display:inline;.zm}
+input,button,textarea,select,optgroup,option{*font-size:100%;}
+table{border-collapse:collapse;border-spacing:0;}
+th{text-align:inherit;}
+fieldset,img{.bo0;}
+iframe{.db}
+abbr,acronym{.bo0; font-variant:@m;}
+del,ins{.td(line-through)}
+address,caption,cite,code,dfn,em,th,var,optgroup{.fe(@m); .fb(500);}
+ol,ul{.lsn}
+li{.lsn; .vab;}
+caption{.tal}
+code,kbd,pre,samp{.courier}
+h1,h2,h3,h4,h5,h6{.fs(100%); .fb(500);}
+q:before,q:after{content:'';}
+sub,sup{.fs(75%); .lh0; .pr; .va(baseline);}
+sup{.t(-.5em)}
+sub{.b(-.25em)}
+legend {.c000}
+a{.tdn}  
+a:hover{.tdu}
+/*********************/
+/******* End *********/
+/*********************/

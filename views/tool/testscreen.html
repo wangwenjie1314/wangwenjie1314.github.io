@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>屏幕测试</title>
+</head>
+
+<body>
+<style>
+* { margin:0; padding:0; font:normal 14px/1.5 "microsoft yahei",arial;}
+table { border:0; border-collapse:collapse; border-spacing:0; width:100%; }
+td { border:1px solid #ccc; padding:5px; }
+h1 { font-weight:bold; font-size:20px; line-height:1.5; }
+</style>
+
+<table>
+<tr>
+<td width=50% align="right"><h1>屏幕分辨率</h1>iOS（screen.width=dips）<br>Android（screen.width/devicePixelRatio=dips）</td>
+<td width=50%>
+<script>
+report = "screen.width : <b>"+screen.width+"</b> px<br>";
+report += "screen.height : <b>"+screen.height+"</b> px";
+document.write(report);
+</script>
+</td>
+</tr>
+<tr>
+<td width=50% align="right"><h1>窗口内尺寸</h1>（含滚动条）</td>
+<td width=50%>
+<script>
+report = "window.innerWidth : <b>"+window.innerWidth+"</b> px<br>";
+report +=  "window.innerHeight : <b>"+window.innerHeight+"</b> px";
+document.write(report);
+</script>
+</td>
+</tr>
+<tr>
+<td width=50% align="right"><h1>窗口外尺寸</h1>（包含滚动条、状态栏、菜单栏、边框）</td>
+<td width=50%>
+<script>
+report = "window.outerWidth : <b>"+window.outerWidth+"</b> px<br>";
+report += "window.outerHeight : <b>"+window.outerHeight+"</b> px";
+document.write(report);
+</script>
+</td>
+</tr>
+<tr>
+<td width=50% align="right"><h1>此属性在大部分浏览器中等同于dips</h1></td>
+<td width=50%>
+<script>
+report = "document.documentElement.clientWidth : <b>"+document.documentElement.clientWidth+"</b> px<br>";
+report += "document.documentElement.clientHeight : <b>"+document.documentElement.clientHeight+"</b> px";
+document.write(report);
+</script>
+</td>
+</tr>
+<tr>
+<td width=50% align="right"><h1>网页正文全尺寸</h1></td>
+<td width=50%>
+<script>
+report = "document.body.scrollWidth : <b>"+document.body.scrollWidth+"</b> px<br>";
+report += "document.body.scrollHeight : <b>"+document.body.scrollHeight+"</b> px";
+document.write(report);
+</script>
+</td>
+</tr>
+<tr>
+<td width=50% align="right"><h1>window.devicePixelRatio</h1></td>
+<td width=50%>
+<script>
+report = "<b style=color:red>"+window.devicePixelRatio+"</b><br>";
+document.write(report);
+</script>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<p id="test">非高清屏上，屏幕的每一个点，只显示1个像素；<br>
+在高清屏上，屏幕的每一个点，要显示2个像素；<br>
+虽然iPhone4S和iPhone4的屏幕宽度一样，<br>
+但iPhone4S要把640像素宽的内容"压"到320像素的屏幕中显示，
+所以 <b style="font-weight:bold">devicePixelRatio =640/320=2</b>
+</p>
+<br>
+<p>
+<textarea rows="11" style="width:100%">
+<meta name="viewport"  
+        content="  
+            height = [pixel_value | device-height] ,  
+            width = [pixel_value | device-width ] ,  
+            initial-scale = float_value ,  
+            minimum-scale = float_value ,  
+            maximum-scale = float_value ,  
+            user-scalable = [yes | no] ,  
+            target-densitydpi = [dpi_value | device-dpi | high-dpi | medium-dpi | low-dpi]  
+        "  
+/>
+</textarea>
+</p>
+</td>
+</tr>
+</table>
+<script>
+canvas.addEventListener('touchmove', function(event) { 
+    for (var i = 0; i < event.touches.length; i++) { 
+        var touch = event.touches[i]; 
+        ctx.beginPath(); 
+        ctx.arc(touch.pageX, touch.pageY, 20, 0, 2*Math.PI, true); 
+        ctx.fill(); 
+        ctx.stroke(); 
+    } 
+}, false);
+
+</script>
+</body>
+</html>

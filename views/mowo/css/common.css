@@ -1,0 +1,32 @@
+/*mw通用css add by wwj 2014-9-22 00:07:22*/@charset "utf-8";body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,address{margin:0;padding:0}html{color:#000}body{font:12px "宋体","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%}fieldset,img{border:0}img{vertical-align:middle}:focus{outline:0}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:normal}article,aside,details,figcaption,figure,footer,header,dialog,hgroup,menu,nav,section,summary,time,mark,audio,video{display:block;margin:0;padding:0}li{list-style:none}a{color:#666;text-decoration:none}a:hover{color:#cc0000}a:focus {outline:none;-moz-outline:none}:link,:visited,ins{text-decoration:none}p{word-wrap:break-word}table{border-collapse:collapse;border-spacing:0;font-size:inherit}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;outline:none}html{_background:url(about:black) no-repeat fixed}.clearfix:after{content:".";display:block;height:0;font-size:0;clear:both;visibility:hidden}.clearfix{display:inline-block}* html .clearfix{height:1%}.clearfix{display:block}.comWidth,.comWith{width:1000px;margin:0 auto}.h_10{height:10px;overflow:hidden}.h_15{height:15px;overflow:hidden}.h_30{height:30px;overflow:hidden}.mt10{margin-top:10px}.mt30{margin-top:30px}.pt30{padding-top:30px}.pos_fix{position:fixed}.pos_sta{position:static}.tal{text-align:left}.tar{text-align:right}.dn{display:none}.db{display:block}.fl_dib{float:left;display:inline-block;*display:inline;*zoom:1}.fr_dib{float:right;display:inline-block;*display:inline;*zoom:1}.t,input{-webkit-transition:all .5s ease-in-out 0s;-o-transition:all .5s ease-in-out 0s;-moz-transition:all .5s ease-in-out 0s;-ms-transition:all .5s ease-in-out 0s;transition:all .5s ease-in-out 0s}a{-webkit-transition:all .2s ease-in-out 0s;-o-transition:all .2s ease-in-out 0s;-moz-transition:all .2s ease-in-out 0s;-ms-transition:all .2s ease-in-out 0s;transition:all .2s ease-in-out 0s}
+.hide{opacity: 0;filter:alpha(opacity=0)}
+.mw-minwidth{min-width:1000px}.mw-width{width: 1000px;margin: 0 auto}
+.hide-text{text-indent:-99999em;white-space:nowrap;overflow:hidden}
+/*header*/
+.mw-header{position:fixed;width:100%;height:80px;background-color:#feb9ed;top:-80px;left:0;z-index:99999999}
+.mw-header-s{top:0}
+.mw-header.mask{background-color: #fff;box-shadow: 0 0 5px #888;-webkit-box-shadow: 0 0 5px #888;-moz-box-shadow: 0 0 5px #888}
+.mw-header-wrap{position:relative;height:80px}
+.mw-header-wrap-mr{margin:0 65px}
+.mw-logo-wrap{position:absolute;left:0;top:15px}
+.mw-logo{display:block;width:168px;height:44px;background:url(../imgs/logo.png) no-repeat left top;overflow:hidden}
+.mw-header-right{position:absolute;right:0;top:20px}
+.mw-header-right li{float:left;margin-left:40px;height:36px;font:22px/36px "微软雅黑";position: relative}
+.mw-header-right li.cur i{display:block;position: absolute;background: url(../imgs/ico_tb_sj.png) no-repeat left top;width:33px;height:21px;left:30%;bottom: -24px}
+.mw-header-right li a{color:#100c0f}
+.mw-header-right li a:hover{color:#a40861}
+/*footer*/
+.mw-footer{background-color:#daefee;position:relative;height:200px;top:0;overflow:hidden;z-index:51}
+.mw-share-con{width:410px;padding-left:80px;padding-top:33px}
+.mw-share-con li{float:left;margin-left:45px;width:68px;height:105px;position:relative}
+.mw-share-con li a{display:block;background:url(../imgs/ico_share.png) no-repeat;width:68px;height:68px;margin-top:33px;cursor:pointer}
+.mw-share-con li a.mw-share-sina{background-position:0 0}
+.mw-share-con li a.mw-share-weixin{background-position:0 -136px}
+.mw-share-con li a.mw-share-txwb{background-position:0 -272px}
+.mw-share-con li a.mw-share-sina:hover{background-position:0 -68px}
+.mw-share-con li a.mw-share-weixin:hover{background-position:0 -204px}
+.mw-share-con li a.mw-share-txwb:hover{background-position:0 -340px}
+.mw-share-con li p{position:absolute;top:-20px;left:0;width:70px;height:27px;overflow:hidden;color:#595757;text-align:center;font:14px/27px "黑体"}
+.mw-share-con li a:hover p{opacity:1;filter:alpha(opacity=100);top:0}
+.mw-company-con{width:510px;padding-top:80px}
+.mw-company-con p{font:16px/22px "黑体";color:#595757}

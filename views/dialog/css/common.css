@@ -1,0 +1,49 @@
+/* CSS reset */
+@charset "utf-8";body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,address{margin:0;padding:0}
+body{font:14px Microsoft YaHei,SimSun,Arial;background:#fff;color:#5e5e5e;-webkit-text-size-adjust:100%}
+fieldset,img{border:0}
+img{vertical-align:middle}
+:focus{outline:0}
+address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:normal}
+article,aside,details,figcaption,figure,footer,header,dialog,hgroup,menu,nav,section,summary,time,mark,audio,video{display:block;margin:0;padding:0}
+li{list-style:none}
+a{color:#666;text-decoration:none}
+a:hover{color:#cc0000}
+a:focus{outline:none;-moz-outline:none}
+:link,:visited,ins{text-decoration:none}
+p{word-wrap:break-word}
+table{border-collapse:collapse;border-spacing:0;font-size:inherit}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;font-family: "Microsoft YaHei"; }
+q:before,q:after{content:''}
+abbr,acronym{border:0;font-variant:normal}
+sup{vertical-align:text-top}
+sub{vertical-align:text-bottom}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;outline:none}
+html{_background:url(about:black) no-repeat fixed}
+.clearfix:after{content:".";display:block;height:0;font-size:0;clear:both;visibility:hidden}
+.clearfix{display:inline-block}
+* html .clearfix{height:1%}
+.clearfix{display:block}
+.comWidth{width:1000px;margin:0 auto}
+.h_10{height:10px;overflow:hidden}
+.h_15{height:15px;overflow:hidden}
+.h_30{height:30px;overflow:hidden}
+.mt10{margin-top:10px}
+.mt30{margin-top:30px}
+.pt30{padding-top:30px}
+.pos_fix{position:fixed}
+.pos_sta{position:static}
+.tal{text-align:left}
+.tac{text-align:center}
+.tar{text-align:right}
+.dn{display:none}
+.db{display:block}
+.fl_dib{float:left;display:inline-block;*display:inline;*zoom:1}
+.fr_dib{float:right;display:inline-block;*display:inline;*zoom:1}
+.hide{opacity:0;filter:alpha(opacity=0)}
+::-webkit-scrollbar {width:8px}
+::-webkit-scrollbar-thumb {background:#bbbbbb;background:rgba(0,0,0,0.15);border-radius:5px}
+::-webkit-scrollbar-track {background:#dddddd;background:rgba(0,0,0,0.05)}
+.t,input{-webkit-transition:all .5s ease-in-out 0s;-o-transition:all .5s ease-in-out 0s;-moz-transition:all .5s ease-in-out 0s;-ms-transition:all .5s ease-in-out 0s;transition:all .5s ease-in-out 0s}
+a{-webkit-transition:all .2s ease-in-out 0s;-o-transition:all .2s ease-in-out 0s;-moz-transition:all .2s ease-in-out 0s;-ms-transition:all .2s ease-in-out 0s;transition:all .2s ease-in-out 0s}

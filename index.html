@@ -1,11 +1,98 @@
----
-layout: default
-title: 我的Blog
----
-<h2>{{ page.title }}</h2>
-<p>最新文章</p>
-<ul>
-　　{% for post in site.posts %}
-　　<li>{{ post.date | date_to_string }} <a href="{{ post.url }}">{{ post.title }}</a></li>
-　　{% endfor %}
-</ul> 
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta content="width=320,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" />
+  <title>前端风景</title>
+  <meta name="author" content="wangwenjie" />
+  <link rel="shortcut icon" href="http://wangwenjie1314.github.io/statics/images/favicon.ico" />
+  <link rel="stylesheet" href="http://wangwenjie1314.github.io/statics/css/blog-index.css" />
+ </head>
+ <body>
+  <header class="header"> 
+   <div class="navigation container_12"> 
+    <div class="row"> 
+     <section class="grid_2 logo"><a href="http://wangwenjie1314.github.io/">前端风景</a></section> 
+     <div class="grid_8"> 
+      <nav role="navigation"> 
+       <ul role="main-navigation"> 
+        <li><a class="current" href="http://wangwenjie1314.github.io/blog/" target="_blank">文章</a></li>
+        <li><a href="http://wangwenjie1314.github.io/views/tool/index.htm" target="_blank"><i class="icon-stack"></i> 前端工具箱</a></li>
+        <li><a href="http://wangwenjie1314.github.io/views/weblearn/index.html" target="_blank">前端知识</a></li>
+        <li><a href="https://github.com/wangwenjie1314/webQd/blob/master/README.md" target="_blank">前端面试</a></li>
+        <li><a href="http://wangwenjie1314.github.io/views/about/me.html" target="_blank">关于我</a></li>
+       </ul>
+      </nav> 
+      <div class="search"></div>
+     </div> 
+     <div class="social grid_2 share_link"> 
+      <span><a href="http://www.renren.com/260146739" target="_blank"><i class="icon-renren" title="人人"></i></a>
+      <a href="http://weibo.com/wangwenjie1314" target="_blank"><i class="icon-weibo" title="微博"></i></a></span>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="banner"></div> 
+  <section class="main container_12"> 
+   <div class="row"> 
+    <div class="area-header"></div> 
+    <div class="block-contents"> 
+     <div class="bg-contents"></div> 
+     <h1 class="title">列表</h1> 
+     <div class="contents"> 
+      <div class="index"> 
+       <ul class="article-list"> 
+        <li><a href="views/dialog/index_scale.html" target="_blank">[模版] 弹窗dialog放大缩小效果页面</a> <time>2014-10-27</time> </li>
+        <li><a href="views/subway/index.htm" target="_blank">[移植] 北京地铁输入始末站查成本</a> <time>2014-10-20</time> </li>
+        <li><a href="views/job/index.html" target="_blank">[行业] 拉钩网分析互联网职位报告</a> <time>2014-10-20</time> </li>
+        <li><a href="views/highlight/index.html" target="_blank">[学习] 代码高亮highlight</a> <time>2014-10-20</time> </li>
+        <li><a href="views/echarts/line2.html" target="_blank">[学习] 图表echarts</a> <time>2014-10-20</time> </li>
+        <li><a href="views/mowo/index.html" target="_blank">[练习] mowo365</a> <time>2014-10-17</time> </li>
+        <li><a href="views/kuaidi/index.html" target="_blank">[便民] 快递单号查询</a> <time>2014-10-16</time> </li>
+        <li><a href="views/kuaidi/company.html" target="_blank">[便民] 快递公司查询</a> <time>2014-10-16</time> </li>
+        <li><a href="views/404/index.html" target="_blank">[模版] 404页面</a> <time>2014-10-16</time> </li>
+        <li><a href="views/auto_layout/index.html" target="_blank">[模版] 瀑布流布局页面 <i class="icon-heart"></i></a> <time>2014-10-16</time> </li>
+        <li><a href="views/chart/index.html" target="_blank">[模版] 聊天窗口页面</a> <time>2014-10-16</time> </li>
+        <li><a href="views/login_reg/reg.html" target="_blank">[模版] 用户注册页面</a> <time>2014-10-16</time> </li>
+        <li><a href="views/login_reg/login.html" target="_blank">[模版] 用户登录页面</a> <time>2014-10-16</time> </li>
+        <li><a href="views/photo/index.html" target="_blank">[模版] 相册页面</a> <time>2014-10-16</time> </li>
+        <li><a href="views/table/base_table.html" target="_blank">[模版] 基础表格页面</a> <time>2014-10-16</time> </li>
+        <li><a href="views/table/edit_table.html" target="_blank">[模版] 编辑表格页面</a> <time>2014-10-16</time> </li>
+        <li><a href="views/table/data_table.html" target="_blank">[模版] 数据表格页面</a> <time>2014-10-16</time> </li>
+        <li><a href="views/timeline/index.html" target="_blank">[模版] 时间轴页面</a> <time>2014-10-16</time> </li>
+        <li><a href="views/dialog/index.html" target="_blank">[模版] 弹窗dialog页面</a> <time>2014-10-16</time> </li>
+        <li><a href="views/netcar/index.html" target="_blank">[练习] 巢车网页面</a> <time>2014-08-10</time> </li>
+		<li><a href="views/hao/index.html" target="_blank">[练习] 仿qq导航简洁版页面</a> <time>2014-07-10</time> </li>
+		<li><a href="views/ouzhouke/index.html" target="_blank">[练习] 欧洲客页面</a> <time>2014-04-20</time> </li>
+        <li><a href="views/business/index.html" target="_blank">[模板] 企业公司展示页面</a> <time>2014-04-12</time> </li>
+       </ul>
+      </div> 
+      <div class="archive-link"> 
+       <!-- <i class="fa fa-share"></i> 
+       <a href="/archive.html">Archives</a> -->
+      </div> 
+      <div class="clear"></div>
+     </div>
+    </div>
+   </div> 
+  </section>
+  <footer class="footer" role="contentinfo"> 
+   <div class="footer-content container_12"> 
+    <div class="row"> 
+     <div class="grid_6 left">
+     	<span>特别说明:本站所有资源仅供学习与参考,请勿用于商业用途。转载请注明来自https://github.com/wangwenjie1314</span>
+     </div> 
+     <div class="copyright grid_6 right"> 
+      <span> Powered by welefen and <a target="_blank" href="https://github.com/wangwenjie1314">github</a> &copy; 2014 </span>
+     </div>
+    </div>
+   </div> 
+  </footer>
+  <div class="dn"><script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F05147a4961fd5f5d3a31494134c7417b' type='text/javascript'%3E%3C/script%3E"));
+</script></div>
+ </body>
+</html>

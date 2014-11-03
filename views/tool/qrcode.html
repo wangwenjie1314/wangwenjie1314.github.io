@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>样式表(CSS) 格式整理与压缩</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+body { background:#fff; }
+td { padding:0 2px; vertical-align:top; }
+#qr_code_img { width:160px; height:160px; border:1px solid #ccc; }
+</style>
+</head> 
+
+<body> 
+<table>
+<tr>
+<td>
+<p><strong>请输入完整的网址</strong></p>
+<textarea id="id_content" placeholder="http://www.bluesdog.net/" rows="6" style="width:300px;height:100px"></textarea>
+<p>
+<input onclick="Show_QR_Code()" type="button" value="生成二维码" class="btnb" style="float:left;">
+<input onclick="Clear_Content()" type="button" value="清空" class="btn" style="float:right;">
+</p>
+</td>
+<td>
+<img onclick="savepic();" id="qr_code_img" src="http://toolsapp.duapp.com/qr_code/qr_img.php?s=4&amp;d=http://www.bluesdog.net/" alt="二维码图像">
+<div id="down_qr_code" align=center>
+<a id="save_pic" target="_self" href="http://toolsapp.duapp.com/qr_code/qr_save.php?s=4&amp;d=http://www.bluesdog.net/" title="点击保存图片" >点此下载该二维码图片</a>
+</div>
+</td>
+</tr>
+</table>
+<script> 
+function $(name){ return document.getElementById(name); }
+
+function Clear_Content(){
+	$('id_content').value = "";
+}
+function Show_QR_Code(){
+	var str = $('id_content').value;
+	var len = str.length;
+	if(len <= 0){
+		alert('请输入产生二维码的字符串！');
+		return;
+	}
+	if(len >= 512){
+		alert('产生二维码的字符串过长，请缩短字符串！');
+		return;
+	}
+	var url = 'http://toolsapp.duapp.com//qr_code/qr_img.php';
+	url += '?s=4';
+	url += '&d=' + str;
+	$('qr_code_img').src = url;
+	
+	var s_url = 'http://toolsapp.duapp.com/qr_code/qr_save.php';
+	s_url += '?s=4';
+	s_url += '&d=' + str;
+	var down_url = '<a id="save_pic" target="_self" href="' + s_url + '" title="点击保存为图片。假如字符串比较长，信息比较多，建议先把二维码保存为png图片，再打开。">点此下载该二维码图片</a>';
+	$('down_qr_code').innerHTML = down_url;
+}
+
+function savepic(o){   
+	var id = $('save_pic');
+	if(id)id.click();
+}   
+</script>  
+</body>
+</html>

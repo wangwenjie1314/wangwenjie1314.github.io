@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>懂球帝 手机客户端App下载</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<style>
+body{margin:0; padding:0; background:url(http://m.dongqiudi.com/app/images/bg.jpg) 0 0 no-repeat; width: 100%; height: 100%; background-size: 100%}
+.down{width: 60%; margin-top: 78%; margin-left:auto; margin-right: auto; height: 50%}
+.down a{outline: none}
+.down img{margin:10px auto; border:0}
+</style>
+<script type="text/javascript">
+function switchApp() {
+    if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent) && /(MicroMessenger)/i.test(navigator.userAgent)) {
+        setTimeout(function() {
+            alert('前往App Store下载');
+        }, 25);
+    } else {
+        setTimeout(function() {
+            window.location = "https://itunes.apple.com/cn/app/dong-qiu-di-zhuan-ye-quan/id766695512?ls=1&mt=8&at=1l3v3QB&ct=m";
+        }, 25);
+    }
+    window.location = "dongqiudi://";
+}
+window.onload = function() {
+    if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+        document.getElementById("iphone").href = "https://itunes.apple.com/cn/app/dong-qiu-di-zhuan-ye-quan/id766695512?ls=1&mt=8&at=1l3v3QB&ct=m";
+
+        if (/(MicroMessenger)/i.test(navigator.userAgent)) {
+            window.location = "http://a.app.qq.com/o/simple.jsp?pkgname=com.dongqiudi.news";
+        } else {
+            window.location = "https://itunes.apple.com/cn/app/dong-qiu-di-zhuan-ye-quan/id766695512?ls=1&mt=8&at=1l3v3QB&ct=m";    
+        }
+    }
+    if (/(Android)/i.test(navigator.userAgent) ) {
+        if (/(MicroMessenger)/i.test(navigator.userAgent)) {
+            window.location = "http://app.xiaomi.com/detail/54976";
+        } else {
+            window.location = "http://static.dongqiudi.com/app/apk/dongqiudi_website.apk";    
+        }
+    }
+}
+</script>
+</head>
+<body>
+    <div class="down">        
+        <a href = "http://static.dongqiudi.com/app/apk/dongqiudi_website.apk" class="btn_ios"><img src="http://m.dongqiudi.com/app/images/btn_android.png" width="100%" /></a>
+        <a id="iphone" href="javascript:void(0);" onclick="switchApp();" class="btn_ios"><img src="http://m.dongqiudi.com/app/images/btn_iphone.png" width="100%"/></a>
+        <a id="ipad" href="https://itunes.apple.com/cn/app/dong-qiu-dihd-zu-qiu-mi-bi-bei/id923963136?mt=8"><img src="http://m.dongqiudi.com/app/images/btn_ipad.png" width="100%"/></a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<title>dialog</title>
+	<link rel="stylesheet" href="css/common.css?v=141016" type="text/css" />
+	<link rel="stylesheet" href="css/dialog.css?v=141016" type="text/css" />
+	<style type="text/css">
+	.mask-box p{padding:5px 10px;}
+	</style>
+</head>
+<body>
+<div class="comWidth mt30 clearfix"><a id="link-open-dialog" href="javascript:;" style="font-size:60px">打开弹窗</a></div>
+<!-- mask-->
+<div class="mask-wrap dn" id="mask-wrap">
+	<div class="mask-body hide" id="mask-body">
+		<div class="mask-box">
+	 	<p>大家好，我是弹窗内容</p>
+	 	<p>//弹窗Dialog js</p>
+		<p>var mask_wrap=$("#mask-wrap"),</p>
+		<p>	mask_body=$("#mask-body"),</p>
+		<p>	mask_close=$("#mask-close"),</p>
+		<p>	mask_bg=$("#mask-bg"),</p>
+		<p>	mask_time;</p>
+		<p>mask_close.bind("click",function(){</p>
+		<p>	dialog.close();</p>
+		<p>});</p>
+		<p>mask_bg.bind("click",function(){</p>
+		<p>	dialog.close();</p>
+		<p>});</p>
+		<p>var dialog={</p>
+		<p>	open:function(){</p>
+		<p>		mask_wrap.show();</p>
+		<p>		mask_bg.animate({opacity:0.75},300);</p>
+		<p>		mask_body.animate({opacity:1,top:"50%"},300);</p>
+		<p>	},close:function(){</p>
+		<p>		mask_body.animate({opacity:0,top:"0"},200);</p>
+		<p>		mask_bg.animate({opacity:0},200);</p>
+		<p>		clearTimeout(mask_time);</p>
+		<p>		mask_time=setTimeout(function(){mask_wrap.hide();},150);</p>
+		<p>	}</p>
+		<p>}</p>
+		</div>
+		<a href="javascript:;" class="mask-close" id="mask-close" title="关闭">X</a>
+	</div>
+	<div class="mask-bg hide" id="mask-bg"></div>
+</div>
+<!-- mask end-->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/dialog.js"></script>
+<script type="text/javascript">
+$(function(){
+	//打开dialog
+	var link=$("#link-open-dialog");
+	link.bind("click",function(){
+		dialog.open();
+	});
+})
+</script>
+</body>
+</html>

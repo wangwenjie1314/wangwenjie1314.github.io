@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>LESS bluesdog.net</title>
+</head>
+
+<body>
+<h1>让LESS文件在Dreamweaver中代码高亮</h1>
+<article>
+<p class="f18 fb">1. 编辑 → 首选参数 → 文件类型/编辑器 → 在代码视图中打开 → 添加".less"后缀</p>
+<img src="articles/images/less_1.png">
+<br>
+<p class="f18 fb">2. 修改下面两个xml文件中 id 为 CSS 的 documenttype 标签中属性 <span class="red">winfileextension="css"</span> 和 <span class="red">macfileextension="css"</span> 改为 <span class="green">winfileextension="css,less"</span>  和 <span class="green">macfileextension="css,less"</span></p>
+<img src="articles/images/less_2.png">
+<br>
+两处路径：
+<pre><code>C:\Program Files (x86)\Adobe\Adobe Dreamweaver CS6\configuration\DocumentTypes\MMDocumentTypes.xml
+C:\Users\%你的用户名%\AppData\Roaming\Adobe\Dreamweaver CS6\zh_CN\configuration\DocumentTypes\MMDocumentTypes.xml
+</code></pre><br>
+<strong>重启DW</strong><br>
+<br><br><br>
+<p class="f18 fb">用后感想</p>
+<p class="f18">如果我给Emmet的评价是神器，那么给Less的评价就是鸡肋。</p>
+<div class="fl w360 pr10"><strong>在实际项目中，传统的CSS写法是：</strong><br>给每一个元素写样式，导致CSS文档中出现一堆无意义的ID和近似的Class，重复着各种属性名和值；</div>
+<div class="fl w360 pl20 bl1ccc"><strong>改良型写法是：</strong><br>把常用的css整理成库，在写HTML时，直接写在元素上，近似内联样式，但是如果要修改一个样式，则需要动模板HTML文件，似乎很烦。</div>
+<div class="clear"></div>
+<br>
+所以这个时候，Less就派上了用场，它既可以像改良型方式一样，整理出“通用库”，变量属性方便多次调用，又可以转义成大家都认识css文件，让程序处理去处理那些重复工作，不需要为了改样式而动模板，便于管理，我想这就是它的好处了把。</p>
+<br>
+<a href="http://www.lesscss.net/article/document.html" target="_blank">了解Less的语法</a><br>
+<a href="http://www.lesscss.net/article/reference.html" target="_blank">震精的70个自创函数...</a>
+<br><br>
+OK，试着用less花了整整1天重构了自己的 <a href="css/style_test.less">CSS库</a>，以及reset部分。不得不说这是非常消耗时间脑力的事情。虽然避免了在css中重复出现的大量属性，但是为了预先定义这些属性并且记住真是颇费周折。<br>
+这是在效率和质量之间做抉择，最快最省心的写法肯定就是体积最大，最不容易维护的写法，反之要追求代码美观高效，就得付出平时几倍的时间。<br>
+另外不要按照less推荐的HTML结构套路来写，这样完全打破了CSS的语境，要搞死人！<br><br>
+<strong>只要记住3点：</strong>
+<ul>
+	<li>把重复的字符串设成@变量，如 <strong>@b:bold； @a:#aaa;</strong>，理论上可以把所有重复的单词全转成短变量名以达到最高复用率...</li>
+	<li>把重复的CSS属性设成独立样式，如 <strong>.fb{ font-weight:@b;}；.fs(@i1,@i2:0px){ font-size:@i1+@i2; }</strong></li>
+	<li>在需要重复的地方反复调用这些独立样式，如 <strong>.title{ .fb; .fs(18); color:@a; }</strong></li>
+</ul><br>
+其他什么JS嵌套，运算\cos\sin\开平方，等等都是狗屎，完全不必理会。属性复用越多，作用越大，但对于区区百行的中小项目，LESS显得毫无意义。
+</article>
+</body>
+</html>

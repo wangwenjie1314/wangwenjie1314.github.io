@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>json格式化,压缩</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/codemirror.css">
+<style>
+body { background:#fff; }
+#jsonformat-container{ width:95%; padding-left:20px;}
+#jsonformat-editor{ border:1px solid #bbc;}
+#jsonformat-editor .CodeMirror{ height:430px; font-family:'微软雅黑';}
+.CodeMirror-gutters{ border-right:3px solid #3ADC02 !important; background-color:#f9f9fb; padding-right:5px;}
+.CodeMirror-code div{ line-height:18px;}
+.cm-keyword{ font-weight:bold; font-size:105%;}
+.cm-comment{ color:#bbb !important;}
+</style>
+</head>
+
+<body>
+<div id="jsonformat-container">
+    <div id="jsonformat-editor">
+        <textarea id="jsonformat-editor-textarea" style="display: none;">[{"title":"天气App应用的几种主流设计趋势","url":"http://www.uisdc.com/trends-weather-app-design","postdate":"2013-09-16","imgurl":"images/2013091601.jpg","category":"app设计","tags":["天气","趋势"],"description":"查看天气也可以变成一种享受！尽管每款系统都有自己内置的天气应用，但是第三方的设计师推动了天气应用的发展，让天气应用能够和用户的应用场景有所联系，让天气应用变得漂亮大方，现在几乎每个人手机上都有一款天气应用。","remark":""},{"title":"25个在线商店网站设计欣赏","url":"http://www.uisdc.com/web-design-gallery","postdate":"2013-09-16","imgurl":"images/2013091602.jpg","category":"网页设计","tags":["电商"],"description":"还停留在在线商店就是一板一眼的结构跟样式？看到的设计都是千篇一律趋同的？来看看这些不一样的在线商店设计吧！","remark":""}]</textarea>
+    </div>
+
+    <div id="commands">
+    	<table>
+        <tr>
+        <td>
+        <button class="btnb" id="jsonformat-format">格式化JSON</button>
+        <button class="btn" id="compress">压缩</button>
+		<span id="copy"><button class="btn">复制</button><object id="objectID-0" width="56" height="30" type="application/x-shockwave-flash" data="copy.swf"><param name="wmode" value="transparent"><param name="movie" value="copy.swf"><a href="http://www.adobe.com/go/getflash">需要安装Flash后才能使用</a></object></span>
+        <button class="btn" id="jsonformat-console">在控制台中输出</button>
+        </td>
+        <td align="right">
+        <span id="ratio"></span>
+        <button class="btn" id="empty">清空</button>
+        </td>
+        </tr>
+        </table>
+    </div>
+</div>
+<script src="js/codemirror.js"></script>
+<script src="js/javascript.js"></script>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+$(function(){
+	/*复制按钮*/
+	var copybtn = $("#copy").find(".btn");
+	$("#copy").hover(function(){
+		copybtn.addClass("btnhover");	
+	},function(){
+		copybtn.removeClass("btnhover");	
+	});
+
+	/*代码编辑器*/
+	var editor =  CodeMirror.fromTextArea(document.getElementById("jsonformat-editor-textarea"), {
+	  mode: "text/javascript",
+	  lineNumbers: true,
+	  extraKeys: {"Ctrl-Space": "autocomplete"}
+	}),
+	
+	$formatbtn = $('#jsonformat-format'),
+	
+	formatCode = {};
+	
+	window.__oncopy = function(){
+		alert("复制成功");
+		return editor.getValue();
+	};
+	
+	
+	$("#empty").click(function(){
+		editor.setValue("");
+		$("#ratio").html("");
+	});
+	
+	$("#compress").click(function(){
+		var code = editor.getValue(), size = code.length;
+		code=code.replace(/(\t|\n|\r|\s)*/ig,'');
+		editor.setValue(code);
+		size = (code.length/size*100).toFixed(2);
+		$("#ratio").html("压缩率：<span class=green>"+size+"%</span>");
+	});
+	
+	$('#jsonformat-console').click(function(){
+		if( window.console ){
+			console.log('下面是json字符串转换后的对象');
+			console.log(formatCode);
+			alert('已经发送，请打开控制台');
+		}
+	});
+
+	if(window.JSON && JSON.stringify){
+		$formatbtn.click(function(){
+			var code = editor.getValue(), data = null;
+			if(code.replace(/\s+/g, '') == '' ){
+				return alert('请在编辑框中粘贴被压缩后的JSON！');;	
+			}
+			try{
+				data = new Function('return ' + code)();	
+				formatCode = data;
+				editor.setValue(JSON.stringify(data, null, 4));
+			}catch(e){
+				alert('json 格式发生错误！');
+			}
+		});
+		
+	}else{
+		$formatbtn.removeClass('blue').addClass('dis').html('您使用了反人类的浏览器，暂不支持格式化，您可以尝试打印到Console控制台查看。');
+	}
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+/*dialog add by wwj 2014-10-16*/
+.mask-body{position:fixed;background:#edf0f2;z-index:100000;top:0;left:50%;margin-top:-300px;margin-left:-500px;_position:absolute;_bottom:auto;_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));_margin-bottom:0px}
+.mask-box{position:relative;width:1000px;height:600px;overflow:auto;overflow-x:hidden;background-color:#fff;box-shadow:0 1px 3px rgba(198,198,198,0.5);-webkit-box-shadow:0 1px 3px rgba(198,198,198,0.5);-moz-box-shadow:0 1px 3px rgba(198,198,198,0.5);-ms-box-shadow:0 1px 3px rgba(198,198,198,0.5);-o-box-shadow:0 1px 3px rgba(198,198,198,0.5)}
+.mask-close{display:block;width:30px;height:30px;background-color:#fff;text-align:center;font:22px/30px Arial;color:#c00;position:absolute;top:50%;margin-top:-300px;right:-33px;border-radius:50%}
+.mask-close:hover{background-color:#c00;color:#fff}
+.mask-bg{position:fixed;top:0;right:0;bottom:0;left:0;z-index:10040;background-color:#000}

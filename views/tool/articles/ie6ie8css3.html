@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ie-css3 bluesdog.net</title>
+</head>
+
+<body>
+<h1>IE6-IE8 CSS3兼容htc插件</h1>
+<article>
+
+<h3>什么是htc？</h3>
+<p>首先只有IE认htc，htc文件可以用来描述web行为，允许程序员把自定义的功能“连接”到现有的元素和控件，而不是必须让用户下载二进制文件（例如ActiveX 控件）来完成这个功能。</p>
+<br>
+<h3>什么是VML?</h3>
+<p>是一种基于 XML 语法的语言，The Vector Markup Language(矢量可标记语言)的缩写，IE浏览器的御用画笔。</p>
+<br>
+<h3><span class="red">插件1</span> <a href="http://css3pie.com/" target="_blank" rel='nofollow'>pie.htc</a></h3>
+<p>使用CSS的behavior行为，调用文件pie.htc，让IE6也能实现一些常见的CSS3效果：<br><strong>圆角(border-radius)，盒阴影(box-shadow)，背景渐变(gradient)</strong></p>
+<strong>border-radius圆角</strong>
+<pre><code>.pie_radius{
+    width:360px;
+    height:200px;
+    background-color:#34538b;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+    <span class="red">position:relative;
+    behavior:url(pie.htc);</span>
+}
+&lt;div class="pie_radius"&gt;&lt;/div&gt;
+</code></pre>
+<br>
+
+<strong>box-shadow 盒阴影</strong>
+<pre><code>.pie_box_shadow{
+    width:360px;
+    height:200px;
+    background-color:#34538b;
+    -moz-box-shadow:1px 3px 3px #666;
+    -webkit-box-shadow:1px 3px 3px #666;
+    box-shadow:1px 3px 3px #666;
+    <span class="red">position:relative;
+    behavior:url(pie.htc);</span>
+}
+&lt;div class="pie_box_shadow"&gt;&lt;/div&gt;
+</code></pre>
+<br>
+
+<strong>Gradient渐变</strong>
+<pre><code>.pie_gradient{
+    width:360px;
+    height:200px;
+    background-color:#9F9;
+    background:-webkit-gradient(linear, 0 0, 0 bottom, from(#9F9), to(#393));
+    background:-moz-linear-gradient(#9F9, #393);
+    <span class="red">-pie-background:linear-gradient(#9F9, #393);
+    position:relative;
+    behavior:url(pie.htc)</span>;
+}
+&lt;div class="pie_gradient"&gt;&lt;/div&gt;
+</code></pre>
+<br>
+
+<p>
+<strong>
+已知的一些问题：
+</strong>
+</p>
+<ol>
+<li class="red">必须设置目标元素position:relative 或是设置祖先元素position:relative并赋予一个z-index值</li>
+<li>只支持4角等圆，不支持单独属性border-top-left-radius</li>
+<li><span class="red">要想让IE浏览器支持htc文件，需要一个有着”text/x-component”字样的content-type 头部，否则会忽视behavior。</span>绝大数web服务器提供了正确的content-type，但还是有一部分出于安全的考虑没有提供”text/x-component”字样的content-type。
+<br>例如Apache服务器，可以在.htaccess文件中写：
+<pre><code>AddType text/x-component .htc</code></pre>
+<br>无法修改服务器配置的话，可以用一个PHP文件来间接调用htc文件：
+<pre><code>&lt;?php
+header( 'Content-type: text/x-component' );
+include( 'pie.htc' );
+?&gt;</code></pre></li>
+</ol>
+
+<p>
+<strong>
+更多反馈问题：
+</strong>
+</p>
+<ol>
+<li>高度计算常出错，导致容器撑不开</li>
+<li>文件32.9K过大，多处应用会导致解析时间过长，页面显示缓慢，性能低下</li>
+</ol>
+<br><br>
+<h3><span class="red">插件2</span> <a href="http://fetchak.com/ie-css3/" target="_blank" rel='nofollow'>ie-css3.htc</a></h3>
+<p>ie-css3.htc支持 <strong>border-radius、box-shadow、text-shadow</strong></p>
+<pre><code>.box {
+  -moz-border-radius: 15px; 
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+
+  -moz-box-shadow: 10px 10px 20px #000;
+  -webkit-box-shadow: 10px 10px 20px #000;
+  box-shadow: 10px 10px 20px #000; 
+
+  behavior: url(ie-css3.htc); /* 通知IE浏览器调用脚本作用于'box'类 */
+}
+</code></pre>
+<br>
+<strong>和css3 pie一样存在的问题</strong><br>
+<ol>
+<li>必须设置目标元素position:relative 或是设置祖先元素position:relative并赋予一个z-index值</li>
+<li>只支持4角等圆，不支持单独属性border-top-left-radius</li>
+<li>box-shadow仅支持黑色 #000</li>
+<li>不能叠加使用</li>
+<li>性能低下</li>
+</ol>
+
+<br><br>
+<h3><span class="red">API</span> <a href="https://code.google.com/p/html5shiv/" target="_blank" rel='nofollow'>html5shiv.js</a></h3>
+<p><strong>html5shiv.js干什么的？</strong><br>
+包含基本的 createElement()“迷惑”技术，即使用 <span class="red">document.createElement</span> 以及 <span class="red">document.createDocumentFragment</span> 的运行悄悄进行动态的修改。<br>
+同时还为HTML5元素提供基本的样式，如 <span class="red">article,...,section { display:block }</span> 等。</p>
+<p><strong>html5shiv-printshiv.js</strong><br>
+上面的都有，同时含有一种机制，允许IE6-8浏览器在打印的时候HTML5元素被样式化以及包含子元素。</p>
+<p>在大多数情况下，HTML5 Shiv简单的插入到文档中即可，没有必要去配置HTML5 Shiv或者使用其提供的方法。</p>
+<br>
+<p><strong>html5.elements选项</strong><br>
+为空格分隔的字符串或数组，内容是需要兼容的html5元素列表。
+在引用html5shiv.js之前配置elements.</p>
+<pre><code>//创建一个全局的可选HTML5对象
+window.html5 = {
+  'elements': 'mark section customelement' 
+};</code></pre>
+<p>在引用html5shiv.js之后配置elements.</p>
+<pre><code>//改变html5shiv可选对象
+window.html5.elements = 'mark section customelement';
+//重调用`shivDocument`方法
+html5.shivDocument(document);
+</code></pre>
+<br>
+<p><strong>html5.shivCSS</strong><br>
+shivCSS默认为true, 会给章节元素（如section, article等）添加基本的些样式（大部分是display:block），也可以被设置为false, 只能在html5shiv.js引用之前：</p>
+<pre><code>//创建一个全局的html5选项对象
+window.html5 = {
+    'shivCSS': false
+};
+</code></pre>
+<br>
+<p><strong>html5.createElement( nodeName [, document] )</strong><br>
+html5.createElement方法创建一个“光环”元素，即使shivMethods设置为false.</p>
+<pre><code>var container = html5.createElement('div');
+//container被“猪脚光环”了，因此我们可以使用`innerHTML`添加HTML5元素。
+container.innerHTML = '&lt;section&gt;This is a section&lt;/section&gt;';
+</code></pre>
+<br>
+<p><strong>html5.createDocumentFragment( [document] )</strong><br>
+html5.createDocumentFragment方法创建一个“光环”的文档片段，即使shivMethods设置为false.</p>
+<pre><code>var fragment = html5.createDocumentFragment();
+var container = document.createElement('div');
+fragment.appendChild(container);
+//fragment被“猪脚光环”了，因此我们可以使用`innerHTML`添加HTML5元素。
+container.innerHTML = '&lt;section&gt;This is a section&lt;/section&gt;';
+</code></pre>
+</article>
+</body>
+</html>

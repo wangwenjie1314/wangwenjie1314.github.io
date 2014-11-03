@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* CSS Document */
+/*banner*/
+body{background:url(../images/main_bg.jpg) no-repeat top center #f2f2f2}
+.banner{height:111px;margin:0 auto;width:1000px}
+.banner_l{width:300px}
+.banner_l img{width:138px;height:44px;margin-top:35px}
+.banner_r{width:250px;text-align:right}
+.banner_r_top{font:12px/22px "宋体";height:25px;margin-top:10px;color:#999}
+.banner_r_top a{color:#999}
+.banner_r_bot{font:bold 14px/25px "微软雅黑";color:#666;margin-top:45px}
+/*顶部导航*/
+.nav{background:url(../images/nav_bg.png) repeat-x;height:39px;overflow:hidden}
+.nav .nav_box{width:1000px;margin:0 auto;}
+.nav .nav_box ul{padding-left:30px}
+.nav .nav_box ul li{display:inline;float:left;background:url(../images/li_line.png) no-repeat top right;font:14px/35px "微软雅黑";padding:0 30px}
+.nav .nav_box ul li a{color:#fff}.nav .nav_box ul li a:hover{color:#ffc000;text-decoration:none}
+/*内容区*/
+/*焦点图*/
+.conbox{ background:#fff;margin:0 auto;width:1000px;box-shadow:1px 5px 5px #999}
+.wj_jdt_1{width:1000px;height:350px;overflow:hidden;*margin-top:3px}
+.wj_jdt_1 .jdt_slide{width:1000px;height:350px;overflow:hidden;position:relative;}
+.wj_jdt_1 .jdt_slide ul{position:relative;width:1000%;height:350px;overflow:hidden}
+.wj_jdt_1 .jdt_slide ul li{display:inline;float:left;width:1000px;height:350px;overflow:hidden;position:relative}
+.wj_jdt_1 .jdt_slide ul li img{width:1000px;height:350px;}
+.wj_jdt_1 .jdt_slide ul li .pic-txt{font:14px/35px "微软雅黑";color:#fff;width:985px;text-align:left;padding-left:15px;}
+.wj_jdt_1 .jdt_slide .slide_img_prev{display:none;background:url(http://static.henan.dagongnet.com/images/henan/news/left_btn.png) no-repeat left center;position:absolute;top:30%;left:20px;width:80px;height:130px;diplay:block;line-height: 10;z-index: 1;}
+.wj_jdt_1 .jdt_slide .slide_img_prev:hover{background:url(http://static.henan.dagongnet.com/images/henan/news/left_btn_on.png) no-repeat left center;}
+.wj_jdt_1 .jdt_slide .slide_img_next{display:none;background:url(http://static.henan.dagongnet.com/images/henan/news/right_btn.png) no-repeat right center;position:absolute;top:30%;right:20px;width:80px;height:130px;diplay:block;line-height: 10;z-index: 1;}
+.wj_jdt_1 .jdt_slide .slide_img_next:hover{background:url(http://static.henan.dagongnet.com/images/henan/news/right_btn_on.png) no-repeat right center;}
+.wj_jdt_1 .info_btn_div{ position:relative}
+.wj_jdt_1 .info_btn_div .info_btn{width:140px;height:15px;overflow:hidden;margin:0 auto;padding-top:15px;zoom:1; position:absolute;top:-36px;right:0;z-index:100}
+.wj_jdt_1 .info_btn_div .info_btn li{float:left;padding:0 8px;width:10px;height:10px;background:url(http://static.henan.dagongnet.com/images/henan/news/icon_jdt.png) no-repeat left top;text-indent:-9999em;overflow:hidden;cursor:pointer;}
+.wj_jdt_1 .info_btn_div .info_btn li.on{background:url(http://static.henan.dagongnet.com/images/henan/news/icon_jdt_on.png) no-repeat left top}
+.txt_box,.pic-txt{position:absolute;bottom:0;_bottom:-1px;left: 0;height:35px;z-index:1;background:#000;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";filter:alpha(opacity=70);opacity: .7;overflow:hidden}
+.txt_box a,.pic-txt a{color:#fff}.txt_box a:hover,.pic-txt a:hover{color:#ab6d04}
+.title{background:#E5E5E5;padding-left:10px;font:14px/32px "微软雅黑";color:#ab6d04;height:32px;position:relative}
+.title a.more{font:12px/32px "宋体";color:#999;position:absolute;top:0px;right:5px}
+.title a.more:hover{color:#ab6d04;text-decoration:none}
+.content_box{margin-top:5px}
+.content_box .c_box_l{width:320px;}
+.content_box .c_box_l .c_box_l_t{border:1px solid #ddd;width:318px}
+.content_box .c_box_l .c_box_l_t .con{padding:5px;font:12px/22px "宋体"; text-indent:2em}
+.content_box .c_box_l .c_box_l_b{border:1px solid #ddd;width:318px;margin-top:5px}
+.content_box .c_box_l .c_box_l_b ul li{margin:5px}
+.content_box .c_box_l .c_box_l_b ul li img{width:308px;height:72px}
+.hj_img_box{width:1000px;height:100px;margin:15px 0;position:relative;overflow:hidden}
+.hj_img_box .img_box{width:990px;height:100px;margin:0 5px;position:relative;overflow:hidden}
+.hj_img_box .img_box ul{width:1000%;position:absolute;left:0 ;top:0;}
+.hj_img_box .img_box ul li{float:left;display:inline-block;*display:inline; *zoom:1;margin-right:10px;}
+.hj_img_box .img_box ul li img{width:150px;height:100px}
+.hj_img_box .img_box_prev,.hj_img_box .img_box_next{display:block;position:absolute;top:0;width:30px;height:100px;text-align:center;font:50px/100px "宋体";color:#999;}
+.hj_img_box .img_box_prev{left:0}.hj_img_box .img_box_next{right:0}
+.hj_img_box .img_box_prev:hover,.hj_img_box .img_box_next:hover{color:#fff;background:#ddd; text-decoration:none}
+.content_box .c_box_r{width:660px;}
+.c_box_r .c_box_r_b{border:1px solid #ddd;width:658px;overflow:hidden}
+.c_box_r .c_box_r_b .tle{background:#E5E5E5;height:32px}
+.c_box_r .c_box_r_b .tle_l{width:200px;padding-left:10px;font:14px/32px "微软雅黑";color:#ab6d04}
+.c_box_r .c_box_r_b .tle_r{width:300px;font:12px/32px "宋体";color:#999;}
+.c_box_r .c_box_r_b .tle_r ul li{float:left;display:inline;padding:0 5px;}
+.c_box_r .c_box_r_b .tle_r ul li a{color:#999;}.c_box_r .c_box_r_b .tle .tle_r ul li a:hover{color:#ab6d04;text-decoration:none}
+.c_box_r .c_box_r_b .con{padding:10px}
+.c_box_r .c_box_r_b .con .con_l{width:300px}
+.c_box_r .c_box_r_b .con .con_l img{width:300px;height:150px}
+.c_box_r .c_box_r_b .con .con_r{width:320px}
+.c_box_r .c_box_r_b .con .con_r .con_r_tle{font:bold 14px/25px "微软雅黑";color:#333;margin-bottom:5px}
+.c_box_r .c_box_r_b .con .con_r .con_r_txt{font:12px/22px "宋体"}
+.c_box_r .c_box_r_b .con .con_r .con_r_txt a{color:#ab6d04}
+.c_box_r .c_box_r_t{border:1px solid #ddd;width:658px;overflow:hidden}
+.c_box_r .c_box_r_t .title{background:#E5E5E5;padding-left:10px;font:14px/32px "微软雅黑";color:#ab6d04;height:32px}
+.c_box_r .c_box_r_t .con_news{padding:10px}
+.c_box_r .c_box_r_t .con_news_l{width:300px}
+.c_box_r .c_box_r_t .con_news_l img{width:300px;height:150px}
+.c_box_r .c_box_r_t .con_news_r{width:320px;margin-top:-5px}
+.c_box_r .c_box_r_t .con_news_r ul li{background:url(http://static.henan.dagongnet.com/images/henan/icon_dd_black.png) no-repeat left center;float:left;display:inline-block;*display:inline; *zoom:1;font:12px/25px "宋体";width:310px;height:25px;overflow:hidden;padding-left:10px}
+.c_box_r .c_box_r_t .con_news_r ul li a,.c_box_r .c_box_r_t .con_news_r ul li img{ float:left}
+.c_box_r .c_box_r_t .con_news_r ul li span{float:right}
+/*返回顶部*/
+.btn-top{display:none;position:fixed; right:0px;bottom:100px;background:url(http://static.takungpao.com/images/sports/top.jpg) no-repeat center center;width:49px;height:49px;cursor:pointer}
+.btn-top{_position:absolute;_bottom:auto;_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));_margin-bottom:120px;}
+/*底部*/
+.footer{border-top:4px solid #3f4457;overflow:hidden;margin:15px 0;line-height:21px;text-align:center;}
+.friendlink{width:998px;border:1px solid #ddd;margin:0 auto;}
+.friendlink .header_link{background:#E5E5E5;padding-left:10px;border-bottom:2px solid #ddd;font:bold 14px/32px "宋体";color:#AB6D04}
+.friendlink .con{line-height:25px;padding:10px;}
+.friendlink .con span{margin:0 2px;color:#e7e7e7;}
+.fnav{font-weight:600;line-height:26px;color:#3b1e87;padding:5px 0;}
+.fnav a{padding:0 5px;color:#3f4457;}
+.fnav a:hover,dl.van_header dd.dec a:hover,dl.van_header dd a:hover{color:#AB6D04}
+.fnav span{margin:0 5px;color:#3f4457;}
+.footer p{margin-right:15px;color:#606060;}

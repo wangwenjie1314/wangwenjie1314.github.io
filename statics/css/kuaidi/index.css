@@ -1,0 +1,56 @@
+/*kuaidi_css add by wwj 2014-10-10*/
+/*布局*/
+body{background-attachment: fixed;background-repeat: no-repeat;background-image: url(../../images/login-blurry-bg.jpg);}
+.w-wrap{height:978px;overflow-y:auto}
+.w-title{font-size: 60px;text-align: center;padding-top: 50px;color:#fff;text-shadow:3px 3px 10px #000;margin-bottom: 20px;font-family: "楷体"}
+.w-wrap p{margin-top:20px}
+.w-input{padding: 9px 8px;width: 464px;height: 24px;line-height: 24px;font-size: 16px;border:0}
+.w-input-btn{padding: 0px 20px;cursor: pointer}
+.inp-metro{padding:9px 8px;width:464px;height:24px;line-height:24px;font-size:16px;border:1px solid #448ef3}
+.btn-query{display:inline-block;padding:0;margin-top:-5px;width:128px;height:44px;line-height:44px;overflow:hidden;vertical-align:middle;font-size:18px;text-indent:20px;color:#fff;cursor:pointer;border:none;background:url("http://cdn.kuaidi100.com/images/ico_index.png") 8px -551px no-repeat #448ef3}
+.btn-query:hover{background-color:#2682ff;color:#fff}.btn-query-m{margin-top: 0}.btn-query-dis,.btn-query-dis:hover{background-color:#999;cursor:not-allowed}
+.input-tips{position:absolute;top:44px;left:0px;display:none;padding-top:10px;width:480px;border:1px solid #BCBCBC;background-color:#fff}
+.input-tips li.selection{padding-left:10px;width:470px;line-height:2em;font-size:16px;font-weight:bold;overflow:hidden;cursor:pointer;transition:color 0.2s linear,background-color 0.2s linear;-webkit-transition:color 0.2s linear,background-color 0.2s linear;-moz-transition:color 0.2s linear,background-color 0.2s linear}
+.input-tips li.selection0{color:#333}
+.input-tips li.selection1{color:#777}
+.input-tips li.hover{color:#333;background-color:#fff2c5}
+.input-tips li.tips_bottom{padding:2px 5px;text-align:right;color:#b4b4b4}
+/*查询结果*/
+.result-con{display:none;width:610px;margin:0 auto;margin-top:10px;border:1px solid #90bfff}
+.result-top{width:100%;height:43px;background-color:#fbfbfb;border-bottom:none}
+.result-top span,.result-top a{display:inline-block;height:43px;line-height:43px;vertical-align:middle;font-size:14px}
+.result-top .col1{width:184px;text-align:center;font-weight:bold;border-right:1px solid #ddd;color:#333}
+.result-top .col2{width:303px;text-align:center;font-weight:bold;color:#333}
+.result-info{width:100%;border-top: 1px solid #ddd}
+.result-info tr{display:none}
+.result-info td{padding:10px;color:#878787;border-bottom:1px solid #d8d8d8 !important;background-color:#fbfbfb !important}
+.result-info .last td {color: #FF8c00;border-bottom: none;background-color: #ffffff}
+.result-info .row1{width:140px;text-align:right}
+.result-info .status{width:30px;background:url("http://cdn.kuaidi100.com/images/ico_status.gif") -50px center no-repeat #fbfbfb}
+.result-info .status-first{background-position: 0 center}
+.result-info .status-check{background-position: -150px center}
+.result-info .status-wait{background-position: -100px center}
+/*阴影层*/
+.mask-body{position:fixed;background:#edf0f2;z-index:100000;top:0;left:50%;margin-top:-300px;margin-left:-500px;_position:absolute;_bottom:auto;_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));_margin-bottom:0px}
+.mask-box{position:relative;width:1000px;height:600px;overflow:auto;overflow-x:hidden;background-color:#fff;box-shadow:0 1px 3px rgba(198,198,198,0.5);-webkit-box-shadow:0 1px 3px rgba(198,198,198,0.5);-moz-box-shadow:0 1px 3px rgba(198,198,198,0.5);-ms-box-shadow:0 1px 3px rgba(198,198,198,0.5);-o-box-shadow:0 1px 3px rgba(198,198,198,0.5)}
+.mask-close{display:block;width:30px;height:30px;background-color:#fff;text-align:center;font:22px/30px Arial;color:#c00;position:absolute;top:50%;margin-top:-300px;right:-33px;border-radius:50%}
+.mask-close:hover{background-color:#c00;color:#fff}
+.mask-bg{position:fixed;top:0;right:0;bottom:0;left:0;z-index:10040;background-color:#000}
+.column-1{float:left;width:475px;border-bottom:1px solid #e9eff6}
+.column-2{float:right;width:475px;border-bottom:1px solid #e9eff6}
+.column-list dl{float:left;width:100%;font-size:14px;background-color:#b9d5fd;border-right:1px solid #e9eff6}
+.column-list dl:hover{background-color:#317ee7}
+.column-list dt{float:left;margin-top:-1px;width:28px;line-height:32px;text-align:center;font-size:22px;font-family:"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei","黑体",sans-serif;border-top:1px solid #e9eff6;color:#fff}
+.column-list dd{float:right;margin-top:-1px;width:446px;height:32px;white-space:nowrap;overflow:hidden;line-height:32px;border-top:1px solid #e9eff6;border-left:1px solid #e9eff6;background-color:#fafcff}
+.column-list dl.dl-bg dd{background-color:#f4f9ff}
+.column-list dd a{display:inline-block;padding-left:10px;width:138px;line-height:32px;overflow:hidden;border-right:1px solid #e9eff6;border-bottom:1px solid #e9eff6;color:#333}
+.column-list dd a:hover{text-decoration:underline;color:#c00}
+.column-list dd:hover,.column-list dl.dl-bg dd:hover{background-color:#d7e7ff}
+/*返回顶部*/
+.btn-top,.btn_top{display:none;position:fixed;right:0px;bottom:120px;background:url('http://static.takungpao.com/images/sports/top.jpg') no-repeat center center;width:49px;height:49px;cursor:pointer;z-index:9999}
+.btn-top,.btn_top{_position:absolute;_bottom:auto;_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));_margin-bottom:120px}
+.btn_top{background:none;width:52px;height:52px}
+.icon_top{display:block;width:52px;height:52px;background:url('http://static.takungpao.com/images/haedFoot/gotop.png') no-repeat left top;background-position:0 0;text-indent:-99999em}
+.icon_top:hover{background-position:0 -52px}
+.icon_top_n{display:block;width:52px;height:52px;background:url('http://static.takungpao.com/images/haedFoot/icon_sprite.png') no-repeat #dbdbdb;background-position:-61px -47px;text-indent:-99999em}
+.icon_top_n:hover{background-color:#c3c3c3}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>css3生成器中文版,CSS3 Maker,css3在线生成工具</title>
+<meta name="keywords" content="css3圆角生成器,css3边框生成器,css3 Transform生成器,css3 BoxShadow生成器,css3 TextShadow生成器,css3 Transition生成器,css3 Gradient生成器,css3 RGBA生成器" />
+<meta name="description" content="CSS Maker是一个免费的工具生成CSS3的属性和值进行直观的展示，并为您的网站生成一个简单的css3样式。" />
+<link href="css/style1.css" rel="stylesheet" type="text/css" />
+<link href="css/colorpicker.css" rel="stylesheet" type="text/css" />
+<style>
+body { font:12px/16px "microsoft yahei",tahoma,arial; background:#fff; color:#444; }
+a,a:link { text-decoration:none; font-size:12px; color:#09d; font-weight:bold; }
+a:hover { color:#3CF; }
+</style>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.ui.widget.js"></script>
+<script src="js/jquery.ui.mouse.js"></script>
+<script src="js/jquery.ui.slider.js"></script>
+<script src="js/colorpicker.js"></script>
+<script src="js/main.js"></script>
+</head>
+
+<body>
+<div class="main_wrapper">
+    <div id="wrapper">
+        <section id="content" class="clearfix">
+            <aside class="narrowcolumn">
+                <div class="container">
+                <h2>CSS3 样式设置</h2>
+                <div class="subContainer eheight clearfix" style="height:348px;overflow:hidden;">
+                <form action="" method="get">
+                <ul class="formData">
+                <li class="selectStyle">
+                <select name="" id="selectCss">
+                <option selected="selected" value="Border-Radius">Border Radius </option>
+                <option value="CSS Transform">CSS Transform</option>
+                <option value="BoxShadow">Box Shadow</option>
+                <option value="TextShadow">Text Shadow </option>
+                <option value="textRotation">Text Rotation</option>
+                <option value="rgba">RGBA </option>
+                <option value="FontFace">@Font Face </option>
+                <option value="Outline">Outline Offset </option>
+                <option value="Transition">Transition </option>
+                <option value="CSS Gradient">CSS Gradient </option>
+                </select>
+                </li>
+                </ul>
+                <div id="formDataLoad"></div>
+                </form>
+                </div>
+                </div>
+            </aside>
+            
+            <article class="widecolumn">
+                <div class="container">
+                <h2>CSS3 效果实时预览</h2>
+                <div class="subContainer eheight">
+                <div class="previewAreapadding">
+                <div id="previewArea" class="previewArea"></div>
+                </div>
+                </div>
+                </div>
+                <div class="container">
+                <h2><span class="browserComptability"></span> 的浏览器兼容性</h2>
+                <ul class="browserComptabilityData clearfix">
+                <li class="mozilla-firefox">3.0+ </li>
+                <li class="ie">9+</li>
+                <li class="safari">3.1+</li>
+                <li class="opera">10.5+</li>
+                <li class="google-chrome">4.0+</li>
+                </ul>
+                <!--
+                <h2><span class="browserComptability"></span> 的移动兼容性</h2>
+                <ul class="browserComptabilityData mobile clearfix">
+                <li class="blackberry">BlackBerry  6 +</li>
+                <li class="iPhone">iOS 1.0 +</li>
+                </ul>
+                -->
+                </div>
+            </article>
+            
+            <aside class="narrowcolumnRight">
+                <div class="container">
+                <h2>CSS3 代码生成下载</h2>
+                <div class="subContainer eheight">
+                <div id="viewCssCode"></div>
+                </div>
+                </div>
+            </aside>
+        </section>
+    </div>
+    <div class="fontfaceview"></div>
+</div>
+</body> 
+</html>
