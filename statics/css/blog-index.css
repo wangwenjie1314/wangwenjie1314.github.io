@@ -45,7 +45,7 @@ table > tbody + tbody{border-top:2px solid #ddd}
 .archive-link i{margin-right:5px}
 .article p code{background-color:#fff;border:1px solid #bbb;border-radius:3px;font-family:Consolas,"Liberation Mono",Courier,monospace;font-size:75%;margin:0 2px;padding:3px 5px;vertical-align:top}
 .article ul li,.article ol li{list-style:disc;margin:10px 0}
-.article pre code{border:none;font-size:16px;margin:0;padding:5px}
+.article pre code{border:none;font-size:18px;margin:0;padding:5px}
 .archive-list h2 span{color:#ddd}
 .archive-list li time{float:right}
 .archive-list li+li{border-top:1px solid #ededed}
@@ -115,3 +115,4 @@ section.main .block-contents h1.title_s{display:block}
 }
 .footer-content .left span{font-size:14px;color:#999}
 .origin_image{margin:6px 0;display:block;overflow:hidden;max-width:100%;height:auto;width:auto\9;-ms-interpolation-mode:bicubic}
+.fl{float: left}.fr{float: right}
