@@ -65,7 +65,7 @@
 		</a>
 		</li>
 	</ul>
-	<em class="silder-now"><span>1</span> / 3</em>
+	<em class="silder-now"><span id="silder-now-span">1</span> / 3</em>
 </div>
 <!-- silder end-->
 <!-- news-list-->
@@ -180,7 +180,7 @@ $(function(){
 	function q(H){
 		var K = null,
         	I = $("#" + H),
-        	L = I.find(".silder-now span");
+        	L = $("#silder-now-span");
             K = new Swipe(document.getElementById(H),{
             startSlide: 0,
             auto: 4000,
