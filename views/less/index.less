@@ -1,0 +1,37 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,address{margin:0;padding:0;}
+body{font:12px "宋体","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%}
+.comWidth{width:1000px;margin:0 auto}
+html{_background:url(about:black) no-repeat fixed}
+.clearfix:after{content:".";display:block;height:0;font-size:0;clear:both;visibility:hidden;}
+.clearfix{display:inline-block;}
+* html .clearfix{height:1%;}
+.clearfix{display:block;}
+@color: #4D926F;
+#header {
+  color: @color;
+}
+h2 {
+  color: @color;
+}
+.rounded-corners (@radius: 5px) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+#header {
+  .rounded-corners;
+}
+#header {
+  h1 {
+    font-size: 26px;
+    font-weight: bold;
+  }
+  p { font-size: 12px;
+    a { text-decoration: none;
+      &:hover { border-width: 1px }
+    }
+  }
+}
+#footer {
+  .rounded-corners(10px);
+}
