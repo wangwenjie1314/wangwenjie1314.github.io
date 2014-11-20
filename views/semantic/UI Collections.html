@@ -1,0 +1,1932 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<title>UI Collections</title>
+	<link rel="shortcut icon" href="http://wangwenjie1314.github.io/statics/images/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="../../statics/css/semantic.min.css" />
+	<style type="text/css">
+	html,body{font-size:15px;height:100%;}
+	body{font-family:"Open Sans","Helvetica Neue","Helvetica","Arial",sans-serif;background:#FFFFFF;margin:0px;padding:0px;color:#555555;text-rendering:optimizeLegibility;min-width:320px;}
+	a{color:#009FDA;text-decoration:none}a:hover{color:#00BAFF}
+	</style>
+	<script type="text/javascript" src="../../statics/js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="../../statics/js/semantic.min.js"></script>
+</head>
+<body style="margin:0 10px">
+	<h1>UI Collections</h1>
+	<div class="ui segment">
+	<p>
+	<a href="#Breadcrumb">面包屑</a>
+	<a href="#Form">表单</a>
+	<a href="#Grid">网格</a>
+	<a href="#Menu">菜单</a>
+	</p>
+	</div>
+	<h2 id="Breadcrumb" name="Breadcrumb">Breadcrumb面包屑</h2>
+	<div class="ui breadcrumb">
+	  <a class="section">Food</a>
+	  <div class="divider"> / </div>
+	  <a class="section">Fruit</a>
+	  <div class="divider"> / </div>
+	  <div class="active section">Apples</div>
+	</div><br>
+	<div class="ui breadcrumb">
+	  <a class="section">Food</a>
+	  <i class="right arrow icon divider"></i>
+	  <a class="section">Fruit</a>
+	  <i class="right arrow icon divider"></i>
+	  <div class="active section">Apples</div>
+	</div><br>
+	<div class="ui breadcrumb">
+	  <a class="section">Food</a>
+	  <div class="divider"> / </div>
+	  <a class="section">Fruit</a>
+	  <div class="divider"> / </div>
+	  <div class="active section">Apples</div>
+	</div><br>
+	<div class="ui small breadcrumb">
+	  <a class="section">Food</a>
+	  <div class="divider"> / </div>
+	  <a class="section">Fruit</a>
+	  <div class="divider"> / </div>
+	  <div class="active section">Apples</div>
+	</div><br>
+	<div class="ui large breadcrumb">
+	  <a class="section">Food</a>
+	  <div class="divider"> / </div>
+	  <a class="section">Fruit</a>
+	  <div class="divider"> / </div>
+	  <div class="active section">Apples</div>
+	</div><br>
+	<div class="ui huge breadcrumb">
+	  <a class="section">Food</a>
+	  <div class="divider"> / </div>
+	  <a class="section">Fruit</a>
+	  <div class="divider"> / </div>
+	  <div class="active section">Apples</div>
+	</div>
+	<!-- 分隔符-->
+	<div class="ui horizontal divider"><i class="circular heart icon"></i></div>
+	<!-- 分隔符end-->
+	<h2 id="Form" name="Form">Form 表单</h2>
+	<p>Validation messages use <a href="/collections/message.html">messages</a> which are formatted for use inside forms.</p>
+	<div class="ui form segment">
+	  <div class="field">
+	    <label>Username</label>
+	    <div class="ui left labeled icon input">
+	      <input type="text" placeholder="Username">
+	      <i class="user icon"></i>
+	      <div class="ui corner label">
+	        <i class="icon asterisk"></i>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="field">
+	    <label>Password</label>
+	    <div class="ui left labeled icon input">
+	      <input type="password">
+	      <i class="lock icon"></i>
+	      <div class="ui corner label">
+	        <i class="icon asterisk"></i>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="ui error message">
+	    <div class="header">We noticed some issues</div>
+	  </div>
+	  <div class="ui blue submit button">Login</div>
+	</div>
+	<div class="ui form">
+	  <div class="field">
+	    <label>User Input</label>
+	    <input type="text">
+	  </div>
+	</div>
+	<div class="ui form">
+	  <div class="field">
+	    <label>User Text</label>
+	    <textarea></textarea>
+	  </div>
+	</div>
+	<div class="ui form">
+	  <div class="inline field">
+	    <div class="ui checkbox">
+	      <input type="checkbox">
+	      <label>Checkbox</label>
+	    </div>
+	  </div>
+	  <div class="inline field">
+	    <div class="ui slider checkbox">
+	      <input type="checkbox">
+	      <label>Slider</label>
+	    </div>
+	    <label></label>
+	  </div>
+	  <div class="inline field">
+	    <div class="ui toggle checkbox">
+	      <input type="checkbox">
+	      <label>Toggle</label>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui form">
+	  <div class="grouped inline fields">
+	    <div class="field">
+	      <div class="ui radio checkbox">
+	        <input type="radio" name="fruit" checked="">
+	        <label>Apples</label>
+	      </div>
+	    </div>
+	    <div class="field">
+	      <div class="ui radio checkbox">
+	        <input type="radio" name="fruit">
+	        <label>Oranges</label>
+	      </div>
+	    </div>
+	    <div class="field">
+	      <div class="ui radio checkbox">
+	        <input type="radio" name="fruit">
+	        <label>Pears</label>
+	      </div>
+	    </div>
+	    <div class="field">
+	      <div class="ui radio checkbox">
+	        <input type="radio" name="fruit">
+	        <label>Grapefruit</label>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui form">
+	  <div class="grouped inline fields">
+	    <div class="field">
+	      <div class="ui radio checkbox">
+	        <input id="choice-1" type="radio" name="fruit" checked="">
+	        <label for="choice-1">Apples</label>
+	      </div>
+	    </div>
+	    <div class="field">
+	      <div class="ui radio checkbox">
+	        <input id="choice-2" type="radio" name="fruit">
+	        <label for="choice-2">Oranges</label>
+	      </div>
+	    </div>
+	    <div class="field">
+	      <div class="ui radio checkbox">
+	        <input id="choice-3" type="radio" name="fruit">
+	        <label for="choice-3">Pears</label>
+	      </div>
+	    </div>
+	    <div class="field">
+	      <div class="ui radio checkbox">
+	        <input id="choice-4" type="radio" name="fruit">
+	        <label for="choice-4">Grapefruit</label>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui selection dropdown">
+      <input type="hidden" name="gender">
+      <div class="default text">Gender</div>
+      <i class="dropdown icon"></i>
+      <div class="menu ui transition hidden">
+        <div class="item" data-value="male">Male</div>
+        <div class="item" data-value="female">Female</div>
+      </div>
+    </div>
+	<div class="ui form">
+	  <div class="ui message">
+	    <div class="header">We had some issues</div>
+	    <ul class="list">
+	      <li>Please enter your first name</li>
+	      <li>Please enter your last name</li>
+	    </ul>
+	  </div>
+	</div>
+	<div class="ui loading form segment">
+	  <div class="two fields">
+	    <div class="field">
+	      <label>First Name</label>
+	      <input placeholder="First Name" type="text">
+	    </div>
+	    <div class="field">
+	      <label>Last Name</label>
+	      <input placeholder="Last Name" type="text">
+	    </div>
+	  </div>
+	  <div class="field">
+	    <label>Gender</label>
+	    <div class="ui fluid selection dropdown">
+	      <div class="text">Select</div>
+	      <i class="dropdown icon"></i>
+	      <input type="hidden" name="gender">
+	      <div class="menu">
+	        <div class="item" data-value="male">Male</div>
+	        <div class="item" data-value="female">Female</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="field">
+	    <label>Username</label>
+	    <input placeholder="Username" type="text">
+	  </div>
+	  <div class="field">
+	    <label>Password</label>
+	    <input type="password">
+	  </div>
+	  <div class="inline field">
+	    <div class="ui checkbox">
+	      <input type="checkbox">
+	      <label>I agree to the terms and conditions</label>
+	    </div>
+	  </div>
+	  <div class="ui blue submit button">Submit</div>
+	</div>
+	<div class="ui error form segment">
+	  <div class="ui error message">
+	    <div class="header">Action Forbidden</div>
+	    <p>You can only sign up for an account once with a given e-mail address.</p>
+	  </div>
+	  <div class="two fields">
+	    <div class="field">
+	      <label>First Name</label>
+	      <input placeholder="First Name" type="text">
+	    </div>
+	    <div class="field">
+	      <label>Last Name</label>
+	      <input placeholder="Last Name" type="text">
+	    </div>
+	  </div>
+	  <div class="field">
+	    <label>Gender</label>
+	    <div class="ui fluid selection dropdown">
+	      <div class="text">Select</div>
+	      <i class="dropdown icon"></i>
+	      <input type="hidden" name="gender">
+	      <div class="menu">
+	        <div class="item" data-value="male">Male</div>
+	        <div class="item" data-value="female">Female</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="field">
+	    <label>Username</label>
+	    <input placeholder="Username" type="text">
+	  </div>
+	  <div class="field">
+	    <label>Password</label>
+	    <input type="password">
+	  </div>
+	  <div class="inline field">
+	    <div class="ui checkbox">
+	      <input type="checkbox">
+	      <label>I agree to the Terms and Conditions</label>
+	    </div>
+	  </div>
+	  <div class="ui blue submit button">Submit</div>
+	</div>
+	<div class="ui warning form segment">
+	  <div class="ui warning message">
+	    <div class="header">Could you check something!</div>
+	    <ul class="list">
+	      <li>You forgot your <b>first name</b></li>
+	      <li>And also your <b>last name</b></li>
+	    </ul>
+	  </div>
+	  <div class="two error fields">
+	    <div class="field">
+	      <label>First Name</label>
+	      <input placeholder="First Name" type="text">
+	      <div class="ui red pointing above ui label">Enter a first name</div>
+	    </div>
+	    <div class="field">
+	      <label>Last Name</label>
+	      <input placeholder="Last Name" type="text">
+	      <div class="ui red pointing above ui label">Enter a last name</div>
+	    </div>
+	  </div>
+	  <div class="field">
+	    <label>Username</label>
+	    <input placeholder="Username" type="text">
+	  </div>
+	  <div class="field">
+	    <label>Password</label>
+	    <input type="password">
+	  </div>
+	  <div class="inline field">
+	    <div class="ui checkbox">
+	      <input type="checkbox">
+	      <label>I agree to the Terms and Conditions</label>
+	    </div>
+	  </div>
+	  <div class="ui blue submit button">Submit</div>
+	</div>
+	<div class="ui form segment">
+	  <div class="two fields">
+	    <div class="field error">
+	      <label>First Name</label>
+	      <input placeholder="First Name" type="text">
+	    </div>
+	    <div class="field">
+	      <label>Last Name</label>
+	      <input placeholder="Last Name" type="text">
+	    </div>
+	  </div>
+	  <div class="field error">
+	    <label>Gender</label>
+	    <div class="ui fluid selection dropdown">
+	      <div class="text">Select</div>
+	      <i class="dropdown icon"></i>
+	      <input type="hidden" name="gender">
+	      <div class="menu">
+	        <div class="item" data-value="male">Male</div>
+	        <div class="item" data-value="female">Female</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui form segment">
+	  <div class="two fields">
+	    <div class="field">
+	      <label>First Name</label>
+	      <input placeholder="Read Only" readonly="readonly" type="text">
+	    </div>
+	    <div class="disabled field">
+	      <label>Last Name</label>
+	      <input placeholder="Disabled" disabled="disabled" type="text">
+	    </div>
+	  </div>
+	</div>
+	<div class="ui fluid form segment">
+	  <div class="two fields">
+	    <div class="field">
+	      <label>First Name</label>
+	      <input placeholder="First Name" type="text">
+	    </div>
+	    <div class="field">
+	      <label>Last Name</label>
+	      <input placeholder="Last Name" type="text">
+	    </div>
+	  </div>
+	  <div class="ui blue submit button">Submit</div>
+	</div>
+	<div class="ui small form segment">
+	  <div class="two fields">
+	    <div class="field">
+	      <label>First Name</label>
+	      <input placeholder="First Name" type="text">
+	    </div>
+	    <div class="field">
+	      <label>Last Name</label>
+	      <input placeholder="Last Name" type="text">
+	    </div>
+	  </div>
+	  <div class="ui blue small submit button">Submit</div>
+	</div>
+	<div class="ui large form segment">
+	  <div class="two fields">
+	    <div class="field">
+	      <label>First Name</label>
+	      <input placeholder="First Name" type="text">
+	    </div>
+	    <div class="field">
+	      <label>Last Name</label>
+	      <input placeholder="Last Name" type="text">
+	    </div>
+	  </div>
+	  <div class="ui blue submit button">Submit</div>
+	</div>
+	<div>
+	<div class="ui inverted form">
+	    <div class="ui info message">
+	      <div class="header">We had some issues</div>
+	      <ul class="list">
+	        <li>Please enter your first name</li>
+	        <li>Please enter your last name</li>
+	      </ul>
+	    </div>
+	    <div class="two fields">
+	      <div class="field">
+	        <label>First Name</label>
+	        <input placeholder="First Name" type="text">
+	      </div>
+	      <div class="field">
+	        <label>Last Name</label>
+	        <input placeholder="Last Name" type="text">
+	      </div>
+	    </div>
+	    <div class="inline field">
+	      <div class="ui checkbox">
+	        <input type="checkbox">
+	        <label>I agree to the terms and conditions</label>
+	      </div>
+	    </div>
+	    <div class="ui blue submit button">Submit</div>
+	  </div>
+	</div>
+	<div class="ui form">
+	  <div class="inline field">
+	    <label>Last name</label>
+	    <input type="text" placeholder="Full Name">
+	  </div>
+    </div>
+    <div class="ui form">
+	  <div class="date field">
+	    <label>Birthday</label>
+	    <input type="text" placeholder="xx/xx/xxxx">
+	  </div>
+	</div>
+	<div class="ui form">
+	  <div class="ui three fields">
+	    <div class="field">
+	      <label>First name</label>
+	      <input type="text" placeholder="First Name">
+	    </div>
+	    <div class="field">
+	      <label>Middle name</label>
+	      <input type="text" placeholder="Middle Name">
+	    </div>
+	    <div class="field">
+	      <label>Last name</label>
+	      <input type="text" placeholder="Last Name">
+	    </div>
+	  </div>
+	</div>
+	<div class="ui form">
+	  <div class="fields">
+	    <div class="four wide field">
+	      <label>First name</label>
+	      <input type="text" placeholder="First Name">
+	    </div>
+	    <div class="four wide field">
+	      <label>Middle name</label>
+	      <input type="text" placeholder="Middle Name">
+	    </div>
+	    <div class="eight wide field">
+	      <label>Last name</label>
+	      <input type="text" placeholder="Last Name">
+	    </div>
+	  </div>
+	</div>
+	<div class="ui form">
+	  <div class="grouped inline fields">
+	    <div class="field">
+	      <div class="ui radio checkbox">
+	        <input type="radio" name="fruit">
+	        <label></label>
+	      </div>
+	      <label> Apples</label>
+	    </div>
+	    <div class="field">
+	      <div class="ui radio checkbox">
+	        <input type="radio" name="fruit">
+	        <label></label>
+	      </div>
+	      <label> Oranges</label>
+	    </div>
+	    <div class="field">
+	      <div class="ui radio checkbox">
+	        <input type="radio" name="fruit">
+	        <label></label>
+	      </div>
+	      <label> Pears</label>
+	    </div>
+	    <div class="field">
+	      <div class="ui radio checkbox">
+	        <input type="radio" name="fruit">
+	        <label></label>
+	      </div>
+	      <label> Grapefruit</label>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui form">
+	  <div class="inline fields">
+	    <div class="field">
+	      <label>Phone Number</label>
+	      <input type="text" placeholder="(xxx)">
+	    </div>
+	    <div class="field">
+	      <input type="text" placeholder="xxx">
+	    </div>
+	    <div class="field">
+	      <input type="text" placeholder="xxxx">
+	    </div>
+	  </div>
+	</div>
+	<div class="ui horizontal divider"><i class="circular heart icon"></i></div>
+	<h2 id="Grid" name="Grid">Grid网格</h2>
+	<div class="ui grid">
+	  <div class="four wide column">
+	    <div class="ui segment">
+	    </div>
+	  </div>
+	  <div class="four wide column">
+	    <div class="ui segment">
+	    </div>
+	  </div>
+	  <div class="four wide column">
+	    <div class="ui segment">
+	    </div>
+	  </div>
+	  <div class="four wide column">
+	    <div class="ui segment">
+	    </div>
+	  </div>
+	</div>
+	<div class="ui two column page grid">
+	  <div class="column">
+	    <div class="ui labeled vertical fluid inverted icon menu">
+	      <a class="item">
+	        <i class="icon mail"></i>
+	        Mail
+	      </a>
+	      <a class="item">
+	        <i class="icon lab"></i>
+	        Lab
+	      </a>
+	      <a class="item">
+	        <i class="icon star"></i>
+	        Favorites
+	      </a>
+	    </div>
+	  </div>
+	  <div class="column">
+	    <div class="ui segment">
+	      <b>Inbox</b>
+	      <p>Welcome to your inbox. Would you like to see more information?</p>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui six column divided grid">
+	  <div class="row">
+	    <div class="column">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	    <div class="column">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	    <div class="column">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	    <div class="column">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	    <div class="column">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	    <div class="column">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	  </div>
+	  <div class="row">
+	    <div class="column">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	    <div class="column">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	    <div class="column">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	    <div class="column">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	    <div class="column">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	    <div class="column">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui vertically divided grid">
+	  <div class="two column row">
+	    <div class="column">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	    <div class="column">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	  </div>
+	  <div class="three column row">
+	    <div class="column">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	    <div class="column">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	    <div class="column">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui celled grid">
+	  <div class="row">
+	    <div class="two wide column" style="">
+	      <p>Lorem ipsum do</p>
+	    </div>
+	    <div class="three wide column" style="">
+	      <p>Lorem ipsum dolor </p>
+	    </div>
+	    <div class="seven wide column">
+	      <p>Lorem ipsum dolor sitos. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	  </div>
+	  <div class="row">
+	    <div class="five wide column">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	     <div class="three wide column">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	     <div class="two wide column">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	    <div class="two wide column">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui grid">
+	  <div class="row">
+	    <div class="column">
+	      <div class="ui segment">
+	        A
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        A
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        A
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        A
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        A
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        A
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        A
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        A
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        A
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        A
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        A
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        A
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        A
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        A
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        A
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        A
+	      </div>
+	    </div>
+	  </div>
+	  <div class="row">
+	    <div class="column">
+	      <div class="ui segment">
+	       B
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	       B
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	       B
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	       B
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	       B
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	       B
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	       B
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	       B
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	       B
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        B
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        B
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        B
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        B
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        B
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        B
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        B
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui three column grid">
+	  <div class="column">
+	    <div class="ui segment">
+	      1
+	    </div>
+	  </div>
+	  <div class="column">
+	    <div class="ui segment">
+	      2
+	    </div>
+	  </div>
+	  <div class="column">
+	    <div class="ui segment">
+	      3
+	    </div>
+	  </div>
+	  <div class="column">
+	    <div class="ui segment">
+	      4
+	    </div>
+	  </div>
+	</div>
+	<div class="ui two column grid">
+	  <div class="column">
+	    <div class="ui fluid form segment">
+	      <h3 class="ui header">Log-in</h3>
+	      <div class="field">
+	        <label>Username</label>
+	        <input placeholder="Username" type="text">
+	      </div>
+	      <div class="field">
+	        <label>Password</label>
+	        <input type="password">
+	      </div>
+	      <div class="ui blue submit button">Login</div>
+	    </div>
+	  </div>
+	  <div class="column">
+	    <div class="ui fluid form segment">
+	      <h3 class="ui header">Register</h3>
+	      <div class="two fields">
+	        <div class="field">
+	          <label>First Name</label>
+	          <input placeholder="First Name" type="text">
+	        </div>
+	        <div class="field">
+	          <label>Last Name</label>
+	          <input placeholder="Last Name" type="text">
+	        </div>
+	      </div>
+	      <div class="field">
+	        <label>Username</label>
+	        <input placeholder="Username" type="text">
+	      </div>
+	      <div class="field">
+	        <label>Password</label>
+	        <input type="password">
+	      </div>
+	      <div class="inline field">
+	        <div class="ui checkbox">
+	          <input type="checkbox" id="conditions">
+	          <label for="conditions">I agree to the terms and conditions</label>
+	        </div>
+	      </div>
+	      <div class="ui blue submit button">Submit</div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui two column relaxed grid">
+	  <div class="column">
+	    <div class="ui fluid form segment">
+	      <h3 class="ui header">Log-in</h3>
+	      <div class="field">
+	        <label>Username</label>
+	        <input placeholder="Username" type="text">
+	      </div>
+	      <div class="field">
+	        <label>Password</label>
+	        <input type="password">
+	      </div>
+	      <div class="ui blue submit button">Login</div>
+	    </div>
+	  </div>
+	  <div class="column">
+	    <div class="ui fluid form segment">
+	      <h3 class="ui header">Register</h3>
+	      <div class="two fields">
+	        <div class="field">
+	          <label>First Name</label>
+	          <input placeholder="First Name" type="text">
+	        </div>
+	        <div class="field">
+	          <label>Last Name</label>
+	          <input placeholder="Last Name" type="text">
+	        </div>
+	      </div>
+	      <div class="field">
+	        <label>Username</label>
+	        <input placeholder="Username" type="text">
+	      </div>
+	      <div class="field">
+	        <label>Password</label>
+	        <input type="password">
+	      </div>
+	      <div class="inline field">
+	        <div class="ui checkbox">
+	          <input type="checkbox" id="terms">
+	          <label for="terms">I agree to the terms and conditions</label>
+	        </div>
+	      </div>
+	      <div class="ui blue submit button">Submit</div>
+	    </div>
+	  </div>
+	</div>
+	<div class="five column doubling ui grid">
+	  <div class="column">
+	    <div class="ui segment">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	  </div>
+	  <div class="column">
+	    <div class="ui segment">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	  </div>
+	  <div class="column">
+	    <div class="ui segment">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	  </div>
+	  <div class="column">
+	    <div class="ui segment">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	  </div>
+	  <div class="column">
+	    <div class="ui segment">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	  </div>
+	</div>
+	<div class="two column stackable ui grid">
+	  <div class="column">
+	    <div class="ui segment">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	  </div>
+	  <div class="column">
+	    <div class="ui segment">
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui center aligned three column grid">
+	  <div class="row">
+	    <div class="column">
+	      <div class="ui vertical fluid menu">
+	        <div class="header item">
+	          Cats
+	        </div>
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui vertical fluid menu">
+	        <div class="header item">
+	          Dogs
+	        </div>
+	        <div class="item">
+	          Poodle
+	        </div>
+	        <div class="item">
+	          Cockerspaniel
+	        </div>
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui vertical fluid menu">
+	        <div class="header item">
+	          Monkeys
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui middle aligned three column grid">
+	  <div class="row">
+	    <div class="column">
+	      <div class="ui vertical fluid menu">
+	        <div class="header item">
+	          Cats
+	        </div>
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui vertical fluid menu">
+	        <div class="header item">
+	          Dogs
+	        </div>
+	        <div class="item">
+	          Poodle
+	        </div>
+	        <div class="item">
+	          Cockerspaniel
+	        </div>
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui vertical fluid menu">
+	        <div class="header item">
+	          Monkeys
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui grid">
+	  <div class="two column row">
+	    <div class="column">
+	      <div class="ui segment">
+	        Two
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        Two
+	      </div>
+	    </div>
+	  </div>
+	  <div class="three column row">
+	    <div class="column">
+	      <div class="ui segment">
+	        Three
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        Three
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        Three
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui grid">
+	  <div class="two column mobile only row">
+	    <div class="column">
+	      <div class="ui segment">
+	        Mobile
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        Mobile
+	      </div>
+	    </div>
+	  </div>
+	  <div class="three column row">
+	    <div class="computer only column">
+	      <div class="ui segment">
+	        Computer
+	      </div>
+	    </div>
+	    <div class="tablet mobile only column">
+	      <div class="ui segment">
+	        Tablet and Mobile
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        All Sizes
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        All Sizes
+	      </div>
+	    </div>
+	  </div>
+	  <div class="four column computer only row">
+	    <div class="column">
+	      <div class="ui segment">
+	        Computer
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        Computer
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        Computer
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        Computer
+	      </div>
+	    </div>
+	  </div>
+	  <div class="three column tablet only row">
+	    <div class="column">
+	      <div class="ui segment">
+	        Tablet
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        Tablet
+	      </div>
+	    </div>
+	    <div class="column">
+	      <div class="ui segment">
+	        Tablet
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui grid">
+	  <div class="left floated four wide column">
+	    <div class="ui vertical fluid menu">
+	      <div class="header item">
+	        Dogs
+	      </div>
+	      <div class="item">
+	        Poodle
+	      </div>
+	      <div class="item">
+	        Cockerspaniel
+	      </div>
+	    </div>
+	  </div>
+	  <div class="right floated four wide column">
+	    <div class="ui vertical fluid menu">
+	      <div class="header item">
+	        Cats
+	      </div>
+	      <div class="item">
+	        Abysinnian
+	      </div>
+	      <div class="item">
+	        Sphynx
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui info message">
+	  Column width is based off a 16 column grid, even if you are using a different row or grid column count, for instance a <code>three wide column</code> inside a <code>three column grid</code>  <b>will only take up three-sixteenths of the grid width</b>.
+	</div>
+	<div class="ui grid">
+	  <div class="three wide column">
+	    <div class="ui segment"><b>Column One</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis sapien.</div>
+	  </div>
+	  <div class="six wide column">
+	    <div class="ui segment"><b>Column Two</b> Aliquam lobortis commodo sem ac accumsan. Vestibulum non faucibus lorem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur sed lorem lorem. Nam augue erat, dignissim nec aliquam vel, congue et sapien. Integer viverra justo vel nibh suscipit commodo. Nullam ut turpis nibh, in luctus risus. Sed ut risus nec dui mattis porta. Nam nisi magna, ornare mollis congue a, suscipit at nisl.</div>
+	  </div>
+	  <div class="three wide column">
+	    <div class="ui segment"><b>Column Three</b> Donec semper mollis condimentum. Aenean eget rutrum magna. Mauris ornare nibh scelerisque turpis lobortis dignissim. Etiam eleifend justo eget quam semper vulputate. Nulla et risus convallis velit molestie iaculis. Aliquam erat volutpat. </div>
+	  </div>
+	  <div class="four wide column">
+	    <div class="ui segment"><b>Column Three</b> Donec semper mollis condimentum. Aenean eget rutrum magna. Mauris ornare nibh scelerisque turpis lobortis dignissim. Etiam eleifend justo eget quam semper vulputate. Nulla et risus convallis velit molestie iaculis. Aliquam erat volutpat. </div>
+	  </div>
+	</div>
+	<div class="ui horizontal divider"><i class="circular heart icon"></i></div>
+	<h2 id="Menu" name="Menu">Menu菜单</h2>
+	<div class="ui menu">
+	  <a class="active item">
+	    <i class="home icon"></i> Home
+	  </a>
+	  <a class="item">
+	    <i class="mail icon"></i> Messages
+	  </a>
+	  <div class="right menu">
+	    <div class="item">
+	      <div class="ui icon input">
+	        <input type="text" placeholder="Search...">
+	        <i class="search link icon"></i>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui vertical menu">
+	  <a class="active teal item">
+	    Inbox
+	    <div class="ui teal label">1</div>
+	  </a>
+	  <a class="item">
+	    Spam
+	    <div class="ui label">51</div>
+	  </a>
+	  <a class="item">
+	    Updates
+	    <div class="ui label">1</div>
+	  </a>
+	  <div class="item">
+	    <div class="ui small icon input">
+	      <input type="text" placeholder="Search mail...">
+	      <i class="search icon"></i>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui pagination menu">
+	  <a class="icon item">
+	    <i class="left arrow icon"></i>
+	  </a>
+	  <a class="active item">
+	    1
+	  </a>
+	  <div class="disabled item">
+	    ...
+	  </div>
+	  <a class="item">
+	    10
+	  </a>
+	  <a class="item">
+	    11
+	  </a>
+	  <a class="item">
+	    12
+	  </a>
+	  <a class="icon item">
+	    <i class="right arrow icon"></i>
+	  </a>
+	</div>
+	<div class="ui tabular menu">
+	  <a class="active item">
+	    Bio
+	  </a>
+	  <a class="item">
+	    Pics
+	  </a>
+	</div>
+	<div class="ui tiered menu">
+	  <div class="menu">
+	    <a class="active item">
+	      <i class="users icon"></i>
+	      Friends
+	    </a>
+	    <a class="item">
+	      <i class="grid layout icon"></i> Browse
+	    </a>
+	    <a class="item">
+	      <i class="mail icon"></i> Messages
+	    </a>
+	    <div class="right menu">
+	      <div class="item">
+	        <div class="ui icon input">
+	          <input type="text" placeholder="Search...">
+	          <i class="search icon"></i>
+	        </div>
+	      </div>
+	      <div class="ui dropdown item">
+	        More <i class="icon dropdown"></i>
+	        <div class="menu">
+	          <a class="item"><i class="edit icon"></i> Edit Profile</a>
+	          <a class="item"><i class="globe icon"></i> Choose Language</a>
+	          <a class="item"><i class="settings icon"></i> Account Settings</a>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="ui sub menu">
+	    <a class="active item">Search</a>
+	    <a class="item">Add</a>
+	    <a class="item">Remove</a>
+	  </div>
+	</div>
+	<div class="ui vertical menu">
+	  <div class="item">
+	    <div class="ui input"><input type="text" placeholder="Search..."></div>
+	  </div>
+	  <div class="item">
+	    <i class="home icon"></i> Home
+	    <div class="menu">
+	      <a class="active item">Search</a>
+	      <a class="item">Add</a>
+	      <a class="item">Remove</a>
+	    </div>
+	  </div>
+	  <a class="item">
+	    <i class="grid layout icon"></i> Browse
+	  </a>
+	  <a class="item">
+	    <i class="mail icon"></i> Messages
+	  </a>
+	  <div class="ui dropdown item">
+	    More <i class="dropdown icon"></i>
+	    <div class="menu">
+	      <a class="item"><i class="edit icon"></i> Edit Profile</a>
+	      <a class="item"><i class="globe icon"></i> Choose Language</a>
+	      <a class="item"><i class="settings icon"></i> Account Settings</a>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui secondary  menu">
+	  <a class="active item">
+	    <i class="home icon"></i> Home
+	  </a>
+	  <a class="item">
+	    <i class="mail icon"></i> Messages
+	  </a>
+	  <a class="item">
+	    <i class="user icon"></i> Friends
+	  </a>
+	  <div class="right menu">
+	    <div class="item">
+	      <div class="ui icon input">
+	        <input type="text" placeholder="Search...">
+	        <i class="search link icon"></i>
+	      </div>
+	    </div>
+	    <a class="ui item">
+	      Logout
+	    </a>
+	  </div>
+	</div>
+	<div class="ui secondary vertical menu">
+	  <a class="active item">
+	    <i class="users icon"></i>
+	    Friends
+	  </a>
+	  <a class="item">
+	    <i class="mail icon"></i> Messages
+	  </a>
+	  <a class="item">
+	    <i class="user icon"></i> Friends
+	  </a>
+	  <div class="ui dropdown item">
+	    More <i class="dropdown icon"></i>
+	    <div class="menu">
+	      <a class="item"><i class="edit icon"></i> Edit Profile</a>
+	      <a class="item"><i class="globe icon"></i> Choose Language</a>
+	      <a class="item"><i class="settings icon"></i> Account Settings</a>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui pointing menu">
+	  <a class="active item">
+	    <i class="home icon"></i> Home
+	  </a>
+	  <a class="item">
+	    <i class="mail icon"></i> Messages
+	  </a>
+	  <a class="item">
+	    <i class="user icon"></i> Friends
+	  </a>
+	  <div class="right menu">
+	    <div class="item">
+	      <div class="ui icon input">
+	        <input type="text" placeholder="Search...">
+	        <i class="search link icon"></i>
+	      </div>
+	    </div>
+	    <div class="ui dropdown item">
+	      Language <i class="dropdown icon"></i>
+	      <div class="menu">
+	        <a class="item">English</a>
+	        <a class="item">Russian</a>
+	        <a class="item">Spanish</a>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui vertical pointing menu">
+	  <a class="active item">
+	    <i class="home icon"></i> Home
+	  </a>
+	  <a class="item">
+	    <i class="mail icon"></i> Messages
+	  </a>
+	  <a class="item">
+	    <i class="user icon"></i> Friends
+	  </a>
+	</div>
+	<div class="ui secondary pointing menu">
+	  <a class="active item">
+	    <i class="home icon"></i> Home
+	  </a>
+	  <a class="item">
+	    <i class="mail icon"></i> Messages
+	  </a>
+	  <a class="item">
+	    <i class="user icon"></i> Friends
+	  </a>
+	  <div class="right menu">
+	    <div class="item">
+	      <div class="ui icon input">
+	        <input type="text" placeholder="Search...">
+	        <i class="search link icon"></i>
+	      </div>
+	    </div>
+	    <a class="ui item">
+	      Logout
+	    </a>
+	  </div>
+	</div>
+	<div class="ui secondary vertical pointing menu">
+	  <a class="active item">
+	    <i class="home icon"></i> Home
+	  </a>
+	  <a class="item">
+	    <i class="mail icon"></i> Messages
+	  </a>
+	  <a class="item">
+	    <i class="user icon"></i> Friends
+	  </a>
+	</div>
+	<div class="ui text menu">
+	  <div class="header item">Sort By</div>
+	  <a class="active item">
+	    <i class="home icon"></i> Closest
+	  </a>
+	  <a class="item">
+	    <i class="mail icon"></i> Most Comments
+	  </a>
+	  <a class="item">
+	    <i class="user icon"></i> Most Popular
+	  </a>
+	</div>
+	<div class="ui vertical text menu">
+	  <div class="header item">Sort By</div>
+	  <a class="active item">
+	    <i class="home icon"></i> Closest
+	  </a>
+	  <a class="item">
+	    <i class="mail icon"></i> Most Comments
+	  </a>
+	  <a class="item">
+	    <i class="user icon"></i> Most Popular
+	  </a>
+	</div>
+	<div class="ui vertical menu">
+	  <div class="header item">
+	    <i class="user icon"></i>
+	    Communities
+	  </div>
+	  <div class="item">
+	    College
+	    <div class="menu">
+	      <a class="item">Baseball</a>
+	      <a class="item">Basketball</a>
+	      <a class="item">Golf</a>
+	    </div>
+	  </div>
+	  <a class="item">
+	    Dance
+	  </a>
+	  <a class="item">
+	    Aerobics
+	  </a>
+	  <div class="header item">
+	    <i class="globe icon"></i>
+	    Cities
+	  </div>
+	  <a class="item">
+	    New York
+	  </a>
+	  <a class="item">
+	    Montreal
+	  </a>
+	  <a class="item">
+	    Los Angeles
+	  </a>
+	  <a class="item">
+	    San Francisco
+	  </a>
+	  <div class="header item">
+	    <i class="icon calendar"></i>
+	    Months
+	  </div>
+	  <a class="item">
+	    August
+	  </a>
+	  <a class="item">
+	    June
+	  </a>
+	</div>
+	<div class="ui vertical menu">
+	  <div class="header item">
+	    Promotions
+	    <span class="ui teal label">New</span>
+	  </div>
+	  <div class="text item">
+	    <a>Join now</a> and save $10 on a pro membership!
+	  </div>
+	  <div class="item">
+	    <p><a>Join tomorrow</a> and save $5 on pro.</p>
+	  </div>
+	</div>
+	<div class="ui menu">
+	  <div class="right item">
+	    <div class="ui icon input">
+	      <input type="text" placeholder="Search...">
+	      <i class="search icon"></i>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <div class="ui action input">
+	      <input type="text" placeholder="Navigate to...">
+	      <div class="ui button">Go</div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui menu">
+	  <div class="item">
+	    <div class="ui teal button">Sign up</div>
+	  </div>
+	  <div class="item">
+	    <div class="ui button">Log-in</div>
+	  </div>
+	</div>
+	<div class="ui vertical menu">
+	  <a href="http://www.google.com" class="item">
+	    Visit Google
+	  </a>
+	  <div class="link item">
+	    Javascript Link
+	  </div>
+	</div>
+	<div class="ui vertical menu">
+	  <div class="ui dropdown item">
+	    Categories <i class="dropdown icon"></i>
+	    <div class="menu">
+	      <a class="item">Electronics</a>
+	      <a class="item">Automotive</a>
+	      <a class="item">Home</a>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui menu">
+	  <a class="item">Browse</a>
+	  <a class="item">Submit</a>
+	  <div class="right menu">
+	    <a class="item">Sign Up</a>
+	    <a class="item">Help</a>
+	  </div>
+	</div>
+	<div class="ui vertical menu">
+	  <a class="item"><b>Friends</b></a>
+	  <div class="item">
+	    <a><b>Your Profile</b></a>
+	    <div class="menu">
+	      <a class="item">Inbox</a>
+	      <a class="item">Activity</a>
+	      <a class="item">Groups</a>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui inverted menu">
+	  <a class="active item">
+	    <i class="home icon"></i> Home
+	  </a>
+	  <a class="item">
+	    <i class="mail icon"></i> Messages
+	  </a>
+	  <a class="item">
+	    <i class="user icon"></i> Friends
+	  </a>
+	</div>
+	<div class="ui menu">
+	  <a class="active green item">
+	    <i class="home icon"></i> Green
+	  </a>
+	  <a class="red item">
+	    <i class="mail icon"></i> Red
+	  </a>
+	  <a class="blue item">
+	    <i class="user icon"></i> Blue
+	  </a>
+	  <a class="orange item">
+	    <i class="home icon"></i> Orange
+	  </a>
+	  <a class="purple item">
+	    <i class="mail icon"></i> Purple
+	  </a>
+	  <a class="teal item">
+	    <i class="user icon"></i> Teal
+	  </a>
+	</div>
+	<div class="ui red menu">
+	  <a class="active item">
+	    <i class="home icon"></i> Home
+	  </a>
+	  <a class="item">
+	    <i class="mail icon"></i> Messages
+	  </a>
+	  <a class="item">
+	    <i class="user icon"></i> Friends
+	  </a>
+	</div>
+	<div class="ui blue menu">
+	  <a class="active item">
+	    <i class="home icon"></i> Home
+	  </a>
+	  <a class="item">
+	    <i class="mail icon"></i> Messages
+	  </a>
+	  <a class="item">
+	    <i class="user icon"></i> Friends
+	  </a>
+	</div>
+	<div class="ui orange menu">
+	  <a class="active item">
+	    <i class="home icon"></i> Home
+	  </a>
+	  <a class="item">
+	    <i class="mail icon"></i> Messages
+	  </a>
+	  <a class="item">
+	    <i class="user icon"></i> Friends
+	  </a>
+	</div>
+	<div class="ui purple menu">
+	  <a class="active item">
+	    <i class="home icon"></i> Home
+	  </a>
+	  <a class="item">
+	    <i class="mail icon"></i> Messages
+	  </a>
+	  <a class="item">
+	    <i class="user icon"></i> Friends
+	  </a>
+	</div>
+	<div class="ui teal menu">
+	  <a class="active item">
+	    <i class="home icon"></i> Home
+	  </a>
+	  <a class="item">
+	    <i class="mail icon"></i> Messages
+	  </a>
+	  <a class="item">
+	    <i class="user icon"></i> Friends
+	  </a>
+	</div>
+	<div class="ui green inverted menu">
+	  <a class="active item">
+	    <i class="home icon"></i> Home
+	  </a>
+	  <a class="item">
+	    <i class="mail icon"></i> Messages
+	  </a>
+	  <a class="item">
+	    <i class="user icon"></i> Friends
+	  </a>
+	</div>
+	<div class="ui red inverted menu">
+	  <a class="active item">
+	    <i class="home icon"></i> Home
+	  </a>
+	  <a class="item">
+	    <i class="mail icon"></i> Messages
+	  </a>
+	  <a class="item">
+	    <i class="user icon"></i> Friends
+	  </a>
+	</div>
+	<div class="ui blue inverted menu">
+	  <a class="active item">
+	    <i class="home icon"></i> Home
+	  </a>
+	  <a class="item">
+	    <i class="mail icon"></i> Messages
+	  </a>
+	  <a class="item">
+	    <i class="user icon"></i> Friends
+	  </a>
+	</div>
+	<div class="ui orange inverted menu">
+	  <a class="active item">
+	    <i class="home icon"></i> Home
+	  </a>
+	  <a class="item">
+	    <i class="mail icon"></i> Messages
+	  </a>
+	  <a class="item">
+	    <i class="user icon"></i> Friends
+	  </a>
+	</div>
+	<div class="ui purple inverted menu">
+	  <a class="active item">
+	    <i class="home icon"></i> Home
+	  </a>
+	  <a class="item">
+	    <i class="mail icon"></i> Messages
+	  </a>
+	  <a class="item">
+	    <i class="user icon"></i> Friends
+	  </a>
+	</div>
+	<div class="ui teal inverted menu">
+	  <a class="active item">
+	    <i class="home icon"></i> Home
+	  </a>
+	  <a class="item">
+	    <i class="mail icon"></i> Messages
+	  </a>
+	  <a class="item">
+	    <i class="user icon"></i> Friends
+	  </a>
+	</div>
+	<div class="ui icon menu">
+	  <a class="red item">
+	    <i class="mail icon"></i>
+	  </a>
+	  <a class="teal item">
+	    <i class="lab icon"></i>
+	  </a>
+	  <a class="green item">
+	    <i class="star icon"></i>
+	  </a>
+	</div>
+	<div class="ui vertical icon menu">
+	  <a class="red item">
+	    <i class="mail icon"></i>
+	  </a>
+	  <a class="teal item">
+	    <i class="lab icon"></i>
+	  </a>
+	  <a class="green item">
+	    <i class="star icon"></i>
+	  </a>
+	</div>
+	<div class="ui labeled icon menu">
+	  <a class="red item">
+	    <i class="mail icon"></i>
+	    Mail
+	  </a>
+	  <a class="teal item">
+	    <i class="lab icon"></i>
+	    Lab
+	  </a>
+	  <a class="green item">
+	    <i class="star icon"></i>
+	    Favorites
+	  </a>
+	</div>
+	<div class="ui vertical labeled icon menu">
+	  <a class="red item">
+	    <i class="mail icon"></i>
+	    Mail
+	  </a>
+	  <a class="teal item">
+	    <i class="lab icon"></i>
+	    Lab
+	  </a>
+	  <a class="green item">
+	    <i class="star icon"></i>
+	    Favorites
+	  </a>
+	</div>
+	<div class="ui fluid vertical menu">
+	  <a class="item">Run</a>
+	  <a class="item">Walk</a>
+	  <a class="item">Bike</a>
+	</div>
+	<div class="ui fluid three item menu">
+	  <a class="item">Buy</a>
+	  <a class="item">Sell</a>
+	  <a class="item">Rent</a>
+	</div>
+	<div class="ui pointing vertical menu">
+	  <a class="item">
+	    Site Title
+	  </a>
+	  <div class="item">
+	    <b>Grouped Section</b>
+	    <div class="menu">
+	      <a class="item">Subsection 1</a>
+	      <a class="active item">Subsection 1</a>
+	      <a class="item">Subsection 1</a>
+	    </div>
+	  </div>
+	  <div class="ui dropdown item">
+	    Dropdown <i class="dropdown icon"></i>
+	    <div class="menu">
+	      <div class="item">Choice 1</div>
+	      <div class="item">Choice 2</div>
+	      <div class="item">Choice 3</div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui top attached tabular menu">
+	  <a class="active item">
+	    Tab 1
+	  </a>
+	  <a class="item">
+	    Tab 2
+	  </a>
+	</div>
+	<div class="ui bottom attached segment">
+	  There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+	</div>
+	<div class="ui large menu">
+	  <a class="active item">
+	    <i class="home icon"></i> Home
+	  </a>
+	  <a class="item">
+	    <i class="mail icon"></i> Messages
+	  </a>1
+	  <div class="right menu">
+	    <div class="item">
+	      <div class="ui icon input">
+	        <input type="text" placeholder="Search...">
+	        <i class="search link icon"></i>
+	      </div>
+	    </div>
+	    <div class="ui dropdown item">
+	      Language <i class="dropdown icon"></i>
+	      <div class="menu">
+	        <a class="item">English</a>
+	        <a class="item">Russian</a>
+	        <a class="item">Spanish</a>
+	      </div>
+	    </div>
+	    <div class="item">
+	        <div class="ui teal button">Sign Up</div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui large vertical menu">
+	  <a class="active item">
+	    <div class="ui teal label">1</div>
+	    Inbox
+	  </a>
+	  <a class="item">
+	    <div class="ui label">51</div>
+	    Spam
+	  </a>
+	  <a class="item">
+	    <div class="ui label">1</div>
+	    Updates
+	  </a>
+	  <div class="item">
+	    <div class="ui icon input">
+	      <input type="text" placeholder="Search mail...">
+	      <i class="search icon"></i>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui menu">
+	  <div class="fitted item">
+	    No padding whatsoever
+	  </div>
+	  <div class="horizontally fitted item">
+	    No horizontal padding
+	  </div>
+	  <div class="vertically fitted item">
+	    No vertical padding
+	  </div>
+	</div>
+	<div class="ui borderless pagination menu">
+	  <a class="item">
+	    <i class="left arrow icon"></i> Previous
+	  </a>
+	  <a class="item">1</a>
+	  <a class="item">2</a>
+	  <a class="item">3</a>
+	  <a class="item">4</a>
+	  <a class="item">5</a>
+	  <a class="item">6</a>
+	  <a class="item">
+	    Next <i class="icon right arrow"></i>
+	  </a>
+	</div>
+
+	<div class="ui horizontal divider"><i class="circular heart icon"></i></div>
+
+
+
+	<h2>xxx</h2>
+	<div class="ui horizontal divider"><i class="circular heart icon"></i></div>
+	<div class="ui horizontal divider"><i class="circular heart icon"></i></div>
+	<script type="text/javascript">
+	$(function(){
+		var
+	    $menuItem = $('.menu a.item, .menu .link.item'),
+	    $dropdown = $('.menu .dropdown'),
+	    $dropdown2=$(".ui.selection.dropdown"),
+	    // alias
+	    handler = {
+	      activate: function() {
+	        if(!$(this).hasClass('dropdown')) {
+	          $(this)
+	            .addClass('active')
+	            .closest('.ui.menu')
+	            .find('.item')
+	              .not($(this))
+	              .removeClass('active')
+	          ;
+	        }}
+	    };
+	  $dropdown.dropdown({ on: 'hover'});
+	  $dropdown2.dropdown();
+	  $menuItem.on('click', handler.activate);
+	});
+	</script>
+</body>
+</html>
