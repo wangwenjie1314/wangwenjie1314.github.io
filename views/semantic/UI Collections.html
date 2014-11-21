@@ -23,6 +23,8 @@
 	<a href="#Form">表单</a>
 	<a href="#Grid">网格</a>
 	<a href="#Menu">菜单</a>
+	<a href="#Message">信息</a>
+	<a href="#Table">表格</a>
 	</p>
 	</div>
 	<h2 id="Breadcrumb" name="Breadcrumb">Breadcrumb面包屑</h2>
@@ -1896,13 +1898,697 @@
 	    Next <i class="icon right arrow"></i>
 	  </a>
 	</div>
-
 	<div class="ui horizontal divider"><i class="circular heart icon"></i></div>
-
-
-
-	<h2>xxx</h2>
+	<h2>Message</h2>
+	<div class="ui message">
+	  <div class="header">
+	    Welcome back!
+	  </div>
+	  <p>
+	    It's good to see you again. I have had a lot to think about since our last visit, I've changed much as a person and I can see that you have too.
+	  </p>
+	  <p>
+	    Perhaps we can talk about it if you have the time.
+	  </p>
+	</div>
+	<div class="ui message">
+	  <div class="header">
+	    Welcome back!
+	  </div>
+	  <ul class="list">
+	    <li>It's good to see you again.</li>
+	    <li>Did you know it's been a while?</li>
+	  </ul>
+	</div>
+	<div class="ui icon message">
+	  <i class="inbox icon"></i>
+	  <div class="content">
+	    <div class="header">
+	      Have you heard about our mailing list?
+	    </div>
+	    <p>Get all the best inventions in your e-mail every day. Sign up now!</p>
+	  </div>
+	</div>
+	<div class="ui message">
+	  <i class="close icon"></i>
+	  <div class="header">
+	    Welcome back!
+	  </div>
+	  <p>This is a special notification which you can dismiss if you're bored with it.</p>
+	</div>
+	<div class="warning ui message">
+	  <p>Dismissable blocks do not automatically close when using the close icon, this behavior must be defined using javascript, for example:</p>
+	  <div class="ui instructive segment"><div class="code ace_editor ace-github" style="height: 71px;"><div class="ace_gutter" style="display: none;"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px;"></div><div class="ace_gutter-active-line" style="top: 0px; height: 17px;"></div></div><div class="ace_scroller" style="left: 0px; right: 0px; bottom: 0px;"><div class="ace_content" style="margin-top: 0px; width: 1040px; height: 115px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 619.7875px; visibility: hidden;"></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line_group"><div class="ace_line" style="height:17px"><span class="ace_keyword ace_operator">$</span><span class="ace_paren ace_lparen">(</span><span class="ace_string">'.message&nbsp;.close'</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">on</span><span class="ace_paren ace_lparen">(</span><span class="ace_string">'click'</span><span class="ace_punctuation ace_operator">,</span>&nbsp;<span class="ace_storage ace_type">function</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span>&nbsp;<span class="ace_paren ace_lparen">{</span></div></div><div class="ace_line_group"><div class="ace_line" style="height:17px">&nbsp;&nbsp;<span class="ace_keyword ace_operator">$</span><span class="ace_paren ace_lparen">(</span><span class="ace_variable ace_language">this</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">closest</span><span class="ace_paren ace_lparen">(</span><span class="ace_string">'.message'</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">fadeOut</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span></div></div><div class="ace_line_group"><div class="ace_line" style="height:17px"><span class="ace_paren ace_rparen">})</span><span class="ace_punctuation ace_operator">;</span></div></div></div>
+	</div>
+	<div class="ui visible message">
+	  <p>You can always see me</p>
+	</div>
+	<div class="ui floating message">
+	  <p>Way to go!</p>
+	</div>
+	<div class="ui compact message">
+	  <p>Get all the best inventions in your e-mail every day. Sign up now!</p>
+	</div>
+	<div class="ui attached message">
+	  <div class="header">
+	    Have you heard about our mailing list?
+	  </div>
+	  <p>Get all the best inventions in your e-mail every day. Sign up now!</p>
+	</div>
+	<form class="ui form attached fluid segment">
+	  <p>Let's go ahead and get you signed up.</p>
+	  <div class="two fields">
+	    <div class="field">
+	      <label>First Name</label>
+	      <input placeholder="First Name" type="text">
+	    </div>
+	    <div class="field">
+	      <label>Last Name</label>
+	      <input placeholder="Last Name" type="text">
+	    </div>
+	  </div>
+	  <div class="field">
+	    <label>Username</label>
+	    <input placeholder="Username" type="text">
+	  </div>
+	  <div class="field">
+	    <label>Password</label>
+	    <input type="password">
+	  </div>
+	  <div class="inline field">
+	    <div class="ui checkbox">
+	      <input type="checkbox" id="terms">
+	      <label for="terms">I agree to the terms and conditions</label>
+	    </div>
+	  </div>
+	  <div class="ui blue submit button">Submit</div>
+	</form>
+	<div class="ui bottom attached info message">
+	  <i class="icon help"></i>Are you sure you know what you're doing?
+	</div>
+	<div class="ui red message">Red</div>
+	<div class="ui blue message">Blue</div>
+	<div class="ui green message">Green</div>
+	<div class="ui yellow message">Yellow</div>
+	<div class="ui warning message">
+	  <i class="close icon"></i>
+	  <div class="header">
+	    You must register before you can do that!
+	  </div>
+	  Visit our registration page, then try again
+	</div>
+	<div class="ui info message">
+	  <i class="close icon"></i>
+	  <div class="header">
+	    Was this what you wanted?
+	  </div>
+	  <ul class="list">
+	    <li>It's good to see you again.</li>
+	    <li>Did you know it's been a while?</li>
+	  </ul>
+	</div>
+	<div class="ui success message">
+	  <i class="close icon"></i>
+	  <div class="header">
+	    Congratulations, you are now a member!
+	  </div>
+	</div>
+	<div class="ui error message">
+	  <i class="close icon"></i>
+	  <div class="header">
+	    Was this what you wanted?
+	  </div>
+	  <ul class="list">
+	    <li>It's good to see you again.</li>
+	    <li>Did you know it's been a while?</li>
+	  </ul>
+	</div>
+	<div class="ui small message">
+	  This is a very small message.
+	</div>
+	<div class="ui large message">
+	  This is large
+	</div>
+	<div class="ui huge message">
+	  This is huge
+	</div>
+	<div class="ui massive message">
+	  This is massive
+	</div>
 	<div class="ui horizontal divider"><i class="circular heart icon"></i></div>
+	<h2>Table</h2>
+	<table class="ui table segment">
+	  <thead>
+	    <tr><th>Name</th>
+	    <th>Status</th>
+	    <th>Notes</th>
+	  </tr></thead>
+	  <tbody>
+	    <tr>
+	      <td>John</td>
+	      <td>Approved</td>
+	      <td>None</td>
+	    </tr>
+	    <tr>
+	      <td>Jamie</td>
+	      <td>Approved</td>
+	      <td>Requires call</td>
+	    </tr>
+	    <tr>
+	      <td>Jill</td>
+	      <td>Denied</td>
+	      <td>None</td>
+	    </tr>
+	  </tbody>
+	  <tfoot>
+	    <tr><th colspan="3">
+	      <div class="ui blue labeled icon button"><i class="user icon"></i> Add User</div>
+	    </th>
+	  </tr></tfoot>
+	</table>
+	<table class="ui table segment">
+	  <thead>
+	    <tr><th>Name</th>
+	    <th>Status</th>
+	    <th>Notes</th>
+	  </tr></thead>
+	  <tbody>
+	    <tr>
+	      <td>No Name Specified</td>
+	      <td>Unknown</td>
+	      <td>None</td>
+	    </tr>
+	    <tr class="positive">
+	      <td>Jimmy</td>
+	      <td><i class="icon checkmark"></i> Approved</td>
+	      <td>None</td>
+	    </tr>
+	    <tr>
+	      <td>Jamie</td>
+	      <td>Unknown</td>
+	      <td class="negative"><i class="icon close"></i> Requires call</td>
+	    </tr>
+	    <tr>
+	      <td>Jill</td>
+	      <td>Unknown</td>
+	      <td>None</td>
+	    </tr>
+	  </tbody>
+	</table>
+	<table class="ui table segment">
+	  <thead>
+	    <tr><th>Name</th>
+	    <th>Status</th>
+	    <th>Notes</th>
+	  </tr></thead>
+	  <tbody>
+	    <tr>
+	      <td>No Name Specified</td>
+	      <td>Approved</td>
+	      <td>None</td>
+	    </tr>
+	    <tr class="error">
+	      <td>Jimmy</td>
+	      <td>Cannot pull data</td>
+	      <td>None</td>
+	    </tr>
+	    <tr>
+	      <td>Jamie</td>
+	      <td>Approved</td>
+	      <td class="error"><i class="attention icon"></i> Classified</td>
+	    </tr>
+	    <tr>
+	      <td>Jill</td>
+	      <td>Approved</td>
+	      <td>None</td>
+	    </tr>
+	  </tbody>
+	</table>
+	<table class="ui table segment">
+	  <thead>
+	    <tr><th>Name</th>
+	    <th>Status</th>
+	    <th>Notes</th>
+	  </tr></thead>
+	  <tbody>
+	    <tr>
+	      <td>No Name Specified</td>
+	      <td>Unknown</td>
+	      <td>None</td>
+	    </tr>
+	    <tr class="warning">
+	      <td>Jimmy</td>
+	      <td><i class="attention icon"></i> Requires Action</td>
+	      <td>None</td>
+	    </tr>
+	    <tr>
+	      <td>Jamie</td>
+	      <td>Unknown</td>
+	      <td class="warning"><i class="attention icon"></i> Hostile</td>
+	    </tr>
+	    <tr>
+	      <td>Jill</td>
+	      <td>Unknown</td>
+	      <td>None</td>
+	    </tr>
+	  </tbody>
+	</table>
+	<table class="ui table segment">
+	  <thead>
+	    <tr><th>Name</th>
+	    <th>Status</th>
+	    <th>Notes</th>
+	  </tr></thead>
+	  <tbody>
+	    <tr>
+	      <td>Jamie</td>
+	      <td>Approved</td>
+	      <td>Requires call</td>
+	    </tr>
+	    <tr class="active">
+	      <td>John</td>
+	      <td>Selected</td>
+	      <td>None</td>
+	    </tr>
+	    <tr>
+	      <td>Jamie</td>
+	      <td>Approved</td>
+	      <td>Requires call</td>
+	    </tr>
+	    <tr>
+	      <td class="active">Jill</td>
+	      <td>Approved</td>
+	      <td>None</td>
+	    </tr>
+	  </tbody>
+	</table>
+	<table class="ui table segment">
+	  <thead>
+	    <tr><th>Name</th>
+	    <th>Status</th>
+	    <th>Notes</th>
+	  </tr></thead>
+	  <tbody>
+	    <tr class="disabled">
+	      <td>Jamie</td>
+	      <td>Approved</td>
+	      <td>Requires call</td>
+	    </tr>
+	    <tr>
+	      <td>John</td>
+	      <td>Selected</td>
+	      <td>None</td>
+	    </tr>
+	    <tr>
+	      <td>Jamie</td>
+	      <td>Approved</td>
+	      <td>Requires call</td>
+	    </tr>
+	    <tr>
+	      <td class="disabled">Jill</td>
+	      <td>Approved</td>
+	      <td>None</td>
+	    </tr>
+	  </tbody>
+	</table>
+	<table class="ui celled table segment">
+	  <thead>
+	    <tr><th>Name</th>
+	    <th>Status</th>
+	    <th>Notes</th>
+	  </tr></thead>
+	  <tbody>
+	    <tr>
+	      <td>John</td>
+	      <td>Approved</td>
+	      <td>None</td>
+	    </tr>
+	    <tr>
+	      <td>Jamie</td>
+	      <td>Approved</td>
+	      <td>Requires call</td>
+	    </tr>
+	    <tr>
+	      <td>Jill</td>
+	      <td>Denied</td>
+	      <td>None</td>
+	    </tr>
+	  </tbody>
+	  <tfoot>
+	    <tr><th>3 People</th>
+	    <th>2 Approved</th>
+	    <th></th>
+	  </tr></tfoot>
+	</table>
+	<table class="ui basic table">
+	  <thead>
+	    <tr><th>Name</th>
+	    <th>Status</th>
+	    <th>Notes</th>
+	  </tr></thead>
+	  <tbody>
+	    <tr>
+	      <td>John</td>
+	      <td>Approved</td>
+	      <td>None</td>
+	    </tr>
+	    <tr>
+	      <td>Jamie</td>
+	      <td>Approved</td>
+	      <td>Requires call</td>
+	    </tr>
+	    <tr>
+	      <td>Jill</td>
+	      <td>Denied</td>
+	      <td>None</td>
+	    </tr>
+	  </tbody>
+	</table>
+	<table class="ui five column table segment">
+	  <thead>
+	    <tr><th>Name</th>
+	    <th>Status</th>
+	    <th>Age</th>
+	    <th>Gender</th>
+	    <th>Notes</th>
+	  </tr></thead>
+	  <tbody>
+	    <tr>
+	      <td>John</td>
+	      <td>Approved</td>
+	      <td>22</td>
+	      <td>Male</td>
+	      <td>None</td>
+	    </tr>
+	    <tr>
+	      <td>Jamie</td>
+	      <td>Approved</td>
+	      <td>32</td>
+	      <td>Male</td>
+	      <td>Requires call</td>
+	    </tr>
+	    <tr>
+	      <td>Jill</td>
+	      <td>Denied</td>
+	      <td>22</td>
+	      <td>Female</td>
+	      <td>None</td>
+	    </tr>
+	  </tbody>
+	  <tfoot>
+	    <tr><th>3 People</th>
+	    <th>2 Approved</th>
+	    <th></th>
+	    <th></th>
+	    <th></th>
+	  </tr></tfoot>
+	</table>
+	<table class="ui five column table segment">
+	  <thead>
+	    <tr><th class="ten wide">Name</th>
+	    <th class="six wide">Status</th>
+	  </tr></thead>
+	  <tbody>
+	    <tr>
+	      <td>John</td>
+	      <td>Approved</td>
+	    </tr>
+	    <tr>
+	      <td>Jamie</td>
+	      <td>Approved</td>
+	    </tr>
+	    <tr>
+	      <td>Jill</td>
+	      <td>Denied</td>
+	    </tr>
+	  </tbody>
+	  <tfoot>
+	    <tr><th>3 People</th>
+	    <th>2 Approved</th>
+	  </tr></tfoot>
+	</table>
+	<table class="ui collapsing table segment">
+	  <thead>
+	    <tr><th>Name</th>
+	    <th>Status</th>
+	    <th>Notes</th>
+	  </tr></thead>
+	  <tbody>
+	    <tr>
+	      <td>John</td>
+	      <td>Approved</td>
+	      <td>None</td>
+	    </tr>
+	    <tr>
+	      <td>Jamie</td>
+	      <td>Approved</td>
+	      <td>Requires call</td>
+	    </tr>
+	    <tr>
+	      <td>Jill</td>
+	      <td>Denied</td>
+	      <td>None</td>
+	    </tr>
+	  </tbody>
+	  <tfoot>
+	    <tr><th>3 People</th>
+	    <th>2 Approved</th>
+	    <th></th>
+	  </tr></tfoot>
+	</table>
+	<table class="ui inverted table segment">
+	  <thead>
+	    <tr><th>Name</th>
+	    <th>Status</th>
+	    <th>Notes</th>
+	  </tr></thead>
+	  <tbody>
+	    <tr>
+	      <td>John</td>
+	      <td>Approved</td>
+	      <td>None</td>
+	    </tr>
+	    <tr>
+	      <td>Jamie</td>
+	      <td>Approved</td>
+	      <td>Requires call</td>
+	    </tr>
+	    <tr>
+	      <td>Jill</td>
+	      <td>Denied</td>
+	      <td>None</td>
+	    </tr>
+	  </tbody>
+	  <tfoot>
+	    <tr><th>3 People</th>
+	    <th>2 Approved</th>
+	    <th></th>
+	  </tr></tfoot>
+	</table>
+	<table class="ui inverted red table segment">
+	  <thead>
+	    <tr><th>Name</th>
+	    <th>Status</th>
+	    <th>Notes</th>
+	  </tr></thead>
+	  <tbody>
+	    <tr>
+	      <td>John</td>
+	      <td>Approved</td>
+	      <td>None</td>
+	    </tr>
+	    <tr>
+	      <td>Jamie</td>
+	      <td>Approved</td>
+	      <td>Requires call</td>
+	    </tr>
+	    <tr>
+	      <td>Jill</td>
+	      <td>Denied</td>
+	      <td>None</td>
+	    </tr>
+	  </tbody>
+	  <tfoot>
+	    <tr><th>3 People</th>
+	    <th>2 Approved</th>
+	    <th></th>
+	  </tr></tfoot>
+	</table>
+	<table class="ui definition table segment">
+	  <thead>
+	    <tr><th>Behavior</th>
+	    <th>Arguments</th>
+	    <th>Description</th>
+	  </tr></thead>
+	  <tbody>
+	    <tr>
+	      <td>reset rating</td>
+	      <td>None</td>
+	      <td>Resets rating to default value</td>
+	    </tr>
+	    <tr>
+	      <td>set rating</td>
+	      <td>rating (integer)</td>
+	      <td>Sets the current star rating to specified value</td>
+	    </tr>
+	</tbody></table>
+	<div class="ui warning message">Adding a classname of <code>ascending</code> or <code>descending</code> to the <code>th</code> will show the user the direction of sort. This example uses a modified version of the kylefox's <a href="https://github.com/kylefox/jquery-tablesort">tablesort plugin</a> to provide the proper class names.
+	  </div>
+	<table class="ui sortable table segment">
+	    <thead>
+	      <tr><th>Name</th>
+	      <th>Status</th>
+	      <th>Notes</th>
+	    </tr></thead>
+	    <tbody>
+	      <tr>
+	        <td>John</td>
+	        <td>No Action</td>
+	        <td>None</td>
+	      </tr>
+	      <tr>
+	        <td>Jamie</td>
+	        <td class="positive">Approved</td>
+	        <td class="warning">Requires call</td>
+	      </tr>
+	      <tr>
+	        <td>Jill</td>
+	        <td class="negative">Denied</td>
+	        <td>None</td>
+	      </tr>
+	    </tbody>
+	    <tfoot>
+	      <tr><th>3 People</th>
+	      <th>2 Approved</th>
+	      <th></th>
+	    </tr></tfoot>
+  	</table>
+  	<table class="ui padded table segment">
+	  <thead>
+	    <tr><th>Name</th>
+	    <th>Status</th>
+	    <th>Notes</th>
+	  </tr></thead>
+	  <tbody>
+	    <tr>
+	      <td>John</td>
+	      <td>Approved</td>
+	      <td>He is a very nice guy and I enjoyed talking to him on the telephone. I hope we get to talk again.</td>
+	    </tr>
+	    <tr>
+	      <td>Jamie</td>
+	      <td>Approved</td>
+	      <td>Jamie was not interested in purchasing our product.</td>
+	    </tr>
+	  </tbody>
+	</table>
+	<table class="ui compact table segment">
+	  <thead>
+	    <tr><th>Name</th>
+	    <th>Status</th>
+	    <th>Notes</th>
+	  </tr></thead>
+	  <tbody>
+	    <tr>
+	      <td>John</td>
+	      <td>Approved</td>
+	      <td>None</td>
+	    </tr>
+	    <tr>
+	      <td>Jamie</td>
+	      <td>Approved</td>
+	      <td>Requires call</td>
+	    </tr>
+	    <tr>
+	      <td>John</td>
+	      <td>Approved</td>
+	      <td>None</td>
+	    </tr>
+	    <tr>
+	      <td>Jamie</td>
+	      <td>Approved</td>
+	      <td>Requires call</td>
+	    </tr>
+	    <tr>
+	      <td>John</td>
+	      <td>Approved</td>
+	      <td>None</td>
+	    </tr>
+	    <tr>
+	      <td>Jamie</td>
+	      <td>Approved</td>
+	      <td>Requires call</td>
+	    </tr>
+	    <tr>
+	      <td>John</td>
+	      <td>Approved</td>
+	      <td>None</td>
+	    </tr>
+	    <tr>
+	      <td>Jamie</td>
+	      <td>Approved</td>
+	      <td>Requires call</td>
+	    </tr>
+	  </tbody>
+	</table>
+	<table class="ui small table segment">
+	  <thead>
+	    <tr><th>Name</th>
+	    <th>Status</th>
+	    <th>Notes</th>
+	  </tr></thead>
+	  <tbody>
+	    <tr>
+	      <td>John</td>
+	      <td>Approved</td>
+	      <td>None</td>
+	    </tr>
+	    <tr>
+	      <td>Jamie</td>
+	      <td>Approved</td>
+	      <td>Requires call</td>
+	    </tr>
+	    <tr>
+	      <td>Jill</td>
+	      <td>Denied</td>
+	      <td>None</td>
+	    </tr>
+	  </tbody>
+	  <tfoot>
+	    <tr><th>3 People</th>
+	    <th>2 Approved</th>
+	    <th></th>
+	  </tr></tfoot>
+	</table>
+	<table class="ui large table segment">
+	  <thead>
+	    <tr><th>Name</th>
+	    <th>Status</th>
+	    <th>Notes</th>
+	  </tr></thead>
+	  <tbody>
+	    <tr>
+	      <td>John</td>
+	      <td>Approved</td>
+	      <td>None</td>
+	    </tr>
+	    <tr>
+	      <td>Jamie</td>
+	      <td>Approved</td>
+	      <td>Requires call</td>
+	    </tr>
+	    <tr>
+	      <td>Jill</td>
+	      <td>Denied</td>
+	      <td>None</td>
+	    </tr>
+	  </tbody>
+	  <tfoot>
+	    <tr><th>3 People</th>
+	    <th>2 Approved</th>
+	    <th></th>
+	  </tr></tfoot>
+	</table>
 	<div class="ui horizontal divider"><i class="circular heart icon"></i></div>
 	<script type="text/javascript">
 	$(function(){

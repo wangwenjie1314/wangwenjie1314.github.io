@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<title>UI View</title>
+	<link rel="shortcut icon" href="http://wangwenjie1314.github.io/statics/images/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="../../statics/css/semantic.min.css" />
+	<style type="text/css">
+	html,body{font-size:15px;height:100%;}
+	body{font-family:"Open Sans","Helvetica Neue","Helvetica","Arial",sans-serif;background:#FFFFFF;margin:0px;padding:0px;color:#555555;text-rendering:optimizeLegibility;min-width:320px;}
+	a{color:#009FDA;text-decoration:none}a:hover{color:#00BAFF}
+	</style>
+	<script type="text/javascript" src="../../statics/js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="../../statics/js/semantic.min.js"></script>
+</head>
+<body style="margin:0 10px">
+	<h1>UI View</h1>
+	<div class="ui segment">
+	<p>
+	<a href="#Comment">评论</a>
+	<a href="#Feed">时间</a>
+	<a href="#Item">流式</a>
+	<a href="#List">列表</a>
+	</p>
+	</div>
+	<h2 id="Comment" name="Comment">评论</h2>
+	<div class="ui two column grid">
+	  <div class="column">
+	    <div class="ui piled blue segment">
+	      <h2 class="ui header">
+	        <i class="icon inverted circular blue comment"></i> Comments
+	      </h2>
+	      <div class="ui comments">
+	        <div class="comment">
+	          <a class="avatar">
+	            <img src="images/avatar.jpg">
+	          </a>
+	          <div class="content">
+	            <a class="author">Dog Doggington</a>
+	            <div class="metadata">
+	              <span class="date">2 days ago</span>
+	            </div>
+	            <div class="text">
+	              I think this is a great idea and i am voting on it
+	            </div>
+	            <div class="actions">
+	              <a class="reply">Reply</a>
+	              <a class="delete">Delete</a>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="comment">
+	          <a class="avatar">
+	            <img src="images/avatar2.jpg">
+	          </a>
+	          <div class="content">
+	            <a class="author">Pawfin Dog</a>
+	            <div class="metadata">
+	              <span class="date">2 days ago</span>
+	            </div>
+	            <div class="text">
+	              I think this is a great idea and i am voting on it
+	            </div>
+	            <div class="actions">
+	              <a class="reply">Reply</a>
+	              <a class="delete">Delete</a>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="comment">
+	          <a class="avatar">
+	            <img src="images/avatar.jpg">
+	          </a>
+	          <div class="content">
+	            <a class="author">Dog Doggington</a>
+	            <div class="metadata">
+	              <span class="date">2 days ago</span>
+	            </div>
+	            <div class="text">
+	              I think this is a great idea and i am voting on it
+	            </div>
+	            <div class="actions">
+	              <a class="reply">Reply</a>
+	              <a class="delete">Delete</a>
+	            </div>
+	          </div>
+	        </div>
+	        <form class="ui reply form">
+	          <div class="field">
+	            <textarea></textarea>
+	          </div>
+	          <div class="ui fluid blue labeled submit icon button">
+	            <i class="icon edit"></i> Add Reply
+	          </div>
+	        </form>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui comments">
+	  <div class="comment">
+	    <a class="avatar">
+	      <img src="images/avatar.jpg">
+	    </a>
+	    <div class="content">
+	      <a class="author">Dog Doggington</a>
+	      <div class="text">
+	        I think this is a great idea and i am voting on it
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui comments">
+	  <div class="comment">
+	    <a class="avatar">
+	      <img src="images/avatar.jpg">
+	    </a>
+	    <div class="content">
+	      <a class="author">Dog Doggington</a>
+	      <div class="metadata">
+	        <div class="date">2 days ago</div>
+	        <div class="stars">
+	          <i class="icon star"></i>
+	          <i class="icon star"></i>
+	          <i class="icon star"></i>
+	          <i class="icon empty star"></i>
+	          <i class="icon empty star"></i>
+	        </div>
+	      </div>
+	      <div class="text">
+	        I think this is a great idea and i am voting on it
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui comments">
+	  <div class="comment">
+	    <a class="avatar">
+	      <img src="images/avatar.jpg">
+	    </a>
+	    <div class="content">
+	      <a class="author">Dog Doggington</a>
+	      <div class="metadata">
+	        <div class="date">2 days ago</div>
+	        <div class="stars">
+	          <i class="icon star"></i>
+	          <i class="icon star"></i>
+	          <i class="icon star"></i>
+	          <i class="icon empty star"></i>
+	          <i class="icon empty star"></i>
+	        </div>
+	      </div>
+	      <div class="text">
+	        I think this is a great idea and i am voting on it
+	      </div>
+	      <div class="actions">
+	        <a class="reply">Reply</a>
+	        <a class="delete">Delete</a>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui comments">
+	  <div class="comment">
+	    <a class="avatar">
+	      <img src="images/avatar.jpg">
+	    </a>
+	    <div class="content">
+	      <a class="author">Dog Doggington</a>
+	      <div class="metadata">
+	        <div class="date">2 days ago</div>
+	      </div>
+	      <div class="text">
+	        I think this is a great idea and i am voting on it
+	      </div>
+	      <div class="actions">
+	        <a class="reply active">Reply</a>
+	        <a class="delete">Delete</a>
+	      </div>
+	      <form class="ui reply form">
+	        <div class="field">
+	          <textarea></textarea>
+	        </div>
+	        <div class="ui button teal submit labeled icon">
+	          <i class="icon edit"></i> Add Reply
+	        </div>
+	      </form>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui comments">
+	  <div class="comment">
+	    <a class="avatar">
+	      <img src="images/avatar.jpg">
+	    </a>
+	    <div class="content">
+	      <a class="author">Dog Doggington</a>
+	      <div class="metadata">
+	        <div class="date">2 days ago</div>
+	      </div>
+	      <div class="text">
+	        I think this is a great idea and i am voting on it
+	      </div>
+	      <div class="actions">
+	        <a class="reply">Reply</a>
+	        <a class="delete">Delete</a>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="comment">
+	    <a class="avatar">
+	      <img src="images/avatar2.jpg">
+	    </a>
+	    <div class="content">
+	      <a class="author">Pawfin Dog</a>
+	      <div class="metadata">
+	        <div class="date">1 day ago</div>
+	      </div>
+	      <div class="text">
+	        I think this is a great idea and i am voting on it
+	      </div>
+	      <div class="actions">
+	        <a class="reply">Reply</a>
+	      </div>
+	    </div>
+	  </div>
+	  <form class="ui reply form">
+	    <div class="field">
+	      <textarea></textarea>
+	    </div>
+	    <div class="ui button teal submit labeled icon">
+	      <i class="icon edit"></i> Add Comment
+	    </div>
+	  </form>
+	</div>
+	<div class="ui threaded comments">
+	  <div class="comment">
+	    <a class="avatar">
+	      <img src="images/avatar.jpg">
+	    </a>
+	    <div class="content">
+	      <a class="author">Dog Doggington</a>
+	      <div class="metadata">
+	        <span class="date">2 days ago</span>
+	      </div>
+	      <div class="text">
+	        I think this is a great idea and i am voting on it
+	      </div>
+	      <div class="actions">
+	        <a class="reply">Reply</a>
+	        <a class="delete">Delete</a>
+	      </div>
+	    </div>
+	    <div class="comments">
+	      <div class="comment">
+	        <a class="avatar">
+	          <img src="images/avatar2.jpg">
+	        </a>
+	        <div class="content">
+	          <a class="author">Pawfin Dog</a>
+	          <div class="metadata">
+	            <span class="date">1 day ago</span>
+	          </div>
+	          <div class="text">
+	            I think this is a great idea and i am voting on it
+	          </div>
+	          <div class="actions">
+	            <a class="reply">Reply</a>
+	            <a class="delete">Delete</a>
+	          </div>
+	        </div>
+	        <div class="comments">
+	          <div class="comment">
+	            <a class="avatar">
+	              <img src="images/avatar.jpg">
+	            </a>
+	            <div class="content">
+	              <a class="author">Dog Doggington</a>
+	              <div class="metadata">
+	                <span class="date">20 minutes ago</span>
+	              </div>
+	              <div class="text">
+	                I think this is a great idea and i am voting on it
+	              </div>
+	              <div class="actions">
+	                <a class="reply">Reply</a>
+	                <a class="delete">Delete</a>
+	              </div>
+	            </div>
+	          </div>
+	          <div class="comment">
+	            <a class="avatar">
+	              <img src="images/avatar.jpg">
+	            </a>
+	            <div class="content">
+	              <a class="author">Dog Doggington</a>
+	              <div class="metadata">
+	                <span class="date">20 minutes ago</span>
+	              </div>
+	              <div class="text">
+	                Also pizza.
+	              </div>
+	              <div class="actions">
+	                <a class="reply">Reply</a>
+	                <a class="delete">Delete</a>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="comment">
+	        <a class="avatar">
+	          <img src="images/avatar.jpg">
+	        </a>
+	        <div class="content">
+	          <a class="author">Dog Doggington</a>
+	          <div class="metadata">
+	            <span class="date">2 days ago</span>
+	          </div>
+	          <div class="text">
+	            I think this is a great idea and i am voting on it
+	          </div>
+	          <div class="actions">
+	            <a class="reply">Reply</a>
+	            <a class="delete">Delete</a>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="comment">
+	    <a class="avatar">
+	      <img src="images/avatar.jpg">
+	    </a>
+	    <div class="content">
+	      <a class="author">Dog Doggington</a>
+	      <div class="metadata">
+	        <span class="date">20 hours ago</span>
+	      </div>
+	      <div class="text">
+	        I think this is a great idea and i am voting on it
+	      </div>
+	      <div class="actions">
+	        <a class="reply">Reply</a>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="comment">
+	    <a class="avatar">
+	      <img src="images/avatar2.jpg">
+	    </a>
+	    <div class="content">
+	      <a class="author">Pawfin Dog</a>
+	      <div class="metadata">
+	        <span class="date">15 hours ago</span>
+	      </div>
+	      <div class="text">
+	        I think this is a great idea and i am voting on it
+	      </div>
+	      <div class="actions">
+	        <a class="reply">Reply</a>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui minimal comments">
+	  <div class="comment">
+	    <a class="avatar">
+	      <img src="images/avatar.jpg">
+	    </a>
+	    <div class="content">
+	      <a class="author">Dog Doggington</a>
+	      <div class="metadata">
+	        <span class="date">2 days ago</span>
+	      </div>
+	      <div class="text">
+	        I think this is a great idea and i am voting on it
+	      </div>
+	      <div class="actions">
+	        <a class="reply">Reply</a>
+	        <a class="delete">Delete</a>
+	      </div>
+	    </div>
+	    <div class="comments">
+	      <div class="comment">
+	        <a class="avatar">
+	          <img src="images/avatar2.jpg">
+	        </a>
+	        <div class="content">
+	          <a class="author">Pawfin Dog</a>
+	          <div class="metadata">
+	            <span class="date">1 day ago</span>
+	          </div>
+	          <div class="text">
+	            I think this is a great idea and i am voting on it
+	          </div>
+	          <div class="actions">
+	            <a class="reply">Reply</a>
+	            <a class="delete">Delete</a>
+	          </div>
+	        </div>
+	        <div class="comments">
+	          <div class="comment">
+	            <a class="avatar">
+	              <img src="images/avatar.jpg">
+	            </a>
+	            <div class="content">
+	              <a class="author">Dog Doggington</a>
+	              <div class="metadata">
+	                <span class="date">20 minutes ago</span>
+	              </div>
+	              <div class="text">
+	                I think this is a great idea and i am voting on it
+	              </div>
+	              <div class="actions">
+	                <a class="reply">Reply</a>
+	                <a class="delete">Delete</a>
+	              </div>
+	            </div>
+	          </div>
+	          <div class="comment">
+	            <a class="avatar">
+	              <img src="images/avatar.jpg">
+	            </a>
+	            <div class="content">
+	              <a class="author">Dog Doggington</a>
+	              <div class="metadata">
+	                <span class="date">20 minutes ago</span>
+	              </div>
+	              <div class="text">
+	                Also pizza.
+	              </div>
+	              <div class="actions">
+	                <a class="reply">Reply</a>
+	                <a class="delete">Delete</a>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="comment">
+	        <a class="avatar">
+	          <img src="images/avatar.jpg">
+	        </a>
+	        <div class="content">
+	          <a class="author">Dog Doggington</a>
+	          <div class="metadata">
+	            <span class="date">2 days ago</span>
+	          </div>
+	          <div class="text">
+	            I think this is a great idea and i am voting on it
+	          </div>
+	          <div class="actions">
+	            <a class="reply">Reply</a>
+	            <a class="delete">Delete</a>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="comment">
+	    <a class="avatar">
+	      <img src="images/avatar.jpg">
+	    </a>
+	    <div class="content">
+	      <a class="author">Dog Doggington</a>
+	      <div class="metadata">
+	        <span class="date">20 hours ago</span>
+	      </div>
+	      <div class="text">
+	        I think this is a great idea and i am voting on it
+	      </div>
+	      <div class="actions">
+	        <a class="reply">Reply</a>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="comment">
+	    <a class="avatar">
+	      <img src="images/avatar2.jpg">
+	    </a>
+	    <div class="content">
+	      <a class="author">Pawfin Dog</a>
+	      <div class="metadata">
+	        <span class="date">15 hours ago</span>
+	      </div>
+	      <div class="text">
+	        I think this is a great idea and i am voting on it
+	      </div>
+	      <div class="actions">
+	        <a class="reply">Reply</a>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui horizontal divider"><i class="circular heart icon"></i></div>
+	<h2 id="Feed" name="Feed">时间</h2>
+	<div class="ui piled feed segment">
+	  <h2 class="ui header">
+	    Recent Activity
+	  </h2>
+	  <div class="event">
+	    <div class="label">
+	      <img src="images/avatar2.jpg">
+	    </div>
+	    <div class="content">
+	      <div class="date">
+	        Just moments ago
+	      </div>
+	      <div class="summary">
+	         <a>Sally Poodle</a> added you as a friend
+	      </div>
+	    </div>
+	  </div>
+	  <div class="event">
+	    <div class="label">
+	      <i class="circular pencil icon"></i>
+	    </div>
+	    <div class="content">
+	      <div class="date">
+	        3 days ago
+	      </div>
+	      <div class="summary">
+	        You submitted a new post to the page
+	      </div>
+	      <div class="extra text">
+	        I am a dog and I do not know how to make a post
+	      </div>
+	    </div>
+	  </div>
+	  <div class="event">
+	    <div class="label">
+	      <i class="circular photo icon"></i>
+	    </div>
+	    <div class="content">
+	      <div class="date">
+	        3 days ago
+	      </div>
+	      <div class="summary">
+	        <a>Sally Poodle</a> added <a>2 new photos</a> of you
+	      </div>
+	      <div class="extra images">
+	        <img src="images/item1.jpg">
+	        <img src="images/item2.jpg">
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<h4>Label</h4>
+	<div class="ui feed segment">
+	  <div class="event">
+	    <div class="label">
+	      <img src="images/avatar.jpg">
+	    </div>
+	    <div class="content">
+	      <div class="summary">
+	         <a>Sally Poodle</a> added you as a friend
+	      </div>
+	    </div>
+	  </div>
+	  <div class="event">
+	    <div class="label">
+	      <i class="circular pencil icon"></i>
+	    </div>
+	    <div class="content">
+	      <div class="summary">
+	        You submitted a new post to the page
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<h4>Date</h4>
+	<div class="ui feed segment">
+	  <div class="event">
+	    <div class="label">
+	      <img src="images/avatar.jpg">
+	    </div>
+	    <div class="content">
+	      <div class="date">
+	        3 days ago
+	      </div>
+	      <div class="summary">
+	         <a>Sally Poodle</a> added you as a friend
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<h4>Additional information</h4>
+	<div class="ui feed segment">
+	  <div class="event">
+	    <div class="label">
+	      <img src="images/avatar.jpg">
+	    </div>
+	    <div class="content">
+	      <div class="date">
+	        3 days ago
+	      </div>
+	      <div class="summary">
+	         <a>Sally Poodle</a> added 2 photos of you
+	      </div>
+	      <div class="extra images">
+	        <img src="images/item1.jpg">
+	        <img src="images/item2.jpg">
+	      </div>
+	    </div>
+	  </div>
+	  <div class="event">
+	    <div class="label">
+	      <img src="images/avatar.jpg">
+	    </div>
+	    <div class="content">
+	      <div class="date">
+	        3 days ago
+	      </div>
+	      <div class="summary">
+	         <a>Sally Poodle</a> created a post
+	      </div>
+	      <div class="extra text">
+	        I am a dog and I do not know how to make a post
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui grid">
+	  <div class="ten wide column">
+	    <div class="ui small piled feed segment">
+	      <h4 class="ui header">My Activity</h4>
+	      <div class="event">
+	        <div class="label">
+	          <img src="images/avatar2.jpg">
+	        </div>
+	        <div class="content">
+	          <div class="date">
+	            Just moments ago
+	          </div>
+	          <div class="summary">
+	             <a>Sally Poodle</a> added you as a friend
+	          </div>
+	        </div>
+	      </div>
+	      <div class="event">
+	        <div class="label">
+	          <i class="circular pencil icon"></i>
+	        </div>
+	        <div class="content">
+	          <div class="date">
+	            3 days ago
+	          </div>
+	          <div class="summary">
+	            You submitted a new post to the page
+	          </div>
+	          <div class="extra text">
+	            I am a dog and I do not know how to make a post
+	          </div>
+	        </div>
+	      </div>
+	      <div class="event">
+	        <div class="label">
+	          <i class="circular photo icon"></i>
+	        </div>
+	        <div class="content">
+	          <div class="date">
+	            3 days ago
+	          </div>
+	          <div class="summary">
+	            <a>Sally Poodle</a> added <a>2 new photos</a> of you
+	          </div>
+	          <div class="extra images">
+	            <img src="images/item1.jpg">
+	            <img src="images/item2.jpg">
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="six wide column">
+	    <div class="ui small   feed segment">
+	      <h4 class="ui header">Followers Activity</h4>
+	      <div class="event">
+	        <div class="content">
+	          <div class="summary">
+	             <a>Sally Poodle</a> added <a>hotpup202</a> as a friend
+	          </div>
+	        </div>
+	      </div>
+	      <div class="event">
+	        <div class="content">
+	          <div class="summary">
+	             <a>Dally Doodle</a> added <a>hotpup202</a> as a friend
+	          </div>
+	        </div>
+	      </div>
+	      <div class="event">
+	        <div class="content">
+	          <div class="summary">
+	             <a>Sally Poodle</a> added <a>sixpack dog</a> as a friend
+	          </div>
+	        </div>
+	      </div>
+	      <div class="event">
+	        <div class="content">
+	          <div class="summary">
+	             <a>Dally Doodle</a> added <a>hotpup202</a> as a friend
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui horizontal divider"><i class="circular heart icon"></i></div>
+	<h2 id="Item" name="Item">流式</h2>
+	<div class="ui items">
+	  <div class="item">
+	    <div class="image">
+	      <img src="images/highres.jpg">
+	      <a class="like ui corner label">
+	        <i class="like icon"></i>
+	      </a>
+	    </div>
+	    <div class="content">
+	      <div class="name">Cute Dog</div>
+	      <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
+	      <div class="extra">
+	          199 votes
+	      </div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <div class="image">
+	      <img src="images/highres2.jpg">
+	      <a class="like ui corner label">
+	        <i class="like icon"></i>
+	      </a>
+	    </div>
+	    <div class="content">
+	      <div class="meta">5 days ago</div>
+	      <div class="name">Faithful Dog</div>
+	      <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+	      <div class="extra">
+	          311 votes
+	      </div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <div class="image">
+	      <img src="images/highres3.jpg">
+	      <a class="like ui corner label">
+	        <i class="like icon"></i>
+	      </a>
+	    </div>
+	    <div class="content">
+	      <div class="name">Silly Dog</div>
+	      <p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
+	      <div class="extra">
+	          522 votes
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui items">
+	  <div class="item">
+	    <div class="content">
+	      <div class="meta">2 days ago</div>
+	      <div class="name">Cute Dog</div>
+	      <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
+	    </div>
+	    <div class="extra">
+	        199 votes
+	    </div>
+	  </div>
+	  <div class="item">
+	    <div class="content">
+	      <div class="meta">5 days ago</div>
+	      <div class="name">Faithful Dog</div>
+	      <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+	    </div>
+	    <div class="extra">
+	        311 votes
+	    </div>
+	  </div>
+	  <div class="item">
+	    <div class="content">
+	      <div class="meta">1 week ago</div>
+	      <div class="name">Silly Dog</div>
+	      <p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
+	    </div>
+	    <div class="extra">
+	        522 votes
+	    </div>
+	  </div>
+	</div>
+	<div class="ui stackable items">
+	  <div class="item">
+	    <div class="image">
+	      <img src="images/highres5.jpg">
+	      <a class="like ui corner label">
+	        <i class="like icon"></i>
+	      </a>
+	    </div>
+	    <div class="content">
+	      <div class="name">Cute Dog</div>
+	      <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
+	      <div class="extra">
+	          199 votes
+	      </div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <div class="image">
+	      <img src="images/highres6.jpg">
+	      <a class="like ui corner label">
+	        <i class="like icon"></i>
+	      </a>
+	    </div>
+	    <div class="content">
+	      <div class="meta">5 days ago</div>
+	      <div class="name">Faithful Dog</div>
+	      <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+	      <div class="extra">
+	          311 votes
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui connected items">
+	  <div class="row">
+	    <div class="item">
+	      <div class="image">
+	        <img src="images/highres4.jpg">
+	      </div>
+	      <div class="content">
+	        <div class="name">Cute Dog</div>
+	        <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
+	      </div>
+	    </div>
+	    <div class="item">
+	      <div class="image">
+	        <img src="images/highres5.jpg">
+	      </div>
+	      <div class="content">
+	        <div class="name">Faithful Dog</div>
+	        <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+	      </div>
+	    </div>
+	    <div class="item">
+	      <div class="image">
+	        <img src="images/highres3.jpg">
+	      </div>
+	      <div class="content">
+	        <div class="name">Silly Dog</div>
+	        <p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui six connected items">
+	  <div class="row">
+	    <div class="item">
+	      <div class="content">
+	        <div class="name">Cute Dog</div>
+	        <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
+	      </div>
+	    </div>
+	    <div class="item">
+	      <div class="content">
+	        <div class="name">Faithful Dog</div>
+	        <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+	      </div>
+	    </div>
+	    <div class="item">
+	      <div class="content">
+	        <div class="name">Silly Dog</div>
+	        <p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
+	      </div>
+	    </div>
+	    <div class="item">
+	      <div class="content">
+	        <div class="name">Cute Dog</div>
+	        <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
+	      </div>
+	    </div>
+	    <div class="item">
+	      <div class="content">
+	        <div class="name">Faithful Dog</div>
+	        <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+	      </div>
+	    </div>
+	    <div class="item">
+	      <div class="content">
+	        <div class="name">Silly Dog</div>
+	        <p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui four items">
+	  <div class="item">
+	    <div class="image">
+	      <img src="images/highres4.jpg">
+	      <a class="star ui corner label">
+	        <i class="star icon"></i>
+	      </a>
+	    </div>
+	    <div class="content">
+	      <div class="name">Cute Dog</div>
+	      <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <div class="image">
+	      <img src="images/highres5.jpg">
+	      <a class="star ui corner label">
+	        <i class="star icon"></i>
+	      </a>
+	    </div>
+	    <div class="content">
+	      <div class="name">Faithful Dog</div>
+	      <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <div class="image">
+	      <img src="images/highres3.jpg">
+	      <a class="star ui corner label">
+	        <i class="star icon"></i>
+	      </a>
+	    </div>
+	    <div class="content">
+	      <div class="name">Silly Dog</div>
+	      <p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <div class="image">
+	      <img src="images/highres2.jpg">
+	      <a class="star ui corner label">
+	        <i class="star icon"></i>
+	      </a>
+	    </div>
+	    <div class="content">
+	      <div class="name">Happy Dog</div>
+	      <p class="description">Happy dogs are pretty interesting if you are an unhappy person.</p>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui five connected items">
+	  <div class="item">
+	    <div class="image">
+	      <img src="images/highres4.jpg">
+	      <a class="star ui corner label">
+	        <i class="star icon"></i>
+	      </a>
+	    </div>
+	    <div class="content">
+	      <div class="name">Cute Dog</div>
+	      <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <div class="image">
+	      <img src="images/highres5.jpg">
+	      <a class="star ui corner label">
+	        <i class="star icon"></i>
+	      </a>
+	    </div>
+	    <div class="content">
+	      <div class="name">Faithful Dog</div>
+	      <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <div class="image">
+	      <img src="images/highres3.jpg">
+	      <a class="star ui corner label">
+	        <i class="star icon"></i>
+	      </a>
+	    </div>
+	    <div class="content">
+	      <div class="name">Silly Dog</div>
+	      <p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <div class="image">
+	      <img src="images/highres2.jpg">
+	      <a class="star ui corner label">
+	        <i class="star icon"></i>
+	      </a>
+	    </div>
+	    <div class="content">
+	      <div class="name">Happy Dog</div>
+	      <p class="description">Happy dogs are pretty interesting if you are an unhappy person.</p>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <div class="image">
+	      <img src="images/highres.jpg">
+	      <a class="star ui corner label">
+	        <i class="star icon"></i>
+	      </a>
+	    </div>
+	    <div class="content">
+	      <div class="name">Quiet Dog</div>
+	      <p class="description">A quiet dog is nice if you dont like a lot of upkeep for your dogs.</p>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui horizontal divider"><i class="circular heart icon"></i></div>
+	<h2 id="List" name="List">列表</h2>
+	<div class="ui list">
+	  <div class="item">
+	    <img class="ui avatar image" src="images/avatar2.jpg">
+	    <div class="content">
+	      <div class="header">Schnoodle</div>
+	      Your new dog
+	    </div>
+	    <div class="list">
+	      <div class="item">
+	        <i class="mail outline icon"></i>
+	        <div class="content">
+	          <a class="header">Thanks for being my owner</a>
+	          <div class="description">Im so glad you chose to bring me home from the shelter...</div>
+	        </div>
+	      </div>
+	      <div class="item">
+	        <i class="mail outline icon"></i>
+	        <div class="content">
+	          <a class="header">What a walk</a>
+	          <div class="description">Man i am so tired that walk today really was too far...</div>
+	        </div>
+	      </div>
+	      <div class="item">
+	        <i class="map icon"></i>
+	        <div class="content">
+	          <a class="header">Sorry about your old dog</a>
+	          <div class="description">Is this your address? I'm getting dropped off from the SPCA...</div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <img class="ui avatar image" src="images/avatar3.jpg">
+	    <div class="content">
+	      <div class="header">Ragamuffin</div>
+	      Your old dog.
+	    </div>
+	    <div class="list">
+	      <div class="item">
+	        <i class="photo icon"></i>
+	        <div class="content">
+	          <a class="header">Was on a walk today</a>
+	          <div class="description">Here's a picture of me on the farm with a cow...</div>
+	        </div>
+	      </div>
+	      <div class="item">
+	        <i class="mail outline icon"></i>
+	        <div class="content">
+	          <a class="header">Ruff Ruff</a>
+	          <div class="description">I know i usually message you in english but i wanted to see how your dog language was progressing...</div>
+	        </div>
+	      </div>
+	      <div class="item">
+	        <i class="mail outline icon"></i>
+	        <div class="content">
+	          <a class="header">Reaching Out</a>
+	          <div class="description">Hey its your old dog, been a while since you sent me to the farm...</div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui bulleted list">
+	  <div class="item">Cats</div>
+	  <div class="item">Horses</div>
+	  <div class="item">Dogs
+	    <div class="list">
+	      <div class="item">Labradoodles</div>
+	      <div class="item">Shiba Inu</div>
+	      <div class="item">Mastiff</div>
+	    </div>
+	  </div>
+	</div>
+	<ul class="ui list">
+	  <li>Cats</li>
+	  <li>Horses</li>
+	  <li>Dogs</li>
+	    <ul>
+	      <li>Labradoodles</li>
+	      <li>Shiba Inu</li>
+	      <li>Mastiff</li>
+	    </ul>
+	  
+	</ul>
+	<div class="ui ordered list">
+	  <div class="item">Getting Started</div>
+	  <div class="item">Introduction</div>
+	  <div class="item">Languages
+	    <div class="list">
+	      <div class="item">HTML</div>
+	      <div class="item">Javascript</div>
+	      <div class="item">CSS</div>
+	    </div>
+	  </div>
+	</div>
+	<ol class="ui list">
+	  <li>Cats</li>
+	  <li>Horses</li>
+	  <li>Dogs</li>
+	    <ol>
+	      <li>Labradoodles</li>
+	      <li>Shiba Inu</li>
+	      <li>Mastiff</li>
+	    </ol>
+	  
+	</ol>
+	<div class="ui link list">
+	  <a class="item">Home</a>
+	  <a class="item">About</a>
+	  <a class="item">Jobs</a>
+	  <a class="item">Team</a>
+	</div>
+	<div class="ui list">
+	  <a class="item">
+	    <i class="right triangle icon"></i>
+	    How do you know your dog likes you?
+	  </a>
+	  <a class="item">
+	    <i class="right triangle icon"></i>
+	    When is it ok to send your dog to a farm?
+	  </a>
+	  <a class="item">
+	    <i class="right triangle icon"></i>
+	    Can you get your dog back from a farm if you really want him back?
+	  </a>
+	  <a class="item">
+	    <i class="right triangle icon"></i>
+	    Is trespassing on a farm a misdemeanor offence?
+	  </a>
+	</div>
+	<div class="ui divided list">
+	  <div class="item">
+	    <div class="right floated tiny teal ui button">View Listing</div>
+	    <img class="ui avatar image" src="images/avatar2.jpg">
+	    <div class="content">
+	      <div class="header">New York Dog Fair</div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <div class="right floated tiny teal ui button">View Listing</div>
+	    <img class="ui avatar image" src="images/avatar3.jpg">
+	    <div class="content">
+	      <div class="header">Dog Appreciation Day</div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui list">
+	  <a class="item">What is a FAQ?</a>
+	  <a class="item">How does one go about reading answers to questions in a FAQ</a>
+	  <a class="item">How do you close a web browser?</a>
+	  <a class="item">What is the most popular FAQ question?</a>
+	</div>
+	<div class="ui list">
+	  <div class="item">
+	    <div class="header">New York City</div>
+	    A lovely city
+	  </div>
+	  <div class="item">
+	    <div class="header">Chicago</div>
+	    Also quite a lovely city
+	  </div>
+	  <div class="item">
+	    <div class="header">Los Angeles</div>
+	    Sometimes can be a lovely city
+	  </div>
+	  <div class="item">
+	    <div class="header">San Francisco</div>
+	    What a lovely city
+	  </div>
+	</div>
+	<div class="ui divided list">
+	  <div class="item">
+	    <i class="map marker icon"></i>
+	    <div class="content">
+	      <a class="header">New York City</a>
+	      <div class="description">A lovely city</div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <i class="map marker icon"></i>
+	    <div class="content">
+	      <a class="header">Chicago</a>
+	      <div class="description">A lovely city</div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <i class="map marker icon"></i>
+	    <div class="content">
+	      <a class="header">Los Angeles</a>
+	      <div class="description">A lovely city</div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <i class="map marker icon"></i>
+	    <div class="content">
+	      <a class="header">San Francisco</a>
+	      <div class="description">A lovely city</div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui horizontal list">
+	  <div class="item">
+	    <img class="ui avatar image" src="images/avatar.jpg">
+	    <div class="content">
+	      <div class="header">Snickerdoodle</div>
+	      An excellent companion
+	    </div>
+	  </div>
+	  <div class="item">
+	    <img class="ui avatar image" src="images/avatar2.jpg">
+	    <div class="content">
+	      <div class="header">Poodle</div>
+	      A poodle, its pretty basic
+	    </div>
+	  </div>
+	  <div class="item">
+	    <img class="ui avatar image" src="images/avatar3.jpg">
+	    <div class="content">
+	      <div class="header">Paulo</div>
+	      He's also a dog
+	    </div>
+	  </div>
+	</div>
+	<div class="ui ordered horizontal list">
+	  <div class="item">New York City</div>
+	  <div class="item">Chicago</div>
+	  <div class="item">Los Angeles</div>
+	  <div class="item">San Francisco</div>
+	</div>
+	<div class="ui horizontal bulleted list">
+	  <div class="item">
+	    Apples
+	  </div>
+	  <div class="item">
+	    Pears
+	  </div>
+	  <div class="item">
+	    Oranges
+	  </div>
+	  <div class="item">
+	    Soursop
+	  </div>
+	</div>
+	<div class="ui inverted segment">
+	  <div class="ui inverted relaxed divided list">
+	    <div class="item">
+	      <div class="content">
+	        <div class="header">Snickerdoodle</div>
+	        An excellent companion
+	      </div>
+	    </div>
+	    <div class="item">
+	      <div class="content">
+	        <div class="header">Poodle</div>
+	        A poodle, its pretty basic
+	      </div>
+	    </div>
+	    <div class="item">
+	      <div class="content">
+	        <div class="header">Paulo</div>
+	        He's also a dog
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui selection list">
+	  <div class="item">
+	    <img class="ui avatar image" src="images/avatar.jpg">
+	    <div class="content">
+	      <div class="header">Snickerdoodle</div>
+	      An excellent companion
+	    </div>
+	  </div>
+	  <div class="item">
+	    <img class="ui avatar image" src="images/avatar2.jpg">
+	    <div class="content">
+	      <div class="header">Poodle</div>
+	      A poodle, its pretty basic
+	    </div>
+	  </div>
+	  <div class="item">
+	    <img class="ui avatar image" src="images/avatar3.jpg">
+	    <div class="content">
+	      <div class="header">Paulo</div>
+	      He's also a dog
+	    </div>
+	  </div>
+	</div>
+	<div class="ui animated list">
+	  <div class="item">
+	    <img class="ui avatar image" src="images/avatar.jpg">
+	    <div class="content">
+	      <div class="header">Snickerdoodle</div>
+	      An excellent companion
+	    </div>
+	  </div>
+	  <div class="item">
+	    <img class="ui avatar image" src="images/avatar2.jpg">
+	    <div class="content">
+	      <div class="header">Poodle</div>
+	      A poodle, its pretty basic
+	    </div>
+	  </div>
+	  <div class="item">
+	    <img class="ui avatar image" src="images/avatar3.jpg">
+	    <div class="content">
+	      <div class="header">Paulo</div>
+	      He's also a dog
+	    </div>
+	  </div>
+	</div>
+	<div class="ui relaxed divided list">
+	  <div class="item">
+	    <i class="map marker icon"></i>
+	    <div class="content">
+	      <a class="header">New York City</a>
+	      <div class="description">A lovely city</div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <i class="map marker icon"></i>
+	    <div class="content">
+	      <a class="header">Chicago</a>
+	      <div class="description">A lovely city</div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <i class="map marker icon"></i>
+	    <div class="content">
+	      <a class="header">Los Angeles</a>
+	      <div class="description">A lovely city</div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui very relaxed divided list">
+	  <div class="item">
+	    <i class="map marker icon"></i>
+	    <div class="content">
+	      <a class="header">New York City</a>
+	      <div class="description">A lovely city</div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <i class="map marker icon"></i>
+	    <div class="content">
+	      <a class="header">Chicago</a>
+	      <div class="description">A lovely city</div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <i class="map marker icon"></i>
+	    <div class="content">
+	      <a class="header">Los Angeles</a>
+	      <div class="description">A lovely city</div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui relaxed horizontal divided list">
+	  <div class="item">
+	    <i class="map marker icon"></i>
+	    <div class="content">
+	      <a class="header">New York City</a>
+	      <div class="description">A lovely city</div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <i class="map marker icon"></i>
+	    <div class="content">
+	      <a class="header">Chicago</a>
+	      <div class="description">A lovely city</div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <i class="map marker icon"></i>
+	    <div class="content">
+	      <a class="header">Los Angeles</a>
+	      <div class="description">A lovely city</div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui very relaxed horizontal divided list">
+	  <div class="item">
+	    <i class="map marker icon"></i>
+	    <div class="content">
+	      <a class="header">New York City</a>
+	      <div class="description">A lovely city</div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <i class="map marker icon"></i>
+	    <div class="content">
+	      <a class="header">Chicago</a>
+	      <div class="description">A lovely city</div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <i class="map marker icon"></i>
+	    <div class="content">
+	      <a class="header">Los Angeles</a>
+	      <div class="description">A lovely city</div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui divided list">
+	  <div class="item">
+	    <img class="ui avatar image" src="images/avatar.jpg">
+	    <div class="content">
+	      <div class="header">Snickerdoodle</div>
+	      An excellent companion
+	    </div>
+	  </div>
+	  <div class="item">
+	    <img class="ui avatar image" src="images/avatar2.jpg">
+	    <div class="content">
+	      <div class="header">Poodle</div>
+	      A poodle, its pretty basic
+	    </div>
+	  </div>
+	  <div class="item">
+	    <img class="ui avatar image" src="images/avatar3.jpg">
+	    <div class="content">
+	      <div class="header">Paulo</div>
+	      He's also a dog
+	    </div>
+	  </div>
+	</div>
+	<div class="ui divided horizontal list">
+	  <div class="item">About Us</div>
+	  <div class="item">Contact</div>
+	  <div class="item">Support</div>
+	</div>
+	<div class="ui celled list">
+	  <div class="item">
+	    <img class="ui avatar image" src="images/avatar.jpg">
+	    <div class="content">
+	      <div class="header">Snickerdoodle</div>
+	      An excellent companion
+	    </div>
+	  </div>
+	  <div class="item">
+	    <img class="ui avatar image" src="images/avatar2.jpg">
+	    <div class="content">
+	      <div class="header">Poodle</div>
+	      A poodle, its pretty basic
+	    </div>
+	  </div>
+	  <div class="item">
+	    <img class="ui avatar image" src="images/avatar3.jpg">
+	    <div class="content">
+	      <div class="header">Paulo</div>
+	      He's also a dog
+	    </div>
+	  </div>
+	</div>
+	<div class="ui celled horizontal list">
+	  <div class="item">About Us</div>
+	  <div class="item">Contact</div>
+	  <div class="item">Support</div>
+	</div>
+	<div class="ui mini list">
+	  <div class="item">
+	    <i class="mail outline icon"></i>
+	    <div class="content">
+	      <a class="header">Thanks for being my owner</a>
+	      <div class="description">Im so glad you chose to bring me home from the shelter...</div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <i class="mail outline icon"></i>
+	    <div class="content">
+	      <a class="header">What a walk</a>
+	      <div class="description">Man i am so tired that walk today really was too far...</div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <i class="map icon"></i>
+	    <div class="content">
+	      <a class="header">Sorry about your old dog</a>
+	      <div class="description">Is this your address? I'm getting dropped off from the SPCA...</div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui tiny list">
+	  <div class="item">
+	    <i class="mail outline icon"></i>
+	    <div class="content">
+	      <a class="header">Thanks for being my owner</a>
+	      <div class="description">Im so glad you chose to bring me home from the shelter...</div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <i class="mail outline icon"></i>
+	    <div class="content">
+	      <a class="header">What a walk</a>
+	      <div class="description">Man i am so tired that walk today really was too far...</div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <i class="map icon"></i>
+	    <div class="content">
+	      <a class="header">Sorry about your old dog</a>
+	      <div class="description">Is this your address? I'm getting dropped off from the SPCA...</div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui small list">
+	  <div class="item">
+	    <i class="mail outline icon"></i>
+	    <div class="content">
+	      <a class="header">Thanks for being my owner</a>
+	      <div class="description">Im so glad you chose to bring me home from the shelter...</div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <i class="mail outline icon"></i>
+	    <div class="content">
+	      <a class="header">What a walk</a>
+	      <div class="description">Man i am so tired that walk today really was too far...</div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <i class="map icon"></i>
+	    <div class="content">
+	      <a class="header">Sorry about your old dog</a>
+	      <div class="description">Is this your address? I'm getting dropped off from the SPCA...</div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui large list">
+	  <div class="item">
+	    <i class="mail outline icon"></i>
+	    <div class="content">
+	      <a class="header">Thanks for being my owner</a>
+	      <div class="description">Im so glad you chose to bring me home from the shelter...</div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <i class="mail outline icon"></i>
+	    <div class="content">
+	      <a class="header">What a walk</a>
+	      <div class="description">Man i am so tired that walk today really was too far...</div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <i class="map icon"></i>
+	    <div class="content">
+	      <a class="header">Sorry about your old dog</a>
+	      <div class="description">Is this your address? I'm getting dropped off from the SPCA...</div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui big list">
+	  <div class="item">
+	    <i class="mail outline icon"></i>
+	    <div class="content">
+	      <a class="header">Thanks for being my owner</a>
+	      <div class="description">Im so glad you chose to bring me home from the shelter...</div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <i class="mail outline icon"></i>
+	    <div class="content">
+	      <a class="header">What a walk</a>
+	      <div class="description">Man i am so tired that walk today really was too far...</div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <i class="map icon"></i>
+	    <div class="content">
+	      <a class="header">Sorry about your old dog</a>
+	      <div class="description">Is this your address? I'm getting dropped off from the SPCA...</div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui huge list">
+	  <div class="item">
+	    <i class="mail outline icon"></i>
+	    <div class="content">
+	      <a class="header">Thanks for being my owner</a>
+	      <div class="description">Im so glad you chose to bring me home from the shelter...</div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <i class="mail outline icon"></i>
+	    <div class="content">
+	      <a class="header">What a walk</a>
+	      <div class="description">Man i am so tired that walk today really was too far...</div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <i class="map icon"></i>
+	    <div class="content">
+	      <a class="header">Sorry about your old dog</a>
+	      <div class="description">Is this your address? I'm getting dropped off from the SPCA...</div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui massive list">
+	  <div class="item">
+	    <i class="mail outline icon"></i>
+	    <div class="content">
+	      <a class="header">Thanks for being my owner</a>
+	      <div class="description">Im so glad you chose to bring me home from the shelter...</div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <i class="mail outline icon"></i>
+	    <div class="content">
+	      <a class="header">What a walk</a>
+	      <div class="description">Man i am so tired that walk today really was too far...</div>
+	    </div>
+	  </div>
+	  <div class="item">
+	    <i class="map icon"></i>
+	    <div class="content">
+	      <a class="header">Sorry about your old dog</a>
+	      <div class="description">Is this your address? I'm getting dropped off from the SPCA...</div>
+	    </div>
+	  </div>
+	</div>
+	<div class="ui horizontal divider"><i class="circular heart icon"></i></div>
+</body>
+</html>
