@@ -6,14 +6,14 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<title>UI Modules</title>
 	<link rel="shortcut icon" href="http://wangwenjie1314.github.io/statics/images/favicon.ico" />
-	<link rel="stylesheet" type="text/css" href="../../statics/css/semantic.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../statics/css/semantic-0.19.3.min.css" />
 	<style type="text/css">
 	html,body{font-size:15px;height:100%;}
 	body{font-family:"Open Sans","Helvetica Neue","Helvetica","Arial",sans-serif;background:#FFFFFF;margin:0px;padding:0px;color:#555555;text-rendering:optimizeLegibility;min-width:320px;}
 	a{color:#009FDA;text-decoration:none}a:hover{color:#00BAFF}
 	</style>
 	<script type="text/javascript" src="../../statics/js/jquery-2.0.3.min.js"></script>
-	<script type="text/javascript" src="../../statics/js/semantic.min.js"></script>
+	<script type="text/javascript" src="../../statics/js/semantic-0.19.3.min.js"></script>
 </head>
 <body style="margin:0 10px">
 	<h1>UI Modules</h1>
@@ -23,8 +23,8 @@
 	<a href="#Checkbox">多选按钮</a>
 	<a href="#Dimmer">调光器</a>
 	<a href="#Dropdown">下拉</a>
+	<a href="#Modal">弹出层</a>
 
-	<a href="#Accordion">手风琴</a>
 	<a href="#Checkbox">多选按钮</a>
 	<a href="#Dimmer">调光器</a>
 	<a href="#Dropdown">下拉</a>
@@ -555,10 +555,336 @@
 		  </div>
 		</div>
 	</div>
-	
+	<div class="dropdown example">
+	  <div class="ui teal buttons">
+	  <div class="ui button">Save</div>
+	  <div class="ui teal floating dropdown icon button">
+	    <i class="dropdown icon"></i>
+	    <div class="menu">
+	      <div class="item"><i class="edit icon"></i>Edit Post</div>
+	      <div class="item"><i class="delete icon"></i>Remove Post</div>
+	      <div class="item"><i class="hide icon"></i>Hide Post</div>
+	    </div>
+	  </div>
+	</div>
+	</div>
+	<div class="dropdown example">
+		<div class="ui compact menu">
+		  <div class="menu">
+		    <a class="active item">
+		      <i class="home icon"></i> Home
+		    </a>
+		    <div class="ui pointing dropdown link item">
+		      <i class="icon mail"></i> Messages <i class="dropdown icon"></i>
+		      <div class="menu">
+		        <a class="item"><i class="mail icon"></i>Inbox</a>
+		        <a class="item"><i class="book icon"></i>Archive</a>
+		      </div>
+		    </div>
+		    <a class="item">
+		      <i class="user icon"></i> Browse
+		    </a>
+		    <a class="item">
+		      <i class="question icon"></i> Help
+		    </a>
+		  </div>
+		</div>
+	</div>
+	<div class="dropdown example">
+		<div class="ui blue labeled icon top left pointing dropdown button">
+		  <i class="settings icon"></i>
+		  <span class="text">Settings</span>
+		  <div class="menu">
+		    <div class="item"><i class="edit icon"></i>Edit</div>
+		    <div class="item"><i class="delete icon"></i>Remove</div>
+		    <div class="item"><i class="hide icon"></i>Hide</div>
+		  </div>
+		</div>
+		<div class="ui red labeled icon top right pointing dropdown button">
+		  <i class="settings icon"></i>
+		  <span class="text">Settings</span>
+		  <div class="menu">
+		    <div class="item"><i class="edit icon"></i>Edit</div>
+		    <div class="item"><i class="delete icon"></i>Remove</div>
+		    <div class="item"><i class="hide icon"></i>Hide</div>
+		  </div>
+		</div>
+	</div>
+	<div class="dropdown example">
+		<div class="ui right pointing dropdown icon button">
+		  <i class="settings icon"></i>
+		  <div class="menu">
+		    <div class="item"><i class="edit icon"></i>Edit</div>
+		    <div class="item"><i class="delete icon"></i>Remove</div>
+		    <div class="item"><i class="hide icon"></i>Hide</div>
+		  </div>
+		</div>
+		<div class="ui left pointing dropdown icon button">
+		  <i class="settings icon"></i>
+		  <div class="menu">
+		    <div class="item"><i class="edit icon"></i>Edit</div>
+		    <div class="item"><i class="delete icon"></i>Remove</div>
+		    <div class="item"><i class="hide icon"></i>Hide</div>
+		  </div>
+		</div>
+	</div>
+	<div class="dropdown example">
+		<div class="ui compact menu">
+		  <div class="ui simple dropdown item">
+		    Dropdown <i class="dropdown icon"></i>
+		    <div class="menu">
+		      <div class="item">Choice 1</div>
+		      <div class="item">Choice 2</div>
+		      <div class="item">Choice 3</div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+	<div class="dropdown example">
+		<div class="ui vertical menu">
+		  <a class="item">Link 1</a>
+		  <a class="item">Link 2</a>
+		  <div class="header item">All Sections</div>
+		  <div class="ui item">
+		    <div class="ui fluid selection dropdown">
+		      <div class="text">More</div>
+		      <i class="dropdown icon"></i>
+		      <div class="menu">
+		        <div class="item">Choice 1</div>
+		        <div class="item">Choice 2</div>
+		        <div class="item">Choice 3</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+	<div class="dropdown example">
+		<div class="ui floating dropdown error">
+		  Dropdown <i class="dropdown icon"></i>
+		  <div class="menu">
+		    <div class="item">Choice 1</div>
+		    <div class="item">Choice 2</div>
+		    <div class="item">Choice 3</div>
+		  </div>
+		</div>
+		<div class="ui selection dropdown error">
+		  Dropdown <i class="dropdown icon"></i>
+		  <div class="menu">
+		    <div class="item">Choice 1</div>
+		    <div class="item">Choice 2</div>
+		    <div class="item">Choice 3</div>
+		  </div>
+		</div>
+	</div>
+	<div class="ui info message">An active state will only affect a simple dropdown. To activate a menu on a dropdown module use <code>$('.ui.dropdown').dropdown('show');</code></div>
+	<div class="ui info message">A disabled state will only affect a simple dropdown. To disable a dropdown module use <code>$('.ui.dropdown').dropdown('destroy');</code></div>
+	<div class="dropdown example">
+		<div class="ui inline dropdown">
+		  <div class="text">Hide</div>
+		  <i class="dropdown icon"></i>
+		  <div class="menu">
+		    <div class="item">Edit</div>
+		    <div class="item">Remove</div>
+		    <div class="item active">Hide</div>
+		  </div>
+		</div>
+	</div>
+	<div class="dropdown example">
+		<div class="ui icon buttons">
+		  <div class="ui top left pointing dropdown button">
+		    <i class="user icon"></i>
+		    <div class="menu">
+		      <div class="item"><i class="edit icon"></i>Edit User</div>
+		      <div class="item"><i class="delete icon"></i>Remove User</div>
+		      <div class="item"><i class="hide icon"></i>Make Invisible</div>
+		    </div>
+		  </div>
+		  <div class="ui top left pointing dropdown button">
+		    <i class="users icon"></i>
+		    <div class="menu">
+		      <div class="item"><i class="edit icon"></i>Edit Group</div>
+		      <div class="item"><i class="delete icon"></i>Remove Group</div>
+		      <div class="item"><i class="hide icon"></i>Hide from Group</div>
+		    </div>
+		  </div>
+		  <div class="ui top right pointing dropdown button">
+		    <i class="settings icon"></i>
+		    <div class="menu">
+		      <div class="item"><i class="edit icon"></i>Edit</div>
+		      <div class="item"><i class="delete icon"></i>Remove</div>
+		      <div class="item"><i class="hide icon"></i>Hide</div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+	<div class="dropdown example">
+		<div class="ui teal buttons">
+		  <div class="ui button">Update Post</div>
+		  <div class="ui teal dropdown icon button">
+		    <i class="dropdown icon"></i>
+		    <div class="menu">
+		      <div class="item"><i class="edit icon"></i>Edit Post</div>
+		      <div class="item"><i class="delete icon"></i>Remove Post</div>
+		      <div class="item"><i class="hide icon"></i>Hide Post</div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+	<div class="dropdown example">
+		<div class="ui inline dropdown">
+		  <input type="hidden" name="gender">
+		  <div class="text">Shiba Inu</div>
+		  <i class="dropdown icon"></i>
+		  <div class="menu">
+		    <div class="item">
+		      <i class="dropdown icon"></i>
+		      Dogs
+		      <div class="menu">
+		        <div class="item">Shiba Inu</div>
+		        <div class="item">Poodle</div>
+		        <div class="item">Labrador</div>
+		      </div>
+		    </div>
+		    <div class="item">
+		      <i class="dropdown icon"></i>
+		      Cats
+		      <div class="menu">
+		        <div class="item">Aegean</div>
+		        <div class="item">Balinese</div>
+		        <div class="item">Persian</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+	<div class="dropdown example">
+		<div class="ui compact tiered purple inverted menu">
+		  <div class="menu">
+		    <a class="active item">
+		      <i class="icon home"></i> Home
+		    </a>
+		    <a class="ui dropdown item">
+		      <i class="icon mail"></i> Messages <i class="dropdown icon"></i>
+		      <div class="menu">
+		        <div class="item">
+		          <i class="mail icon"></i>Categories
+		          <div class="menu">
+		            <div class="item">Unread</div>
+		            <div class="item">Promotions</div>
+		            <div class="item">Updates</div>
+		          </div>
+		        </div>
+		        <div class="item"><i class="book icon"></i>Archive</div>
+		      </div>
+		    </a>
+		    <a class="item">
+		      <i class="user icon"></i> Browse
+		    </a>
+		  </div>
+		  <div class="sub menu">
+		    <a class="item">Activity Feed</a>
+		    <a class="item">Profile</a>
+		    <a class="item">Events</a>
+		  </div>
+		</div>
+	</div>
+	<div class="dropdown example">
+		<div class="ui form segment">
+		  <p>Let's go ahead and get you signed up.</p>
+		  <div class="two fields">
+		    <div class="field">
+		      <label>First Name</label>
+		      <input placeholder="First Name" type="text">
+		    </div>
+		    <div class="field">
+		      <label>Last Name</label>
+		      <input placeholder="Last Name" type="text">
+		    </div>
+		  </div>
+		  <div class="field">
+		    <label>Gender</label>
+		    <div class="ui dropdown selection">
+		      <input type="hidden" name="gender">
+		      <div class="default text">...</div>
+		      <i class="dropdown icon"></i>
+		      <div class="menu">
+		        <div class="item" data-value="male">Male</div>
+		        <div class="item" data-value="female">Female</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+	<div class="dropdown example">
+		<div class="ui dropdown selection error">
+		  <input type="hidden" name="gender">
+		  <div class="default text">...</div>
+		  <i class="dropdown icon"></i>
+		  <div class="menu">
+		    <div class="item" data-value="male">Male</div>
+		    <div class="item" data-value="female">Female</div>
+		  </div>
+		</div>
+	</div>
+	<div class="dropdown example">
+		<div class="ui form segment">
+		  <p>Let's go ahead and get you signed up.</p>
+		  <div class="two fields">
+		    <div class="field">
+		      <label>First Name</label>
+		      <input placeholder="First Name" type="text">
+		    </div>
+		    <div class="field">
+		      <label>Last Name</label>
+		      <input placeholder="Last Name" type="text">
+		    </div>
+		  </div>
+		  <div class="field error">
+		    <label>Gender</label>
+		    <div class="ui dropdown selection">
+		      <input type="hidden" name="gender">
+		      <div class="default text">...</div>
+		      <i class="dropdown icon"></i>
+		      <div class="menu">
+		        <div class="item" data-value="male">Male</div>
+		        <div class="item" data-value="female">Female</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+	<div class="dropdown example">
+		<div class="ui info message">
+		  <code>div</code> elements do not normally gain focus on tab unless you add <code>tabindex</code> value to your dropdown
+		</div>
+		<div class="ui dropdown selection" tabindex="0">
+		  <input type="hidden" name="gender">
+		  <div class="default text">Select Gender</div>
+		  <i class="dropdown icon"></i>
+		  <div class="menu">
+		    <div class="item" data-value="male">Male</div>
+		    <div class="item" data-value="female">Female</div>
+		  </div>
+		</div>
+	</div>
+	<div class="dropdown example">
+		<div class="ui teal buttons">
+		  <div class="ui button">Toggle</div>
+		  <div class="ui teal floating dropdown icon button">
+		    <i class="dropdown icon"></i>
+		    <div class="menu">
+		      <div class="item" data-value="horizontal flip">Horizontal Flip</div>
+		      <div class="item" data-value="fade up">Fade Up</div>
+		      <div class="item" data-value="scale">Scale</div>
+		    </div>
+		  </div>
+		</div>
+	</div>
 	<div class="ui horizontal divider"><i class="circular heart icon"></i></div>
-	<h2 id="Comment" name="Comment">手风琴</h2>
+	<h2 id="Modal" name="Modal">弹出层</h2>
 	
+
+
 	<div class="ui horizontal divider"><i class="circular heart icon"></i></div>
 	<h2 id="Comment" name="Comment">手风琴</h2>
 	
@@ -642,7 +968,16 @@ $(function() {
 	  $buttonDropdown.dropdown({
 	    action: 'hide'
 	  });
-
+	  //弹出层
+	  //$('.wwj .modal').modal('show');
+	  $('.selection').dropdown({
+        onChange: function(value) {
+          $('.test.modal')
+            .modal('setting', 'transition', value)
+            .modal('show')
+          ;
+        }
+      });
 });
 </script>
 </body>
