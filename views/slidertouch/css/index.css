@@ -1,0 +1,50 @@
+body,dl,dd,h1,h2,h3,h4,h5,h6,p,form{margin:0}
+ul,ol{margin:0;padding:0}
+table,td,th{border-collapse:collapse}
+ol,ul,li{list-style:none}
+h1,h2,h3{font-size:100%}
+img,input,textarea{vertical-align:middle;border:0}
+a{text-decoration:none;outline:0}
+a:hover,a:active{text-decoration:none;outline:0}
+body{font-family:"Microsoft YaHei","Helvetica Neue",Helvetica,STHeiTi,sans-serif;position:relative}
+a,img{-webkit-touch-callout:none}
+.clearfix:before,.clearfix:after{content:"";display:table}
+.clearfix:after{clear:both;overflow:hidden}
+.clearfix{zoom:1}
+.fl{float:left}
+.fr{float:right}
+.els{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+a,input{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+::-webkit-scrollbar{width:0}
+@media screen and (min-width:480px){html{font-size:15.00px}
+}
+@media screen and (max-width:480px){html{font-size:15.00px}
+}
+@media screen and (max-width:448px){html{font-size:14px}
+}
+@media screen and (max-width:420px){html{font-size:13.12px}
+}
+@media screen and (max-width:416px){html{font-size:13px}
+}
+@media screen and (max-width:384px){html{font-size:12px}
+}
+@media screen and (max-width:360px){html{font-size:11.25px}
+}
+@media screen and (max-width:352px){html{font-size:11px}
+}
+@media screen and (max-width:320px){html{font-size:10px}
+}
+html,body{overflow:hidden;display:block;height:100%}
+body{max-width:480px;margin:0 auto;display:block;position:relative;background-color:#fff}
+.loading{position:absolute;top:50%;left:50%;width:100%;-webkit-transform:translate(-50%,-50%) translateZ(0);font-size:1.2rem;color:#7482bb;white-space:nowrap;text-align:center}
+.progress{width:80%;background:#7482bb;margin:0 auto;border-radius:10px;margin-bottom:2%}
+.progress>div{background:#212f66;width:0;height:6px;border-radius:10px;-webkit-transition:all .1s ease-in-out;}
+.page,.sliderContainer,.slider{height:100%;background-color:#fff}
+.layout,.pages,.slider{height:100%;background-color:#fff}
+.layout{opacity:0;-webkit-transition:all .4s ease-in-out;}
+.slider{position:absolute;top:0;left:0;width:100%;height:100%;-webkit-transition:-webkit-transform 0.5s linear;transition:-webkit-transform 0.5s linear;-webkit-transform:translateY(100%);}
+.slider.up{-webkit-transform:translateY(-100%);}
+.slider.on{-webkit-transform:translateY(0);}
+.slider.down{-webkit-transform:translateY(100%);}
+.slider-10{background:url(../images/share.png) no-repeat top center #000;}
+.slider img{width:100%;height:100%}

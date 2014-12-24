@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+	<title>文杰兄测试页面</title>
+	<link href="images/favicon.ico" rel="shortcut icon" type="images/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/index.css?v=1">
+	<script src="http://10.58.138.11:9005/target/target-script-min.js#anonymous"></script>
+</head>
+<body>
+	<div class="loading" id="loading"><div class="progress"><div></div></div><div class="loading-text">正在加载中(<em>0</em>/<em>10</em>)……</div></div>
+	<div class="layout" id="layout">
+		<div class="pages" id="pages">
+			<div class="slider slider-1 on">
+			<img src="images/1.jpg" />
+			</div>
+			<div class="slider slider-2">
+			<img src="images/2.jpg" />
+			</div>
+			<div class="slider slider-3">
+			<img src="images/3.jpg" />
+			</div>
+			<div class="slider slider-4">
+			<img src="images/4.jpg" />
+			</div>
+			<div class="slider slider-5">
+			<img src="images/5.jpg" />
+			</div>
+			<div class="slider slider-6">
+			<img src="images/6.jpg" />
+			</div>
+			<div class="slider slider-7">
+			<img src="images/7.jpg" />
+			</div>
+			<div class="slider slider-8">
+			<img src="images/8.jpg" />
+			</div>
+			<div class="slider slider-9">
+			<img src="images/9.jpg" />
+			</div>
+			<div class="slider slider-10">
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+	<script type="text/javascript">
+	var loading_n = $("#loading em"),
+		loading_i=0,
+	    loading_r = $("#loading .progress > div");
+	function init_loading(){
+		loading_i++;
+		loading_n.eq(0).text(loading_i);
+		loading_r.width(100 * loading_i / 10 + "%");
+		if(loading_i<11){
+		    setTimeout("init_loading()",100);
+		}else{
+			$("#loading").remove();
+	    	$("#layout").css("opacity",1);
+		}
+	}
+	init_loading();
+	</script>
+	<script type="text/javascript" src="js/touch.min.js"></script>
+	<script type="text/javascript" src="js/weixinApi.js"></script>
+	<script type="text/javascript">
+	window.onload=function(){
+		//上下移动
+		var sliders=$("#pages .slider"),
+			s_len=sliders.length;
+		sliders.each(function(i){
+			var silder=$(this),ind=silder.index();
+			touch.on(silder, 'swipeup', function(ev){
+				if(ind<s_len-1){
+					//当前被上拉
+					silder.css("-webkit-transform","translateY(-100%);");
+					//当前的下一个被顶上
+					sliders.eq(ind+1).css("-webkit-transform","translateY(0);");
+					//开始做判断,决定“当前的下一个”是否进行效果展示
+
+				}
+			});
+			touch.on(silder, 'swipedown', function(ev){
+				if(ind>0){
+					//当前被下拉
+					silder.css("-webkit-transform","translateY(100%);");
+					//当前的上一个被拉下显示
+					sliders.eq(ind-1).css("-webkit-transform","translateY(0);");
+					//开始做判断,决定“当前的上一个”是否进行效果展示
+
+				}
+			});
+		});
+		//微信分享
+		WeixinApi.ready(function(Api){
+			// 微信分享的数据
+		    var wxData = {
+		        "appId": "", // 服务号可以填写appId
+		        "imgUrl" : 'http://www.ynaaa.cn/images/logo.jpg',
+		        "link" : 'http://www.baidu.com',
+		        "desc" : '大家好，我是文杰兄，喜欢技术上的瞎倒腾！欢迎多交流',
+		        "title" : "文杰测试页面"
+		    };
+		    // 分享的回调
+		    var wxCallbacks = {
+		    	 // 分享操作开始之前
+		        ready : function() {
+		            //你可以在这里对分享的数据进行重组
+		        },
+		        // 分享被用户自动取消
+		        cancel : function(resp) {
+		            //你可以在你的页面上给用户一个小Tip，为什么要取消呢？
+		        },
+		        // 分享失败了
+		        fail : function(resp) {
+		            // 分享失败了，是不是可以告诉用户：不要紧，可能是网络问题，一会儿再试试？
+		        },
+		        // 分享成功
+		        confirm : function(resp) {
+		            // 分享成功了，我们是不是可以做一些分享统计呢？
+		        },
+		    	// 整个分享过程结束
+		        all : function(resp) {
+		            // 如果你做的是一个鼓励用户进行分享的产品，在这里是不是可以给用户一些反馈了？
+		            //alert("感谢您的分享，我们会做的更好，么么哒~");
+		        }
+		    }
+		    // 用户点开右上角popup菜单后，点击分享给好友，会执行下面这个代码
+		    Api.shareToFriend(wxData, wxCallbacks);
+		    // 点击分享到朋友圈，会执行下面这个代码
+		    Api.shareToTimeline(wxData, wxCallbacks);
+		    // 点击分享到腾讯微博，会执行下面这个代码
+		    Api.shareToWeibo(wxData, wxCallbacks);
+		});
+	}
+	</script>
+</body>
+</html>
