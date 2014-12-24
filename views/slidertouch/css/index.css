@@ -38,18 +38,16 @@ html,body{overflow:hidden;display:block;height:100%}
 body{max-width:480px;margin:0 auto;display:block;position:relative;background-color:#fff}
 .loading{position:absolute;top:50%;left:50%;width:100%;-webkit-transform:translate(-50%,-50%) translateZ(0);font-size:1.2rem;color:#7482bb;white-space:nowrap;text-align:center}
 .progress{width:80%;background:#7482bb;margin:0 auto;border-radius:10px;margin-bottom:2%}
-.progress>div{background:#212f66;width:0;height:6px;border-radius:10px;-webkit-transition:all .1s ease-in-out;}
+.progress>div{background:#212f66;width:0;height:6px;border-radius:10px;-webkit-transition:all .1s ease-in-out}
 .page,.sliderContainer,.slider{height:100%;background-color:#fff}
 .layout,.pages,.slider{height:100%;background-color:#fff}
-.layout{opacity:0;-webkit-transition:all .4s ease-in-out;}
-.slider{position:absolute;top:0;left:0;width:100%;height:100%;background-color: #f8f8f8;color:#333;-webkit-transition:-webkit-transform 0.5s linear;transition:-webkit-transform 0.5s linear;-webkit-transform:translateY(100%);}
-.slider.up{-webkit-transform:translateY(-100%);}
-.slider.on{-webkit-transform:translateY(0);}
-.slider.down{-webkit-transform:translateY(100%);}
-.slider-11{background:url(../images/share.png) no-repeat top right #000;}
+.layout{opacity:0;-webkit-transition:all .4s ease-in-out}
+.slider{position:absolute;top:0;left:0;width:100%;height:100%;background-color: #f8f8f8;color:#333;-webkit-transition:-webkit-transform 0.5s linear;transition:-webkit-transform 0.5s linear;-webkit-transform:translateY(100%)}
+.slider.up{-webkit-transform:translateY(-100%)}
+.slider.on{-webkit-transform:translateY(0)}
+.slider.down{-webkit-transform:translateY(100%)}
+.slider-11{background:url(../images/share.png) no-repeat top right #000}
 .slider img{width:100%;height:100%}
 .slider p{margin:10px 0;text-indent: 2em;padding:0 5px}
 .slider a{color:#666;text-decoration: underline}
-
-.slider-txt{position: absolute;bottom:30%;left:10%;width:80%;border-radius: 5px;
-	background-color:#fff;box-shadow: 0 0 10px #333;opacity: .8}
+.slider-txt{position: absolute;bottom:30%;left:10%;width:80%;border-radius: 5px;background-color:#fff;box-shadow: 0 0 10px #333;opacity: .8}
