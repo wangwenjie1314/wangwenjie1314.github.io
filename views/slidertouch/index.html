@@ -21,6 +21,20 @@
 	<div class="loading" id="loading"><div class="progress"><div></div></div><div class="loading-text">正在加载中(<em>0</em>/<em>10</em>)……</div></div>
 	<div class="layout" id="layout">
 		<div class="pages" id="pages">
+			<!-- 加入音乐元素-->
+			<div class="music" id="music">
+				<audio id="audio" autoplay="autoplay" loop="loop" src="audio/1.mp3"></audio>
+				<div class="music-btn">
+					<div class="music-open">
+					<img src="images/pause.png" />
+					<img src="images/play.gif" />
+					</div>
+					<div class="music-close dn">
+					<img src="images/play.png" />
+					<img src="images/paused2.png" />
+					</div>
+				</div>
+			</div>
 			<div class="slider slider-1 on">
 				<img src="images/1.jpg" />
 				<div class="slider-txt clearfix">
@@ -130,6 +144,20 @@
 	<script type="text/javascript" src="js/weixinApi.js"></script>
 	<script type="text/javascript">
 	window.onload=function(){
+		//音乐
+		var audio=$("#audio"),
+			music_open=$("#music .music-open"),
+			music_close=$("#music .music-close");
+		touch.on(music_open,'tap',function(ev){
+			music_open.hide();
+			music_close.show();
+			audio.pause();
+		});
+		touch.on(music_close,'tap',function(ev){
+			music_close.hide();
+			music_open.show();
+			audio.play();
+		});
 		//上下移动
 		var sliders=$("#pages .slider"),
 			s_len=sliders.length;
