@@ -364,7 +364,7 @@ $(function(){
           //防止同一个a被多次点击 没有class=on时才去请求ajax
           if(!link_a.hasClass("on")){
             //当前被点击加入on样式，其他li清除on
-            link_a.addClass("on").siblings("li").removeClass("on");
+            link_a.addClass("on").siblings().removeClass("on");
             link_url=$(this).attr("flag");
             //开始执行ajax请求 真正请求的时候是写后台方法 然后方法携带数据跳转到页面，页面被ajax获取
             $.ajax({  
