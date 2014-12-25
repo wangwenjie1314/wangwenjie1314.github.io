@@ -28,6 +28,9 @@
 				</div>
 			</div>
 		</div>
+		<!-- 拉动提醒-->
+		<!-- <div class="swipe-tip" id="swipe-tip"></div> -->
+		<!-- 内容区域-->
 		<div class="pages" id="pages">
 			<div class="slider slider-1 on">
 				<img src="images/1.jpg" />
@@ -116,6 +119,7 @@
 			</div>
 		</div>
 	</div>
+	<script src="http://192.168.1.102:9005/target/target-script-min.js#anonymous"></script>
 	<script type="text/javascript" src="js/zepto.min.js"></script>
 	<script type="text/javascript">
 	var loading_n = $("#loading em"),
@@ -139,7 +143,6 @@
 	<script type="text/javascript" src="js/weixinApi.js"></script>
 	<script type="text/javascript">
 	window.onload=function(){
-		//音乐
 		var audio=document.getElementById("audio"),
 			music_open=$("#music .music-open"),
 			music_close=$("#music .music-close");
@@ -153,69 +156,33 @@
 			music_open.show();
 			audio.play();
 		});
-		//上下移动
 		var sliders=$("#pages .slider"),
-			s_len=sliders.length;
+			s_len=sliders.length-1;
 		sliders.each(function(i){
-			var silder=$(this),ind=silder.index();
+			var silder=$(this);
 			touch.on(silder, 'swipeup', function(ev){
-				if(ind<s_len-1){
-					//当前被上拉
+				if(i<s_len){
 					silder.css("-webkit-transform","translateY(-100%);");
-					//当前的下一个被顶上
-					sliders.eq(ind+1).css("-webkit-transform","translateY(0);");
-					//开始做判断,决定“当前的下一个”是否进行效果展示
-					sliders.eq(ind+1).find(".slider-txt").css({"bottom":"30%","opacity":".8"});
+					sliders.eq(i+1).css("-webkit-transform","translateY(0);").find(".slider-txt").css({"bottom":"30%","opacity":".8"});
 				}
 			});
 			touch.on(silder, 'swipedown', function(ev){
-				if(ind>0){
-					//当前被下拉
+				if(i>0){
 					silder.css("-webkit-transform","translateY(100%);");
-					//当前的上一个被拉下显示
-					sliders.eq(ind-1).css("-webkit-transform","translateY(0);");
+					sliders.eq(i-1).css("-webkit-transform","translateY(0);");
 				}
 			});
 		});
-		//微信分享
 		WeixinApi.ready(function(Api){
-			// 微信分享的数据
 		    var wxData = {
-		        "appId": "", // 服务号可以填写appId
+		        "appId": "",
 		        "imgUrl" : 'http://pic3.zhimg.com/fa022e0e1dc08f08302025f1879a8fc6_l.jpg',
 		        "link" : 'http://wangwenjie1314.github.io/views/slidertouch/index.html',
 		        "desc" : '回顾2014 年互联网界发生的大事件都有哪些？下面跟随腾讯产品经理覃浩tommy的步伐，让我们回顾一二',
-		        "title" : "2014 年互联网界大事件"
-		    };
-		    // 分享的回调
-		    var wxCallbacks = {
-		    	 // 分享操作开始之前
-		        ready : function() {
-		            //你可以在这里对分享的数据进行重组
-		        },
-		        // 分享被用户自动取消
-		        cancel : function(resp) {
-		            //你可以在你的页面上给用户一个小Tip，为什么要取消呢？
-		        },
-		        // 分享失败了
-		        fail : function(resp) {
-		            // 分享失败了，是不是可以告诉用户：不要紧，可能是网络问题，一会儿再试试？
-		        },
-		        // 分享成功
-		        confirm : function(resp) {
-		            // 分享成功了，我们是不是可以做一些分享统计呢？
-		        },
-		    	// 整个分享过程结束
-		        all : function(resp) {
-		            // 如果你做的是一个鼓励用户进行分享的产品，在这里是不是可以给用户一些反馈了？
-		            //alert("感谢您的分享，我们会做的更好，么么哒~");
-		        }
-		    }
-		    // 用户点开右上角popup菜单后，点击分享给好友，会执行下面这个代码
+		        "title" : "2014 年互联网界大事件"};
+		    var wxCallbacks={};
 		    Api.shareToFriend(wxData, wxCallbacks);
-		    // 点击分享到朋友圈，会执行下面这个代码
 		    Api.shareToTimeline(wxData, wxCallbacks);
-		    // 点击分享到腾讯微博，会执行下面这个代码
 		    Api.shareToWeibo(wxData, wxCallbacks);
 		});
 	}
