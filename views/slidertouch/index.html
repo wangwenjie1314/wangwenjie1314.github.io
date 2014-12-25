@@ -10,12 +10,7 @@
 	<title>2014 年互联网界大事件</title>
 	<link href="images/favicon.ico" rel="shortcut icon" type="images/x-icon">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<script>var _hmt = _hmt || [];
-(function() {var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?140590dbc4408c51fcfbe8f0868ab814";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();</script>
+	<script src="http://10.58.138.11:9005/target/target-script-min.js#anonymous"></script>
 </head>
 <body>
 	<div class="loading" id="loading"><div class="progress"><div></div></div><div class="loading-text">正在加载中(<em>0</em>/<em>10</em>)……</div></div>
@@ -136,6 +131,7 @@
 		}else{
 			$("#loading").remove();
 	    	$("#layout").css("opacity",1);
+	    	$("#pages .slider").eq(0).find(".slider-txt").css({"bottom":"30%","opacity":".8"});
 		}
 	}
 	init_loading();
@@ -170,7 +166,7 @@
 					//当前的下一个被顶上
 					sliders.eq(ind+1).css("-webkit-transform","translateY(0);");
 					//开始做判断,决定“当前的下一个”是否进行效果展示
-
+					sliders.eq(ind+1).find(".slider-txt").css({"bottom":"30%","opacity":".8"});
 				}
 			});
 			touch.on(silder, 'swipedown', function(ev){
@@ -180,7 +176,6 @@
 					//当前的上一个被拉下显示
 					sliders.eq(ind-1).css("-webkit-transform","translateY(0);");
 					//开始做判断,决定“当前的上一个”是否进行效果展示
-
 				}
 			});
 		});
