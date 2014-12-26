@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+/* 
+	CSS CATALOGUE
+	1.0 reset css
+*/
+
+/*
+1.0 reset css
+------------------------------------------------------------------- */
+/** 清除内外边距 **/
+html, body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td /* table elements 表格元素 */ {
+    margin: 0;
+    padding: 0;
+}
+
+/** 清除chrome用户自定义样式 **/
+html body { padding-bottom:0;}
+
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html { overflow-y: scroll; }
+
+/** 设置默认字体 **/
+body, button, input, select, textarea /* for ie */ {
+   font: 12px/1.0 Microsoft YaHei, arial, \5b8b\4f53, sans-serif;
+}
+h1 { font-size: 24px; }
+h2 { font-size: 18px; }
+h3 { font-size: 16px; }
+h4 { font-size: 14px;}
+h5, h6 { font-size: 100%; }
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp, tt { font-family: courier new, courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+em,i{font-style:normal}
+
+/** 重置列表元素 **/
+ul, ol { list-style: none; }
+
+/** 重置文本格式元素 **/
+a { color: #333; text-decoration: none; }
+a:hover {
+	text-decoration: none;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	   -moz-transition: all 0.3s ease-in-out 0s;
+	     -o-transition: all 0.3s ease-in-out 0s;
+	    -ms-transition: all 0.3s ease-in-out 0s;
+	        transition: all 0.3s ease-in-out 0s;
+}
+input[type="button"], input[type=submit], a { cursor: pointer; }
+
+/** 重置焦点无虚线框 **/
+:focus { outline: 0; }
+
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; }
+
+sup { vertical-align: text-top; } /* 重置，减少对行高的影响 */
+sub { vertical-align: text-bottom; }
+
+/** 重置突出元素样式 **/
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+
+/** 重置表单元素 **/
+legend { color: #000; } /* for ie6 */
+a img { border: 0; } /* 让链接里的 img 无边框 */
+img { vertical-align: middle; -ms-interpolation-mode: bicubic; } /*解决图像缩放而产生的锯齿*/ 
+button, input, select, textarea { font-size: 100%; } /* 使得表单元素在 ie 下能继承字体大小 */
+textarea { resize: vertical } /* 让用户可以调节元素的高度 只适用于webkit内核浏览器 */
+
+/** 重置表格元素 **/
+table { border-collapse: collapse; border-spacing: 0; }
+th{ letter-spacing: 1px; }
+
+/* 重置 hr */
+hr { height: 1px; border-width: 0; border-bottom-width: 1px; overflow: hidden; margin: 10px 0; border-color: #888; }
+
+/* 重置 HTML5 元素 */
+article, aside, details, figcaption, figure, footer,header, hgroup, menu, nav, section,
+summary, time, mark, audio, video {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.fl{float: left; }
+.fr{float: right; }
+.clear { clear: both; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; font-size: 0; line-height: 0; }
+.cf:after { content: '\0020'; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; }
+.cf:after { clear: both; }
+.cf { zoom: 1; }
+

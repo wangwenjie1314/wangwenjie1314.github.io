@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>a beautiful girl</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <link rel="stylesheet" href="style/parallax.css" type="text/css"/>
+    <link rel="stylesheet" href="style/common.css" type="text/css"/>
+	<style>
+		section[data-id="1"]{
+				background: url(images/qizhi1.jpg) no-repeat center 0;
+				background-size: cover;
+		}
+		section[data-id="2"]{
+				background: url(images/qizhi2.jpg) no-repeat  center 0;
+				background-size: cover;
+		}
+		section[data-id="3"]{
+				background: url(images/qizhi3.jpg) no-repeat  center 0;
+				background-size: cover;
+		}
+		section[data-id="4"]{
+				background: url(images/qizhi4.jpg) no-repeat  center 0;
+				background-size: cover;
+		}
+		section[data-id="5"]{
+				background: url(images/qizhi5.jpg) no-repeat  center 0;
+				background-size: cover;
+		}
+	</style>
+</head>
+<body>
+	<section class="wrapper">
+			<section class="pages">
+
+				<!-- 第一屏 -->
+				<section class="page">
+					
+				</section>
+
+				<!-- 第二屏 -->
+				<section class="page">
+					
+				</section>
+
+				<!-- 第三屏 -->
+				<section class="page">
+					
+				</section>
+				
+				<!-- 第四屏 -->
+				<section class="page">
+				
+				</section>
+				
+				<!-- 第五屏 -->
+				<section class="page">
+					
+				</section>		
+			</section>
+			
+			
+			<div class="music">
+				<audio id="audio" autoplay="autoplay" loop="loop" src="images/almostlover.mp3"></audio>
+				<div class="music-btn" id="music-btn">
+					<div class="music-open" id="music-open">
+					<img src="images/pause.png" />
+					<img src="images/play.gif" />
+					</div>
+					<div class="music-close dn" id="music-close">
+					<img src="images/play.png" />
+					<img src="images/paused2.png" />
+					</div>
+				</div>
+			</div>
+			
+		</section>
+
+	<script src="libs/zepto.min.js"></script>
+	<script src="js/parallax.js"></script>
+	<script src="js/weixinApi.js"></script>
+	<script>
+		$(function(){
+			$('.pages').parallax({
+					direction: 'vertical', 	// horizontal (水平翻页)
+					swipeAnim: 'cover', 	// cover (切换效果)
+					drag:      true,		// 是否允许拖拽 (若 false 则只有在 touchend 之后才会翻页)
+					loading:   true,		// 有无加载页
+					indicator: true,		// 有无指示点
+					arrow:     true,		// 有无指示箭头
+					/*
+					 * 翻页后立即执行
+					 * {int} 		index: 第几页
+					 * {DOMElement} element: 当前页节点
+					 * {String}		directation: forward(前翻)、backward(后翻)、stay(保持原页)
+					 */
+					onchange: function(index, element, direction) {
+						// code here...
+						// console.log(index, element, direction);
+					},
+					/*
+					 * 横竖屏检测
+					 * {String}		orientation: landscape、protrait
+					 */
+					orientationchange: function(orientation) {
+						// console.log(orientation);
+					}
+				});
+				
+				WeixinApi.ready(function(Api){
+					var wxData = {
+						"appId": "",
+						"imgUrl" : 'http://wangwenjie1314.github.io/views/girl/images/weixin-icon.jpg',
+						"link" : 'http://wangwenjie1314.github.io/views/girl/index.html',
+						"desc" : 'a pefect girl',
+						"title" : "a pefect girl"
+					};
+					var wxCallbacks={};
+					Api.shareToFriend(wxData, wxCallbacks);
+					Api.shareToTimeline(wxData, wxCallbacks);
+					Api.shareToWeibo(wxData, wxCallbacks);
+				});
+
+		});
+	</script>
+</body>
+</html>
