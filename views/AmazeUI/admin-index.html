@@ -362,7 +362,7 @@ $(function(){
           var link_a=$(this);
           //防止同一个a被多次点击 没有class=on时才去请求ajax
           if(!link_a.hasClass("on")){
-            //当前被点击加入on样式，其他li清除on
+            //当前被点击加入on样式，其他a清除on
             am_lists.removeClass("on");
             link_a.addClass("on");
             link_url=$(this).attr("flag");

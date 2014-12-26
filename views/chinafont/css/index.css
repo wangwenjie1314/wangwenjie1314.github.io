@@ -1,0 +1,32 @@
+/*声明 WebFont*/
+@font-face {
+  font-family: 'anjingchen';
+  src: url('../font/anjingchen.eot');
+  src:
+    url('../font/anjingchen.eot?#font-spider') format('embedded-opentype'),
+    url('../font/anjingchen.woff') format('woff'),
+    url('../font/anjingchen.ttf') format('truetype'),
+    url('../font/anjingchen.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'zhongqi';
+  src: url('../font/zhongqi.eot');
+  src:
+    url('../font/zhongqi.eot?#font-spider') format('embedded-opentype'),
+    url('../font/zhongqi.woff') format('woff'),
+    url('../font/zhongqi.ttf') format('truetype'),
+    url('../font/zhongqi.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*使用选择器指定字体*/
+.home h1{
+    color:#00a5e0;
+    font-size: 80px;
+    font-family: 'anjingchen';
+}
+.home h2{
+    font-family: 'zhongqi';
+}
