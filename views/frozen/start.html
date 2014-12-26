@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html lang="">
+    <head>
+        <meta charset="UTF-8">
+        <title>FrozenUI - 开始使用</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Description" content="专注于移动web的UI框架，基于腾讯手机QQ规范" />
+        <meta name="Keywords" content="frozen,frozenui,frozenjs,forzen ui,forzen js,UI框架,组件库,css组件库,javascript组件库" />
+        <meta name="author" content="fayching" />
+        <link type="image/x-icon" href="static/favicon.ico" rel="icon">
+        <link rel="stylesheet" href="static/style.css" />
+        <link rel="stylesheet" href="static/solarized.css" />
+        <script src="static/sea-modules/seajs/seajs/2.2.1/sea.js"></script>
+        <script src="static/jquery.js"></script>
+       <script>
+        var $ = jQuery;
+        seajs.config({
+          alias: {
+            "$": "jquery/jquery/2.1.0/jquery.js",
+            "sticky":"arale/sticky/1.3.1/sticky",
+            "side":"./static/side",
+            "handlebars": "gallery/handlebars/1.0.2/handlebars"
+          }
+        });
+        seajs.use(['sticky','side'], function(Sticky, Side) {
+            if(document.body.clientWidth>980){
+            	Sticky('.side-area', 20);
+            }
+            Side.init();
+        });
+        </script>
+        
+    </head>
+    <body>
+        <div id="body-wrapper">
+            <div class="head-area">
+            </div>
+            <div class="main-area">
+                <div class="side-area"><ul><li><a href="#例子">例子</a></li><li><a href="#正确使用css的方式">正确使用css的方式</a></li><li><a href="#正确使用js的方式">正确使用js的方式</a></li></ul></div>
+                        
+                <script type="text/template" id="list-template">
+                    <li><a href="#"></a></li>
+                </script>
+                <div class="content-area">
+                    <h1>开始使用</h1>
+                    <div class="content"><h2 id="例子">例子</h2><style>
+.nico-iframe iframe{height: 400px;}
+</style>
+
+<div class="nico-iframe">
+<iframe src="iframe-start-1.html" allowtransparency="true" 
+frameborder="0" scrolling="0" ></iframe></div><div class="highlight"><pre><code class="xml"><span class="doctype">&lt;!DOCTYPE HTML&gt;</span>
+<span class="tag">&lt;<span class="title">html</span>&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"author"</span> <span class="attribute">content</span>=<span class="value">"ISUX"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"format-detection"</span> <span class="attribute">content</span>=<span class="value">"telephone=no"</span>/&gt;</span>
+    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"viewport"</span> <span class="attribute">content</span>=<span class="value">"width=device-width,user-scalable=no"</span>/&gt;</span>
+    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"apple-mobile-web-app-capable"</span> <span class="attribute">content</span>=<span class="value">"yes"</span>/&gt;</span>
+    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"apple-mobile-web-app-status-bar-style"</span> <span class="attribute">content</span>=<span class="value">"black"</span>/&gt;</span>
+    <span class="tag">&lt;<span class="title">title</span>&gt;</span>demo<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">type</span>=<span class="value">"text/css"</span> <span class="attribute">href</span>=<span class="value">"http://i.gtimg.cn/vipstyle/frozenui/1.2.0/css/frozen.css?_bid=306"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css">
+    <span class="class">.ui-tab-content</span><span class="rules">{
+        <span class="rule"><span class="attribute">display</span>:<span class="value"> -webkit-box</span></span>;
+        <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">300</span>%</span></span>;
+     <span class="rule">}</span></span>
+    <span class="class">.ui-tab-content</span> &gt; <span class="tag">li</span> <span class="rules">{
+        <span class="rule"><span class="attribute">-webkit-box-flex</span>:<span class="value"> <span class="number">1</span></span></span>;
+        <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100</span>%</span></span>;
+        <span class="rule"><span class="attribute">height</span>:<span class="value"><span class="number">300</span>px</span></span>;
+    <span class="rule">}</span></span>
+</span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"wrapper"</span>&gt;</span>
+        <span class="comment">&lt;!-- list1 start --&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-tab"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"ui-tab-nav ui-border-b"</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"current"</span>&gt;</span>热门推荐<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">li</span>&gt;</span>全部表情<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">li</span>&gt;</span>表情<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+            <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"ui-tab-content"</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">li</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"ui-list ui-list-link ui-border-b"</span>&gt;</span>  
+                        <span class="tag">&lt;<span class="title">li</span>&gt;</span>
+                            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-list-thumb ui-avatar-s"</span>&gt;</span>
+                               <span class="tag">&lt;<span class="title">span</span> <span class="attribute">style</span>=<span class="value">"background-image:url(http://icase.tencent.com/vlabs/img/?100*100)"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+                            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+                            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-list-info ui-border-t"</span>&gt;</span>
+                                <span class="tag">&lt;<span class="title">h4</span>&gt;</span>标题标题标题标题标题标题标题标题标题标题标题<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
+                                <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容内容内容内容内容内容内容内容内容内容内容内容内容内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+                            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+                        <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                        <span class="tag">&lt;<span class="title">li</span>&gt;</span>
+                            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-list-thumb ui-avatar-s"</span>&gt;</span>
+                                <span class="tag">&lt;<span class="title">span</span>  <span class="attribute">style</span>=<span class="value">"background-image:url(http://icase.tencent.com/vlabs/img/?100*100)"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+                            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+                            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-list-info ui-border-t"</span>&gt;</span>
+                                <span class="tag">&lt;<span class="title">h4</span>&gt;</span>标题标题标题标题标题标题标题标题标题标题标题<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
+                                <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容内容内容内容内容内容内容内容内容内容内容内容内容内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+                          <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+                        <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                        <span class="tag">&lt;<span class="title">li</span>&gt;</span>
+                            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-list-thumb ui-avatar-s"</span>&gt;</span>
+                                <span class="tag">&lt;<span class="title">span</span>  <span class="attribute">style</span>=<span class="value">"background-image:url(http://icase.tencent.com/vlabs/img/?100*100)"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+                            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+                            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-list-info ui-border-t"</span>&gt;</span>
+                                <span class="tag">&lt;<span class="title">h4</span>&gt;</span>标题标题标题标题标题标题标题标题标题标题标题<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
+                                <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容内容内容内容内容内容内容内容内容内容内容内容内容内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+                          <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+                        <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                        <span class="tag">&lt;<span class="title">li</span>&gt;</span>
+                            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-list-thumb ui-avatar-s"</span>&gt;</span>
+                                <span class="tag">&lt;<span class="title">span</span>  <span class="attribute">style</span>=<span class="value">"background-image:url(http://icase.tencent.com/vlabs/img/?100*100)"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+                            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+                            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-list-info ui-border-t"</span>&gt;</span>
+                                <span class="tag">&lt;<span class="title">h4</span>&gt;</span>标题标题标题标题标题标题标题标题标题标题标题<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
+                                <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容内容内容内容内容内容内容内容内容内容内容内容内容内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+                          <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+                        <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-loading-wrap"</span>&gt;</span>
+                        <span class="tag">&lt;<span class="title">p</span>&gt;</span>加载中<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+                        <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-loading"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+                    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+                <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">li</span>&gt;</span>内容二<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">li</span>&gt;</span>内容三<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+            <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+     <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://i.gtimg.cn/vipstyle/frozenjs/lib/zepto.min.js?_bid=304"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://i.gtimg.cn/vipstyle/frozenjs/1.0.0/frozen.js?_bid=304"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
+       <span class="keyword">var</span> tab = <span class="keyword">new</span> Slide(<span class="string">'.ui-tab'</span>, {
+           role: <span class="string">'tab'</span>,
+           autoplay: <span class="literal">true</span>,
+           interval: <span class="number">3000</span>
+       });
+
+       tab.on(<span class="string">'slideStart'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+           console.log(<span class="string">'start'</span>)
+       });
+
+       tab.on(<span class="string">'slideEnd'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+           console.log(<span class="string">'end'</span>)
+       });
+    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></pre></div><p>你会看到一个<a href="http://frozenui.github.io/iframe-start-1.html">demo页面</a>,里面有引用frozenui的css和js。</p>
+<p>css具体模块的代码可以访问<a href="http://frozenui.github.io/frozenui/"><a href="http://frozenui.github.io/frozenui/">http://frozenui.github.io/frozenui/</a></a></p>
+<p>js具体模块代码可以访问<a href="http://frozenui.github.io/frozenjs/"><a href="http://frozenui.github.io/frozenjs/">http://frozenui.github.io/frozenjs/</a></a></p>
+<p><a href="http://frozenui.github.io/frozenui/history.html">这里</a> 查看css历史版本修改记录。</p>
+<h2 id="正确使用css的方式">正确使用css的方式</h2><h4 id="1-可以直接使用上面的-css-文件，注意1-2-0之后的bid改为306">1. 可以直接使用上面的 css 文件，注意1.2.0之后的bid改为306:</h4><pre> &lt;link media=&quot;all&quot; href=&quot;http://i.gtimg.cn/vipstyle/frozenui/1.2.0/css/frozen.css?_bid=306&quot; rel=&quot;stylesheet&quot;&gt;
+
+  &lt;link media=&quot;all&quot; href=&quot;http://i.gtimg.cn/vipstyle/frozenui/1.2.0/css/global.css?_bid=306&quot; rel=&quot;stylesheet&quot;&gt;</pre><p>前者是打包了除了会员相关的基础css文件，后者还包括vip等级图标 ，qq等级图标，角标，好友选择器等会员相关的css组件，使用手Q离线包需要加上bid的参数。</p>
+<p>调试时可使用未压缩版，把css目录换成css-debug，如<a href="http://i.gtimg.cn/vipstyle/frozenui/1.2.0/css-debug/frozen.css">http://i.gtimg.cn/vipstyle/frozenui/1.2.0/css-debug/frozen.css</a></p>
+<h4 id="2-针对非手q用户可以使用cdn-和-combo-服务按需加载">2. 针对非手Q用户可以使用cdn 和 combo 服务按需加载</h4><pre> &lt;link media=&quot;all&quot; href=&quot;http://i.gtimg.cn/c/=/vipstyle/frozenui/1.2.0/css/reset.css,/vipstyle/frozenui/1.2.0/css/ui-notice.css&quot; rel=&quot;stylesheet&quot;&gt;</pre><h4 id="3-直接下载">3. 直接下载</h4><p>另外提供下载地址，供非腾讯公司用户使用：<a href="http://frozenui.github.io/frozenui/static/frozenui-1.2.0.zip"><a href="http://frozenui.github.io/frozenui/static/frozenui-1.2.0.zip">http://frozenui.github.io/frozenui/static/frozenui-1.2.0.zip</a></a></p>
+<h4 id="4-访问我们的github仓库">4.访问我们的github仓库</h4><p> <a href="https://github.com/frozenui/frozenui"><a href="https://github.com/frozenui/frozenui">https://github.com/frozenui/frozenui</a></a>，自行 clone 到本地。</p>
+<h2 id="正确使用js的方式">正确使用js的方式</h2><h4 id="1-非模块化引用方式">1. 非模块化引用方式</h4><pre>&lt;script src=&quot;http://i.gtimg.cn/vipstyle/frozenjs/lib/zepto.min.js?_bid=304&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;http://i.gtimg.cn/vipstyle/frozenjs/1.0.0/frozen.js?_bid=304&quot;&gt;&lt;/script&gt;</pre><h4 id="2-模块化引用方式，这里的zepto必须是模块化后的">2. 模块化引用方式，这里的zepto必须是模块化后的</h4><pre>&lt;script src=&quot;http://i.gtimg.cn/vipstyle/frozenjs/lib/sea.js?_bid=304&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+seajs.config({
+    alias:{
+        &quot;$&quot;:&quot;frozenjs/lib/zepto.min.js?_bid=304&quot;,
+        &quot;frozen&quot;:&quot;frozenjs/1.0.0/frozen.js?_bid=304&quot;
+    }
+});
+&lt;/script&gt;</pre><h4 id="3-访问我们的github仓库">3.访问我们的github仓库</h4><p><a href="https://github.com/frozenui/frozenjs"><a href="https://github.com/frozenui/frozenjs">https://github.com/frozenui/frozenjs</a></a>，自行 clone 到本地。</p>
+<p><em>注意非腾讯公司用户请不要直接使用上述域名。</em></p>
+</div>
+                </div>
+                
+            </div>
+            <div class="footer-area">
+            </div>
+
+        </div>
+        <script src="static/layout.js"></script>
+    </body>
+</html>
