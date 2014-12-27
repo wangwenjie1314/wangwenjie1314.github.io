@@ -85,7 +85,7 @@ var audio=document.getElementById("audio"),
 	music_open=$("#music-open"),
 	music_close=$("#music-close"),
 	tip=$("#tip");
-	setTimeout(function(){tip.show();},3000);
+	setTimeout(function(){tip.css("display","block");},3000);
 music_btn.on('click',function(){
 	if(!music_flag){
 		music_open.hide();
