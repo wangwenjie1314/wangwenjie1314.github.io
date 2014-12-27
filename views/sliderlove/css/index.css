@@ -20,15 +20,15 @@ section[data-id="9"]{background-image:url(../images/9.jpg)}
 section[data-id="10"]{background-image:url(../images/10.jpg)}
 section[data-id="11"]{background-image:url(../images/11.jpg)}
 section[data-id="12"]{background-image:url(../images/share.png);background-position: top right;background-color: #111}
-.box-txt{position: absolute;bottom:2%;opacity: .8;left:18%;width:62%;border-radius: 5px;background-color:#fff;z-index: 999999;box-shadow: 0 0 10px #333}
+.box-txt{position: absolute;bottom:2%;opacity: .8;left:16%;width:64%;border-radius: 5px;background-color:#fff;z-index: 999999;box-shadow: 0 0 10px #333}
 .box-txt p{margin:10px 0;padding:0 5px}
 .box-txt a{color:#666;text-decoration: underline}
 .page-share-img{display: block;width:50%;height: 30%;position: absolute;left:30%;bottom: 10%}
-.xin{position: absolute;top:99%;opacity: 0;width:30px;height:30px;color:#cd2056;font-size:5em;z-index:1000000}
-.xin-1{left:5%;color:#fff;-webkit-animation:movea 10s linear infinite}
-.xin-2{left:95%;color:#fff;-webkit-animation:moveb 10s linear infinite}
-.xin-3{left:25%;-webkit-animation:movec 10s linear infinite}
-.xin-4{left:75%;-webkit-animation:moved 10s linear infinite}
+.xin{position: absolute;top:99%;opacity: 0;width:30px;height:30px;background: url(../images/ico-love-1.png) no-repeat;font-size:5em;z-index:1000000}
+.xin-1{left:5%;-webkit-animation:movea 10s linear infinite}
+.xin-2{left:95%;background-image:url(../images/ico-love-2.png);-webkit-animation:moveb 10s linear infinite}
+.xin-3{left:25%;background-image:url(../images/ico-love-3.png);-webkit-animation:movec 10s linear infinite}
+.xin-4{left:75%;background-image:url(../images/ico-love-3.png);-webkit-animation:moved 10s linear infinite}
 @-webkit-keyframes movea{
     0%{top:95%;left:10%;opacity: 0}
     50%{top:50%;left:20%;opacity: 1}
