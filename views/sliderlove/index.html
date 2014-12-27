@@ -46,7 +46,7 @@
 	<div class="xin xin-3"></div>
 	<div class="xin xin-4"></div>
 	<!-- 信息提示-->
-	<div class="box-txt"><p>专属VIP定制请关注微信Android_Jie</p></div>
+	<div class="box-txt" id="tip"><p>专属VIP定制请关注微信Android_Jie</p></div>
 	<!-- 加入音乐元素-->
 	<div class="music">
 		<audio id="audio" autoplay="autoplay" loop="loop" src="audio/1.mp3"></audio>
@@ -83,7 +83,9 @@ var audio=document.getElementById("audio"),
 	music_btn=$("#music-btn"),
 	music_flag=false,
 	music_open=$("#music-open"),
-	music_close=$("#music-close");
+	music_close=$("#music-close"),
+	tip=$("#tip");
+	setTimeout(function(){tip.css("opacity",".8");},3000);
 music_btn.on('click',function(){
 	if(!music_flag){
 		music_open.hide();
