@@ -1,5 +1,16 @@
 /*声明 WebFont*/
 @font-face {
+  font-family: 'zhankuhei';
+  src: url('../font/zhankuhei.eot');
+  src:
+    url('../font/zhankuhei.eot?#font-spider') format('embedded-opentype'),
+    url('../font/zhankuhei.woff') format('woff'),
+    url('../font/zhankuhei.ttf') format('truetype'),
+    url('../font/zhankuhei.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
   font-family: 'anjingchen';
   src: url('../font/anjingchen.eot');
   src:
@@ -25,8 +36,13 @@
 .home h1{
     color:#00a5e0;
     font-size: 80px;
-    font-family: 'anjingchen';
+    font-family: 'zhankuhei';
 }
 .home h2{
+	color:#666;
+    font-family: 'anjingchen';
+}
+.home h3{
+	color:#999;
     font-family: 'zhongqi';
 }
