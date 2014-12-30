@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CodeMirror: Theme Demo</title>
+  <link rel="stylesheet" type="text/css" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/codemirror.css">
+  <link rel="stylesheet" href="css/theme/3024-day.css">
+  <link rel="stylesheet" href="css/theme/3024-night.css">
+  <link rel="stylesheet" href="css/theme/ambiance.css">
+  <link rel="stylesheet" href="css/theme/base16-dark.css">
+  <link rel="stylesheet" href="css/theme/base16-light.css">
+  <link rel="stylesheet" href="css/theme/blackboard.css">
+  <link rel="stylesheet" href="css/theme/cobalt.css">
+  <link rel="stylesheet" href="css/theme/eclipse.css">
+  <link rel="stylesheet" href="css/theme/elegant.css">
+  <link rel="stylesheet" href="css/theme/erlang-dark.css">
+  <link rel="stylesheet" href="css/theme/lesser-dark.css">
+  <link rel="stylesheet" href="css/theme/mbo.css">
+  <link rel="stylesheet" href="css/theme/mdn-like.css">
+  <link rel="stylesheet" href="css/theme/midnight.css">
+  <link rel="stylesheet" href="css/theme/monokai.css">
+  <link rel="stylesheet" href="css/theme/neat.css">
+  <link rel="stylesheet" href="css/theme/neo.css">
+  <link rel="stylesheet" href="css/theme/night.css">
+  <link rel="stylesheet" href="css/theme/paraiso-dark.css">
+  <link rel="stylesheet" href="css/theme/paraiso-light.css">
+  <link rel="stylesheet" href="css/theme/pastel-on-dark.css">
+  <link rel="stylesheet" href="css/theme/rubyblue.css">
+  <link rel="stylesheet" href="css/theme/solarized.css">
+  <link rel="stylesheet" href="css/theme/the-matrix.css">
+  <link rel="stylesheet" href="css/theme/tomorrow-night-bright.css">
+  <link rel="stylesheet" href="css/theme/tomorrow-night-eighties.css">
+  <link rel="stylesheet" href="css/theme/twilight.css">
+  <link rel="stylesheet" href="css/theme/vibrant-ink.css">
+  <link rel="stylesheet" href="css/theme/xq-dark.css">
+  <link rel="stylesheet" href="css/theme/xq-light.css">
+  <link rel="stylesheet" href="css/theme/zenburn.css">
+</head>
+<body>
+<div class="container">
+  <h1>CodeMirror Demo</h1>
+  <h4>Select a theme: <select id="select">
+      <option selected="selected">default</option>
+      <option>3024-day</option>
+      <option>3024-night</option>
+      <option>ambiance</option>
+      <option>base16-dark</option>
+      <option>base16-light</option>
+      <option>blackboard</option>
+      <option>cobalt</option>
+      <option>eclipse</option>
+      <option>elegant</option>
+      <option>erlang-dark</option>
+      <option>lesser-dark</option>
+      <option>mbo</option>
+      <option>mdn-like</option>
+      <option>midnight</option>
+      <option>monokai</option>
+      <option>neat</option>
+      <option>neo</option>
+      <option>night</option>
+      <option>paraiso-dark</option>
+      <option>paraiso-light</option>
+      <option>pastel-on-dark</option>
+      <option>rubyblue</option>
+      <option>solarized dark</option>
+      <option>solarized light</option>
+      <option>the-matrix</option>
+      <option>tomorrow-night-bright</option>
+      <option>tomorrow-night-eighties</option>
+      <option>twilight</option>
+      <option>vibrant-ink</option>
+      <option>xq-dark</option>
+      <option>xq-light</option>
+      <option>zenburn</option>
+  </select>
+  </h4>
+  <h2>javascript</h2>
+  <p class="clearfix">
+<form><textarea id="javascript" name="javascript">
+$("#stop").toggle(function() {
+  $(".logo").css("animation-play-state", "paused");
+  $("#shadow").css("animation-play-state", "paused");
+},
+function() {
+    $(".logo").css("animation-play-state", "running");
+    $("#shadow").css("animation-play-state", "running");
+});
+
+if (localStorage.speed) {
+    speed = localStorage.speed
+} else {
+    speed = 5;
+}
+
+$("#speed").val(speed).blur(function() {
+    localStorage.speed = $(this).val();
+    location.reload();
+});
+</textarea></form>
+  </p>
+  <h2>css</h2>
+  <p class="clearfix">
+  <form><textarea id="css" name="css">
+body * { font-size:10pt; }/* ss sda   */
+p 
+{ clear:left; padding:5px 10px;1
+}
+td 
+,
+fieldset
+{ padding : 10px;  }
+textarea { 
+   width:90%;
+   height:10em;
+ }
+</textarea></form>
+  </p>
+  <h2>markdown</h2>
+  <p class="clearfix">
+  <form><textarea id="markdown" name="markdown">
+## 更新
+
+### 2013-12-13
+
+* 增加了feed功能 http://www.welefen.com/feed
+* 增加Node.js执行时间的统计，可以在header里看到, 一般在10ms-15ms之间
+</textarea></form>
+  </p>
+  <p>了解更多：</p>
+  <p><a href="https://github.com/wangwenjie1314/CodeMirror" target="_blank">https://github.com/wangwenjie1314/CodeMirror</a></p>
+</div>
+<script src="js/codemirror.js"></script>
+<script src="js/javascript.js"></script>
+<script src="js/css.js"></script>
+<script src="js/markdown.js"></script>
+<script>
+window.onload=function(){
+  var editor1 = CodeMirror.fromTextArea(document.getElementById("javascript"), {
+    lineNumbers: true,
+    styleActiveLine: true,
+    matchBrackets: true,
+    mode:  "javascript"
+  });
+  var editor2 = CodeMirror.fromTextArea(document.getElementById("css"), {
+    lineNumbers: true,
+    styleActiveLine: true,
+    matchBrackets: true,
+    mode:  "css"
+  });
+  var editor3 = CodeMirror.fromTextArea(document.getElementById("markdown"), {
+    lineNumbers: true,
+    styleActiveLine: true,
+    matchBrackets: true,
+    mode:  "markdown"
+  });
+  var input = document.getElementById("select");
+  input.onchange=function(){
+    var theme = input.options[input.selectedIndex].innerHTML;
+    editor1.setOption("theme", theme);
+    editor2.setOption("theme", theme);
+    editor3.setOption("theme", theme);
+  }
+}
+</script>
+</body>
+</html>
