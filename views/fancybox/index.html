@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>fancyBox - Fancy jQuery Lightbox Alternative | Demonstration</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="css/fancybox.css" media="screen" />
+<style type="text/css">
+body {
+	max-width: 700px;
+	margin: 0 auto;
+}
+</style>
+</head>
+<body>
+	<p>
+		<a class="fancybox" href="images/1_b.jpg" data-fancybox-group="gallery" title="I love touy"><img src="images/1_b.jpg" style="width:150px;height:150px" /></a>
+		<a class="fancybox" href="images/2_b.jpg" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img src="images/2_b.jpg" style="width:150px;height:150px" /></a>
+		<a class="fancybox" href="images/3_b.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="images/3_b.jpg" style="width:150px;height:150px" /></a>
+		<a class="fancybox" href="images/4_b.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="images/4_b.jpg" style="width:150px;height:150px" /></a>
+		<a class="fancybox" href="images/5_b.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="images/5_b.jpg" style="width:150px;height:150px" /></a>
+	</p>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.fancybox').fancybox();
+});
+</script>
+</body>
+</html>
