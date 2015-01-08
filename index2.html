@@ -107,7 +107,7 @@
     page_next.bind("click",function(){
       page++;
       page_prev.show();
-      if(page<(page_len/page_num)-1){
+      if(page<Math.ceil(page_len/page_num)){
         init_page(page_data,page*9,(page+1)*9);
         window.location.href=link_arry[0]+"#p="+(page+1);
       }else{
@@ -117,8 +117,8 @@
     function init_page(data,i,sum){
       list.empty();
       sum>(page_len-1)?sum=(page_len-1):sum=sum;
+      alert("i:"+i+"====sum:"+sum);
       for(i;i<=sum;i++){
-        //alert(i+"----"+data[i].link);
         list.append('<li><a href="'+data[i].link+'" target="_blank">'+data[i].title+'</a><time>'+data[i].time+'</time></li>');
       }
     }
