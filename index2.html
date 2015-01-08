@@ -95,6 +95,7 @@
       init_page(page_data,page*9,(page+1)*9);
     });
     page_prev.bind("click",function(){
+      alert(page);
       page--;
       page_next.show();
       if(page>0){
@@ -107,7 +108,7 @@
     page_next.bind("click",function(){
       page++;
       page_prev.show();
-      if(page<Math.ceil(page_len/page_num)){
+      if(page<Math.ceil(page_len/page_num)-1){
         init_page(page_data,page*9,(page+1)*9);
         window.location.href=link_arry[0]+"#p="+(page+1);
       }else{
