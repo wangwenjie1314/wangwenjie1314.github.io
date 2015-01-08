@@ -86,6 +86,7 @@
       page_data=data;
       page_len=page_data.length;
       page_ci=Math.ceil(page_len/page_num)-1;
+      alert(page_ci);
       if(page>0){
         page_prev.show();
       }
@@ -95,7 +96,6 @@
       init_page(page_data,page*9,(page+1)*9);
     });
     page_prev.bind("click",function(){
-      alert(page);
       page--;
       page_next.show();
       if(page>-1){
@@ -107,6 +107,7 @@
       }
     });
     page_next.bind("click",function(){
+      alert(page_ci);
       page++;
       page_prev.show();
       if(page<page_ci){
