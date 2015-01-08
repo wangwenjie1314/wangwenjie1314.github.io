@@ -75,31 +75,30 @@
   <script type="text/javascript">
   $(function(){
     var link=window.location.href,link_arry=link.split("#"),
-      list=$("#article-list"),page_prev=$("#page-prev"),page_next=$("#page-next"),page_data,page_len,page=0,page_num=10,page_ci;
+      list=$("#article-list"),page_prev=$("#page-prev"),page_next=$("#page-next"),page_data,page_len,page=0,page_num=15,page_ci;
     if(link_arry[1]!="undefined"&&link_arry[1]!=null&&link_arry[1]!=""){
        link_vals=link_arry[1].split("=");
        if(link_vals[1]!="undefined"&&link_vals[1]!=null&&link_vals[1]!=""){
           page=parseInt(link_vals[1])-1;
       }
     }
-    $.getJSON("http://wangwenjie1314.github.io/pages.json",function(data){
+    $.getJSON("pages.json",function(data){
       page_data=data;
       page_len=page_data.length;
-      page_ci=Math.ceil(page_len/page_num)-1;
-      alert(page_ci);
+      page_ci=Math.ceil(page_len/page_num);
       if(page>0){
         page_prev.show();
       }
-      if(page_len>9){
+      if(page_len>(page_num-1)){
         page_next.show();
       }
-      init_page(page_data,page*9,(page+1)*9);
+      init_page(page_data,page*(page_num-1),(page+1)*(page_num-1));
     });
     page_prev.bind("click",function(){
       page--;
       page_next.show();
       if(page>-1){
-        init_page(page_data,page*9,(page+1)*9);
+        init_page(page_data,page*(page_num-1),(page+1)*(page_num-1));
         window.location.href=link_arry[0]+"#p="+(page+1);
         if(page==0){page_prev.hide();}
       }else{
@@ -107,13 +106,12 @@
       }
     });
     page_next.bind("click",function(){
-      alert(page_ci);
       page++;
       page_prev.show();
       if(page<page_ci){
-        init_page(page_data,page*9,(page+1)*9);
+        init_page(page_data,page*(page_num-1),(page+1)*(page_num-1));
         window.location.href=link_arry[0]+"#p="+(page+1);
-        if(page<page_ci-1){page_next.hide();}
+        if(page==(page_ci-1)){page_next.hide();}
       }else{
         page_next.hide();
       }
@@ -121,7 +119,6 @@
     function init_page(data,i,sum){
       list.empty();
       sum>(page_len-1)?sum=(page_len-1):sum=sum;
-      alert("i:"+i+"====sum:"+sum);
       for(i;i<=sum;i++){
         list.append('<li><a href="'+data[i].link+'" target="_blank">'+data[i].title+'</a><time>'+data[i].time+'</time></li>');
       }
