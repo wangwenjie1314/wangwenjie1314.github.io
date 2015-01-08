@@ -96,7 +96,7 @@
       </div>
       <div class="page-content">
        <span class="fl"><a href="javascript:;" id="page-prev" class="dn">上一页</a></span>
-       <span class="fr"><a href="javascript:;" id="page-next" class="dn">下一页</a></span>
+       <span class="fr"><a href="javascript:;" id="page-next">下一页</a></span>
       </div>
       <div class="clear"></div>
      </div>
@@ -115,5 +115,14 @@
     </div>
    </div>
   </footer>
+  <script type="text/javascript" src="statics/js/jquery.js"></script>
+  <script type="text/javascript">
+  $(function(){
+    var page_prev=$("#page-prev"),page_next=$("#page-prev");
+    $.getJSON("http://wangwenjie1314.github.io/pages.json?callback=",function(data){
+      alert(data);
+    })
+  });
+  </script>
  </body>
 </html>
