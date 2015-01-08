@@ -96,18 +96,20 @@
     });
     page_prev.bind("click",function(){
       page--;
+      page_next.show();
       if(page>0){
         init_page(page_data,page*9,(page+1)*9);
-        window.location.href=link_arry[0]+"#p="+page;
+        window.location.href=link_arry[0]+"#p="+(page+1);
       }else{
         page_prev.hide();
       }
     });
     page_next.bind("click",function(){
       page++;
-      if(page<page_len-1){
+      page_prev.show();
+      if(page<page_len-2){
         init_page(page_data,page*9,(page+1)*9);
-        window.location.href=link_arry[0]+"#p="+page;
+        window.location.href=link_arry[0]+"#p="+(page+1);
       }else{
         page_next.hide();
       }
