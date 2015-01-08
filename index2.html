@@ -94,7 +94,7 @@
       }
       init_page(page_data,page*9,(page+1)*9);
     });
-    page_prev.live("click",function(){
+    page_prev.bind("click",function(){
       page--;
       if(page>0){
         init_page(page_data,page*9,(page+1)*9);
@@ -103,7 +103,7 @@
         page_prev.hide();
       }
     });
-    page_next.live("click",function(){
+    page_next.bind("click",function(){
       page++;
       if(page<page_len-1){
         init_page(page_data,page*9,(page+1)*9);
@@ -115,7 +115,7 @@
     function init_page(data,i,sum){
       list.empty();
       for(i;i<=sum;i++){
-        alert(i+"----"+data[i].link);
+        //alert(i+"----"+data[i].link);
         list.append('<li><a href="'+data[i].link+'" target="_blank">'+data[i].title+'</a><time>'+data[i].time+'</time></li>');
       }
     }
