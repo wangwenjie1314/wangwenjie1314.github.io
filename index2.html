@@ -71,11 +71,11 @@
     </div>
    </div>
   </footer>
-  <script type="text/javascript" src="statics/js/jquery.js"></script>
+  <script type="text/javascript" src="statics/js/jquery-2.0.3.min.js"></script>
   <script type="text/javascript">
   $(function(){
     var link=window.location.href,link_arry=link.split("#"),
-      list=$("#article-list"),page_prev=$("#page-prev"),page_next=$("#page-prev"),page_data,page_len,page=0;
+      list=$("#article-list"),page_prev=$("#page-prev"),page_next=$("#page-next"),page_data,page_len,page=0;
     if(link_arry[1]!="undefined"&&link_arry[1]!=null&&link_arry[1]!=""){
        link_vals=link_arry[1].split("=");
        if(link_vals[1]!="undefined"&&link_vals[1]!=null&&link_vals[1]!=""){
