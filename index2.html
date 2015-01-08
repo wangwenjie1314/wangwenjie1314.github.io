@@ -114,6 +114,7 @@
     });
     function init_page(data,i,sum){
       list.empty();
+      sum>(page_len-1)?sum=(page_len-1):sum=sum;
       for(i;i<=sum;i++){
         //alert(i+"----"+data[i].link);
         list.append('<li><a href="'+data[i].link+'" target="_blank">'+data[i].title+'</a><time>'+data[i].time+'</time></li>');
