@@ -1,8 +1,6 @@
 /* css add by wwj 二次开发*/
-.am-offcanvas{z-index:999999}
-.am-offcanvas-bar{z-index:9999999}
 .am-gotop-fixed-50{bottom: 50px}
 .am-line-clamp{overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical}
 .am-line-clamp-3{-webkit-line-clamp:3}
 .am-line-clamp-4{-webkit-line-clamp:4}
-.am-list .am-list-item-dated a{padding-right:100px}
+.am-list .am-list-item-dated a{padding-right:8rem}
