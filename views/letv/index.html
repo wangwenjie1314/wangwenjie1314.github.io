@@ -27,8 +27,14 @@
   </div>
 </header>
 <section class="am-container">
-	<!-- autoplay="autoplay" -->
-	<video x-webkit-airplay="allow" style="width:100%;height:100%;" preload="auto" src="http://119.188.180.96/121/50/82/letv-uts/14/ver_00_22-302512687-avc-482931-aac-32032-77920-5102163-36498914069b8c527e9f026ae718614a-1421198310703.m3u8?crypt=12aa7f2e98&amp;b=523&amp;nlh=3072&amp;nlt=45&amp;bf=15&amp;p2p=1&amp;video_type=mp4&amp;termid=2&amp;tss=ios&amp;geo=CN-1-5-2&amp;tm=1421249400&amp;key=b23b4568b772f2f764e429e48b7d7082&amp;platid=3&amp;splatid=301&amp;proxy=2008875692,2007471084&amp;mmsid=26108272&amp;playid=0&amp;vtype=126&amp;cvid=914956526575&amp;pip=38e92aa9c8112d9d5d88d90a7e8bbe03&amp;p1=0&amp;p2=04&amp;ostype=macos&amp;hwtype=iphone&amp;_r=0&amp;errc=0&amp;gn=1113&amp;buss=4701&amp;qos=4&amp;cips=111.196.2.112"></video>
+	<div class="am-play-box" id="am-play-box">
+		<!-- autoplay="autoplay" -->
+		<div class="am-play" style="display:none;background:none"><video x-webkit-airplay="allow" style="width:100%;height:100%;" preload="auto" src="http://119.188.180.96/121/50/82/letv-uts/14/ver_00_22-302512687-avc-482931-aac-32032-77920-5102163-36498914069b8c527e9f026ae718614a-1421198310703.m3u8?crypt=12aa7f2e98&amp;b=523&amp;nlh=3072&amp;nlt=45&amp;bf=15&amp;p2p=1&amp;video_type=mp4&amp;termid=2&amp;tss=ios&amp;geo=CN-1-5-2&amp;tm=1421249400&amp;key=b23b4568b772f2f764e429e48b7d7082&amp;platid=3&amp;splatid=301&amp;proxy=2008875692,2007471084&amp;mmsid=26108272&amp;playid=0&amp;vtype=126&amp;cvid=914956526575&amp;pip=38e92aa9c8112d9d5d88d90a7e8bbe03&amp;p1=0&amp;p2=04&amp;ostype=macos&amp;hwtype=iphone&amp;_r=0&amp;errc=0&amp;gn=1113&amp;buss=4701&amp;qos=4&amp;cips=111.196.2.112"></video></div>
+		<div class="am-play-poster" style="background-image: url(http://i2.letvimg.com/lc_yunzhuanma/201501/13/9b423a68f25fb38bf09521a4a201c5b9_26081635/thumb/8_320_180.jpg);"></div>
+		<div class="am-play-btn"></div>
+	</div>
+</section>
+<section class="am-container">
 	<p class="am-padding am-text-lg am-font-bold am-margin-0 am-margin-bottom-1">杨幂机场与助理走失 网友笑：一孕傻三年</p>
 	<div class="am-scrollable-vertical am-form-set">
 		<p class="am-padding am-margin-0">描述：13日中午，有网友在机场巧遇杨幂助理走失……当时杨幂正站在墙角打电话，一副着急的样子。该网友偷拍下杨幂的照片，并在微博爆料称：“杨幂在上海虹桥机场跟助理走失了，萌哒哒站在原地打电话找助理，果然一孕那啥三年啊！助理急急赶来才认领走了大幂幂，之后被一外籍帅哥接走！”当晚，杨幂工作室转发相关微博，留言调侃：“外教英语老师第一天工作，就要额外负责寻找失踪少女，这样好么？”对此，网友们纷纷调侃起杨幂：“外教说有额外的工资么？以后还要负责找失踪的少女幂。”“要给大幂当外教的不现实，我准备以后去机场失物招领处工作了。”“蠢萌的少女，还知道在原地等”。</p>
@@ -71,7 +77,17 @@
 <footer class="footer">
   <p class="am-padding">© 2014 by the LeCloud Team.</p>
 </footer>
-<!-- <script src="assets/js/zepto.min.js"></script>
-<script src="assets/js/amazeui.min.js"></script> -->
+<script src="assets/js/zepto.min.js"></script>
+<!-- <script src="assets/js/amazeui.min.js"></script> -->
+<script type="text/javascript">
+window.onload=function(){
+	var win_width=$(window).width(),am_play_box=$("#am-play-box");
+	am_play_box.css("height",(win_width/2+20)+"px").bind("click",function(){
+		$(this).find(".am-play-poster").hide();
+		$(this).find(".am-play-btn").hide();
+		$(this).find(".am-play").show();
+	});
+}
+</script>
 </body>
 </html>
