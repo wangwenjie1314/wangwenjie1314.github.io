@@ -6,4 +6,4 @@
 .am-line-clamp-3{-webkit-line-clamp:3}
 .am-line-clamp-4{-webkit-line-clamp:4}
 .am-line-clamp-1{-webkit-line-clamp:1}
-.am-list .am-list-item-dated a{padding-right:85px;color:#666}
+.am-list .am-list-item-dated a{color:#666;overflow: hidden;text-overflow:ellipsis;white-space: nowrap}
