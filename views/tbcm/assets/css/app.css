@@ -1,8 +1,8 @@
 /* css add by wwj 二次开发*/
-.am-menu{z-index: 9999999}
+.am-icon-logo{position: absolute;top:10px;left:15px;display: block;background: url(../images/logo.png) no-repeat;width: 101px;height:30px}
 .am-tabs-bd-lg .am-tab-panel{padding: 0 0 5px 0}
 .am-gotop-fixed-50{bottom: 50px}
 .am-line-clamp{overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical}
 .am-line-clamp-3{-webkit-line-clamp:3}
 .am-line-clamp-4{-webkit-line-clamp:4}
-.am-list .am-list-item-dated a{padding-right:0;margin-right: 8rem;color:#666}
+.am-list .am-list-item-dated a{/*padding-right:0;margin-right: 8.5rem;*/color:#666}
