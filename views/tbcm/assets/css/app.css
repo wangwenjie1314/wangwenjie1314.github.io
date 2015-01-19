@@ -1,4 +1,5 @@
 /* css add by wwj 二次开发*/
+.am-menu{z-index: 999999}
 .am-icon-logo{position: absolute;top:10px;left:15px;display: block;background: url(../images/logo.png) no-repeat;width: 101px;height:30px}
 .am-tabs-bd-lg .am-tab-panel{padding: 0 0 5px 0}
 .am-gotop-fixed-50{bottom: 50px}
