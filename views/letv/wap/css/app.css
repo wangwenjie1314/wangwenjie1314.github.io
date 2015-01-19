@@ -3,8 +3,8 @@
 .le-logo{width:90px;height:25px;background-image:url(../images/le-logo-1x.png);background-image:-webkit-image-set(url(../images/le-logo-1x.png) 1x,url(../images/le-logo-2x.png) 2x,url(../images/le-logo-3x.png) 3x);background-repeat:no-repeat;background-position:0 0}
 .le-logo-text{font-size:1.2rem;line-height:35px}
 /*展开全部 收起全部*/
-a.le-switch-flag{display:block;color:#1b80da;height:22px;line-height:22px}
-a.le-switch-flag i{display:inline-block;float:left;color:#fff;border-radius:50%;-webkit-border-radius:50%;width:22px;height:22px;text-align:center;line-height:22px;background-color:#1b80da;margin-right:5px}
+a.le-switch-flag{display:block;color:#1b80da;height:20px;line-height:20px}
+a.le-switch-flag i{display:inline-block;float:left;color:#fff;border-radius:50%;-webkit-border-radius:50%;width:20px;height:20px;text-align:center;line-height:20px;background-color:#1b80da;margin-right:5px}
 a.le-switch-flag i.in{-webkit-transform:rotate(180deg);transform:rotate(180deg)}
 /*h5播放器下的title*/
 .le-player-title{font-size:1.6rem;background-color:#2d2d2d;height:50px;line-height:50px;color:#a9a9ac}
