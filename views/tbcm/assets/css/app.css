@@ -7,6 +7,7 @@
 .am-line-clamp-3{-webkit-line-clamp:3}
 .am-line-clamp-4{-webkit-line-clamp:4}
 .am-line-clamp-1{-webkit-line-clamp:1}
-.am-list .am-list-item-dated a{padding-right: 0;margin-right:8rem;color:#666}
+.am-list-item-hd {width: 100%}
+.am-list .am-list-item-dated a{color:#666}
 .am-article-title{font-size: 2rem}
 .am-page li{width: 100%}
