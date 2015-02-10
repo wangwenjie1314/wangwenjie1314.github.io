@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>微信JS-SDK Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body ontouchstart="">
+<div class="wxapi_container">
+    <!-- <div class="lbox_close wxapi_form">
+      <h3 id="menu-basic">基础接口</h3>
+      <span class="desc">判断当前客户端是否支持指定JS接口</span>
+      <button class="btn btn_primary" id="checkJsApi">checkJsApi</button>
+      <h3 id="menu-share">分享接口</h3>
+      <span class="desc">获取“分享到朋友圈”按钮点击状态及自定义分享内容接口</span>
+      <button class="btn btn_primary" id="onMenuShareTimeline">onMenuShareTimeline</button>
+      <span class="desc">获取“分享给朋友”按钮点击状态及自定义分享内容接口</span>
+      <button class="btn btn_primary" id="onMenuShareAppMessage">onMenuShareAppMessage</button>
+      <span class="desc">获取“分享到QQ”按钮点击状态及自定义分享内容接口</span>
+      <button class="btn btn_primary" id="onMenuShareQQ">onMenuShareQQ</button>
+      <span class="desc">获取“分享到腾讯微博”按钮点击状态及自定义分享内容接口</span>
+      <button class="btn btn_primary" id="onMenuShareWeibo">onMenuShareWeibo</button>
+    </div> -->
+    <div class="lbox_close wxapi_form" id="toupiao">
+      <h3>王1</h3>
+      <p><img src="http://pic3.zhimg.com/b71a15752_m.jpg" /></p>
+      <button class="btn btn_primary btn_tou" data-name="王1" data-img="http://pic3.zhimg.com/b71a15752_m.jpg">投他</button>
+      <h3>王2</h3>
+      <p><img src="http://pic3.zhimg.com/742889a14_m.jpg" /></p>
+      <button class="btn btn_primary btn_tou" data-name="王2" data-img="http://pic1.zhimg.com/742889a14_m.jpg">投他</button>
+      <h3>王3</h3>
+      <p><img src="http://pic3.zhimg.com/465513667_m.jpg" /></p>
+      <button class="btn btn_primary btn_tou" data-name="王3" data-img="http://pic4.zhimg.com/465513667_m.jpg">投他</button>
+      <h3>&nbsp;</h3>
+      <button class="btn btn_primary" id="closeWindow">关闭当前页面</button>
+    </div>
+  </div>
+</body>
+<script src="js/jweixin-1.0.0.js"></script>
+<script src="js/zepto.min.js"></script>
+<script>
+  /*
+   * 注意：
+   * 1. 所有的JS接口只能在公众号绑定的域名下调用，公众号开发者需要先登录微信公众平台进入“公众号设置”的“功能设置”里填写“JS接口安全域名”。
+   * 2. 如果发现在 Android 不能分享自定义内容，请到官网下载最新的包覆盖安装，Android 自定义分享接口需升级至 6.0.2.58 版本及以上。
+   * 3. 常见问题及完整 JS-SDK 文档地址：http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html
+   *
+   * 开发中遇到问题详见文档“附录5-常见错误及解决办法”解决，如仍未能解决可通过以下渠道反馈：
+   * 邮箱地址：weixin-open@qq.com
+   * 邮件主题：【微信JS-SDK反馈】具体问题
+   * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
+   */
+  wx.config({
+      debug: false,// 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+      appId: 'wxf8b4f85f3a794e77',// 必填，公众号的唯一标识
+      timestamp: 1423481002,// 必填，生成签名的时间戳
+      nonceStr: 'erF1pnXE722YxUtF',// 必填，生成签名的随机串
+      signature: '3208b14e9755460c5b3a5e4e7797d45d0441ff86',// 必填，签名，见附录1
+      jsApiList: [// 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+        //'checkJsApi',
+        'onMenuShareTimeline',
+        'onMenuShareAppMessage',
+        'onMenuShareQQ',
+        'onMenuShareWeibo',
+        'closeWindow'
+      ]
+  });
+  wx.ready(function () {
+    var toupiao=$("#toupiao");
+    toupiao.delegate('.btn_tou','tap',function(e){
+      var target = $(e.target);
+      var name=target.attr("data-name");
+      var img=target.attr("data-img");
+      changeShare(name,img);
+    }).delegate('#closeWindow','tap',function(){
+      wx.closeWindow();
+    });
+    //初始化默认的投票分享
+    var shareData = {
+      title: '[喜欢就是任性]投票活动快来参与啊',
+      desc: '爱他就投他呗，你说是不是啊 是不是。',
+      link: 'http://wangwenjie1314.github.io/views/wap/toupiao/index.html',
+      imgUrl: 'http://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRt8Qia4lv7k3M9J1SKqKCImxJCt7j9rHYicKDI45jRPBxdzdyREWnk0ia0N5TMnMfth7SdxtzMvVgXg/0'
+    };
+    wx.onMenuShareAppMessage(shareData);//分享给朋友
+    wx.onMenuShareTimeline(shareData);//分享到朋友圈
+    wx.onMenuShareQQ(shareData);//分享到qq
+    wx.onMenuShareWeibo(shareData);//分享到weibo
+    //投票后的分享事件
+    var changeShare=function(name,img){
+      shareData = {
+        title: '[喜欢就是任性]投票活动，我投了'+name+'一票',
+        desc: '爱'+name+'就投他呗，你说是不是啊 是不是。',
+        link: 'http://wangwenjie1314.github.io/views/wap/toupiao/index.html',
+        imgUrl: img
+      };
+      wx.onMenuShareAppMessage(shareData);//分享给朋友
+      wx.onMenuShareTimeline(shareData);//分享到朋友圈
+      wx.onMenuShareQQ(shareData);//分享到qq
+      wx.onMenuShareWeibo(shareData);//分享到weibo
+      alert('已注册更改分享事件');
+    };
+  // 2. 分享接口
+  // 2.1 监听“分享给朋友”，按钮点击、自定义分享内容及分享结果接口
+  // document.querySelector('#onMenuShareAppMessage').onclick = function () {
+  //   wx.onMenuShareAppMessage({
+  //     title: '互联网之子',
+  //     desc: '在长大的过程中，我才慢慢发现，我身边的所有事，别人跟我说的所有事，那些所谓本来如此，注定如此的事，它们其实没有非得如此，事情是可以改变的。更重要的是，有些事既然错了，那就该做出改变。',
+  //     link: 'http://movie.douban.com/subject/25785114/',
+  //     imgUrl: 'http://demo.open.weixin.qq.com/jssdk/images/p2166127561.jpg',
+  //     trigger: function (res) {
+  //       // 不要尝试在trigger中使用ajax异步请求修改本次分享的内容，因为客户端分享操作是一个同步操作，这时候使用ajax的回包会还没有返回
+  //       alert('用户点击发送给朋友');
+  //     },
+  //     success: function (res) {
+  //       alert('已分享');
+  //     },
+  //     cancel: function (res) {
+  //       alert('已取消');
+  //     },
+  //     fail: function (res) {
+  //       alert(JSON.stringify(res));
+  //     }
+  //   });
+  //   alert('已注册获取“发送给朋友”状态事件');
+  // };
+  // 2.2 监听“分享到朋友圈”按钮点击、自定义分享内容及分享结果接口
+  // document.querySelector('#onMenuShareTimeline').onclick = function () {
+  //   wx.onMenuShareTimeline({
+  //     title: '互联网之子',
+  //     link: 'http://movie.douban.com/subject/25785114/',
+  //     imgUrl: 'http://demo.open.weixin.qq.com/jssdk/images/p2166127561.jpg',
+  //     trigger: function (res) {
+  //       // 不要尝试在trigger中使用ajax异步请求修改本次分享的内容，因为客户端分享操作是一个同步操作，这时候使用ajax的回包会还没有返回
+  //       alert('用户点击分享到朋友圈');
+  //     },
+  //     success: function (res) {
+  //       alert('已分享');
+  //     },
+  //     cancel: function (res) {
+  //       alert('已取消');
+  //     },
+  //     fail: function (res) {
+  //       alert(JSON.stringify(res));
+  //     }
+  //   });
+  //   alert('已注册获取“分享到朋友圈”状态事件');
+  // };
+
+  // 2.3 监听“分享到QQ”按钮点击、自定义分享内容及分享结果接口
+  // document.querySelector('#onMenuShareQQ').onclick = function () {
+  //   wx.onMenuShareQQ({
+  //     title: '互联网之子',
+  //     desc: '在长大的过程中，我才慢慢发现，我身边的所有事，别人跟我说的所有事，那些所谓本来如此，注定如此的事，它们其实没有非得如此，事情是可以改变的。更重要的是，有些事既然错了，那就该做出改变。',
+  //     link: 'http://movie.douban.com/subject/25785114/',
+  //     imgUrl: 'http://img3.douban.com/view/movie_poster_cover/spst/public/p2166127561.jpg',
+  //     trigger: function (res) {
+  //       alert('用户点击分享到QQ');
+  //     },
+  //     complete: function (res) {
+  //       alert(JSON.stringify(res));
+  //     },
+  //     success: function (res) {
+  //       alert('已分享');
+  //     },
+  //     cancel: function (res) {
+  //       alert('已取消');
+  //     },
+  //     fail: function (res) {
+  //       alert(JSON.stringify(res));
+  //     }
+  //   });
+  //   alert('已注册获取“分享到 QQ”状态事件');
+  // };
+  // 2.4 监听“分享到微博”按钮点击、自定义分享内容及分享结果接口
+  // document.querySelector('#onMenuShareWeibo').onclick = function () {
+  //   wx.onMenuShareWeibo({
+  //     title: '互联网之子',
+  //     desc: '在长大的过程中，我才慢慢发现，我身边的所有事，别人跟我说的所有事，那些所谓本来如此，注定如此的事，它们其实没有非得如此，事情是可以改变的。更重要的是，有些事既然错了，那就该做出改变。',
+  //     link: 'http://movie.douban.com/subject/25785114/',
+  //     imgUrl: 'http://img3.douban.com/view/movie_poster_cover/spst/public/p2166127561.jpg',
+  //     trigger: function (res) {
+  //       alert('用户点击分享到微博');
+  //     },
+  //     complete: function (res) {
+  //       alert(JSON.stringify(res));
+  //     },
+  //     success: function (res) {
+  //       alert('已分享');
+  //     },
+  //     cancel: function (res) {
+  //       alert('已取消');
+  //     },
+  //     fail: function (res) {
+  //       alert(JSON.stringify(res));
+  //     }
+  //   });
+  //   alert('已注册获取“分享到微博”状态事件');
+  // };
+});
+wx.error(function (res) {
+  alert(res.errMsg);
+});
+</script>
+</html>
