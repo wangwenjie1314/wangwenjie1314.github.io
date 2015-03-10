@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+	<title>星座</title>
+	<link href="images/favicon.ico" rel="shortcut icon" type="images/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+<div class="wrapper">
+	<div class="pages">
+		<!-- 第一屏 -->
+		<section class="page page1">
+			<div class="box box1" data-animation="slideToRight" data-duration="1000" data-timing-function="ease-out"></div>
+			<div class="box box2" data-animation="slideToLeft" data-duration="1000" data-timing-function="ease-out"></div>
+			<div class="box box3" data-animation="slideToTop" data-delay="600" data-duration="1000" data-timing-function="linear"></div>
+		</section>
+        <!-- 第二屏 -->
+		<section class="page">
+			<!-- <div class="box box1" data-animation="slideToRight" data-duration="1000" data-timing-function="ease-out"></div>
+			<div class="box box2" data-animation="slideToLeft" data-duration="1000" data-timing-function="ease-out"></div>
+			<div class="box box3" data-animation="slideToTop" data-delay="600" data-duration="1000" data-timing-function="linear"></div> -->
+			<div class="box box1" data-animation="followSlide" data-duration="1000"></div>
+			<div class="box box2" data-animation="followSlide" data-delay="200" data-duration="1000"></div>
+			<div class="box box3" data-animation="followSlide" data-delay="400" data-duration="1000"></div>
+			<div class="box box4" data-animation="followSlide" data-delay="600" data-duration="1000"></div> 
+		</section>
+        <!-- 第三屏 -->
+		<section class="page">
+			<div class="box box1" data-animation="fadeInToBottom"></div>
+			<div class="box box2" data-animation="fadeInToTop" data-delay="200"></div>
+			<div class="box box3" data-animation="fadeInToLeft" data-delay="400"></div>
+			<div class="box box4" data-animation="fadeInToRight" data-delay="600"></div>
+			<!-- <div class="box-txt clearfix" data-animation="slideToTop" data-delay="10" data-timing-function="ease-out">
+			<p>影响了一代人的启蒙教育平台快播轰然倒下，代表着大陆全面进入正版化。快播王欣被抓，网民一片哀嚎，大家都迫切期望王欣尽快出来做好灾后重建工作。你可以深深的感受到，快播代表的是跟BAT不一样的互联网另一面。</p>
+			<p><a href="http://www.zhihu.com/question/24860389">如何看待快播王欣被抓？ - 风险投资（VC）</a></p>
+			<p><a href="http://www.zhihu.com/question/20834527">快播还有翻身的机会吗？如何翻身？ - 快播（Qvod）</a></p>
+			</div> -->
+		</section>
+		<!-- 第四屏 -->
+		<section class="page">
+			<div class="box box1" data-animation="fadeIn"></div>
+			<div class="box box2" data-animation="fadeOut" data-delay="800"></div>
+			<!-- <div class="box-txt clearfix" data-animation="slideToTop" data-delay="10" data-timing-function="ease-out">
+				<p>滴滴和快的烧钱大战，双方各自日均烧钱过亿，表面看是打车之争，实际上是腾讯和阿里巴巴的线下支付、O2O入口之争。时隔半年，打的之役未停，专车红包已袭来，百度以6亿美元投资U ber， 正式与腾讯滴滴专车、阿里巴巴快的专车形成“三国杀”。为何BAT如此义无反顾？</p>
+				<p><a href="http://www.zhihu.com/question/24918922/answer/29451948">为什么政策上存在许多有风险的灰色地带，BAT 仍然义无反顾地杀进移动商务用车市场？ - Sgt Pepper 的回答</a></p>
+				<p><a href="http://www.zhihu.com/question/22837944">嘀嘀打车和快的打车这种应用是如何做的地面推广？ - 移动互联网</a></p>
+			</div> -->
+		</section>
+		<!-- 第五屏 -->
+		<section class="page">
+			<!-- <div class="box-txt clearfix" data-animation="fadeIn" data-delay="100">
+				<p><a href="http://note.youdao.com/share/?id=1e6afca996c1ac5e415d51055364123c&type=note">了解更多，请点击这里 “阅读全文” </a></p>
+				<p>answered by 覃浩tommy，腾讯产品经理</p>
+				<p>picture powered by 刘瑞 摄于香山</p>
+				<p>sorted by 文杰，么么哒~</p>
+			</div> -->
+		</section>
+	</div>
+</div>
+<script src="js/app.js"></script>
+<script type="text/javascript">
+$('.pages').parallax({
+	direction: 'vertical', 	// horizontal (水平翻页)
+	swipeAnim: 'cover', 	// cover (切换效果)
+	drag:      true,		// 是否允许拖拽 (若 false 则只有在 touchend 之后才会翻页)
+	loading:   true,		// 有无加载页
+	indicator: false,		// 有无指示点
+	arrow:     true,		// 有无指示箭头
+	/*
+	 * 翻页后立即执行
+	 * {int} 		index: 第几页
+	 * {DOMElement} element: 当前页节点
+	 * {String}		directation: forward(前翻)、backward(后翻)、stay(保持原页)
+	 */
+	onchange: function(index, element, direction) {
+		// code here...
+		// console.log(index, element, direction);
+	},
+	/*
+	 * 横竖屏检测
+	 * {String}		orientation: landscape、protrait
+	 */
+	orientationchange: function(orientation) {
+		// console.log(orientation);
+	}
+});
+</script>
+</body>
+</html>
