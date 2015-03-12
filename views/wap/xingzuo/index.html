@@ -6,6 +6,8 @@
     <meta name="format-detection" content="telephone=no" />
 	<link rel="shortcut icon" href="http://cdn-img.easyicon.net/favicon.ico">
 	<title>整屏滑动切换</title>
+	<meta name="keywords" content="css3教程,css3实例,css3属性详解,w3c,transition">
+	<meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
 </head>
 <body>
@@ -79,10 +81,16 @@
     <div class="wxShare" id="wxShare"></div>
     <!-- 分享2-->
     <div class="wxTip" id="wxTip"></div>
-	<script src="js/zepto.min.js"></script>
     <script src="js/app.js"></script>
     <script type="text/javascript">
-    var slider = {},
+    var args={
+	    Edits:true,
+	    Title:"那些你不造的事儿",
+	    Descs:"总是买到了又不合心意，合心意的又买不到；总是以为自己是女王，结果还是个丫头片子；造为什么吗？戳开看看！",
+	    Links:"http://wangwenjie1314.github.io/views/wap/xingzuo/index.html",
+	    Photo:"http://wangwenjie1314.github.io/views/slidertouch2.0/images/banner.png"
+	},
+    slider = {},
 	allImages = {
 	    images: ["http://p4.qhimg.com/d/_open360/ev/ar/wx/0_00.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/0_0.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/0_01.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/0_025.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/0_03.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/0_05.png"],
 	    images1: ["http://p4.qhimg.com/d/_open360/ev/ar/wx/1_02.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/1_03.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/1_06.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/1_07.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/1_08.png"],
