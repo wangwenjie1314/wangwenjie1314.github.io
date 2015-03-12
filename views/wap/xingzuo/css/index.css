@@ -366,21 +366,27 @@ to {
 	left: 1%;
 }
 .slider-3 .man ul {
-	display: -webkit-flex;
-	display: flex;
+	display: table;
+  table-layout: fixed;
+  width: 100%;
 	margin-bottom: 20px;
 }
 .slider-3 .man li {
-	flex: 1;
-	margin: 5px;
-	background-color: #beb1d8;
-	border-radius: 50%;
-	height: 70px;
-	line-height: 70px;
-	text-align: center;
-	color: #333;
-	font-size: 40px;
+	display: table-cell;
 }
+
+.slider-3 .man li>i{
+  display: block;
+  margin: 5px;
+  background-color: #beb1d8;
+  border-radius: 50%;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  color: #333;
+  font-size: 40px;
+}
+
 .slider-3 .bottom{
 	width: 96%;
 	height: auto;
