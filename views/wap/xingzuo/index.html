@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <meta name="format-detection" content="telephone=no" />
 	<link rel="shortcut icon" href="http://cdn-img.easyicon.net/favicon.ico">
 	<title>整屏滑动切换</title>
-	<meta name="keywords" content="css3教程,css3实例,css3属性详解,w3c,transition">
-	<meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
 </head>
 <body>
+	<!-- 分享logo -->
 	<img src="http://wangwenjie1314.github.io/views/slidertouch2.0/images/banner.png" class="sharepic" />
 	<div class="loading" id="loading"><div class="progress"><div></div></div><div class="loading-text">正在加载中(<em>0</em>/<em>0</em>)……</div></div>
     <div class="page">
@@ -24,56 +23,57 @@
             </div>
             <!-- page2 -->
             <div class="slider slider-2">
-                <div class="ani pic"><img src="images/ico-user.png" alt="头像" /></div>
-                <div class="ani title">麦玲玲，香港首席女风水师</div>
-                <div class="ani desc">人，天生即有运势，此为天注定。而提早知道运势，则可以助我们趋吉避凶。<br/>
-                通过参与互动，将会产生幸运网友，获得麦老师亲自提供的运势解析，机会难得不容错过！</div>
+                <div class="ani pic"></div>
+                <div class="ani title"></div>
+                <div class="ani desc"></div>
                 <div class="ani bottom"><a href="javascirpt:;" class="button js-next">看看我的运势</a></div>
                 <div class="ani next js-next"></div>
             </div>
             <!-- page3 -->
             <div class="slider slider-3">
-                <div class="ani man">
-                    <ul>
-                        <li data-type="gou"><i class="iconfont icon-goushengxiao"></i></li>
-                        <li data-type="hu"><i class="iconfont icon-hushengxiao"></i></li>
-                        <li data-type="long"><i class="iconfont icon-longshengxiao"></i></li>
-                        <li data-type="ma"><i class="iconfont icon-mashengxiao"></i></li>
-                        <!-- <li class="iconfont icon-hushengxiao" data-type="hu"></li>
-                        <li class="iconfont icon-longshengxiao" data-type="long"></li>
-                        <li class="iconfont icon-mashengxiao" data-type="ma"></li> -->
+            	<div class="ani title"></div>
+                <div class="ani desc">
+                   <a href="javascript:;" class="sx-shu" data-name="shu"></a>
+                   <a href="javascript:;" class="sx-niu" data-name="niu"></a>
+                   <a href="javascript:;" class="sx-hu" data-name="hu"></a>
+                   <a href="javascript:;" class="sx-tu" data-name="tu"></a>
+                   <a href="javascript:;" class="sx-long" data-name="long"></a>
+                   <a href="javascript:;" class="sx-she" data-name="she"></a>
+                   <a href="javascript:;" class="sx-ma" data-name="ma"></a>
+                   <a href="javascript:;" class="sx-yang" data-name="yang"></a>
+                   <a href="javascript:;" class="sx-hou" data-name="hou"></a>
+                   <a href="javascript:;" class="sx-ji" data-name="ji"></a>
+                   <a href="javascript:;" class="sx-gou" data-name="gou"></a>
+                   <a href="javascript:;" class="sx-zhu" data-name="zhu"></a>
+
+                   <!--  <ul>
+                        <li><i class="iconfont icon-goushengxiao" data-name="gou"></i></li>
+                        <li><i class="iconfont icon-hushengxiao" data-name="hu"></i></li>
+                        <li><i class="iconfont icon-longshengxiao" data-name="long"></i></li>
+                        <li><i class="iconfont icon-mashengxiao" data-name="ma"></i></li>
                     </ul>
                     <ul>
-						<li data-type="she"><i class="iconfont icon-sheshengxiao"></i></li>
-                        <li data-type="shu"><i class="iconfont icon-shushengxiao"></i></li>
-                        <li data-type="yang"><i class="iconfont icon-yangshengxiao"></i></li>
-                        <li data-type="hou"><i class="iconfont icon-houshengxiao"></i></li>
-                        <!-- <li class="iconfont icon-sheshengxiao" data-type="she"></li>
-                        <li class="iconfont icon-shushengxiao" data-type="shu"></li>
-                        <li class="iconfont icon-yangshengxiao" data-type="yang"></li>
-                        <li class="iconfont icon-houshengxiao" data-type="hou"></li> -->
+						<li><i class="iconfont icon-sheshengxiao" data-name="she"></i></li>
+                        <li><i class="iconfont icon-shushengxiao" data-name="shu"></i></li>
+                        <li><i class="iconfont icon-yangshengxiao" data-name="yang"></i></li>
+                        <li><i class="iconfont icon-houshengxiao" data-name="hou"></i></li>
                     </ul>
                     <ul>
-						<li data-type="ji"><i class="iconfont icon-jishengxiao"></i></li>
-                        <li data-type="niu"><i class="iconfont icon-niushengxiao"></i></li>
-                        <li data-type="tu"><i class="iconfont icon-tushengxiao"></i></li>
-                        <li data-type="zhu"><i class="iconfont icon-zhushengxiao2"></i></li>
-                        <!-- <li class="iconfont icon-jishengxiao" data-type="ji"></li>
-                        <li class="iconfont icon-niushengxiao" data-type="niu"></li>
-                        <li class="iconfont icon-tushengxiao" data-type="tu"></li>
-                        <li class="iconfont icon-zhushengxiao2" data-type="zhu"></li> -->
-                    </ul>
+						<li><i class="iconfont icon-jishengxiao" data-name="ji"></i></li>
+                        <li><i class="iconfont icon-niushengxiao" data-name="niu"></i></li>
+                        <li><i class="iconfont icon-tushengxiao" data-name="tu"></i></li>
+                        <li><i class="iconfont icon-zhushengxiao2" data-name="zhu"></i></li>
+                    </ul> -->
                 </div>
-                <div class="ani bottom">点击查看生肖运势</div>
             </div>
             <!-- page4 -->
             <div class="slider slider-4">
-                <div class="ani title">鼠</div>
+                <div class="ani title"><img src="images/page4-pic-2.png" alt="生肖" /></div>
                 <div class="ani desc">★运势详情：点击查看生肖运势详情点击查看生肖运势详情点击查看生肖运势详情点击查看生肖运势详情点击查看生肖运势详情点击查看生肖运势详情点击查看生肖运势详情点击查看生肖运势详情点击查看生肖运势详情<br/>
                 ★开运吉祥物：慈云阁【慈云阁雄鹰齐辉】</div>
                 <div class="ani bottom">
-                    <a href="javascirpt:;" class="button wx-share">分享我的生肖运势</a>
-                    <a href="javascirpt:;" class="button wx-tip">请老师帮我算算</a>
+                    <a href="javascirpt:;" class="button wx-share" id="wx-share" data-title="">分享我的生肖运势</a>
+                    <a href="javascirpt:;" class="button wx-tip" id="wx-tip" data-title="">请老师帮我算算</a>
                 </div>
             </div>
         </div>
@@ -98,7 +98,7 @@
       if (anim.played[e]) return;
       anim.played[e] = 1,
       anim.add(".slider-1 .title", "moveFromTop"),
-      anim.add(".slider-1 .desc", "moveFromLeft"),
+      anim.add(".slider-1 .desc", "moveFromBottom"),
       anim.add(".slider-1 .logo", "fadeIn"),
       anim.add(".slider-1 .next", "moveFromBottom", {
         remove: !0,
@@ -116,8 +116,8 @@
     function(e) {
       if (anim.played[e]) return;
       anim.played[e] = 1,
-      anim.add(".slider-2 .pic", "fadeIn"),
-      anim.add(".slider-2 .title", "moveFromLeft"),
+      anim.add(".slider-2 .pic", "moveFromTop"),
+      anim.add(".slider-2 .title", "fadeIn"),
       anim.add(".slider-2 .desc", "moveFromBottom"),
       anim.add(".slider-2 .bottom", "zoomOut"),
       anim.add(".slider-2 .next", "moveFromBottom", {
@@ -136,8 +136,8 @@
     function(e) {
       if (anim.played[e]) return;
       anim.played[e] = 1,
-      anim.add(".slider-3 .man", "zoomOut"),
-      anim.add(".slider-3 .bottom", "moveFromBottom"),
+      anim.add(".slider-3 .title", "moveFromTop"),
+      anim.add(".slider-3 .desc", "zoomOut"),
       anim.onComplete = function() {
         anim.onComplete = new Function;
         var e = new Preloader(allImages.images3);
@@ -175,18 +175,46 @@
         }),
         anim.show(0)
     };
+    var fixPic=function(type) {
+      var title="鼠",
+      	  desc="鼠1";
+	  switch (type) {
+	    case "gou":
+	    	title="狗";
+	    	desc="狗1";
+	    	break;
+	    case "hu":
+	    	title="虎";
+	    	desc="虎1";
+	    	break;
+	    case "long":
+	    	title="龙";
+	    	desc="龙1";
+	    	break;
+	    default :
+	    	title="狗";
+	    	desc="狗1";
+	  };
+	  //$(".slider-4 .title").html(title);
+	  $(".slider-4 .desc").html(desc);
+	  //document.title="hello"+title;
+	  $("#wx-share").attr("data-title",title);
+	  $("#wx-tip").attr("data-title",title);
+	};
     var pageEvent=function(){
         var wxShare = $("#wxShare"),
             wxTip = $("#wxTip");
-        $(document).on('tap','.iconfont',function(e){
+        $(document).on('tap','.slider-3 .desc > a',function(e){
             var t = $(this),
             n = t.closest(".slider"),
             r = n.index();
-            type=t.attr("data-type");
-            //add data
-            $(".slider-4 .title").html('马');
-            $(".slider-4 .desc").html('啊');
+            type=t.attr("data-name");
+            alert(type);
+            fixPic(type);
 
+            //add data
+            //$(".slider-4 .title").html('马');
+            //$(".slider-4 .desc").html('啊');
             slider._swipeTop(r, n),
             e.preventDefault();
 
@@ -196,13 +224,19 @@
             r = n.index();
             slider._swipeTop(r, n),
             e.preventDefault();
-        }).on('tap','.wx-share',function(){
+        }).on('tap','#wx-share',function(){
+        	var title=$(this).attr("data-title");
+        	document.title="hello"+title;
             wxShare.show();
-        }).on('tap','.wx-tip',function(){
+        }).on('tap','#wx-tip',function(){
+        	var title=$(this).attr("data-title");
+        	document.title="hello"+title;
             wxTip.show();
         }).on('tap','#wxShare',function(){
+        	document.title="hello";
             $(this).hide();
         }).on('tap','#wxTip',function(){
+        	document.title="hello";
             $(this).hide();
         });
     };
