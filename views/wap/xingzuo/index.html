@@ -10,28 +10,28 @@
 </head>
 <body>
 	<!-- 分享logo -->
-	<img src="http://wangwenjie1314.github.io/views/slidertouch2.0/images/banner.png" class="sharepic" />
+	<img src="images/share-logo.jpg" class="sharepic" />
 	<div class="loading" id="loading"><div class="progress"><div></div></div><div class="loading-text">正在加载中(<em>0</em>/<em>0</em>)……</div></div>
     <div class="page">
         <div class="sliderContainer" id="sliderContainer">
             <!-- page1 -->
             <div class="slider slider-1">
-                <div class="ani title"></div>
-                <div class="ani desc"></div>
-                <div class="ani logo"></div>
+                <img src="images/page1-1.png" class="ani title" />
+                <img src="images/page1-2.png" class="ani desc" />
+                <img src="images/page1-3.png" class="ani logo" />
                 <div class="ani next js-next"></div>
             </div>
             <!-- page2 -->
             <div class="slider slider-2">
-                <div class="ani pic"></div>
-                <div class="ani title"></div>
-                <div class="ani desc"></div>
+            	<img src="images/page2-1.png" class="ani pic" />
+            	<img src="images/page2-2.png" class="ani title" />
+            	<img src="images/page2-3.png" class="ani desc" />
                 <div class="ani bottom"><a href="javascirpt:;" class="button js-next">看看我的运势</a></div>
                 <div class="ani next js-next"></div>
             </div>
             <!-- page3 -->
             <div class="slider slider-3">
-            	<div class="ani title"></div>
+            	<img src="images/page3-1.png" class="ani title" />
                 <div class="ani desc">
                    <a href="javascript:;" class="sx-shu" data-name="shu"></a>
                    <a href="javascript:;" class="sx-niu" data-name="niu"></a>
@@ -45,32 +45,12 @@
                    <a href="javascript:;" class="sx-ji" data-name="ji"></a>
                    <a href="javascript:;" class="sx-gou" data-name="gou"></a>
                    <a href="javascript:;" class="sx-zhu" data-name="zhu"></a>
-
-                   <!--  <ul>
-                        <li><i class="iconfont icon-goushengxiao" data-name="gou"></i></li>
-                        <li><i class="iconfont icon-hushengxiao" data-name="hu"></i></li>
-                        <li><i class="iconfont icon-longshengxiao" data-name="long"></i></li>
-                        <li><i class="iconfont icon-mashengxiao" data-name="ma"></i></li>
-                    </ul>
-                    <ul>
-						<li><i class="iconfont icon-sheshengxiao" data-name="she"></i></li>
-                        <li><i class="iconfont icon-shushengxiao" data-name="shu"></i></li>
-                        <li><i class="iconfont icon-yangshengxiao" data-name="yang"></i></li>
-                        <li><i class="iconfont icon-houshengxiao" data-name="hou"></i></li>
-                    </ul>
-                    <ul>
-						<li><i class="iconfont icon-jishengxiao" data-name="ji"></i></li>
-                        <li><i class="iconfont icon-niushengxiao" data-name="niu"></i></li>
-                        <li><i class="iconfont icon-tushengxiao" data-name="tu"></i></li>
-                        <li><i class="iconfont icon-zhushengxiao2" data-name="zhu"></i></li>
-                    </ul> -->
                 </div>
             </div>
             <!-- page4 -->
             <div class="slider slider-4">
-                <div class="ani title"><img src="images/page4-pic-2.png" alt="生肖" /></div>
-                <div class="ani desc">★运势详情：点击查看生肖运势详情点击查看生肖运势详情点击查看生肖运势详情点击查看生肖运势详情点击查看生肖运势详情点击查看生肖运势详情点击查看生肖运势详情点击查看生肖运势详情点击查看生肖运势详情<br/>
-                ★开运吉祥物：慈云阁【慈云阁雄鹰齐辉】</div>
+                <img src="images/page4-1-long.png" class="ani pic" />
+                <img src="images/page4-2.png" class="ani desc" />
                 <div class="ani bottom">
                     <a href="javascirpt:;" class="button wx-share" id="wx-share" data-title="">分享我的生肖运势</a>
                     <a href="javascirpt:;" class="button wx-tip" id="wx-tip" data-title="">请老师帮我算算</a>
@@ -84,13 +64,17 @@
     <div class="wxTip" id="wxTip"></div>
     <script src="js/app.js"></script>
     <script type="text/javascript">
+    // images: ["http://p4.qhimg.com/d/_open360/ev/ar/wx/0_00.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/0_0.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/0_01.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/0_025.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/0_03.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/0_05.png"],
+	    // images1: ["http://p4.qhimg.com/d/_open360/ev/ar/wx/1_02.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/1_03.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/1_06.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/1_07.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/1_08.png"],
+	    // images2: ["http://p4.qhimg.com/d/_open360/ev/ar/wx/2_00.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/2_03.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/2_04.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/2_06.png"],
+	    // images3: ["http://p4.qhimg.com/d/_open360/ev/ar/wx/3_02.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/3_03.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/3_05.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/3_06.png"],
+	    // images4: ["http://p4.qhimg.com/d/_open360/ev/ar/wx/4_03.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/4_05.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/4_07.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/4_08.png"]
     var slider = {},
 	allImages = {
-	    images: ["http://p4.qhimg.com/d/_open360/ev/ar/wx/0_00.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/0_0.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/0_01.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/0_025.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/0_03.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/0_05.png"],
-	    images1: ["http://p4.qhimg.com/d/_open360/ev/ar/wx/1_02.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/1_03.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/1_06.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/1_07.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/1_08.png"],
-	    images2: ["http://p4.qhimg.com/d/_open360/ev/ar/wx/2_00.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/2_03.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/2_04.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/2_06.png"],
-	    images3: ["http://p4.qhimg.com/d/_open360/ev/ar/wx/3_02.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/3_03.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/3_05.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/3_06.png"],
-	    images4: ["http://p4.qhimg.com/d/_open360/ev/ar/wx/4_03.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/4_05.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/4_07.png", "http://p4.qhimg.com/d/_open360/ev/ar/wx/4_08.png"]
+	    images: ["images/bg-1.png", "images/bg-2.png", "images/swipe-tip.png", "images/page1-1.png", "images/page1-2.png", "images/page1-3.png"],
+	    images1: ["images/page2-1.png", "images/page2-2.png", "images/page2-3.png"],
+	    images2: ["images/page3-1.png", "images/page3-2.png"],
+	    images3: ["images/page4-2.png"],
 	},
 	anim = new Animation;
 	anim.played = [],
@@ -116,7 +100,7 @@
     function(e) {
       if (anim.played[e]) return;
       anim.played[e] = 1,
-      anim.add(".slider-2 .pic", "moveFromTop"),
+      anim.add(".slider-2 .pic", "fadeIn"),
       anim.add(".slider-2 .title", "fadeIn"),
       anim.add(".slider-2 .desc", "moveFromBottom"),
       anim.add(".slider-2 .bottom", "zoomOut"),
@@ -148,14 +132,14 @@
     function(e) {
       if (anim.played[e]) return;
       anim.played[e] = 1,
-      anim.add(".slider-4 .title", "fadeIn"),
+      anim.add(".slider-4 .pic", "fadeIn"),
       anim.add(".slider-4 .desc", "moveFromBottom"),
       anim.add(".slider-4 .bottom", "zoomOut"),
-      anim.onComplete = function() {
-        anim.onComplete = new Function;
-        var e = new Preloader(allImages.images4);
-        e.load();
-      },
+      // anim.onComplete = function() {
+      //   anim.onComplete = new Function;
+      //   var e = new Preloader(allImages.images4);
+      //   e.load();
+      // },
       anim.play()
     }],
 	anim.show = function(e) {
@@ -195,7 +179,7 @@
 	    	title="狗";
 	    	desc="狗1";
 	  };
-	  //$(".slider-4 .title").html(title);
+	  //$(".slider-4 .pic").html(title);
 	  $(".slider-4 .desc").html(desc);
 	  //document.title="hello"+title;
 	  $("#wx-share").attr("data-title",title);
@@ -213,7 +197,7 @@
             fixPic(type);
 
             //add data
-            //$(".slider-4 .title").html('马');
+            //$(".slider-4 .pic").html('马');
             //$(".slider-4 .desc").html('啊');
             slider._swipeTop(r, n),
             e.preventDefault();
