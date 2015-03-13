@@ -1,8 +1,8 @@
 CACHE MANIFEST
-# 2015-03-13 v0
+# 2015-03-13 v1
 css/app.css
 js/app.js
-
+images/*
 
 NETWORK:
 *
