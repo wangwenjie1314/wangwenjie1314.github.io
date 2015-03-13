@@ -1,7 +1,8 @@
 CACHE MANIFEST
-# 2015-03-13 v1
+# 2015-03-13 v2
 css/app.css
 js/app.js
+index.html
 images/favicon.ico
 images/kong.gif
 images/share-logo.jpg
