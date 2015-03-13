@@ -2,7 +2,25 @@ CACHE MANIFEST
 # 2015-03-13 v1
 css/app.css
 js/app.js
-images/*
+images/favicon.ico
+images/kong.gif
+images/share-logo.jpg
+images/swipe-tip.png
+images/bg-1.png
+images/bg-2.png
+images/page1-1.png
+images/page1-2.png
+images/page1-3.png
+images/page2-1.png
+images/page2-2.png
+images/page2-3.png
+images/page3-1.png
+images/page3-2.png
+images/page4-1.png
+images/page4-2.png
+images/bg-1.png
+images/wx-share.png
+images/wx-tip.png
 
 NETWORK:
 *
