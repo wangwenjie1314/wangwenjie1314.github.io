@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 2015-03-13 v2
+# 2015-03-15 v1
 css/app.css
 js/app.js
 index.html
@@ -8,18 +8,26 @@ images/kong.gif
 images/share-logo.jpg
 images/swipe-tip.png
 images/bg-1.png
-images/bg-2.png
 images/page1-1.png
 images/page1-2.png
-images/page1-3.png
 images/page2-1.png
 images/page2-2.png
 images/page2-3.png
 images/page3-1.png
 images/page3-2.png
+images/page4-1-shu.png
+images/page4-1-niu.png
+images/page4-1-hu.png
+images/page4-1-tu.png
 images/page4-1-long.png
-images/page4-2.png
-images/bg-1.png
+images/page4-1-she.png
+images/page4-1-ma.png
+images/page4-1-yang.png
+images/page4-1-hou.png
+images/page4-1-ji.png
+images/page4-1-gou.png
+images/page4-1-zhu.png
+images/page4-2-long.png
 images/wx-share.png
 images/wx-tip.png
 
