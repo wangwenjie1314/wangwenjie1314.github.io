@@ -89,8 +89,12 @@ to{-webkit-transform:rotate(0) translateZ(0)}
 .sharepic{position:absolute;z-index:-1;opacity:0}
 .button{display:inline-block;border:1px solid #fff;padding:0 15px;height:35px;line-height:35px;border-radius:5px;color:#fff;font-size:16px}
 .next{background:url(../images/swipe-tip.png) center center no-repeat;width:20px;height:18px;background-size:20px 18px;position:absolute;left:50%;bottom:5%;margin-left:-10px}
-.slider-1 .title,.slider-1 .logo{width:100%;left:0}
-.slider-1 .title{top:8%}
+.slider-1 .bg,.slider-1 .title,.slider-1 .logo{width:100%;left:0}
+.slider-1 .title,.slider-1 .bg{top:8%}
+.slider-1 .bg{
+	display: block;
+-webkit-animation: rotate 15s linear;
+-webkit-animation-iteration-count: infinite;}
 .slider-1 .logo{bottom:15%}
 .slider-2 .pic,.slider-2 .title,.slider-2 .desc{width:82%;left:50%;margin-left:-41%}
 .slider-2 .pic{top:6%}
@@ -98,22 +102,22 @@ to{-webkit-transform:rotate(0) translateZ(0)}
 .slider-2 .desc{top:43%}
 .slider-2 .bottom{width:300px;height:40px;bottom:11%;left:50%;margin-left:-150px;text-align:center}
 .slider-3 .title,.slider-3 .desc{width:90%;left:50%;margin-left:-45%}
-.slider-3 .title{top:12%}
-.slider-3 .desc{top:22%;height:60%;background:url(../images/page3-2.png) center center no-repeat;background-size:100% 100%}
-.slider-3 .desc > a{display:inline-block;width:24%;height:25%;margin-bottom:10%}
+.slider-3 .title{top:15%}
+.slider-3 .desc{top:28%;height:50%;background:url(../images/page3-2.png) center center no-repeat;background-size:100% 100%}
+.slider-3 .desc > a{display:inline-block;width:24%;height:25%;margin-bottom:11%}
 /*生肖间距 媒体查询*/
-@media all and (max-width:375px){.slider-3 .desc > a{width:23.8%}
+@media all and (max-width:375px){
+	.slider-3 .desc > a{width:23.8%}
 }
-@media all and (min-height:430px) and (max-height:500px){.slider-3 .desc > a{margin-bottom:11%}
+@media all and (min-height:430px) and (max-height:500px){
+	.slider-3 .desc{height: 60%}
 }
-@media all and (min-height:500px) and (max-height:540px){.slider-3 .desc > a{margin-bottom:12%}
+@media all and (min-height:670px){
+	.slider-3 .desc > a{margin-bottom:11.5%}
 }
-@media all and (min-height:540px) and (max-height:570px){.slider-3 .desc > a{margin-bottom:13%}
-}
-@media all and (min-height:570px){.slider-3 .desc > a{margin-bottom:14%}
-}
-.slider-4 .pic,.slider-4 .desc{width:82%;left:50%;margin-left:-41%}
+.slider-4 .pic,.slider-4 .tip,.slider-4 .desc{width:82%;left:50%;margin-left:-41%}
 .slider-4 .pic{top:5%}
+.slider-4 .tip{top:25%}
 .slider-4 .desc{top:35%}
 .slider-4 .bottom{width:100%;left:0;bottom:10%;text-align:center}
 .slider-4 .bottom > .button{margin:0 5px;padding:0 10px}

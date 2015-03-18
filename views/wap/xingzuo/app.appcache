@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 2015-03-15 v4
+# 2015-03-18 v5
 css/app.css
 js/app.js
 index.html
@@ -10,6 +10,7 @@ images/swipe-tip.png
 images/bg-1.png
 images/page1-1.png
 images/page1-2.png
+images/page1-3.png
 images/page2-1.png
 images/page2-2.png
 images/page2-3.png
@@ -27,6 +28,7 @@ images/page4-1-hou.png
 images/page4-1-ji.png
 images/page4-1-gou.png
 images/page4-1-zhu.png
+images/page4-1-tip.png
 images/page4-2-long.png
 images/wx-share.png
 images/wx-tip.png
