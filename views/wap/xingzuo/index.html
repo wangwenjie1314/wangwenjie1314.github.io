@@ -1,284 +1,242 @@
 <!DOCTYPE html>
-<html manifest="app.appcache">
-<!-- <html> -->
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-    <meta name="format-detection" content="telephone=no" />
-	<link rel="shortcut icon" href="http://cdn-img.easyicon.net/favicon.ico">
-	<title>麦玲玲独家解读生肖4月运势-凤凰娱乐</title>
-	<link rel="stylesheet" type="text/css" href="css/app.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="shortcut icon" href="http://cdn-img.easyicon.net/favicon.ico">
+  <title>麦玲玲独家解读生肖4月运势-凤凰娱乐</title>
+  <link rel="stylesheet" href="css/page.css" />
 </head>
 <body>
-	<!-- 分享logo -->
-	<img src="images/share-logo.jpg" class="sharepic" />
-	<div class="loading" id="loading"><div class="progress"><div></div></div><div class="loading-text">正在加载中(<em>0</em>/<em>0</em>)……</div></div>
-    <div class="page">
-        <div class="sliderContainer" id="sliderContainer">
-            <!-- page1 -->
-            <div class="slider slider-1">
-                <img src="images/page1-1.png" class="ani bg" />
-                <img src="images/page1-2.png" class="ani title" />
-                <img src="images/page1-3.png" class="ani logo" />
-                <div class="ani next js-next"></div>
-            </div>
-            <!-- page2 -->
-            <div class="slider slider-2">
-            	<img src="images/page2-1.png" class="ani pic" />
-            	<img src="images/page2-2.png" class="ani title" />
-            	<img src="images/page2-3.png" class="ani desc" />
-                <div class="ani bottom"><a href="javascirpt:;" class="button js-next">看看我的运势</a></div>
-                <div class="ani next js-next"></div>
-            </div>
-            <!-- page3 -->
-            <div class="slider slider-3">
-            	<img src="images/page3-1.png" class="ani title" />
-                <div class="ani desc">
-                   <a href="javascript:;" class="sx-shu" data-name="shu"></a>
-                   <a href="javascript:;" class="sx-niu" data-name="niu"></a>
-                   <a href="javascript:;" class="sx-hu" data-name="hu"></a>
-                   <a href="javascript:;" class="sx-tu" data-name="tu"></a>
-                   <a href="javascript:;" class="sx-long" data-name="long"></a>
-                   <a href="javascript:;" class="sx-she" data-name="she"></a>
-                   <a href="javascript:;" class="sx-ma" data-name="ma"></a>
-                   <a href="javascript:;" class="sx-yang" data-name="yang"></a>
-                   <a href="javascript:;" class="sx-hou" data-name="hou"></a>
-                   <a href="javascript:;" class="sx-ji" data-name="ji"></a>
-                   <a href="javascript:;" class="sx-gou" data-name="gou"></a>
-                   <a href="javascript:;" class="sx-zhu" data-name="zhu"></a>
-                </div>
-            </div>
-            <!-- page4 -->
-            <div class="slider slider-4">
-                <img src="images/page4-1-shu.png" class="ani pic" />
-                <img src="images/page4-1-tip.png" class="ani tip" />
-                <img src="images/page4-2-long.png" class="ani desc" />
-                <div class="ani bottom">
-                    <a href="javascirpt:;" class="button wx-share" id="wx-share" data-title="鼠">请朋友来看的运势</a>
-                    <a href="javascirpt:;" class="button wx-tip" id="wx-tip" data-title="鼠">请老师帮我算算</a>
-                </div>
-            </div>
-        </div>
+  <!-- 微信分享时呈现的分享logo,不显示在页面上但可以被分享抓取 -->
+  <img src="images/share-logo.jpg" class="hide" />
+  <!-- 主内容区 -->
+  <div id="fullpage">
+    <div class="section st1" id="section1">
+      <div class="part part-1">
+          <img src="images/page1-1.png" alt="生肖转盘">
+      </div>
+      <div class="part part-2 fadeIn">
+          <img src="images/page1-2.png" alt="四月运势">
+      </div>
+      <div class="part part-3 slideDown">
+          <img src="images/page1-3.png" alt="logo">
+      </div>
+      <div class="arrow-up slideDown"></div>
     </div>
-    <!-- 分享1-->
-    <div class="wxShare" id="wxShare"></div>
-    <!-- 分享2-->
-    <div class="wxTip" id="wxTip"></div>
-    <script src="js/app.js"></script>
-    <script type="text/javascript">
-    var win_title="麦玲玲独家解读生肖4月运势-凤凰娱乐",
-    win_type="",
-    slider = {},
-	allImages = {
-	    images: ["images/bg-1.png", "images/swipe-tip.png","images/share-logo.jpg","images/page1-1.png","images/page1-2.png","images/page1-3.png"],
-	    images1: ["images/page2-1.png", "images/page2-2.png", "images/page2-3.png"],
-	    images2: ["images/page3-1.png", "images/page3-2.png"],
-	    images3: ["images/page4-1-shu.png","images/page4-1-niu.png","images/page4-1-hu.png","images/page4-1-tu.png","images/page4-1-long.png","images/page4-1-she.png","images/page4-1-ma.png","images/page4-1-yang.png","images/page4-1-hou.png","images/page4-1-ji.png","images/page4-1-gou.png","images/page4-1-zhu.png","images/page4-2-long.png"],
-	},
-	anim = new Animation;
-	anim.played = [],
-    anim.movie = [function(e) {
-      if (anim.played[e]) return;
-      anim.played[e] = 1,
-      anim.add(".slider-1 .title", "fadeIn"),
-      anim.add(".slider-1 .logo", "moveFromBottom"),
-      anim.add(".slider-1 .next", "moveFromBottom", {
-        remove: !0,
-        onComplete: function() {
-          $(".slider-1 .next").css("-webkit-animation", "float 1s linear 0 infinite alternate")
-        }
-      }),
-      anim.onComplete = function() {
-        anim.onComplete = new Function;
-        var e = new Preloader(allImages.images1);
-        e.load()
-      },
-      anim.play()
-    },
-    function(e) {
-      if (anim.played[e]) return;
-      anim.played[e] = 1,
-      anim.add(".slider-2 .pic", "fadeIn"),
-      anim.add(".slider-2 .title", "fadeIn"),
-      anim.add(".slider-2 .desc", "moveFromBottom"),
-      anim.add(".slider-2 .bottom", "zoomOut"),
-      anim.add(".slider-2 .next", "moveFromBottom", {
-        remove: !0,
-        onComplete: function() {
-          $(".slider-2 .next").css("-webkit-animation", "float 1s linear 0 infinite alternate")
-        }
-      }),
-      anim.onComplete = function() {
-        anim.onComplete = new Function;
-        var e = new Preloader(allImages.images2);
-        e.load()
-      },
-      anim.play()
-    },
-    function(e) {
-      if (anim.played[e]) return;
-      anim.played[e] = 1,
-      anim.add(".slider-3 .title", "moveFromTop"),
-      anim.add(".slider-3 .desc", "zoomOut"),
-      anim.onComplete = function() {
-        anim.onComplete = new Function;
-        var e = new Preloader(allImages.images3);
-        e.load();
-      },
-      anim.play()
-    },
-    function(e) {
-      if (anim.played[e]) return;
-      anim.played[e] = 1,
-      anim.add(".slider-4 .pic", "fadeIn"),
-      anim.add(".slider-4 .tip", "fadeIn"),
-      anim.add(".slider-4 .desc", "moveFromBottom"),
-      anim.add(".slider-4 .bottom", "zoomOut"),
-      // anim.onComplete = function() {
-      //   anim.onComplete = new Function;
-      //   var e = new Preloader(allImages.images4);
-      //   e.load();
-      // },
-      anim.play()
-    }],
-	anim.show = function(e) {
-	    // if (anim.played[e]) return;
-	    // anim.played[e] = 1,
-	    // anim.play()
-        anim.movie[e].call(anim, e)
-	};
-    var pageInit=function(){
-        $("#sliderContainer").css("visibility", "visible"),
-        $("#loading").remove(),
-        slider.on("swipeTop",function(e){
-            setTimeout(function(){anim.show(e + 1)},500)
-        }),
-        slider.on("swipeBottom",function(e) {
-            setTimeout(function() {anim.show(e - 1)},500)
-        }),
-        anim.show(0)
-    };
-    var fixPic=function(type) {
-      var title="鼠";
-	  switch (type) {
-	  	case "niu":
-	    	title="牛";
-	    	break;
-	    case "hu":
-	    	title="虎";
-	    	break;
-	    case "tu":
-	    	title="兔";
-	    	break;
-	    case "long":
-	    	title="龙";
-	    	break;
-	    case "she":
-	    	title="蛇";
-	    	break;
-	    case "ma":
-	    	title="马";
-	    	break;
-	    case "yang":
-	    	title="羊";
-	    	break;
-	    case "hou":
-	    	title="猴";
-	    	break;
-	    case "ji":
-	    	title="鸡";
-	    	break;
-	    case "gou":
-	    	title="狗";
-	    	break;
-	    case "zhu":
-	    	title="猪";
-	    	break;
-	    default :
-	    	title="鼠";
+    <div class="section st2" id="section2">
+      <div class="part part-1 fadeIn">
+          <img src="images/page2-1.png" alt="麦玲玲头像">
+      </div>
+      <div class="part part-2 slideDown">
+          <img src="images/page2-2.png" alt="麦玲玲职称">
+      </div>
+      <div class="part part-3 slideDown">
+          <img src="images/page2-3.png" alt="麦玲玲介绍">
+      </div>
+      <div class="part part-4 heartBeat">
+          <a href="javascirpt:;" class="button" id="js-next">看看我的运势</a>
+      </div>
+      <div class="arrow-up slideDown"></div>
+    </div>
+    <div class="section st3" id="section3">
+      <div class="part part-1 slideDown">
+          <img src="images/page3-1.png" alt="生肖操作提示">
+      </div>
+      <div class="part part-2 slideDown">
+      	<ul>
+      		<li><img src="images/page3-2-1.png" alt="鼠"/></li>
+      		<li><img src="images/page3-2-2.png" alt="牛"/></li>
+      		<li><img src="images/page3-2-3.png" alt="虎"/></li>
+      		<li><img src="images/page3-2-4.png" alt="兔"/></li>
+      		<li><img src="images/page3-2-5.png" alt="龙"/></li>
+      		<li><img src="images/page3-2-6.png" alt="蛇"/></li>
+      		<li><img src="images/page3-2-7.png" alt="马"/></li>
+      		<li><img src="images/page3-2-8.png" alt="羊"/></li>
+      		<li><img src="images/page3-2-9.png" alt="猴"/></li>
+      		<li><img src="images/page3-2-10.png" alt="鸡"/></li>
+      		<li><img src="images/page3-2-11.png" alt="狗"/></li>
+      		<li><img src="images/page3-2-12.png" alt="猪"/></li>
+      	</ul>
+      </div>
+    </div>
+    <div class="section st4" id="section4">
+      <div class="part part-1 fadeIn">
+          <img src="images/page4-1-1.png" alt="生肖-大图">
+      </div>
+      <div class="part part-2 heartBeat">
+          <img src="images/page4-1-tip.png" alt="生肖操作提示">
+      </div>
+      <div class="part part-3 slideDown">
+          <img src="images/page4-2-1.png" alt="生肖运势描述">
+      </div>
+      <div class="part part-4 slideDown">
+          <a href="javascirpt:;" class="button" id="wx-btn-share" data-title="鼠">请朋友来看运势</a>
+          <a href="javascirpt:;" class="button" id="wx-btn-follow">请老师帮我算算</a>
+      </div>
+    </div>
+  </div>
+  <!-- WAP分享-->
+  <div class="wx-share-wap" id="wx-share-wap"></div>
+  <!-- WAP关注-->
+  <div class="wx-follow-wap" id="wx-follow-wap">
+    <img src="images/wx-ewm.png" class="wxEwm" />
+  </div>
+  <!-- PC遮罩层-->
+  <div class="wx-modal-bg" id="wx-modal-bg"></div>
+  <!-- PC分享-->
+  <div class="wx-share-pc" id="wx-share-pc">
+	<img src="images/wx-share-pc.png" alt="微信分享二维码" />
+  	<p>用微信扫描二维码</p>
+  	<p>分享至好友和朋友圈</p>
+  </div>
+  <!-- PC关注-->
+  <div class="wx-follow-pc" id="wx-follow-pc">
+    <img src="images/wx-follow-pc.png" alt="微信关注二维码"/>
+    <p>第一步：用微信扫描二维码，关注凤凰娱乐微信公共号
+	<p>第二步：发送“我要算运势+姓名”给主页君，主页君将抽奖若干网友，邀麦玲玲老师来算一算！</p>
+	<p>第三步：凤凰娱乐将会在3日内回复运势详情给中奖网友。</p>
+  </div>
+  <script src="js/app.js"></script>
+  <script type="text/javascript">
+	$(document).ready(function(){
+	  //公共变量
+	  var win_title="麦玲玲独家解读生肖4月运势-凤凰娱乐",
+	    win_type="",
+	    win_href=window.location.href.split("#")[0],
+	    win_href_temp=win_href;
+	  //配置init
+	  $('#fullpage').fullpage({
+	    anchors: ['1page','2page','3page','4page'],
+	    verticalCentered: false,
+	    resize:true,
+	    continuousVertical: false
+	  });
+	  //获取变量
+	  var az_img_1= $("#section4 .part-1 img"),
+	  	az_img_2= $("#section4 .part-3 img"),
+	  	wx_btn_share= $("#wx-btn-share"),
+	  	wx_btn_follow= $("#wx-btn-follow"),
+	  	wx_share_wap=$("#wx-share-wap"),
+	  	wx_follow_wap=$("#wx-follow-wap"),
+	  	wx_modal_bg=$("#wx-modal-bg"),
+	  	wx_share_pc=$("#wx-share-pc"),
+	  	wx_follow_pc=$("#wx-follow-pc"),
+	  	js_next=$("#js-next");
+	  //向下事件
+	  js_next.click(function(e){
+	    e.preventDefault();
+	    $.fn.fullpage.moveSectionDown();
+	  });
+	  var fixPic=function(index){
+	  	switch (index){
+		  	case 0:
+		    	win_type="鼠";
+		    	break;
+		    case 1:
+		    	win_type="牛";
+		    	break;
+		    case 2:
+		    	win_type="虎";
+		    	break;
+		    case 3:
+		    	win_type="兔";
+		    	break;
+		    case 4:
+		    	win_type="龙";
+		    	break;
+		    case 5:
+		    	win_type="蛇";
+		    	break;
+		    case 6:
+		    	win_type="马";
+		    	break;
+		    case 7:
+		    	win_type="羊";
+		    	break;
+		    case 8:
+		    	win_type="猴";
+		    	break;
+		    case 9:
+		    	win_type="鸡";
+		    	break;
+		    case 10:
+		    	win_type="狗";
+		    	break;
+		    case 11:
+		    	win_type="猪";
+		    	break;
+	    	default :
+	    		win_type="鼠";
+	    }
+	    var pic_img="images/page4-1-"+(index+1)+".png",
+	  	  desc_img="images/page4-2-1.png";//没有真实内容先以1为例
+		  az_img_1.attr("src",pic_img);
+		  az_img_2.attr("src",desc_img);
+		  wx_btn_share.attr("data-title",win_type);
+	  };
+	  //对每个生肖绑定事件
+	  $("#section3 .part-2").delegate("li","click",function(){
+	  	fixPic($(this).index());
+	  	$.fn.fullpage.moveSectionDown();
+	  });
+	  //点击生肖大图 返回上一页
+	  az_img_1.click(function(e){
+	  	e.preventDefault();
+	    $.fn.fullpage.moveSectionUp();
+	  });
+	  //适配设备
+	  if(/Android|webOS|iPhone|Windows Phone|iPod|BlackBerry|SymbianOS/i.test(navigator.userAgent)){
+	  	//===WAP分享===
+	  	//点击分享
+	  	wx_btn_share.click(function(){
+	       var title=$(this).attr("data-title");
+	       document.title="我的生肖是"+title+"，你也来测试一下你的生肖运势吧";
+	       win_href_temp=window.location.href;
+	       window.location.href=win_href+"#";
+	       wx_share_wap.show();
+	    });
+	    //分享点击关闭
+	    wx_share_wap.click(function(){
+	       document.title=win_title;
+	  	   $(this).hide();
+	    });
+	  	//===WAP关注===
+	  	//点击关注
+	    wx_btn_follow.click(function(){
+	      wx_follow_wap.show();
+	    });
+	    //关注点击关闭
+	    wx_follow_wap.click(function(){
+	      $(this).hide();
+	    });
+	  }else{
+	  	//===PC分享===
+	  	wx_btn_share.click(function(){
+	  		wx_modal_bg.addClass("active");
+	  		wx_share_pc.addClass("active");
+	  	});
+	  	wx_share_pc.click(function(){
+	  		$(this).removeClass("active");
+	  		wx_modal_bg.removeClass("active");
+	  	});
+	  	//===PC关注===
+	  	wx_btn_follow.click(function(){
+	  		wx_modal_bg.addClass("active");
+	  		wx_follow_pc.addClass("active");
+	  	});
+	  	wx_follow_pc.click(function(){
+	  		$(this).removeClass("active");
+	  		wx_modal_bg.removeClass("active");
+	  	});
+	  	wx_modal_bg.click(function(){
+	  		$(this).removeClass("active");
+	  		wx_share_pc.removeClass("active");
+	  		wx_follow_pc.removeClass("active");
+	  	});
 	  }
-	  var pic_img="images/page4-1-"+type+".png",
-	  	  desc_img="images/page4-2-long.png";
-	  $(".slider-4 .pic").attr("src",pic_img);
-	  $(".slider-4 .desc").attr("src",desc_img);
-	  $("#wx-share").attr("data-title",title);
-	  $("#wx-tip").attr("data-title",title);
-	};
-    var pageEvent=function(){
-        var wxShare = $("#wxShare"),
-            wxTip = $("#wxTip");
-        $(document).on('tap','.slider-3 .desc > a',function(e){
-            var t = $(this),
-            n = t.closest(".slider"),
-            r = n.index();
-            win_type=t.attr("data-name");
-            fixPic(win_type);
-            slider._swipeTop(r, n),
-            e.preventDefault();
-        }).on('tap','.js-next',function(e){
-            var t = $(this),
-            n = t.closest(".slider"),
-            r = n.index();
-            slider._swipeTop(r, n),
-            e.preventDefault();
-        }).on('tap','.slider-4 .pic',function(e){
-            var t = $(this),
-            n = t.closest(".slider"),
-            r = 3;
-            slider._swipeBottom(r, n),
-            e.preventDefault();
-        }).on('tap','#wx-share',function(){
-        	var title=$(this).attr("data-title");
-        	document.title="我的生肖是"+title+"，你也来测试一下你的生肖运势吧";
-            wxShare.show();
-        }).on('tap','#wx-tip',function(){
-        	var title=$(this).attr("data-title");
-        	document.title="我的生肖是"+title+"，请麦玲玲老师帮我算算";
-            wxTip.show();
-        }).on('tap','#wxShare',function(){
-        	document.title=win_title;
-            $(this).hide();
-        }).on('tap','#wxTip',function(){
-        	document.title=win_title;
-            $(this).hide();
-        });
-    };
-    var animApp = {
-        images: allImages.images,
-        init: function() {
-            slider = new TouchSlider("#sliderContainer", ".slider", {
-                vertical: !0
-            });
-            var e = this,
-            t = this.getPreloader();
-            t.onProgress = this.onPreloadProgress,
-            t.load(function() {
-                e.onPreloadLoad()
-            }),
-            window.timer_loaded = setTimeout(function() {
-                e.onPreloadLoad()
-            },5e3)
-        },
-        getPreloader: function() {
-            return new Preloader(this.images)
-        },
-        onPreloadProgress: function(e, t) {
-            var n = $("#loading em"),
-            r = $("#loading .progress > div");
-            n.eq(0).text(e),
-            n.eq(1).text(t),
-            r.css("-webkit-transition", "all .4s ease-in-out"),
-            r.width(100 * e / t + "%")
-        },
-        onPreloadLoad: function() {
-            clearTimeout(window.timer_loaded)
-            setTimeout(pageInit, 500)
-        }
-    };
-    $(function(){
-        animApp.init();
-        pageEvent();
-    });
-    </script>
+	});
+  </script>
 </body>
 </html>
