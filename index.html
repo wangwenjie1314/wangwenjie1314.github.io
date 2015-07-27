@@ -8,74 +8,75 @@
   <title>前端风景</title>
   <meta name="author" content="wangwenjie" />
   <link rel="shortcut icon" href="statics/images/favicon.ico" />
-  <link rel="stylesheet" href="statics/css/blog-index.css" />
+  <link rel="stylesheet" href="statics/css/bootstrap.min.css" />
   <link rel="stylesheet" href="statics/css/font-awesome.min.css">
-  <!--[if IE 7]><link rel="stylesheet" href="statics/css/font-awesome-ie7.min.css"><![endif]-->
+  <style type="text/css">
+ body{background-color:#f5f5f5}
+.navbar{background-color:#454545;box-shadow:#000 0 3px 30px;border-radius:0;border-color:#454545;margin-bottom:0}
+.navbar-default .navbar-brand,.navbar-default .navbar-nav>li>a{color:#cfcfcf}
+.navbar-default .navbar-brand:hover,.navbar-default .navbar-nav>li>a:hover{color:#f8f8f8}
+.navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:focus,.navbar-default .navbar-nav>.active>a:hover{background-color:#454545;color:#f8f8f8}
+.wechat-link{position:relative}
+.wechat-link img{display:none;position:absolute;top:51px;right:-103px;width:250px;z-index:10000}
+.wechat-link:hover img{display:block}
+.banner{background-color:#f5f5f5;background-size:cover;background-image:url(statics/images/banner.png);height:200px;left:0;position:absolute;right:0;top:40px;width:100%;z-index:-2}
+.block-contents{border-radius:3px;-webkit-box-shadow:1px 1px 3px #d9d9d9;-moz-box-shadow:1px 1px 3px #d9d9d9;box-shadow:1px 1px 3px #d9d9d9;padding:25px;padding-bottom:10px;position:relative;margin-top:113px}
+.block-contents .bg-contents{border-radius:3px;background:#fff;height:100%;left:0;opacity:0.85;position:absolute;top:0;width:100%;z-index:-1}
+.block-contents h1.title{font-family:"黑体";margin-top:0}
+.block-contents .contents{z-index:5;min-height:623px}
+.list-group-item{color:#28a2b8 !important;border:0 none;border-bottom: 1px solid #ddd;margin-bottom: 0}
+.list-group-item i{position:absolute;top:10px;right:10px;font-style:normal}
+.footer{background-color:#383838;margin-top:30px;padding:20px 0 10px 0;color:#999}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
   <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="//hm.baidu.com/hm.js?1cb7855a914b199e5bbfce083b9d1f5a";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();</script>
  </head>
  <body>
-  <header class="header">
-   <div class="navigation container_12">
-    <div class="row">
-     <section class="grid_2 logo"><a href="http://wangwenjie1314.github.io/">前端风景</a></section>
-     <div class="grid_8">
-      <nav role="navigation">
-       <ul role="main-navigation">
-        <li><a href="http://wangwenjie1314.github.io/blog/" target="_blank">文章</a></li>
-        <li><a href="http://wangwenjie1314.github.io/views/tool/index.html" target="_blank"><i class="icon-briefcase"></i> 前端工具箱</a></li>
-        <li><a href="http://wangwenjie1314.github.io/views/weblearn/index.html" target="_blank">前端知识</a></li>
-        <li><a href="https://github.com/wangwenjie1314/webQd/blob/master/README.md" target="_blank">前端面试</a></li>
-        <li><a href="http://wangwenjie1314.github.io/views/about/me.html" target="_blank">关于我</a></li>
-       </ul>
-      </nav>
-     </div>
-     <div class="social grid_2 share_link">
-      <span><a href="http://www.renren.com/260146739" target="_blank"><i class="icon-renren" title="人人"></i></a>
-      <a href="http://weibo.com/wangwenjie1314" target="_blank"><i class="icon-weibo" title="微博"></i></a></span>
-     </div>
-     <!--hide -->
-     <div class="grid_6 dn"><a class="current" href="http://wangwenjie1314.github.io/">前端风景</a></div><div class="grid_6 dn"><a href="http://wangwenjie1314.github.io/blog/">文章列表</a></div>
-     <!-- hide end-->
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://wangwenjie1314.github.io/">前端风景</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="http://wangwenjie1314.github.io/">文章 <span class="sr-only">(current)</span></a></li>
+          <li><a href="http://wangwenjie1314.github.io/views/tool/index.html"><i class="icon-briefcase"></i> 前端工具箱</a></li>
+          <li><a href="http://wangwenjie1314.github.io/views/weblearn/index.html" target="_blank">前端知识</a></li>
+          <li><a href="https://github.com/wangwenjie1314/webQd/blob/master/README.md" target="_blank">前端面试</a></li>
+          <li><a href="http://wangwenjie1314.github.io/views/about/me.html" target="_blank">关于我</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="javascript:;" class="wechat-link"><i class="fa fa-wechat" title="微信"></i><img src="statics/images/wechat.jpg" class="wechat-img" /></a></li>
+          <li><a href="http://www.renren.com/260146739" target="_blank"><i class="fa fa-renren" title="人人"></i></a></li>
+          <li><a href="http://weibo.com/wangwenjie1314" target="_blank"><i class="fa fa-weibo" title="微博"></i></a></li>
+        </ul>
+      </div>
     </div>
-   </div>
-  </header>
+  </nav>
   <div class="banner"></div>
-  <section class="main container_12">
-   <div class="row">
-    <div class="area-header"></div>
-    <div class="block-contents">
-     <div class="bg-contents"></div>
-     <h1 class="title">列表</h1>
-     <div class="contents">
-      <div class="index">
-       <ul class="article-list" id="article-list"></ul>
+  <section class="container">
+    <div class="block-contents clearfix">
+      <div class="bg-contents"></div>
+      <h1 class="title">列表</h1>
+      <div class="contents">
+        <div class="list-group" id="article-list"></div>
       </div>
-      <div class="page-content">
-       <span class="fl"><a href="javascript:;" id="page-prev" class="dn">上一页</a></span>
-       <span class="fr"><a href="javascript:;" id="page-next" class="dn">下一页</a></span>
-      </div>
-      <div class="clear"></div>
-     </div>
     </div>
-   </div>
   </section>
-  <footer class="footer" role="contentinfo">
-   <div class="footer-content container_12">
-    <div class="row">
-     <div class="grid_6 left">
-     	<span>特别说明:本站所有资源仅供学习与参考,请勿用于商业用途。转载请注明来自https://github.com/wangwenjie1314</span>
-     </div>
-     <div class="copyright grid_6 right">
-      <span>Powered by welefen and <a target="_blank" href="https://github.com/wangwenjie1314">github</a>&copy; 2014 </span>
-     </div>
-    </div>
-   </div>
+  <footer class="footer">
+    <div class="container"><p>特别说明:本站所有资源仅供学习与参考,请勿用于商业用途。转载请注明来自https://github.com/wangwenjie1314</p></div>
   </footer>
-<!-- 模板 -->
 <script id="tpl" type="text/html">
-{{each lists as t }}
-  <li><a href="{{t.link}}" target="_blank">{{t.title}}</a><time>{{t.time}}</time></li>
-{{/each}}
+{{each lists as t }}<a href="{{t.link}}" target="_blank" class="list-group-item">{{t.title}}<i>{{t.time}}</i></a>{{/each}}
 </script>
   <script type="text/javascript" src="statics/js/jquery.min.js"></script>
   <script type="text/javascript" src="statics/js/template.js"></script>
