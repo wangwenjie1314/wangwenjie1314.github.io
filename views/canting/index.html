@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <meta name="apple-touch-fullscreen" content="yes"/>
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="renderer" content="webkit"/>
+  <link rel="shortcut icon" href="images/favicon.ico"/>
+  <title>盘点明星们在北京开的餐厅-凤凰娱乐</title>
+  <link rel="stylesheet" href="css/app.css" />
+  <script type="text/javascript">window.location.href=window.location.href.split("#")[0]+"#firstpage";</script>
+</head>
+<body>
+  <!-- 微信分享时呈现的分享logo,不显示在页面上但可以被分享抓取 -->
+  <img src="images/share-logo.jpg" class="hide" />
+  <div class="loading" id="loading"><div class="progress" id="progress"><div></div></div><div class="loading-text">正在加载中(<em id="loading_em">0</em>%)……</div></div>
+  <!-- 主内容区 -->
+  <div id="fullpage">
+    <div class="section st1" id="section1">
+	    <div class="section-box">
+	      <div class="part part-logo">
+	          <img src="images/page1-logo.png" alt="凤凰娱乐logo"/>
+	      </div>
+	      <div class="part part-1 rubberBand">
+	          <img src="images/page1-1.png" alt="明星餐厅"/>
+	      </div>
+	      <div class="part part-2 rotate">
+	          <img src="images/page1-2.png" alt="红星"/>
+	      </div>
+	      <div class="part part-3 flash">
+	          <img src="images/page1-3.png" alt="跑马灯"/>
+	      </div>
+	      <div class="part part-4 tada slideDown">
+	        <img src="images/page1-4.png" id="wx-btn-next" alt="开启美食之旅"/>
+	      </div>
+	      <div class="go float"></div>
+	    </div>
+    </div>
+    <div class="section st2" id="section2">
+	    <div class="section-box">
+	      <div class="part part-1 bounceInDown">
+	      	  <p><img src="images/page2-1.png" alt="明星1"/><a href="javascript:;" data-role="1"></a></p>
+	      </div>
+	      <div class="part part-2 bounceInDown">
+	      	  <p><img src="images/page2-2.png" alt="明星2"/><a href="javascript:;" data-role="2"></a></p>
+	      </div>
+	      <div class="part part-3 bounceInDown">
+	      	  <p><img src="images/page2-3.png" alt="明星3"/><a href="javascript:;" data-role="3"></a></p>
+	      </div>
+	      <div class="part part-4 bounceInDown">
+	      	  <p><img src="images/page2-4.png" alt="明星4"/><a href="javascript:;" data-role="4"></a></p>
+	      </div>
+	      <div class="part part-5 bounceInDown">
+	      	  <p><img src="images/page2-5.png" alt="明星5"/><a href="javascript:;" data-role="5"></a></p>
+	      </div>
+	      <div class="part part-6 bounceInDown">
+	      	  <p><img src="images/page2-6.png" alt="明星6"/><a href="javascript:;" data-role="6"></a></p>
+	      </div>
+	      <div class="part part-7 bounceInDown">
+	      	  <p><img src="images/page2-7.png" alt="明星7"/><a href="javascript:;" data-role="7"></a></p>
+	      </div>
+	      <div class="part part-8 bounceInDown">
+	      	  <p><img src="images/page2-8.png" alt="明星8"/><a href="javascript:;" data-role="8"></a></p>
+	      </div>
+	    </div>
+    </div>
+    <div class="section st3" id="section3">
+	    <div class="section-box">
+			<div class="part part-1 slideDown">
+			  <p><img src="images/page3-1-1.png"/><em></em></p>
+	        </div>
+	        <div class="part part-2 slideDown">
+	      	  <img src="images/page3-2-1.png"/>
+	        </div>
+	        <div class="part part-3 slideDown">
+	      	  <img src="images/page3-3.png" id="wx-btn-view" alt="查看菜单"/>
+	        </div>
+	    </div>
+    </div>
+    <div class="section st4" id="section4">
+	    <div class="section-box">
+			<div class="part part-1 slideDown">
+	      	  <p><img src="images/page3-1-1.png"/><em></em></p>
+	        </div>
+	        <div class="part part-2 slideDown">
+				<ul>
+					<li><img src="" /></li>
+					<li><img src="" /></li>
+					<li><img src="" /></li>
+					<li><img src="" /></li>
+				</ul>
+	        </div>
+	        <div class="part part-3 slideDown">
+	          <p id="wx-btn-share"><img src="images/page4-btn-1.png" /></p>
+	          <p id="wx-btn-back"><img src="images/page4-btn-2.png" /></p>
+	        </div>
+	    </div>
+    </div>
+  </div>
+  <!-- WAP分享-->
+  <div class="wx-share-wap" id="wx-share-wap"></div>
+  <!-- WAP菜品-->
+  <div class="wx-menu-view" id="wx-menu-view">
+  	<div class="wx-menu-box">
+		<img src="" id="wx-menu-img" />
+		<p class="wx-menu-close" id="wx-menu-close"><img src="images/icon-btn-close.png" /></p>
+  	</div>
+  </div>
+  <!-- PC遮罩层-->
+  <div class="wx-modal-bg" id="wx-modal-bg"></div>
+  <!-- PC分享-->
+  <div class="wx-share-pc" id="wx-share-pc">
+	<img src="images/wx-share-pc.png" alt="微信分享二维码" />
+  	<p>用微信扫描二维码</p>
+  	<p>分享至好友和朋友圈</p>
+  </div>
+  <!-- PC首屏提示-->
+  <div class="wx-view-tip-pc" id="wx-view-tip-pc">
+  	<img src="images/page1-tip.png" alt="首屏操作提示"/>
+  </div>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript">
+	var globa_num=1,wx_title_arrs=["明星1","明星2","明星3","明星4","明星5","明星6","明星7","明星8"],//定义明星名字
+	wx_img_path="images/",//配置切好的图片路径
+	xg_img_path="images/",//配置需要修改变化的图片路径
+	load_imgs = [wx_img_path + "page1-1.png",wx_img_path + "page1-2.png",wx_img_path + "page1-3.png",wx_img_path + "page1-4.png",wx_img_path + "page1-bg.png",wx_img_path + "page1-logo.png",wx_img_path + "swipe-tip.png",wx_img_path + "share-logo.jpg",wx_img_path + "page2-1.png",wx_img_path + "page2-2.png",wx_img_path + "page2-3.png",wx_img_path + "page2-4.png",wx_img_path + "page2-5.png",wx_img_path + "page2-6.png",wx_img_path + "page2-7.png",wx_img_path + "page2-8.png",wx_img_path + "page2-bg.png",wx_img_path + "page3-3.png",wx_img_path + "page4-btn-1.png",wx_img_path + "page4-btn-2.png",wx_img_path + "wx-share.png",xg_img_path + "page3-1-1.png",xg_img_path + "page3-1-2.png",xg_img_path + "page3-1-3.png",xg_img_path + "page3-1-4.png",xg_img_path + "page3-1-5.png",xg_img_path + "page3-1-6.png",xg_img_path + "page3-1-7.png",xg_img_path + "page3-1-8.png",xg_img_path + "page3-2-1.png",xg_img_path + "page3-2-2.png",xg_img_path + "page3-2-3.png",xg_img_path + "page3-2-4.png",xg_img_path + "page3-2-5.png",xg_img_path + "page3-2-6.png",xg_img_path + "page3-2-7.png",xg_img_path + "page3-2-8.png",xg_img_path + "page4-2-1-1.png",xg_img_path + "page4-2-1-2.png",xg_img_path + "page4-2-1-3.png",xg_img_path + "page4-2-1-4.png",xg_img_path + "page4-2-2-1.png",xg_img_path + "page4-2-2-2.png",xg_img_path + "page4-2-2-3.png",xg_img_path + "page4-2-2-4.png",xg_img_path + "page4-2-3-1.png",xg_img_path + "page4-2-3-2.png",xg_img_path + "page4-2-3-3.png",xg_img_path + "page4-2-3-4.png",xg_img_path + "page4-2-4-1.png",xg_img_path + "page4-2-4-2.png",xg_img_path + "page4-2-4-3.png",xg_img_path + "page4-2-4-4.png",xg_img_path + "page4-2-5-1.png",xg_img_path + "page4-2-5-2.png",xg_img_path + "page4-2-5-3.png",xg_img_path + "page4-2-5-4.png",xg_img_path + "page4-2-6-1.png",xg_img_path + "page4-2-6-2.png",xg_img_path + "page4-2-6-3.png",xg_img_path + "page4-2-6-4.png",xg_img_path + "page4-2-7-1.png",xg_img_path + "page4-2-7-2.png",xg_img_path + "page4-2-7-3.png",xg_img_path + "page4-2-7-4.png",xg_img_path + "page4-2-8-1.png",xg_img_path + "page4-2-8-2.png",xg_img_path + "page4-2-8-3.png",xg_img_path + "page4-2-8-4.png",xg_img_path + "page4-3-1-1.png",xg_img_path + "page4-3-1-2.png",xg_img_path + "page4-3-1-3.png",xg_img_path + "page4-3-1-4.png",xg_img_path + "page4-3-2-1.png",xg_img_path + "page4-3-2-2.png",xg_img_path + "page4-3-2-3.png",xg_img_path + "page4-3-2-4.png",xg_img_path + "page4-3-3-1.png",xg_img_path + "page4-3-3-2.png",xg_img_path + "page4-3-3-3.png",xg_img_path + "page4-3-3-4.png",xg_img_path + "page4-3-4-1.png",xg_img_path + "page4-3-4-2.png",xg_img_path + "page4-3-4-3.png",xg_img_path + "page4-3-4-4.png",xg_img_path + "page4-3-5-1.png",xg_img_path + "page4-3-5-2.png",xg_img_path + "page4-3-5-3.png",xg_img_path + "page4-3-5-4.png",xg_img_path + "page4-3-6-1.png",xg_img_path + "page4-3-6-2.png",xg_img_path + "page4-3-6-3.png",xg_img_path + "page4-3-6-4.png",xg_img_path + "page4-3-7-1.png",xg_img_path + "page4-3-7-2.png",xg_img_path + "page4-3-7-3.png",xg_img_path + "page4-3-7-4.png",xg_img_path + "page4-3-8-1.png",xg_img_path + "page4-3-8-2.png",xg_img_path + "page4-3-8-3.png",xg_img_path + "page4-3-8-4.png"];
+  	if(!app_bower){load_imgs.push(wx_img_path + "page1-bg-pc.png",wx_img_path + "page1-tip.png",wx_img_path + "page2-bg-pc.png",wx_img_path + "icon-canting.png",wx_img_path + "wx-share-pc.png");}//pc额外加载
+	var animApp={images:load_imgs,init:function(){var e=this,t=this.getPreloader();t.onProgress=this.onPreloadProgress,t.load(function(){e.onPreloadLoad()}),window.timer_loaded=setTimeout(function(){e.onPreloadLoad()},5e3)},getPreloader:function(){return new Preloader(this.images)},onPreloadProgress:function(e,t){var n=$("#loading_em"),r=$("#progress > div");var val=Math.ceil(100*e/t);n.text(val);r.width(val+"%")},onPreloadLoad:function(){clearTimeout(window.timer_loaded);setTimeout(pageInit,500)}};
+	var change_title=function(title){document.title="我想去吃"+title+"开的餐厅，你也一起来吧！";};//定义标题改变
+	var wx_menu=$("#section4 .part-2"),wx_menu_li=$("#section4 .part-2 li"),wx_menu_num=wx_menu_li.length;
+	var menu_img_change=function(){//菜单图片更换 // wx_menu_li.find("img").attr("src","");
+	  	var imgs=[xg_img_path+"page4-2-"+globa_num+"-1.png",xg_img_path+"page4-2-"+globa_num+"-2.png",xg_img_path+"page4-2-"+globa_num+"-3.png",xg_img_path+"page4-2-"+globa_num+"-4.png"];
+	    for(var i=0;i<wx_menu_num;i++){
+			wx_menu_li.eq(i).find("img").attr("src",imgs[i]);
+		}
+	};
+	function pageInit(){
+	  $("#loading").remove();//移除loading
+	  if(app_bower){//wap
+  	  	$("body").addClass("wap");
+		$('#fullpage').fullpage({
+		    anchors: ['firstpage','secondpage','thredpage','fouthpage'],
+		    verticalCentered: false,
+		    resize:true,
+		    continuousVertical: false,
+		    afterLoad: function(index, nextIndex, direction){
+	    		if(nextIndex==3){
+	    			var title=$("#wx-btn-share").attr("data-title");
+	    			change_title(title);
+	    		}
+		    },
+		    onLeave: function(index, nextIndex, direction){
+	    		if(nextIndex<4){
+	    			$("#wx-share-wap").hide();
+	    			$("#wx-menu-view").removeClass("active");
+	    		}else{
+	    			menu_img_change();//if(nextIndex==4)menu_img_change();
+	    		}
+		    }
+		});
+  	  }else{//pc
+  	  	$("body").addClass("pc");
+  	  	var wx_view_tip_pc=$("#wx-view-tip-pc");
+  	  	wx_view_tip_pc.show();
+		$('#fullpage').fullpage({
+		    anchors: ['firstpage','secondpage','thredpage','fouthpage'],
+		    verticalCentered: false,
+		    resize:true,
+		    continuousVertical: false,
+		    onLeave: function(index, nextIndex, direction){
+	    		nextIndex==1?wx_view_tip_pc.show():wx_view_tip_pc.hide();
+	    		if(nextIndex<4){
+	    			$("#wx-share-pc").removeClass("active");
+	    			$("#wx-modal-bg").removeClass("active");
+	    			$("#wx-menu-view").removeClass("active");
+	    		}else{
+	    			menu_img_change();//if(nextIndex==4)menu_img_change();
+	    		}
+		    }
+		});
+  	  }
+	}
+  $(function(){
+  	if(!app_bower&&(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/8./i)=="8.")){
+  		pageInit();//ie8单独处理
+  	}else{
+ 		animApp.init();
+ 	}
+  	//初始参数
+	var wx_btn_share= $("#wx-btn-share"),
+	wx_share_wap=$("#wx-share-wap"),
+	wx_modal_bg=$("#wx-modal-bg"),
+	wx_share_pc=$("#wx-share-pc"),
+	wx_btn_next=$("#wx-btn-next"),
+	wx_btn_back=$("#wx-btn-back"),
+	wx_btn_view=$("#wx-btn-view"),
+	wx_menu_view=$("#wx-menu-view"),
+	wx_menu_img=$("#wx-menu-img"),
+	wx_menu_close=$("#wx-menu-close");
+	menu_img_change();
+	wx_btn_share.attr("data-title",wx_title_arrs[0]);
+	wx_btn_next.click(function(e){
+	  e.preventDefault();
+	  $.fn.fullpage.moveSectionDown();
+	});
+	wx_btn_back.click(function(e){
+	  e.preventDefault();
+	  $.fn.fullpage.moveTo(2);
+	});
+	//点击明星头像 查看餐馆
+	var ct_img_tt=$("#section3 .part-1 img"),
+		ct_img_tt_2=$("#section4 .part-1 img")
+		ct_img_ms=$("#section3 .part-2 img");
+	$("#section2 .part").on("click","a",function(e){
+		var target=$(e.target);
+		globa_num=target.attr("data-role");
+		wx_btn_next.click();
+		// ct_img_tt.attr("src","");ct_img_ms.attr("src","");
+		var imgs=[xg_img_path+"page3-1-"+globa_num+".png",xg_img_path+"page3-2-"+globa_num+".png"];
+        ct_img_tt.attr("src",imgs[0]);
+		ct_img_tt_2.attr("src",imgs[0]);
+		ct_img_ms.attr("src",imgs[1]);
+		wx_btn_share.attr("data-title",wx_title_arrs[globa_num-1]);
+	});
+	//点击 查看菜单
+	wx_btn_view.click(function(){
+		wx_btn_next.click();
+	  	menu_img_change();
+	});
+	//点击4个菜品 出现弹窗
+	wx_menu.on("click","li",function(){
+		wx_menu_img.attr("src",xg_img_path+"page4-3-"+globa_num+"-"+($(this).index()+1)+".png");
+		wx_menu_view.addClass("active");
+	});
+	wx_menu_close.click(function(){
+		wx_menu_view.removeClass("active");
+		wx_menu_img.attr("src","");
+	});
+	//适配设备
+	if(app_bower){
+	  	//分享-WAP
+	  	wx_btn_share.click(function(){
+	       wx_share_wap.show();
+	    });
+	    wx_share_wap.click(function(){
+	  	   $(this).hide();
+	    });
+	  }else{
+	  	//分享-PC
+	  	wx_btn_share.click(function(){
+	  		wx_modal_bg.addClass("active");
+	  		wx_share_pc.addClass("active");
+	  	});
+	  	wx_share_pc.click(function(){
+	  		$(this).removeClass("active");
+	  		wx_modal_bg.removeClass("active");
+	  	});
+	  	wx_modal_bg.click(function(){
+	  		$(this).removeClass("active");
+	  		wx_share_pc.removeClass("active");
+	  	});
+	}
+  });
+  </script>
+</body>
+</html>
