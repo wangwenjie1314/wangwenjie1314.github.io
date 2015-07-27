@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>quickhtml</title>
+	<link rel="stylesheet" type="text/css" href="../../statics/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<h2>快速构建静态页面开发模板<small>致力于gulp 不喜欢grunt</small></h2>
+		<h3>项目地址</h3>
+		<p><a href="https://coding.net/u/wangwenjie/p/QuickHtmlFrame/git" target="_blank">https://coding.net/u/wangwenjie/p/QuickHtmlFrame/git</a></p>
+		<h3>如何下载</h3>
+		<p><blockquote>git clone https://git.coding.net/wangwenjie/QuickHtmlFrame.git</blockquote></p>
+		<h3>目录结构</h3>
+		<p><blockquote>pc_ie6 pc端基于ui框架兼容ie6 构建快速模板<br><br>
+		pc_bootstrap pc端基于bootstrap框架 构建快速模板<br><br>
+		pc_gulp_ie6 pc端基于gulp(旧版本，仅支持windows[将项目中node_modules压缩包解压至该目录下])+sass+ui兼容ie6 构建快速模板<br><br>
+		pc_gulp_ie6_adv pc端基于gulp(新版本，windows/liunx/mac均可)+sass+ui兼容ie6 构建快速模板<br><br>
+		pc_gulp_require_ie6_adv pc端基于gulp(新版本，windows/liunx/mac均可)+require+sass+ui兼容ie6 构建快速模板<br><br>
+		pc_gulp_bootstrap pc端基于gulp(旧版本，仅支持windows[将项目中node_modules压缩包解压至该目录下])+sass+bootstrap 构建快速模板<br><br>
+		pc_gulp_bootstrap_adv pc端基于gulp(新版本，windows/liunx/mac均可)+sass+bootstrap 构建快速模板<br><br>
+		pc_gulp_require_bootstrap_adv pc端基于gulp(新版本，windows/liunx/mac均可)+require+sass+bootstrap 构建快速模板<br><br>
+		wap_amaze wap端基于amaze框架 构建快速模板<br><br>
+		wap_normal wap端无框架 构建快速模板<br><br>
+		wap_gulp_amaze wap端基于gulp(旧版本，仅支持windows[将项目中node_modules压缩包解压至该目录下])+sass+amaze框架 构建快速模板<br><br>
+		wap_gulp_amaze_adv wap端基于gulp(新版本，windows/liunx/mac均可)+sass+amaze 构建快速模板<br><br>
+		wap_gulp_noraml wap端基于gulp(旧版本，仅支持windows[将项目中node_modules压缩包解压至该目录下])+sass 构建快速模板<br><br>
+		wap_gulp_normal_adv wap端基于gulp(新版本，windows/liunx/mac均可)+sass 构建快速模板<br><br>
+		wap_gulp_require_normal_adv wap端基于gulp(新版本，windows/liunx/mac均可)+require+sass 构建快速模板</blockquote></p>
+		<h3>特殊说明</h3>
+		<p>以上目录中含 gulp字符的文件夹，需要进入该目录 <br>然后在控制台执行以下命令才可以正常运行(需要node npm)：</p>
+		<p><blockquote>//先拉取运行所需要的环境<br><br>
+		npm install --save--dev<br><br>
+		//拉取环境成功以后 执行开发环境跑起来//自动打开浏览器 自动刷新改动<br><br>
+		gulp serve<br><br>
+		//开发结束后 产出静态页面文件给后台技术 或者自己使用<br><br>
+		gulp default</blockquote></p>
+		<p>》》如果 gulp serve 后报错，那么 请记得修改 gulpfile.js 里面的 myComputerIp(不清楚那么请往下看) ;</p>
+		<p>另 手机端wap开发基于gulp开发，</p>
+		<p>如果需要手机端开发看下页面效果，那么需要手机和电脑在同一个路由器网络下，然后查看电脑ip地址（以作者的10.58.139.169为例），那么手机端浏览器的地址为：http://10.58.139.169:9000/ （9000为gulp配置默认端口）</p>
+		<p>如果需要开启手机端调试模式，那么需要配置下[wap_gulp_amaze] 和 [wap_gulp_noraml] 目录下"gulpfile.js"中的 weinre任务</p>
+		<p><blockquote>var myComputerIp="10.58.139.169";//修改为你开发环境所在的电脑ip</blockquote></p>
+		<h3>author</h3>
+		<p>wangwenjie(<a href="http://wangwenjie1314.github.io" target="_blank">http://wangwenjie1314.github.io</a>)</p>
+		<h3>License</h3>
+		<p>MIT License</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <title>麦玲玲独家解读生肖4月运势-凤凰星座</title>
+  <link rel="stylesheet" href="css/app.css" />
+  <script type="text/javascript">window.location.href=window.location.href.split("#")[0]+"#firstpage";</script>
+  <script src="js/app.js"></script>
+  <script type="text/javascript">
+	var app_bower=/Android|webOS|iPhone|Windows Phone|iPod|BlackBerry|SymbianOS/i.test(navigator.userAgent);
+	var change_title=function(title){document.title="我的4月"+title+"！快让大师也帮你算算4月运势吧";};
+  	$(document).ready(function(){
+  	  if(app_bower){//wap
+		$('#fullpage').fullpage({
+		    anchors: ['firstpage','secondpage','thredpage','fouthpage'],
+		    verticalCentered: false,
+		    resize:true,
+		    continuousVertical: false,
+		    onLeave: function(index, nextIndex, direction){
+		    	if(nextIndex==3)$("#wx-loading").hide();
+	    		if(nextIndex==4){
+	    			var title=$("#wx-btn-share").attr("data-title");
+	    			change_title(title);
+	    		}
+		    }
+		});
+  	  }else{//pc
+  	  	$("body").addClass("pc");
+  	  	var wx_view_tip_pc=$("#wx-view-tip-pc");
+  	  	wx_view_tip_pc.show();
+		$('#fullpage').fullpage({
+		    anchors: ['firstpage','secondpage','thredpage','fouthpage'],
+		    verticalCentered: false,
+		    resize:true,
+		    continuousVertical: false,
+		    onLeave: function(index, nextIndex, direction){
+	    		nextIndex==1?wx_view_tip_pc.show():wx_view_tip_pc.hide();
+	    		if(nextIndex==3)$("#wx-loading").hide();
+		    }
+		});
+  	  }
+  	});
+  </script>
+</head>
+<body>
+  <!-- 微信分享时呈现的分享logo,不显示在页面上但可以被分享抓取 -->
+  <img src="images/share-logo.jpg" class="hide" />
+  <!-- 主内容区 -->
+  <div id="fullpage">
+    <div class="section st1" id="section1">
+      <div class="part part-1 rotate">
+          <img src="images/page1-1.png" alt="生肖转盘"/>
+      </div>
+      <div class="part part-2 fadeIn">
+          <img src="images/page1-2.png" alt="四月运势"/>
+      </div>
+      <div class="part part-3 slideDown">
+          <img src="images/page1-3.png" alt="凤凰星座logo"/>
+      </div>
+      <div class="arrow-up float"></div>
+    </div>
+    <div class="section st2" id="section2">
+      <div class="part part-1 fadeIn">
+          <img src="images/page2-1.png" alt="麦玲玲头像"/>
+      </div>
+      <div class="part part-2 slideDown">
+          <img src="images/page2-2.png" alt="麦玲玲职称"/>
+      </div>
+      <div class="part part-3 slideDown">
+          <img src="images/page2-3.png" alt="麦玲玲介绍"/>
+      </div>
+      <div class="part part-5 slideDown heartBeat">
+          <a href="javascript:;" class="button" id="js-next">看看我的运势</a>
+      </div>
+      <div class="arrow-up float"></div>
+    </div>
+    <div class="section st3" id="section3">
+      <div class="part part-1 slideDown">
+          <img src="images/page3-1.png" alt="生肖操作提示"/>
+      </div>
+      <div class="part part-2 slideDown" >
+      	<ul>
+      		<li><img src="images/page3-2-1.png" alt="鼠"/></li>
+      		<li><img src="images/page3-2-2.png" alt="牛"/></li>
+      		<li><img src="images/page3-2-3.png" alt="虎"/></li>
+      		<li><img src="images/page3-2-4.png" alt="兔"/></li>
+      		<li><img src="images/page3-2-5.png" alt="龙"/></li>
+      		<li><img src="images/page3-2-6.png" alt="蛇"/></li>
+      		<li><img src="images/page3-2-7.png" alt="马"/></li>
+      		<li><img src="images/page3-2-8.png" alt="羊"/></li>
+      		<li><img src="images/page3-2-9.png" alt="猴"/></li>
+      		<li><img src="images/page3-2-10.png" alt="鸡"/></li>
+      		<li><img src="images/page3-2-11.png" alt="狗"/></li>
+      		<li><img src="images/page3-2-12.png" alt="猪"/></li>
+      	</ul>
+      </div>
+      <div class="part part-3 slideDown">
+          <img src="images/page3-3.png" alt="凤凰星座水印"/>
+      </div>
+    </div>
+    <div class="section st4" id="section4">
+      <div class="part part-1 fadeIn heartBeat">
+          <img src="images/page4-1-1.png"/>
+      </div>
+      <div class="part part-2 slideDown">
+          <img src="http://y0.ifengimg.com/l/2015/13/f041bf93518b72b/page4-2-1.png"/>
+      </div>
+	  <div class="part part-3 slideDown">
+          <img src="images/page3-3.png" alt="凤凰星座水印"/>
+      </div>
+      <div class="part part-4 slideDown">
+          <a href="javascript:;" class="button" id="wx-btn-share" data-title="工作运顺遂！">请朋友来看运势</a>
+          <a href="javascript:;" class="button" id="wx-btn-follow">请老师帮我算算</a>
+      </div>
+    </div>
+  </div>
+  <!-- WAP分享-->
+  <div class="wx-share-wap" id="wx-share-wap"></div>
+  <!-- WAP关注-->
+  <div class="wx-follow-wap" id="wx-follow-wap">
+    <img src="images/wx-ewm.png" class="wxEwm" />
+  </div>
+  <!-- PC遮罩层-->
+  <div class="wx-modal-bg" id="wx-modal-bg"></div>
+  <!-- PC分享-->
+  <div class="wx-share-pc" id="wx-share-pc">
+	<img src="images/wx-share-pc.png" alt="微信分享二维码" />
+  	<p>用微信扫描二维码</p>
+  	<p>分享至好友和朋友圈</p>
+  </div>
+  <!-- PC关注-->
+  <div class="wx-follow-pc" id="wx-follow-pc">
+    <img src="images/wx-follow-pc.png" alt="微信关注二维码"/>
+    <p>第一步：用微信扫描二维码，关注凤凰娱乐微信公共号
+	<p>第二步：发送“我要算运势+姓名”给主页君，主页君将抽奖若干网友，邀麦玲玲老师来算一算！</p>
+	<p>第三步：凤凰娱乐将会在3日内回复运势详情给中奖网友。</p>
+  </div>
+  <!-- PC首屏提示-->
+  <div class="wx-view-tip-pc" id="wx-view-tip-pc">
+  	<img src="images/page1-4.png" alt="首屏操作提示"/>
+  </div>
+  <!--loading-->
+  <div class="wx-loading" id="wx-loading"></div>
+  <script type="text/javascript">
+	$(document).ready(function(){
+	  //公共变量
+	  var az_img_1= $("#section4 .part-1 img"),
+	  	az_img_2= $("#section4 .part-2 img"),
+	  	wx_btn_share= $("#wx-btn-share"),
+	  	wx_btn_follow= $("#wx-btn-follow"),
+	  	wx_share_wap=$("#wx-share-wap"),
+	  	wx_follow_wap=$("#wx-follow-wap"),
+	  	wx_modal_bg=$("#wx-modal-bg"),
+	  	wx_share_pc=$("#wx-share-pc"),
+	  	wx_follow_pc=$("#wx-follow-pc"),
+	  	wx_loading=$("#wx-loading"),
+	  	js_next=$("#js-next"),
+	  	wx_title_arrs=["工作运顺遂","破财运重","努力能得到回报","有地位提升之象","心情易受到困扰","宜努力发展事业","财运超级棒","可借助贵人力量","工作会辛苦","会出现新突破","易与伴侣有纷争","工作量减少"];
+	  if(!app_bower){//pc
+	  	var s3_p1=$("#section3 .part-1"),
+  		s3_p2=$("#section3 .part-2"),
+  		s3_p3=$("#section3 .part-3"),
+  		win_hei=$(window).height();
+	  	if(win_hei<800){
+	  		s3_p1.css("bottom","18%");
+	  		s3_p2.css("top","15%");
+	  		s3_p3.css("bottom","8%");
+	  	}else if(win_hei<900){
+	  		s3_p1.css("bottom","20%");
+	  		s3_p2.css("top","20%");
+	  		s3_p3.css("bottom","10%");
+	  	}else{
+	  		s3_p1.css("bottom","25%");
+	  		s3_p2.css("top","20%");
+	  		s3_p3.css("bottom","12%");
+	  	}
+	  }
+	  js_next.click(function(e){
+	    e.preventDefault();
+	    $.fn.fullpage.moveSectionDown();
+	  });
+	  var fixPic=function(index){
+	  	wx_loading.show();
+	  	az_img_1.attr("src","").attr("alt","");
+		az_img_2.attr("src","").attr("alt","");
+	  	var title=wx_title_arrs[index];
+	  	var imgs=["images/page4-1-"+(index+1)+".png","images/page4-2-"+(index+1)+".png"];
+	  	var preloaded = imgs.length,
+        	beginLoad = 0;
+	  	for(var i=0;i<preloaded;i++){
+	  		var image = $('<img />').attr('src', imgs[i]);
+            image.on('load', function(){
+            	beginLoad++;
+            	if (beginLoad == preloaded){
+            		az_img_1.attr("src",imgs[0]);
+					az_img_2.attr("src",imgs[1]);
+					wx_btn_share.attr("data-title",title);
+					//wx_loading.hide();
+					setTimeout(function(){wx_loading.hide();},300);
+            	}
+            });
+	  	}
+	  };
+	  //对每个生肖绑定事件
+	  $("#section3 .part-2").on("click","li",function(e){
+	  	e.preventDefault();
+	  	$.fn.fullpage.moveSectionDown();
+	  	fixPic($(this).index());
+	  });
+	  //点击生肖大图 返回上一页
+	  az_img_1.click(function(e){
+	  	e.preventDefault();
+	    $.fn.fullpage.moveSectionUp();
+	  });
+	  //适配设备
+	  if(app_bower){
+	  	//分享-WAP
+	  	wx_btn_share.click(function(){
+	       wx_share_wap.show();
+	    });
+	    wx_share_wap.click(function(){
+	  	   $(this).hide();
+	    });
+	  	//关注-WAP
+	    wx_btn_follow.click(function(){
+	      wx_follow_wap.show();
+	    });
+	    wx_follow_wap.click(function(){
+	      $(this).hide();
+	    });
+	  }else{
+	  	//分享-PC
+	  	wx_btn_share.click(function(){
+	  		wx_modal_bg.addClass("active");
+	  		wx_share_pc.addClass("active");
+	  	});
+	  	wx_share_pc.click(function(){
+	  		$(this).removeClass("active");
+	  		wx_modal_bg.removeClass("active");
+	  	});
+	  	//关注-PC
+	  	wx_btn_follow.click(function(){
+	  		wx_modal_bg.addClass("active");
+	  		wx_follow_pc.addClass("active");
+	  	});
+	  	wx_follow_pc.click(function(){
+	  		$(this).removeClass("active");
+	  		wx_modal_bg.removeClass("active");
+	  	});
+	  	wx_modal_bg.click(function(){
+	  		$(this).removeClass("active");
+	  		wx_share_pc.removeClass("active");
+	  		wx_follow_pc.removeClass("active");
+	  	});
+	  }
+	});
+  </script>
+</body>
+</html>
