@@ -87,8 +87,8 @@
   <script type="text/javascript" src="statics/js/require.js"></script>
   <script type="text/javascript" src="statics/js/require.config.js"></script>
   <script type="text/javascript">
-  requirejs(['jquery','domReady','template','collapse'],function($,domReady,template){
-      domReady(function(){
+  requirejs(['jquery','template','collapse'],function($,template){
+      $(function(){
         $.getJSON("pages.json",function(data) {
           $('#article-list').html(template('tpl', data));
         });
