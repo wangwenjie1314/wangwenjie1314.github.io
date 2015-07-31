@@ -89,8 +89,41 @@ window.onload = function(){
                     }
                 });
             };
-        //显示已登录 这里可以换成ajax
-        $("#Login_y").removeAttr("style");
-        commom_header_fn();//调用header展开
-    },100);
+         //ajax跨域jsonp
+         $.ajax({
+            type : "GET",
+            url : "http://uc.letvcloud.com/conmmonPage/showHeaderParam.do",
+            dataType: 'jsonp',
+            jsonp: 'jsoncallback',
+            success : function(data) {
+                if(typeof data.username == "undefined"|| data.username == ""){
+                    $("#logout").hide();
+                    $("#Login_n").removeAttr("style");
+                    commom_header_fn();
+                    return;
+                }else{
+                    $("#Login_y").removeAttr("style");
+                }
+                username.html( data.username);
+                messagecount.html( data.messageCount);
+                var manageArray = data.managecontrol;
+
+                var templast="";
+
+                if(manageArray.length>0) {
+                    var html = '<div class="le-header-uc-items items-control clearfix" > <ul class="item clearfix">';
+                    for (var i = 0; i < manageArray.length; i++) {
+                        html = html + "<li class='" + templast + "'><a target='_top' href='" + manageArray[i].url + "'>" + manageArray[i].name + "</a></li>";
+                    }
+                    html =  html+ " <li class='last'><a target='_top' href='http://data.letvcloud.com'>Data+</a></li>'"
+                    html = html + '</ul><i class="arrow"></i></div>';
+                    manage.after(html);
+                }
+                commom_header_fn();
+            },
+            error:function(){
+                commom_header_fn();
+            }
+        });
+    },500);
 }
