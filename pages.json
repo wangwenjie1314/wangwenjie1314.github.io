@@ -1,12 +1,17 @@
 {
     "lists": [
         {
+            "link": "http://www.zi-han.net/theme/hplus/",
+            "title": "[框架]H+ 后台主题UI框架[仅参考该作者融合的插件s]",
+            "time": "2015-11-01"
+        },
+        {
             "link": "views/fontawesome9/index.html",
             "title": "[字体]fontawesome4.4不支持IE7",
             "time": "2015-09-01"
         },
         {
-            "link": "views/quickhtml/index.html",
+            "link": "https://coding.net/u/wangwenjie/p/fedautotool/git",
             "title": "[模板]快速构建静态页面开发模板框架",
             "time": "2015-07-23"
         },
