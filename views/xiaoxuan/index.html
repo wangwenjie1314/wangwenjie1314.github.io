@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+	<title>亲爱的肖璇同学，一定要开心yo</title>
+	<meta name="description" content="肖璇同学，我好喜欢你，我愿意把全部都给你">
+	<link href="images/favicon.ico" rel="shortcut icon" type="images/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/parallax.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+<div class="wrapper">
+	<div class="pages">
+		<!-- 第一屏 -->
+		<section class="page">
+			<div class="box-txt clearfix" data-animation="slideToTop" data-delay="10" data-timing-function="ease-out">
+				<p>Hi，亲爱的肖璇同学：</p>
+				<p>感觉到你最近心情不好，想着能让你开心一点，苦于自己情商太低，不会安慰你，绞尽脑汁想到了做一个H5相册，希望你能开心起来😊</p>
+				<p>手指往上轻轻滑动 go</p>
+			</div>
+		</section>
+        <!-- 第二屏 -->
+		<section class="page">
+			<div class="box-txt right clearfix" data-animation="slideToTop" data-delay="10" data-timing-function="ease-out">
+				<p>嘿嘿，先放一张你的最❤ 宇彬，据说看到自己最爱的明星，心情就大好哦</p>
+				<p>不过说心里话我很讨厌这哥们，他竟然长的那么帅，腿那么长，那么有型，我私心想着让丫快点滚犊子😄️</p>
+			</div>
+		</section>
+        <!-- 第三屏 -->
+		<section class="page">
+			<div class="box-txt clearfix" data-animation="slideToTop" data-delay="10" data-timing-function="ease-out">
+				<p>我很喜欢你的这张自拍，酷帅极了</p>
+				<p>还记得第一次见面，你就带个大墨镜，我看到第一眼就被你迷住了，真的，我一直没告诉你。我心想好diao的女生，我喜欢</p>
+			</div>
+		</section>
+		<!-- 第四屏 -->
+		<section class="page">
+			<div class="box-txt right clearfix" data-animation="slideToTop" data-delay="10" data-timing-function="ease-out">
+				<p>再来张温柔贤惠的萌妹子</p>
+				<p>我还喜欢你的一点是切换自如，有时候大姐风范，有时候萌妹子小女生</p>
+			</div>
+		</section>
+		<!-- 第五屏 -->
+		<section class="page">
+			<div class="box-txt clearfix" data-animation="fadeIn" data-delay="100">
+				<p>仔细回找了下，发现咱俩的合照不多，放上这张😄</p>
+				<p>我想说的是：我发现你在我心里很重要，你不开心，即便是我万事ok，但是我也整个人不好了，想骚啦骚啦的安慰安慰你，又发现自己情商太低，有时候说的话很2b，唉，程序猿啊，我费尽心思去翻查别人的经验，但是话到嘴口说出来或者打字的时候删删减减，反而不是我当初的本意，真是越在意越完犊子。</p>
+				<p>不过呢，想到这么个方式传递一下，想着能让你开心一下，记住事情总会往好的方向发展的，因为咱们年轻啊～</p>
+				<p>最后送你一句伴随我很久的话:</p>
+				<p>Keep your face to the sunshine and you can't see the shadow!</p>
+				<p>sorted by 文杰 么么哒～</p>
+			</div>
+		</section>
+	</div>
+	<!-- 心 飘-->
+	<div class="xin xin-1"></div>
+	<div class="xin xin-2"></div>
+	<div class="xin xin-3"></div>
+	<div class="xin xin-4"></div>
+	<!-- 加入音乐元素-->
+	<div class="music">
+		<audio id="audio" autoplay="autoplay" loop="loop" src="audio/1.mp3"></audio>
+		<div class="music-btn" id="music-btn">
+			<div class="music-open" id="music-open">
+			<img src="images/pause.png" />
+			<img src="images/play.gif" />
+			</div>
+			<div class="music-close dn" id="music-close">
+			<img src="images/play.png" />
+			<img src="images/paused2.png" />
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/parallax.js"></script>
+<script type="text/javascript">
+$('.pages').parallax({
+	direction: 'vertical', 	// horizontal (水平翻页)
+	swipeAnim: 'cover', 	// cover (切换效果)
+	drag:      true,		// 是否允许拖拽 (若 false 则只有在 touchend 之后才会翻页)
+	loading:   true,		// 有无加载页
+	indicator: false,		// 有无指示点
+	arrow:     true,		// 有无指示箭头
+});
+</script>
+<script type="text/javascript">
+window.onload=function(){
+	var audio=document.getElementById("audio"),
+		music_btn=$("#music-btn"),
+		music_flag=false,
+		music_open=$("#music-open"),
+		music_close=$("#music-close");
+	music_btn.on('click',function(){
+		if(!music_flag){
+			music_open.hide();
+			music_close.show();
+			audio.pause();
+			music_flag=true;
+		}else{
+			music_close.hide();
+			music_open.show();
+			audio.play();
+			music_flag=false;
+		}
+	});
+	WeixinApi.ready(function(Api){
+	    var wxData = {
+	        "appId": "",
+	        "imgUrl" : 'http://wangwenjie1314.github.io/views/sliderlove/images/icon.jpg',
+	        "link" : 'http://wangwenjie1314.github.io/views/xiaoxuan/index.html',
+	        "desc" : '肖璇同学，我好喜欢你，我愿意把全部都给你',
+	        "title" : "亲爱的肖璇同学，一定要开心yo"};
+	    var wxCallbacks={};
+	    Api.shareToFriend(wxData, wxCallbacks);
+	    Api.shareToTimeline(wxData, wxCallbacks);
+	    Api.shareToWeibo(wxData, wxCallbacks);
+	});
+};
+</script>
+</body>
+</html>
