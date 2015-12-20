@@ -82,14 +82,12 @@
 <script type="text/javascript">
 $('.pages').parallax({
 	direction: 'vertical', 	// horizontal (水平翻页)
-	swipeAnim: 'cover', 	// cover (切换效果)
+	swipeAnim: 'default', 	// cover (切换效果)
 	drag:      true,		// 是否允许拖拽 (若 false 则只有在 touchend 之后才会翻页)
 	loading:   true,		// 有无加载页
 	indicator: false,		// 有无指示点
 	arrow:     true,		// 有无指示箭头
 });
-</script>
-<script type="text/javascript">
 window.onload=function(){
 	var audio=document.getElementById("audio"),
 		music_btn=$("#music-btn"),
@@ -108,18 +106,6 @@ window.onload=function(){
 			audio.play();
 			music_flag=false;
 		}
-	});
-	WeixinApi.ready(function(Api){
-	    var wxData = {
-	        "appId": "",
-	        "imgUrl" : 'http://wangwenjie1314.github.io/views/sliderlove/images/icon.jpg',
-	        "link" : 'http://wangwenjie1314.github.io/views/xiaoxuan/index.html',
-	        "desc" : '肖璇同学，我好喜欢你，我愿意把全部都给你',
-	        "title" : "亲爱的肖璇同学，一定要开心yo"};
-	    var wxCallbacks={};
-	    Api.shareToFriend(wxData, wxCallbacks);
-	    Api.shareToTimeline(wxData, wxCallbacks);
-	    Api.shareToWeibo(wxData, wxCallbacks);
 	});
 };
 </script>
