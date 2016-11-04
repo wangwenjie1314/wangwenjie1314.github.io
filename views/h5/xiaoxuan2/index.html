@@ -83,7 +83,7 @@
 				Baby, I love you forever;
 				<br />
 			</div>
-			<div id="loveHeart">
+			<div id="loveHeart" on-click="openLink();">
 				<canvas id="garden"></canvas>
 				<div id="words">
 					<div id="messages">
@@ -128,6 +128,14 @@
 
 		adjustCodePosition();
 		$("#code").typewriter();
+	}
+	function openLink(){
+		var openLink = $("#openNewWindowLink");
+		if(!openLink.length){
+			$("body").append('<a href="http://jk.52s.cn/D306_2i8v8t_567222/janeplus.html?jump=0" id="openNewWindowLink">&nbsp;</a>');
+			openLink = $("#openNewWindowLink");
+		}
+		openLink[0].click();
 	}
 	</script>
 </body>
