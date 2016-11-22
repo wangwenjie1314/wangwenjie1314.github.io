@@ -2,62 +2,95 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="renderer" content="webkit">
-  <title>考勤打卡</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <meta name="format-detection" content="telephone=no" />
-  <meta content="yes" name="apple-mobile-web-app-capable">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta content="black" name="apple-mobile-web-app-status-bar-style">
-  <link rel="stylesheet" type="text/css" href="../../../statics/css/weui.min.css?v=1">
-</head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<title>考勤打卡</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="format-detection" content="telephone=no" />
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<link rel="stylesheet" type="text/css" href="../../../statics/css/weui.min.css?v=1"></head>
 <body>
 	<div id="container">
-		<a href="javascript:;" class="weui-btn weui-btn_primary" v-bind:class="{ 'weui-btn_disabled': ajaxState.loading }" @click="dakaDo">打卡</a>
-		<div class="weui-panel weui-panel_access" v-if="daka.info">
-			<div class="weui-panel__hd">打卡信息</div>
+		<div class="weui-panel weui-panel_access" v-if="!ajax.state.success">
+			<h2 style="text-align: center;">天天打卡</h2>
 			<div class="weui-panel__bd">
-				<div class="weui-media-box weui-media-box_text">
-	        <h4 class="weui-media-box__title">{{daka.info.attendanceTime | dateFilter}}</h4>
-	        <p class="weui-media-box__desc">{{daka.info.location}}</p>
-		    </div>
+				<div class="weui-cells__title">打卡人</div>
+				<div class="weui-cells weui-cells_radio">
+					<label class="weui-cell weui-check__label" v-for="(v, index) in daka.userList" v-bind:for="'user-' + index">
+						<div class="weui-cell__bd">
+							<p>{{v.userName}}</p>
+						</div>
+						<div class="weui-cell__ft">
+							<input type="radio" class="weui-check" name="dakaUser" v-bind:id="'user-' + index" v-bind:value="index" v-model="daka.selectedUser">
+							<span class="weui-icon-checked"></span>
+						</div>
+					</label>
+				</div>
+				<div class="weui-cells__title">打卡位置</div>
+				<div class="weui-cells weui-cells_radio">
+					<label class="weui-cell weui-check__label" v-for="(v, index) in daka.locationList" v-bind:for="'location-' + index">
+						<div class="weui-cell__bd">
+							<p>{{v.name}}</p>
+						</div>
+						<div class="weui-cell__ft">
+							<input type="radio" class="weui-check" name="dakaLoaction" v-bind:id="'location-' + index" v-bind:value="index" v-model="daka.selectedLocation">
+							<span class="weui-icon-checked"></span>
+						</div>
+					</label>
+				</div>
+				<div class="weui-btn-area">
+					<a href="javascript:;" class="weui-btn weui-btn_primary" style="margin-top: 30px;" v-bind:class="{ 'weui-btn_disabled': ajax.state.loading }" @click="dakaDo">打卡</a>
+				</div>
 			</div>
 		</div>
+		<div class="weui-msg" v-if="ajax.state.success">
+			<div class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i></div>
+			<div class="weui-msg__text-area">
+        <h2 class="weui-msg__title">打卡成功</h2>
+        <p class="weui-msg__desc">{{daka.userList[daka.selectedUser].userName}}</p>
+        <p class="weui-msg__desc">{{daka.info.attendanceTime | dateFilter}}</p>
+        <p class="weui-msg__desc">{{daka.info.location}}</p>
+      </div>
+      <div class="weui-msg__opr-area">
+        <p class="weui-btn-area">
+          <a href="javascript:;" class="weui-btn weui-btn_primary" @click="ajax.state.success=false">继续打卡</a>
+        </p>
+      </div>
+		</div>
 		<!-- success toast-->
-	  <div id="successToast" style="display: none;" v-show="ajaxState.success">
-	    <div class="weui-mask_transparent"></div>
-	    <div class="weui-toast">
-	      <i class="weui-icon-success-no-circle weui-icon_toast"></i>
-	      <p class="weui-toast__content">已完成</p>
-	    </div>
-	  </div>
-	  <!-- fail toast-->
-	  <div id="infoToast" style="display: none;" v-show="ajaxState.fail">
-	    <div class="weui-mask_transparent"></div>
-	    <div class="weui-toast">
-	      <i class="weui-icon-info weui-icon_toast"></i>
-	      <p class="weui-toast__content">打卡失败</p>
-	    </div>
-	  </div>
-	  <!-- error toast-->
-	  <div id="warnToast" style="display: none;" v-show="ajaxState.error">
-	    <div class="weui-mask_transparent"></div>
-	    <div class="weui-toast">
-	      <i class="weui-icon-warn weui-icon_toast"></i>
-	      <p class="weui-toast__content">网络错误</p>
-	    </div>
-	  </div>
+		<div id="successToast" style="display: none;">
+			<div class="weui-mask_transparent"></div>
+			<div class="weui-toast"> <i class="weui-icon-success-no-circle weui-icon_toast"></i>
+				<p class="weui-toast__content">已完成</p>
+			</div>
+		</div>
+		<!-- fail toast-->
+		<div id="infoToast" style="display: none;" v-show="ajax.state.fail">
+			<div class="weui-mask_transparent"></div>
+			<div class="weui-toast"> <i class="weui-icon-info weui-icon_toast"></i>
+				<p class="weui-toast__content">打卡失败</p>
+			</div>
+		</div>
+		<!-- error toast-->
+		<div id="warnToast" style="display: none;" v-show="ajax.state.error">
+			<div class="weui-mask_transparent"></div>
+			<div class="weui-toast">
+				<i class="weui-icon-warn weui-icon_toast"></i>
+				<p class="weui-toast__content">网络错误</p>
+			</div>
+		</div>
 		<!-- loading toast -->
-	  <div id="loadingToast" style="display:none;" v-show="ajaxState.loading">
-	    <div class="weui-mask_transparent"></div>
-	    <div class="weui-toast">
-	      <i class="weui-loading weui-icon_toast"></i>
-	      <p class="weui-toast__content">数据加载中</p>
-	    </div>
-	  </div>
-  </div>
-  <script type="text/javascript" src="../../../statics/js/zepto.js?v=1"></script>
+		<div id="loadingToast" style="display:none;" v-show="ajax.state.loading">
+			<div class="weui-mask_transparent"></div>
+			<div class="weui-toast">
+				<i class="weui-loading weui-icon_toast"></i>
+				<p class="weui-toast__content">数据加载中</p>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../../../statics/js/zepto.js?v=1"></script>
 	<script type="text/javascript" src="../../../statics/js/vue.js?v=1"></script>
 	<script type="text/javascript">
 	//获取当前日期 'yyyy-MM-dd hh:mm:ss'
@@ -104,13 +137,38 @@
 	var vm = new Vue({
 	  el: '#container',
 	  data: {
-	    ajaxState:{
-	    	loading:false,
-	    	success:false,
-	    	fail:false,
-	    	error:false,
+	    ajax:{
+	    	state:{
+		    	loading:false,
+		    	success:false,
+		    	fail:false,
+		    	error:false,
+		    },
 	    },
-	    daka:{},
+	    daka:{
+	    	userList:[{
+	    		userUuid:"1d825da7-430c-49b2-b12a-bb3ad74f8e1b",
+	    		userName:"文杰",
+	    	},{
+	    		userUuid:"77901fc9-ad59-4ebe-a1d7-9b5af83ce630",
+	    		userName:"亚欣",
+	    	},{
+	    		userUuid:"d1b22468-3748-4275-8c79-117effbde1e6",
+	    		userName:"晓敏",
+	    	},{
+	    		userUuid:"37366a13-fefd-4646-b459-c6f6ea6d1578",
+	    		userName:"惠强",
+	    	}],
+	    	selectedUser : localStorage.dakaUserIndex || 0,
+	    	locationList:[{
+	    		location:"116.450747,39.932834",
+	    		name:"北京市朝阳区工人体育场东路靠近中国红街1号楼"
+	    	},{
+	    		location:"116.450717,39.932861",
+	    		name:"北京市朝阳区工人体育场东路靠近中国国际能源集团"
+	    	}],
+	    	selectedLocation: localStorage.dakaLocationIndex || 0,
+	    },
 	  },
 	  filters: {
 	    dateFilter: function (dateVal) {
@@ -121,43 +179,48 @@
 	  methods:{
 	  	dakaDo:function(){
 	  		var self = this;
+	  		//存储
+	  		localStorage.dakaUserIndex = self.daka.selectedUser;
+	  		localStorage.dakaLocationIndex = self.daka.selectedLocation;
+	  		//赋值
+	  		var userUuid = self.daka.userList[self.daka.selectedUser].userUuid;
+	  		var locations = self.daka.locationList[self.daka.selectedLocation];
+	  		var locationName = locations.name;
+	  		var loactionZb = locations.location.split(",");
 	  		//ajax
 	  		$.ajax({
 					type:'POST',
-					url:"http://api.123shishi.com/thingsapp/attendance/submitPunch",
+					url:"http://api.123shishi.com/thingsapp/attendance/submitPunch",//http://101.200.221.192:8028
 					data:{
 						companyUuid:"bb8eec22-17b1-4258-81d3-c50bd515f5fd",
-						userUuid:"1d825da7-430c-49b2-b12a-bb3ad74f8e1b",
+						userUuid:userUuid,
 						punchType:"punch",
-						longitude:"116.450747",
-						latitude:"39.932834",
-						location:"北京市朝阳区工人体育场东路靠近中国红街1号楼",
+						latitude:loactionZb[0],
+						longitude:loactionZb[1],
+						location:locationName,
 					},
 					dataType:"json",
 					beforeSend:function(){
-						self.ajaxState.loading = true;
+						self.ajax.state.loading = true;
 					},
 					success:function(json){
-						self.ajaxState.loading = false;
+						self.ajax.state.loading = false;
 						if(json.code == "0"){
-							self.ajaxState.success = true;
-							setTimeout(function () {
-	              self.ajaxState.success = false;
-	              self.daka.info = json.result.attendanceRecord;
-	            }, 2000);
+							self.ajax.state.success = true;
+							self.daka.info = json.result.attendanceRecord;
 						}else{
-							self.ajaxState.fail = true;
+							self.ajax.state.fail = true;
 							setTimeout(function () {
-	              self.ajaxState.fail = false;
-	            }, 2000);
+	              self.ajax.state.fail = false;
+	            }, 1500);
 						}
 					},
 					error:function(){
-						self.ajaxState.loading = false;
-						self.ajaxState.error = true;
+						self.ajax.state.loading = false;
+						self.ajax.state.error = true;
 						setTimeout(function () {
-	            self.ajaxState.error = false;
-	          }, 2000);
+	            self.ajax.state.error = false;
+	          }, 1500);
 					},
 				});
 	  	},
