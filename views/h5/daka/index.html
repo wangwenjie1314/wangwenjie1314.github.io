@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <title>考勤打卡</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="format-detection" content="telephone=no" />
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <link rel="stylesheet" type="text/css" href="../../../statics/css/weui.min.css">
+</head>
+<body>
+	<div id="container">
+		<a href="javascript:;" class="weui-btn weui-btn_primary" v-bind:class="{ 'weui-btn_disabled': ajaxState.loading }" @click="dakaDo">打卡</a>
+		<div class="weui-panel weui-panel_access" v-if="daka.info">
+			<div class="weui-panel__hd">打卡信息</div>
+			<div class="weui-panel__bd">
+				<div class="weui-media-box weui-media-box_text">
+	        <h4 class="weui-media-box__title">{{daka.info.attendanceTime | dateFilter}}</h4>
+	        <p class="weui-media-box__desc">{{daka.info.location}}</p>
+		    </div>
+			</div>
+		</div>
+		<!-- success toast-->
+	  <div id="successToast" style="display: none;" v-show="ajaxState.success">
+	    <div class="weui-mask_transparent"></div>
+	    <div class="weui-toast">
+	      <i class="weui-icon-success-no-circle weui-icon_toast"></i>
+	      <p class="weui-toast__content">已完成</p>
+	    </div>
+	  </div>
+	  <!-- fail toast-->
+	  <div id="infoToast" style="display: none;" v-show="ajaxState.fail">
+	    <div class="weui-mask_transparent"></div>
+	    <div class="weui-toast">
+	      <i class="weui-icon-info weui-icon_toast"></i>
+	      <p class="weui-toast__content">打卡失败</p>
+	    </div>
+	  </div>
+	  <!-- error toast-->
+	  <div id="warnToast" style="display: none;" v-show="ajaxState.error">
+	    <div class="weui-mask_transparent"></div>
+	    <div class="weui-toast">
+	      <i class="weui-icon-warn weui-icon_toast"></i>
+	      <p class="weui-toast__content">网络错误</p>
+	    </div>
+	  </div>
+		<!-- loading toast -->
+	  <div id="loadingToast" style="display:none;" v-show="ajaxState.loading">
+	    <div class="weui-mask_transparent"></div>
+	    <div class="weui-toast">
+	      <i class="weui-loading weui-icon_toast"></i>
+	      <p class="weui-toast__content">数据加载中</p>
+	    </div>
+	  </div>
+  </div>
+  <script type="text/javascript" src="../../../statics/js/zepto.js"></script>
+	<script type="text/javascript" src="../../../statics/js/vue.js"></script>
+	<script type="text/javascript">
+	//获取当前日期 'yyyy-MM-dd hh:mm:ss'
+	function getDateFormatStr(timestamp, format) {
+    var date;
+    if (!timestamp) {
+      date = new Date();
+    } else {
+      var timestampStr = timestamp.toString();
+      if(timestampStr.length == 10){
+        date = new Date(timestamp * 1000);
+      }else if(timestampStr.length == 13){
+        date = new Date(timestamp);
+      }else{
+        console.log("请传入正确的时间戳");
+        return "";
+      }
+    }
+    var map = {
+      "M": date.getMonth() + 1, //月份
+      "d": date.getDate(), //日
+      "h": date.getHours(), //小时
+      "m": date.getMinutes(), //分
+      "s": date.getSeconds(), //秒
+      "q": Math.floor((date.getMonth() + 3) / 3), //季度
+      "S": date.getMilliseconds() //毫秒
+    };
+    format = format.replace(/([yMdhmsqS])+/g, function(all, t) {
+      var v = map[t];
+      if (v !== undefined) {
+        if (all.length > 1) {
+          v = '0' + v;
+          v = v.substr(v.length - 2);
+        }
+        return v;
+      } else if (t === 'y') {
+        return (date.getFullYear() + '').substr(4 - all.length);
+      }
+      return all;
+    });
+    return format;
+  };
+  //实例化
+	var vm = new Vue({
+	  el: '#container',
+	  data: {
+	    ajaxState:{
+	    	loading:false,
+	    	success:false,
+	    	fail:false,
+	    	error:false,
+	    },
+	    daka:{},
+	  },
+	  filters: {
+	    dateFilter: function (dateVal) {
+	      if (!dateVal){return '';}
+	      return getDateFormatStr(dateVal,'yyyy-MM-dd hh:mm');
+	    }
+	  },
+	  methods:{
+	  	dakaDo:function(){
+	  		var self = this;
+	  		//ajax
+	  		$.ajax({
+					type:'POST',
+					url:"http://api.123shishi.com/thingsapp/attendance/submitPunch",
+					data:{
+						companyUuid:"bb8eec22-17b1-4258-81d3-c50bd515f5fd",
+						userUuid:"1d825da7-430c-49b2-b12a-bb3ad74f8e1b",
+						punchType:"punch",
+						longitude:"116.450747",
+						latitude:"39.932834",
+						location:"北京市朝阳区工人体育场东路靠近中国红街1号楼",
+					},
+					dataType:"json",
+					beforeSend:function(){
+						self.ajaxState.loading = true;
+					},
+					success:function(json){
+						self.ajaxState.loading = false;
+						if(json.code == "0"){
+							self.ajaxState.success = true;
+							setTimeout(function () {
+	              self.ajaxState.success = false;
+	              self.daka.info = json.result.attendanceRecord;
+	            }, 2000);
+						}else{
+							self.ajaxState.fail = true;
+							setTimeout(function () {
+	              self.ajaxState.fail = false;
+	            }, 2000);
+						}
+					},
+					error:function(){
+						self.ajaxState.loading = false;
+						self.ajaxState.error = true;
+						setTimeout(function () {
+	            self.ajaxState.error = false;
+	          }, 2000);
+					},
+				});
+	  	},
+	  },
+	});
+	</script>
+</body>
+</html>
