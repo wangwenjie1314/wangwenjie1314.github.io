@@ -6,10 +6,6 @@
 
 [http://wangwenjie1314.github.io](http://wangwenjie1314.github.io)
 
-被墙不开心 转coding.net
-
-[https://coding.net/u/wangwenjie](https://coding.net/u/wangwenjie)
-
-爱吃、爱旅行、爱阅读的理想青年，前端开发攻城师。weibo：[Android_Wong](http://weibo.com/wangwenjie1314 "王文杰的微博")
+爱吃、爱旅行、爱阅读的理想青年，前端开发攻城师
 
 ![Stated Clearly Image](http://c.hiphotos.baidu.com/image/pic/item/0823dd54564e92584357a3e39e82d158ccbf4e5f.jpg) 
